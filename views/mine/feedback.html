@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/mine/feedback.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">意见反馈</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<textarea v-model="textareas" onKeyUp="javascript:checkWord(this);" onMouseDown="javascript:checkWord(this);" style="overflow-y:scroll" maxlength="600" style="resize:none" name="" rows="" cols="" placeholder="请写下您的意见或建议"></textarea>
+						<div class="statistics"><span id="wordCheck">0</span>/600</div>
+						<div @tap="submission();" class="oBtn">提交</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/feedback.js"></script>
+		<script type="text/javascript">
+			    var maxstrlen=600;
+				    function Q(s){return document.getElementById(s);}
+				    function checkWord(c){
+				        len=maxstrlen;
+				        var str = c.value;
+				        myLen=getStrleng(str);
+				        var wck=Q("wordCheck");
+				        if(myLen>len*2){
+				            c.value=str.substring(0,i+1);
+				        }
+				        else{
+				            wck.innerHTML = Math.floor((len*2-myLen)/2);
+				           }
+				    }
+				    function getStrleng(str){
+				        myLen =0;
+				        i=0;
+				        for(;(i<str.length)&&(myLen<=maxstrlen*2);i++){
+				        if(str.charCodeAt(i)>0&&str.charCodeAt(i)<128)
+				        myLen++;
+				        else
+				        myLen+=2;
+				    }
+				    return myLen;
+				}
+		</script>
+	</body>
+
+</html>

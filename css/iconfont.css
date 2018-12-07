@@ -1,0 +1,17 @@
+
+@font-face {font-family: "iconfont";
+  url('../lib/fonts/iconfont.ttf') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+}
+
+.iconfont {
+  font-family:"iconfont" !important;
+  font-size:0.34rem;
+  font-style:normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-pingfen:before { content: "\e79a"; }
+
+.icon-pingfen1:before { content: "\e675"; }
+

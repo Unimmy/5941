@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="author" contect="">   
+    <title>5941</title>
+    <link href="lib/mui/mui.css" rel="stylesheet"/>
+    <script src="lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="lib/mui/mui.min.js"></script>
+    <script src="lib/vue/vue.min.js"></script>
+    <style>
+    	.home:before{
+    		background: url(img/common/zhuye-kongxin.png) no-repeat  center;
+		    content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block;   		
+    	}
+    	.mui-active .home:before{
+    		background: url(img/common/zhuye-shiti.png) no-repeat  center;
+    		content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block; 
+    	}
+    	.check:before{
+    		background: url(img/common/fenlei-kongxin.png) no-repeat  center;
+		    content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block;   		
+    	}
+    	.mui-active .check:before{
+    		background: url(img/common/fenlei-shiti.png) no-repeat  center;
+    		content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block; 
+    	}
+    	.certificate:before{
+    		background: url(img/common/shopping-kongxin.png) no-repeat  center;
+		    content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block;   		
+    	}
+    	.mui-active .certificate:before{
+    		background: url(img/common/shopping-shiti.png) no-repeat  center;
+    		content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block; 
+    	}
+    	.mine:before{
+    		background: url(img/common/wode-kongxin.png) no-repeat  center;
+		    content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block;   		
+    	}
+    	.mui-active .mine:before{
+    		background: url(img/common/wode--shiti.png) no-repeat  center;
+    		content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block; 
+    	}
+    	.quan:before{
+    		background: url(img/common/quan.png) no-repeat  center;
+    		content: '';
+		    background-size: cover;
+		    width: 100%;
+		    height: 100%;
+		    display: block; 
+    	}
+    	.mui-bar-tab .mui-tab-item.mui-active{
+    		color:#ff4200;
+    	}
+    	.mui-bar-tab .mui-tab-item .mui-icon ~ .mui-tab-label{
+    		line-height: 14px;
+    		font-size:12px;
+    	}
+    	.mui-bar-tab .mui-tab-item .mui-icon{
+    		width: 24px;
+    		height: 24px;
+    	}
+    	.mui-bar{
+    		box-shadow: none;
+    	}
+    	.mui-icon.quan{
+    		width:50px !important;
+			height:50px !important;
+    	}
+    	/*.mui-icon.quan{
+    		width: 50px !important;
+		    height: 60px !important;
+		    position: absolute !important;
+		    top: -35% !important;
+		    left: 50%;
+		    
+		    transform: translate(-25px);
+		    z-index:999 !important;
+    	}
+    	.mui-bar{
+    		z-index:55;
+    	}*/
+    </style>
+</head>
+<body>
+	<!--html-->
+	<nav class="mui-bar mui-bar-tab" style="background:#fff;">
+	    <a id="homeBar" class="mui-tab-item mui-active" data-href="views/homePage/homeIndex.html">
+	        <span class="mui-icon home"></span>
+	        <span class="mui-tab-label">首页</span>
+	    </a>
+	    <a class="mui-tab-item" data-href="views/classification/classification.html">
+	        <span class="mui-icon check" ></span>
+	        <span class="mui-tab-label">分类</span>
+	    </a>
+	     <!--<a style="pointer-events: none;" class="mui-tab-item" href="javascript:void(0)">
+	        <span class="mui-icon quan"></span>
+	    </a>-->
+	    <a class="mui-tab-item" data-href="views/shoppingCart/shoppingCart.html">
+	        <span class="mui-icon certificate"></span>
+	        <span class="mui-tab-label">购物车</span>
+	    </a>
+	    <a class="mui-tab-item" data-href="views/mine/mine.html">
+	        <span class="mui-icon mine"></span>
+	        <span class="mui-tab-label">我的</span> 
+	    </a>
+	</nav>
+	<!--script-->
+	<script src="js/common/index.js"></script>
+</body>
+<script>
+	mui.oldback = mui.back;
+	var clickNum = 0;
+	mui.back = function(event) {
+	    clickNum++;
+	    if(clickNum > 1) {
+	        plus.runtime.quit();
+	    } else {
+	        mui.toast("再按一次退出应用");
+	    }
+	    setTimeout(function() {
+	        clickNum = 0
+	    }, 1000);
+	    return false;
+	}
+</script>
+</html>

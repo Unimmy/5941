@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/homePage/messageIndex.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">消息中心</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<div class="message" v-for="(item,index) in infos">
+							<h3>{{item.title}}<i v-if="item.isTrue == 0"></i></h3>
+							<div>
+								<img :src="server+item.imageUrl" alt="" />
+								<p>{{item.summary}}</p>
+							</div>
+							<p @click="turnTo('homeMessage','homeMessage',item.id)" class="goDetail">
+								<span class="left">查看详情</span>
+								<span class="right"></span>
+							</p>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/homePage/messageIndex.js"></script>
+	</body>
+</html>

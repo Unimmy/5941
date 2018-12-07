@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<link href="../../lib/swiper3/swiper.min.css" rel="stylesheet">
+	<script src="../../lib/swiper3/swiper.min.js"></script>
+	<link href="../../css/shoppingCart/commodityDetails.css" rel="stylesheet" />
+	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">商品详情</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<span class="mui-pull-right btn-register">
+					<i @click="goHomeIndex();" class="homeImg"></i>
+					<!--<i onclick="shareHref();" id="shareShare" class="share"></i>-->
+				</span>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<div class="message">
+							<div class="swiper-container">
+							  	<div class="swiper-wrapper">
+									<img v-for="(x,index) in infos.mainimage" class="swiper-slide" :src="server+x" alt="" @tap="showSinglePicture(server,x);" />
+									<p v-for="(x,index) in infos.mainimage" id="shareImg" style="display:none;">
+										{{x}}
+									</p>
+							  	</div>	
+								<!--底部滑块-->
+							  	<div class="swiper-pagination"></div>
+							</div>
+							<div v-for="(x,index) in infos.commodity">
+								<h4 id="shopNameaa">{{x.NAME}}</h4>
+								<p>{{x.INTRODUCTION}}</p>
+								<p id="displayTitle" style="display:none;">{{x.INDEXS+x.INCLASS}}</p>
+								<span v-if="shopPrice && isActivity != 1" class="leftMoney">￥{{shopPrice}}</span>
+								<span v-if="!shopPrice && isActivity != 1 && infos.num.MINPRICE!=infos.num.MAXPRICE" class="leftMoney">￥{{infos.num.MINPRICE}}~{{infos.num.MAXPRICE}}</span>
+								<span v-if="!shopPrice && isActivity != 1 && infos.num.MINPRICE==infos.num.MAXPRICE" class="leftMoney">￥{{infos.num.MINPRICE}}</span>
+								<span v-if="isActivity == 1" class="leftMoney">￥{{surePrice.price1}} <i class="oldMoneyss">￥{{surePrice.price}}</i></span>
+								<span class="rightSell">已售{{infos.commodity[0].SALESIZE}}&nbsp;&nbsp;库存{{infos.num.NUM}}份</span>					
+							</div>
+						</div>	
+						<ul class="choose" style="margin-bottom:0.1rem;">
+							<li class="chooseLi">
+								<p @tap="chooseParameter();" class="top" v-bind:class="{'chooseTop':isActivity==1}">
+									<span>已选</span>
+									<input class="chooseInput chooseInput_chooseInput" type="text" readonly="readonly" name="" id="" v-model="chooseInput" />
+									<!--<i :class="{'down':chooseClickImg==1}"></i>-->
+								</p>
+								<p class="activeDiv" v-show="isActivity == 1">
+									<span>{{activity.title}}</span>
+									<span class="right">{{activity.introduce}}{{activity.reduce}}</span>
+								</p>
+<!--								 v-show="isChoose==true"-->
+								<div>
+									<div class="colour">
+										<p class="smallTitle">颜色分类</p>
+										<span @tap="chooseColor(''+index+'',''+x.colour+'','1');" :class="{'active':index == colorIndex && colorName!='','disabledActive':''+x.type+''=='0'}" v-for="(x,index) in infos.colour">{{x.colour}}</span>
+									</div>
+									<div v-if="specificationOrSize == 0" class="size">
+										<p class="smallTitle">尺码</p>
+										<span @tap="chooseSize(''+index+'',''+x.mysize+'','2');" :class="{'active':index == mysizeIndex && mysizeName!='','disabledActive':''+x.type+''=='0'}" v-for="(x,index) in infos.mysize">{{x.mysize}}</span>
+									</div>
+									<div v-if="specificationOrSize == 1" class="specifications">
+										<p class="smallTitle">规格</p>
+										<span @tap="chooseSize(''+index+'',''+x.mysize+'','2');" :class="{'active':index == mysizeIndex && mysizeName!='','disabledActive':''+x.type+''=='0'}" v-for="(x,index) in infos.mysize">{{x.mysize}}</span>
+									</div>
+									<div class="specifications last"> 
+										<p style="margin-bottom:0.15rem;" class="smallTitle">数量</p>
+										<div class="mui-numbox mui-numboxsss" data-numbox-step='1' data-numbox-min='1' data-numbox-max=''>
+										  <!-- "-"按钮，点击可减小当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-minus numboxsss" type="button" @tap="chooseSureBtn();">-</button>
+										  <input class="mui-numbox-input numboxsss" type="number" />
+										  <!-- "+"按钮，点击可增大当前数值 -->
+										  <button class="mui-btn mui-numbox-btn-plus numboxsss" type="button" @tap="chooseSureBtn();">+</button>
+										</div>
+										<!--<div @tap="chooseSureBtn();" class="oBtnSure">确定</div>-->
+									</div>
+								</div>	
+							</li>
+							<!--<li>
+								<p class="top">
+									<span>领劵</span>
+									<img src="../../img/shoppingCart/juan.png"/>
+									<i></i>
+								</p>	
+							</li>-->
+							<li v-for="(x,index) in infos.Promotion">
+								<p class="top">
+									<span>促销</span>
+									<!--<b class="cuxiao">618</b>-->
+									<input class="chooseInput" type="button" name="" id="" :value="x.introduce" />
+									<!--<i></i>-->
+								</p>	
+							</li>
+						<!--</ul>
+						<ul class="parameter">
+							<li>
+								<span>商品参数</span>
+							</li>
+							<li>
+								<span>颜色</span>
+								<p>
+									<span v-for="(x,index) in infos.colour">{{x.colour}}</span>
+								</p>
+							</li>
+							<li v-if="specificationOrSize == 0">
+								<span>尺寸</span>
+								<p>
+									<span v-for="(x,index) in infos.mysize">{{x.mysize}}</span>
+								</p>
+							</li>
+							<li v-if="specificationOrSize == 1">
+								<span>规格</span>
+								<p>
+									<span v-for="(x,index) in infos.mysize">{{x.mysize}}</span>
+								</p>
+							</li>-->
+							<!--<li>
+								<span>主要材质</span>
+								<p>
+									<span>鞋面：头层牛皮革</span>
+									<span>鞋底：橡胶</span>
+								</p>
+							</li>-->
+						</ul>
+						<div class="modityImg">
+							<p v-for="(item,index) in infos.detailsimage">
+								<img v-bind:src="server+item" alt=""  @tap="showSinglePicture(server,item);"/>
+							</p>
+						</div>
+					</div>
+				</div>	
+				<div class="showSinglePicture" v-if="imgurls" @tap="showSinglePicture();">
+					<img :src="imgurls" alt="显示大图"  @tap="showSinglePicture();" id="touchArea"/>
+				</div>
+					<!--保存图片-->
+				<div class="btnarr">
+				 	<button type="button" class="mui-btn" @tap="savePic(1)">查看原图</button>
+				 	<button type="button" class="mui-btn" @tap="savePic()">保存</button>
+				</div>
+				<div class="btnDiv">
+					<button @click="kefuCall();" class="kefu"></button>
+					<button @click="collectionBtn();" :class="{active:isCollection==true}" class="collection"></button>
+					<button @click="goShopCart();" class="kefu gowuche"><i>{{infos.ShoppingCard}}</i></button>
+					<button @tap="purchaseImmediately();" class="buy">立即购买</button>
+					<button @tap="addCar();" class="addCart">加入购物车</button>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/shoppingCart/commodityDetails.js"></script>
+	</body>
+	<script>
+		var Intent = null,
+            File = null,
+            Uri = null,
+            main = null;
+        var shares = null;
+        var shareImageUrl = '';
+        mui.plusReady(function() {  
+            updateSerivces();
+            if (plus.os.name == "Android") {
+                Intent = plus.android.importClass("android.content.Intent");
+                File = plus.android.importClass("java.io.File");
+                Uri = plus.android.importClass("android.net.Uri");
+                main = plus.android.runtimeMainActivity();
+            }
+        })
+        //更新分享服务
+        function updateSerivces() {
+            plus.share.getServices(function(s) {
+                shares = {};
+                for (var i in s) {
+                    var t = s[i];
+                    shares[t.id] = t;
+                }
+                outSet("获取分享服务列表成功");
+            }, function(e) {
+                outSet("获取分享服务列表失败：" + e.message);
+            });
+        }
+        //分享操作
+        function shareAction(id, ex) {
+            var s = null;
+            console.log();
+            if (!id || !(s = shares[id])) {
+                outLine("无效的分享服务！");
+                return;
+            }
+            if (s.authenticated) {
+                outSet("---已授权---");
+                shareMessage(s, ex);
+            } else {
+                outSet("---未授权---");
+                s.authorize(function() {
+                    shareMessage(s, ex);
+                }, function(e) {
+                    outLine("认证授权失败");
+                });
+            }
+        }
+        function trim(s){
+		    return s.replace(/(^\s*)|(\s*$)/g, "");
+		}
+        //发送分享消息
+         function shareMessage(s, ex) {
+         	var imgSrc = document.getElementById("shareImg").innerHTML;
+				imgSrc = trim(imgSrc);
+			var imgShare='';
+         	NetUtil.ajax('/feile/compressImage',{
+         		path:imgSrc,
+         		w:'150',
+         		h:'150'
+         	},function(r){
+         		console.log(server);
+         		if(r.status == 200){
+         			imgShare = server+r.data;
+         			 var msg = {
+		                content: '分享-商品详情',
+		                href:  "http://123.207.147.134:8091/register/"+localStorage.nickId+"",
+		//              title: 'HGDQ-分享测试-title',
+		                title:document.getElementById('displayTitle').innerHTML,
+		//              content: 'HGDQ-分享测试-content',
+						content:document.getElementById('shopNameaa').innerHTML,
+		                thumbs: [imgShare],		//分享图片路劲
+		                pictures: [imgShare],	//分享图片路劲
+		                extra: {
+		                    scene: ex
+		                }
+		            };
+		            console.log(imgShare);
+		            s.send(msg, function() {
+		                outLine("分享成功!");
+		            }, function(e) {
+		                outLine("分享失败!");
+		            });
+         		}else{
+         			mui.alert(r.message,function(){},'div');
+         		}
+         	})
+        }
+        //分享按钮点击
+         function shareHref() {
+            var ids = [{
+                    id: "weixin", 
+                    ex: "WXSceneSession"  /*微信好友*/
+                }, {
+                    id: "weixin",
+                    ex: "WXSceneTimeline" /*微信朋友圈*/
+                }, {
+                    id: "qq"   /*QQ好友*/
+                }, {
+                    id: "tencentweibo"   /*腾讯微博*/
+                },{
+                    id: "sinaweibo"  /*新浪微博*/
+                }],
+                bts = [{
+                    title: "发送给微信好友"
+                }, {
+                    title: "分享到微信朋友圈"
+                }, {
+                    title: "分享到QQ"
+                }, {
+                    title: "分享到腾讯微博"
+                }, {
+                    title: "分享到新浪微博"
+                }];
+            	plus.nativeUI.actionSheet({
+                    cancel: "取消",
+                    buttons: bts
+                },
+                function(e) {
+                    var i = e.index;
+                    if (i > 0) {
+                        shareAction(ids[i - 1].id, ids[i - 1].ex);
+                    }
+                }
+            );
+        }       
+        // 控制台输出日志
+        function outSet(msg) {
+            console.log(msg);
+        }
+        // 界面弹出吐司提示
+        function outLine(msg) {
+            mui.toast(msg);
+        }
+        
+		
+		
+		
+	</script>
+</html>

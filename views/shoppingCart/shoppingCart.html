@@ -1,0 +1,107 @@
+	<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/shoppingCart/shoppingCart.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">购物车</h1>
+				<a v-if="isShowshopCart==1" class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<span @click="edit();" class="mui-pull-right btn-register">
+					<i v-show="editValue && isNoShop==false">编辑</i>
+					<i style="color:#ff4200;" v-show="!editValue && isNoShop==false">完成</i>
+				</span>
+			</header>
+			<div class="" id="pullrefresh">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<div v-if="isNoShop==false" class="storeDiv">
+							<ul v-for="(i,index) in store" class="storeUl">
+								<div class="mui-input-row mui-checkbox mui-left">
+									<input v-model="i.checked" @click="checkedSmallBtn(i,'smallChec'+i.onephone+'');" :class="'smallChec'+i.onephone" class="checkSmallAll" name="checkSmallAll"  type="checkbox">
+									<label id="checkSmallAll">{{i.onename}}</label>
+								</div>  
+								<li v-for="(item,index) in i.listmap">
+									<div class="mui-input-row mui-checkbox mui-left">
+								  		<input :id="item.ID" @click="checkedRadioBtn(i,i.onephone);" :class="'checkInput'+i.onephone" v-model="item.checked" class="checkboxs checkboxss"  name="subcheck"  type="checkbox">
+										<div class="right">
+											<img v-bind:src="server+item.PICPATH" alt="" />
+											<div class="main">
+												<h5 @tap="backCommodityDetail(''+item.KID+'')">{{item.TITLE}}</h5>
+												<p><span class="spanLeftMr newSpan">颜色：{{item.colour}}</span><span class="newSpan newSpans" v-if="item.specifications==0">尺码：{{item.mysize}}</span>
+													<span class="newSpan newSpans" v-if="item.specifications==1">规格：{{item.mysize}}</span>
+												</p>
+												<p>
+													<span style="color:#b4282d;font-size:0.28rem;" class="spanLeftMr">{{item.PRICE | moneyFiler}}元</span>
+													<!--<span style="color:#bbbbbb" class="xiaoNum">小计：{{item.PRICE*item.NUM}}元</span>-->
+												</p>
+												<div class="mui-numbox mui-numboxsss" :class="addClassName(index)" data-numbox-step='0' data-numbox-min='0' data-numbox-max='100'>
+												  <!-- "-"按钮，点击可减小当前数值 -->
+												  <button @click="goodNum(item,-1,''+item.ID+'')" class="mui-btn mui-numbox-btn-minus numboxsss" type="button">-</button>
+												  <input v-model="item.NUM" class="mui-numbox-input numboxsss" type="number" readonly="readonly" />
+												  <!-- "+"按钮，点击可增大当前数值 -->
+												  <button @click="goodNum(item,1,''+item.ID+'')" class="mui-btn mui-numbox-btn-plus numboxsss" type="button">+</button>
+												</div>
+											</div>
+										</div>
+									</div>
+								</li>
+							</ul>
+						</div>
+						<div v-if="isNoShop==true" class="noShop">
+							<div class="left_img"></div>
+							<div class="right_word">
+								<p>购物车还没有商品哦~</p>
+								<a @tap="turnTo('../homePage/homeList','shopCart','购物车');">去逛逛</a>
+							</div>
+						</div>
+						<p class="grayKong"></p>
+						<div class="pickProduct">
+							<div class="productTitle">
+								<i></i>
+								<span>推荐商品</span>
+								<i></i>
+							</div>
+							<div class="products">
+								<dl @tap="turnToX('commodityDetails','commodityDetails',''+item.COMMODITYKEYID+'');" v-for="(item,index) in shops" class="shopps">
+									<dt><img v-bind:src="server+item.MAINIMAGE"/></dt>
+									<dd>
+										<p>{{item.NAME}}</p>
+										<span>￥ {{item.PRICE}}</span>
+									</dd>
+								</dl>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+			</div>
+			<!--footer结算-->
+			<div v-if="isNoShop==false" class="settlementDiv">
+				<div class="mui-input-row mui-checkbox mui-left">
+			  		<input @click="checkedAllBtn(ischeckedAll)" class="checkboxs checkboxAll" v-model="ischeckedAll" v-bind:checked="ischeckedAll" name="subcheckAll" type="checkbox" >
+					<label>全选</label>
+				</div>
+				<div class="mui-right">
+					<p v-show="editValue">合计：<span>{{totalMoney | moneyFiler}}</span></p>
+					<input @tap="toSettleAccounts();" v-show="editValue" class="settlementBtn" type="button" :value="chooseNum" />
+					<input @tap="delShop();" v-show="!editValue" class="settlementBtn" type="button" :value="chooseNum" />
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/shoppingCart/shoppingCart.js"></script>
+	</body>
+
+</html>

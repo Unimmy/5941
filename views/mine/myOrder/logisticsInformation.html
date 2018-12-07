@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myOrder/logisticsInformation.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">订单跟踪</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll list-box">
+					<div class="list-boxTop">
+						<div class="topTitle">
+							<p>订单号：45786165656</p>
+							<p>国内承运人：成都申通物流</p>
+							<p>预计送达：6月21日</p>
+						</div>
+					</div>
+					<p class="grayKong"></p>
+					<ul>
+						<li class="mui-row">
+							<div class="mui-col-sm-4 mui-col-xs-4 left-box">
+								<div class="day" class="color-FB5454">123123123</div>
+								<div class="time color-FB5454">哈哈哈哈哈哈哈哈哈哈哈哈哈哈</div>
+							</div> 
+							<div class="mui-col-sm-8 mui-col-xs-8 right-box">
+								<div class="state" class="color-FB5454">已签收</div>
+								<div class="point active"></div>
+								<div class="desc" class="color-FB5454">
+									哈啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊哈啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊啊
+								</div>
+							</div>
+						</li>
+						<!--<li v-for="(x,index) in info" class="mui-row">
+							<div class="mui-col-sm-4 mui-col-xs-4 left-box">
+								<div class="day" :class="{'color-FB5454':index==infoLength}">{{x.accept_time}}</div>
+								<div class="time color-FB5454">{{x.}}</div>
+							</div>
+							<div class="mui-col-sm-8 mui-col-xs-8 right-box">
+								<div class="state" :class="{'color-FB5454':index==infoLength}">已签收</div>
+								<div class="point" :class="{'active':index==infoLength}"></div>
+								<div class="desc" :class="{'color-FB5454':index==infoLength}" v-html="x.remark"></div>
+							</div>
+						</li>-->
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/logisticsInformation.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,43 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+.contentTable{
+	margin-top:0.2rem;
+	width:100%;
+	text-align:center;
+	background:#FFFFFF;
+	padding:0 0.2rem;
+	table-layout: fixed;
+}
+.contentTable tr{
+	height:1rem !important;
+	line-height:1rem;
+}
+.contentTable tr th,.contentTable tr td{
+	font-size:0.24rem;
+	font-weight:normal;
+	/*padding:0 0.2rem;*/
+}
+.contentTable tr td{
+	font-size:0.22rem;
+	width:33%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.contentTable tr{
+	border-bottom:1px solid #cccccc;
+}
+.contentTable tr:last-child{
+	border:none;
+}
+#pullrefresh{
+	background:#FFFFFF;
+	padding-top:0.75rem;
+}
+.mui-pull-bottom-pocket{
+	height:0;
+}

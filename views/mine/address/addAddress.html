@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<link href="../../../lib/mui/mui.picker.min.css" rel="stylesheet" />
+	<link href="../../../lib/mui/mui.poppicker.css" rel="stylesheet" />
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/address/addAddress.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">{{type==0?"新增地址":"编辑地址"}}</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a @click="delAddress();" v-if="type==1" id='done' class="mui-btn mui-btn-link mui-pull-right mui-btn-blue mui-disabled">删除</a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="all-box mui-clearfix">
+						<ul class="input-list">
+							<li class="input-group">
+								<label for="people">收货人</label>
+								<div class="input-wrapper">
+									<input type="text" id="people" :placeholder="type==1?'请输入发货人姓名':'请输入姓名'" v-model="sendInfo.name" maxlength="10"/>
+								</div>
+							</li>
+							<li class="input-group">
+								<label for="phone">手机号</label>
+								<div class="input-wrapper">
+									<input type="text" id="phone" placeholder="请输入手机号码" v-model="sendInfo.phone" maxlength="11"/>
+								</div>
+							</li>
+							<li class="input-group">
+								<label for="sure-pwd" class="password">所在地区</label>
+								<div class="right input-wrapper" id="showAreaPicker">
+									<input type="text" id="houseResult" readonly="readonly" class="list-right residence" placeholder="" v-model="sendInfo.residence"></input>
+								</div>
+								<div class="toggle toogleAddress"></div>
+							</li>
+							<li class="input-group">
+								<label for="adress">详细地址</label>
+								<div class="input-wrapper">
+									<input type="text" id="adress" placeholder="请填写省市区街道等详细信息" v-model="sendInfo.addressDetail" maxlength="100"/>
+								</div>
+							</li>
+							<li class="input-group">
+								<label for="code">邮政编码</label>
+								<div class="input-wrapper">
+									<input type="text" id="code" placeholder="请输入邮政编码" v-model="sendInfo.zipCode" maxlength="6"/>
+								</div>
+							</li>
+							<!--<li class="input-group">
+								<label for="code">设置轻松购</label>
+								<div @click="eadyShow();" class="input-wrapper">
+									<input type="text" placeholder="" readonly="readonly" maxlength=""/>
+								</div>
+								<div class="toggle toogleEasy"></div>
+								<div v-show="isEasyPurchase==true" class="main">
+									<div class="shipModes">
+										<p>配送方式</p>
+										<span  @click="shipMode('1');" class="active ziti"><i>√</i>自提</span>
+										<span  @click="shipMode('2');" class="scps"><i style="display:none;">√</i>商城配送</span>
+									</div>
+									<div class="payModes">
+										<p>支付方式</p>
+										<span @click="payMode(1);" class="active zxzf"><i>√</i>在线支付</span>
+										<span @click="payMode(2);" class="hdfk"><i style="display:none;">√</i>货到付款</span>
+									</div>
+								</div>
+							</li>-->
+						</ul>
+						<div v-if="sendInfo.id==0" class="adress">
+							<div @click="setDefault();">
+								<i v-bind:class="{active:sendInfo.isDefault==1}"></i><span>设为默认地址</span>
+							</div>
+						</div>
+						
+						<button v-if="type==0" type="button" @click="saveForm()" class="oBtnAdd"  data-loading-icon-position="right" >保存</button>
+						<button v-if="type==1" type="button" @click="modifySave()" class="oBtnAdd"  data-loading-icon-position="right" >保存</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../lib/mui/mui.picker.min.js"></script>
+		<script src="../../../lib/mui/mui.poppicker.js"></script>
+		<script src="../../../lib/mui/city.data.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../lib/mui/city.data-3.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../../js/mine/address/addAddress.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,87 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+#header .mui-pull-left{
+	font-size: 0.4rem;
+    color: #FFFFFF;
+    text-align: center;
+    width:1rem;
+    line-height:0.4rem;
+    padding-left:0;
+}
+
+.mui-bar-nav.mui-bar .mui-icon{
+	
+}
+.mui-search{
+	width:78%;
+}
+.mui-pull-right{
+	font-size:0.26rem;
+	color:#000000;
+}
+a.mui-pull-rightHeader:active{
+	color:#000000;
+}
+.mui-bar .mui-input-row .mui-input-clear~.mui-icon-clear, .mui-bar .mui-input-row .mui-input-speech~.mui-icon-speech{
+	top:0.05rem;
+}
+#header{
+	background:#ff5e30;
+}
+.mui-search .mui-placeholder{
+	background-color: #ff420b;
+	border-radius: 0.06rem;
+	height:0.6rem;
+	line-height:0.6rem;
+	margin-top: 0.09rem;
+	border:none;
+}
+.mui-search .mui-placeholder span{
+	color:#FFFFFF;
+}
+.mui-search .mui-placeholder .mui-icon{
+	color:#FFFFFF;
+}
+.mui-icon-search{
+	padding-top: 0.18rem !important;
+}
+
+.contentDiv{
+	padding:0.2rem;
+	width:100%;
+}
+.contentDiv li{
+	height:0.7rem;
+	line-height:0.7rem;
+	font-size:0.26rem;
+	border-bottom:1px dashed #CCCCCC;
+}
+/*mui-checkbox样式*/
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before{
+	color:#FF4200;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	font-size:0.3rem;
+}
+.mui-checkbox input[type=checkbox], .mui-radio input[type=radio]{
+	top:0;
+	left:0rem;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	line-height:0.7rem;
+}
+.contentDiv li .mdName{
+	margin-left:0.4rem;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space:nowrap;
+}
+.mui-checkbox label, .mui-radio label{
+	padding-right:0;
+	width:85%;
+}
+.checkxieyi{
+	position: absolute;
+    top: 0.25rem;
+}

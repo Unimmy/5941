@@ -1,0 +1,42 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+.contentDiv{
+	width:100%;
+	text-align:center;
+	padding-top:0.6rem;
+}
+.contentDiv h5{
+	font-size:0.26rem;
+	color:#000000;
+}
+.contentDiv .money{
+	font-size:0.32rem;
+	color:#b4282d;
+	margin:0.3rem 0;
+}
+.contentDiv .receivables{
+	height:0.8rem;
+	background:#FFFFFF;
+	width:100%;
+	padding:0 0.5rem;
+	line-height:0.8rem;
+}
+.contentDiv .receivables .left{
+	float:left;
+}
+.contentDiv .receivables .right{
+	float:right;
+}
+.contentDiv .oBtn{
+	width:95%;
+	margin:0 auto;
+	height:0.8rem;
+	line-height:0.8rem;
+	background:#ff4200;
+	text-align:center;
+	color:#FFFFFF;
+	font-size:0.24rem;
+	padding:0;
+	margin-top:2rem;
+}

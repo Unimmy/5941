@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myOrder/applyAfterSale.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">申请售后</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll list-box">
+					<div v-for="(item,index) in infos" class="contentDiv">
+						<div class="detail">
+							<p class="title">商品详情</p>
+							<div class="mainDiv">
+								<img :src="server+item.PICPATH"/>
+								<p class="name">{{item.TITLE}}</p>
+								<p v-if="item.SPECIFICATIONS == 1" class="center">
+									规格：{{item.MYSIZE}}
+								</p>
+								<p v-if="item.SPECIFICATIONS == 0" class="center">
+									尺码：{{item.MYSIZE}}
+								</p>
+								<p v-if="item.COLOUR != 1" class="center">
+									颜色：{{item.COLOUR}}
+								</p>
+								<p class="center">
+									数量：{{item.NUM}}{{item.COMPANY}}
+								</p>
+								<p class="money">￥{{item.PRICE}}</p>
+							</div>
+						</div>
+						<ul class="someThings">
+							<li>
+								<p class="left">订单详情</p>
+							</li>
+							<li>
+								<p class="left">订单号</p>
+								<p class="right">{{item.ORDERID}}</p>
+							</li>
+							<li>
+								<p class="left">下单时间</p>
+								<p class="right">{{item.CDATE}}</p>
+							</li>
+							<li>
+								<p class="left">支付方式</p>
+								<p class="right">在线支付</p>
+							</li>
+							<li>
+								<p class="left">退货方式</p>
+									<form   class="returnform">
+										<label for="homeDelivery">门店</label><input type="radio" name="retunM" id="homeDelivery" @click="idtype(1)" checked/>		
+										<label for="homeDeliver">厂商</label><input type="radio" name="retunM" id="homeDeliver" @click="idtype(2)" />
+									</form>
+							</li>
+							<li>
+								<p class="left">退货数量</p>
+								<p class='btnp'>
+									<button @tap='sizing(-1)' class="returnSize ">-</button>
+									<input  type="text" class="returnSize " v-model="returnSize" />
+									<button @tap='sizing(1)' class="returnSize ">+</button>
+								</p>
+							</li>
+							<li>
+								<p class="left">退款金额</p>
+								<input v-model="returnMoney" class="right returnMoney" type="text" />
+							</li>
+						
+						</ul>
+						<div class="causeOfReturn">
+							<p class="title">退货原因</p>
+							<textarea v-model="reason" placeholder="请写下您的意见或建议" class="causeText" name="" rows="" cols=""></textarea>
+						</div>
+						
+						<div @tap="returnGoods(''+item.ID+'');" class="oBtn" >提交</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/applyAfterSale.js"></script>
+	</body>
+
+</html>

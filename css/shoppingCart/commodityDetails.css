@@ -1,0 +1,346 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+.contentDiv .message{
+	background:#FFFFFF;
+}
+.contentDiv .message img{
+	width:100%;
+	height:6.4rem;
+}
+.contentDiv .message h4{
+	font-size:0.28rem;
+	color:#000000;
+	margin-top:0.15rem;
+	margin-left:0.21rem;
+	font-weight:normal;
+}
+.contentDiv .message p{
+	font-size:0.26rem;
+	color:#5e5e5e;
+	margin:0.15rem 0.21rem;
+}
+.contentDiv .message span{
+	display:inline-block;
+}
+.contentDiv .message .leftMoney{
+	font-size:0.32rem;
+	color:#b4282d;
+	margin:0.12rem 0.21rem;
+}
+.contentDiv .message .rightSell{
+	font-size:0.26rem;
+	color:#5e5e5e;
+	float:right;
+	margin:0.12rem 0;
+	margin-right:0.08rem;
+}
+
+.contentDiv .choose,.contentDiv .parameter,.contentDiv .modityImg{
+	background:#FFFFFF;
+	margin-top:0.2rem;
+}
+.contentDiv .choose li,.contentDiv .parameter li{
+	/*height:0.8rem;*/
+	line-height:0.8rem;
+	border-bottom:1px solid #CCCCCC;
+}
+.contentDiv .choose li:last-child{
+	border:none;
+}
+.contentDiv .choose li .top span,.contentDiv .choose li .top span{
+	display:inline-block;
+	width:0.7rem;
+	text-align:center;
+	font-size:0.24rem;
+	color:#5E5E5E;
+	margin-right:0.05rem;
+	/*float:left;*/
+}
+.contentDiv .choose li .chooseInput{
+	display:inline-block;
+	border:none;
+	height:0.78rem;
+	text-align:left;
+	line-height:0.8rem;
+	font-size:0.24rem;
+	color:#000000;
+	padding:0;
+	width:73%;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+}
+
+.contentDiv .choose li .cuxiao{
+	width:0.8rem;
+	height:0.45rem;
+	background:#fc9b79;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:0.45rem;
+	margin-right:0;
+	font-weight:normal;
+	display:inline-block;
+	border-radius:0.08rem;
+}
+.contentDiv .choose li i{
+	display:inline-block;
+	width:0.8rem;
+	height:0.8rem;
+	float:right;
+	line-height:0.8rem;
+	background:url(../../img/shoppingCart/arrowRight.png) no-repeat 50%;
+	background-size:0.18rem;
+}
+.contentDiv .choose li img{
+	height:0.5rem;
+	width:1.2rem;
+	vertical-align: middle;
+}
+
+.contentDiv .parameter li{
+	padding-left:0.1rem;
+}
+.contentDiv .parameter li>span{
+	display:inline-block;
+	width:1.2rem;
+	text-align:left;
+	font-size:0.24rem;
+	color:#5E5E5E;
+}
+.contentDiv .parameter li p{
+	display:inline-block;
+	font-size:0.24rem;
+	color:#000000;
+	height:0.8rem;
+	line-height:0.8rem;
+}
+.contentDiv .parameter li p span{
+	font-size:0.24rem;
+	display:inline-block;
+	margin:0 0.15rem;
+}
+.contentDiv .parameter li:last-child{
+	border:none;
+}
+.contentDiv .modityImg img{
+	width:100%;
+	/*height:1.5rem;*/
+	display:block;
+}
+
+.mui-content .btnDiv{
+	width:100%;
+	height:0.8rem;
+	background:#FFFFFF;
+	border-top:1px solid #CCCCCC;
+	position:absolute;
+	bottom:0;
+	z-index:99;
+}
+.contentDiv button{
+	display:inline-block;
+	border:none;
+	height:0.8rem;
+	line-height:0.8rem;
+	text-align:center;
+	padding:0;
+	float:left;
+	border-radius:0;
+}
+.mui-content .btnDiv .kefu,.mui-content .btnDiv .collection{
+	width: 13%;
+    border: none;
+    border-radius: 0;
+    border-right: 1px solid #CCCCCC;
+    background: #FFFFFF url(../../img/shoppingCart/lianxikefu.png) no-repeat 50%;
+    background-size: 0.4rem;
+    height: 100%;
+    float: left;
+}
+.mui-content .btnDiv .collection{
+	background:#FFFFFF url(../../img/shoppingCart/shoucangkongxin.png) no-repeat 50%;
+	background-size:0.4rem;
+}
+.mui-content .btnDiv .collection.active{
+	background:#FFFFFF url(../../img/shoppingCart/shoucangshixin.png) no-repeat 50%;
+	background-size:0.4rem;
+}
+.mui-content .btnDiv .gowuche{
+	background:#FFFFFF url(../../img/shoppingCart/gouwuche.png) no-repeat 50%;
+	background-size:0.4rem;
+	position:relative;
+}
+.mui-content .btnDiv .buy,.mui-content .btnDiv .addCart{
+	width: 30.5%;
+    height: 100%;
+    border: none;
+    padding: 0;
+    float: left;
+    color: #000000;
+    border: none;
+}
+.mui-content .btnDiv .addCart{
+	background: #ff4200;
+    color: #FFFFFF;
+    border: none;
+    border-radius: unset;
+}
+.swiper-pagination-bullet-active{
+	background:#ff4200;
+}
+.contentDiv .choose li.chooseLi{
+	line-height:normal;
+}
+.contentDiv .choose li.chooseLi .top{
+	line-height:0.8rem;
+}
+.contentDiv .choose li.chooseLi div{
+	min-height:0.6rem;
+	padding:0.15rem;
+}
+.contentDiv .choose li.chooseLi div .smallTitle{
+	font-size:0.24rem;
+	color:#000000;
+}
+.contentDiv .choose li.chooseLi div span{
+	display:inline-block;
+	color:#5E5E5E;
+	font-size:0.22rem;
+	padding:0.08rem;
+	border:1px solid #AAAAAA;
+	border-radius:0.1rem;
+	margin-right:0.15rem;
+	margin-top:0.15rem;
+	
+}
+.contentDiv .choose li.chooseLi div span.active{
+	border-color:#FF4200;
+	color:#FF4200;
+} 
+.contentDiv .choose li.chooseLi .mui-numboxsss{
+	height:0.5rem;
+	border-bottom:1px solid #bbb;
+	padding:0;
+	float:left;
+}
+.numboxsss{
+ 	width:0.5rem;
+ }
+.contentDiv .choose li.chooseLi div.last .oBtnSure{
+	width:1.5rem;
+	height:0.6rem;
+	line-height:0.6rem;
+	text-align:center;
+	background:#FF4200;
+	color:#FFFFFF;
+	float:left;
+	margin-left:0.4rem;
+	font-size:0.24rem;
+	padding:0;
+	border-radius:0.15rem;
+}
+.contentDiv .choose li.chooseLi div.last{
+	overflow: hidden;
+	margin-bottom:0.2rem;
+}
+.contentDiv .choose li.chooseLi .top.chooseTop{
+	border-bottom:1px solid #CCCCCC;
+}
+.contentDiv .choose li.chooseLi .activeDiv{
+	width:100%;
+	height:0.8rem;
+	line-height:0.8rem;
+	padding:0 0.1rem;
+	color:#b4282d;
+}
+.contentDiv .choose li.chooseLi .activeDiv span{
+	display:inline-block;
+}
+.contentDiv .choose li.chooseLi .activeDiv .right{
+	margin-left:0.2rem;
+}
+.contentDiv .choose li i.down{
+	transform:rotate(90deg);
+	-moz-transform:rotate(90deg);
+	-webkit-transform:rotate(90deg);
+	filter:progid:DXImageTransform.Microsoft.BasicImage(rotation=1);   
+}
+#header span .homeImg,#header span .share{
+	width:0.5rem;
+	height:0.75rem;
+	text-align:center;
+	display:inline-block;
+	float:left;
+	z-index:99;
+}
+#header span .homeImg{
+	background:url(../../img/shoppingCart/shouye.png) no-repeat center;
+	background-size:0.35rem;
+}
+#header span .share{
+	background:url(../../img/shoppingCart/fenxiang.png) no-repeat center;
+	background-size:0.3rem;
+	margin-left:0.1rem;
+}
+.mui-bar .mui-title{
+	left:25%;
+	right:25%;
+}
+.oldMoneyss{
+	font-style:normal;
+	font-size:0.24rem;
+	color:#333333;
+	text-decoration:line-through;
+}
+.mui-content .btnDiv .gowuche i{
+	font-style:normal;
+	font-size:0.2rem;
+	position:absolute;
+	right:0;
+	top:0;
+	width:0.3rem;
+	height:0.3rem;
+	background:#FF4200;
+	border-radius:0.15rem;
+	color:#FFFFFF;
+	line-height:0.3rem;
+	transform:scale(0.9);
+}
+.disabledActive{
+	pointer-events: none;
+    cursor: default;
+    opacity: 0.4;
+  	filter:alpha(opacity=40);
+}
+.showSinglePicture{
+	width:100%;
+	height:13rem;
+	position: fixed;
+	top:0;
+	z-index: 9999;
+	background:#000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+}
+.btnarr{
+	position: absolute;
+	top:50%;
+	left:50%;
+	margin-left:-25%;
+	z-index: 99999;
+	width:50%;
+	display: flex;
+	flex-wrap: wrap;
+	
+}
+.btnarr button{
+	width:100%;
+	height: .8rem;
+}
+.disnone{
+	display:none;
+}

@@ -1,0 +1,118 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+
+.topTitle{
+	padding:0.2rem 0.3rem;
+	overflow:auto;
+}
+.topTitle div{
+	display:inline-block;
+	float:left;
+}
+.topTitle div.leftDiv{
+	margin-right:0.2rem;
+}
+.topTitle div.leftDiv img{
+	width:1.3rem;
+	height:1.3rem;
+}
+.topTitle div.rightDiv{
+	width:70%;
+}
+.topTitle div.rightDiv p{
+	font-size:0.22rem;
+	color:#000000;
+	width:100%;
+}
+.topTitle div.rightDiv p.title{
+	margin-bottom:0.28rem;
+	line-height:0.38rem;
+}
+.topTitle div.rightDiv p .left{
+	color:#5b5b5b;
+}
+.topTitle div.rightDiv p .right{
+	float:right;
+}
+.kong{
+	width:100%;
+	height:0.2rem;
+	background:#f3f3f3;
+}
+.section{
+	width:100%;
+	padding:0.3rem;
+	padding-top:0;
+}
+.section .score{
+	
+}
+.section .noPadding{
+	padding:0;
+	line-height:0.8rem;
+}
+.mui-table-view-cell:after{
+	height:0;
+}
+.section .mui-icon{
+	line-height:0;
+	font-size:0.34rem;
+}
+.mui-icon-star-filled{
+	color:#ff9000;
+}
+.contentDiv{
+	position:relative;
+}
+.contentDiv textarea{
+	width:100%;
+	height:4rem;
+	padding-top:0.1rem;
+	padding-left:0.1rem;
+	font-size:0.22rem;
+	color:#000000;
+	text-indent:1em;
+	background-color:#f7f7f7;
+	border:none;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {   
+ /* WebKit browsers */   
+	color: #b5b5b5;   
+}   
+input:-moz-placeholder, textarea:-moz-placeholder {   
+/* Mozilla Firefox 4 to 18 */   
+	color: #b5b5b5;   
+}   
+input::-moz-placeholder, textarea::-moz-placeholder {   
+ /* Mozilla Firefox 19+ */   
+	color: #b5b5b5;   
+}   
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {   
+ /* Internet Explorer 10+ */   
+	color: #b5b5b5;   
+} 
+.contentDiv .statistics{
+	font-size:0.22rem;
+	color:#bababa;
+	position:absolute;
+	right:0.2rem;
+	bottom:0.4rem;
+}
+.oBtn{
+	width:100%;
+	height:0.7rem;
+	background:#ff4200;
+	color:#FFFFFF;
+	text-align:center;
+	margin-top:0.2rem;
+	line-height:0.7rem;
+	border-radius:0.08rem;
+	margin:0 auto;
+	font-size:0.26rem;
+	margin-bottom:0.2rem;
+	margin-top:0.5rem;
+}
+.wordSize{
+	font-size:0.24rem;
+}

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myOrder/orderDetail.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">订单详情</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll list-box">
+					<div class="contentDiv">
+						<div class="orderTop">
+							<div class="left">
+								<p v-if="differenceKey == 1">交易完成</p>
+								<p v-if="differenceKey == 1">收到货后如有意见请联系我们的客服电话</p>
+								<p v-if="differenceKey == 2">商品退货</p>
+								<p v-if="differenceKey == 2">如有意见请联系我们的客服电话</p>
+								<p v-if="differenceKey == 3">商品退货</p>
+								<p v-if="differenceKey == 3">如有意见请联系我们的客服电话</p>
+							</div>
+							<div>
+								<img src="../../../img/mine/dingdanchenggong.png"/>
+							</div>
+						</div>
+						<ul>
+							<li>
+								<span class="leftImg"></span>
+								<div class="details">
+									<div class="name mui-clearfix">
+										<div class="mui-pull-left" >{{address.name}}</div>
+										<div class="mui-pull-right">{{address.phone}}</div>
+									</div>
+									<div class="area">{{address.detailed}}</div>
+								</div>
+							</li>
+						</ul>
+						<div class="section">
+							<div v-for="(item,index) in infos.Orderrelevance" class="mainDiv">
+								<img :src="server+item.PICPATH"/>
+								<p class="name titlename">{{item.TITLE}}</p>
+								<p v-if="item.SPECIFICATIONS == 1" class="center">
+									规格：{{item.MYSIZE}}
+									<span style="color:#000000;float:right;">￥{{item.TOTALFEE}}</span>
+								</p>
+								<p v-if="item.SPECIFICATIONS == 0" class="center">
+									尺码：{{item.MYSIZE}}
+									<span style="color:#000000;float:right;">￥{{item.TOTALFEE}}</span>
+								</p>
+								<p v-if="item.COLOUR != 1" class="center">
+									颜色：{{item.COLOUR}}
+								</p>
+								<p class="center">
+									数量：{{item.NUM}}{{item.COMPANY}}
+								</p>
+								<!-- -->
+								<div style="margin-left:0.2rem;" v-if="status==0&&orderType==1&&isReturn==0" @tap="turnTo('applyAfterSale',''+item.ID+'');" class="applyBtn">申请退货</div>
+								<div v-if="isBuyAgin==0&&orderType==1" @tap="turnTo('../../shoppingCart/commodityDetails','commodityDetails',''+item.ITEMID+'');" class="applyBtn">再次购买</div>
+							</div>
+						</div>
+									<!--infos.Orderrelevance.length>1&&-->
+								
+									<div v-if="status==0&&isReturn==0" @tap="isShows();" class="allRturn">整单申请退货</div> 
+									<div class="showReturn" v-if="isShow">
+										<p style="font-size:28px;">申请原因</p>
+										<p style="padding-top:19px;margin-bottom: 19px;"><input type="text" v-model="refuse" vplaceholder="请输入退货的原因" /></p>
+										<p>
+											<form>
+												<input type="radio" name="退货方式" @tap="chooseType(1)" checked id="us"/><label for="us">退回厂商</label>
+												<input type="radio" name="退货方式"  @tap="chooseType(2)" id="us1"/><label for="us1">退回门店</label>
+											</form>
+										</p>
+										<p style="text-align:center;margin-top:-10px">
+											<button class="oBtn" style="margin-left: ;"  @tap="closeShow()" >取消</button>
+											<button  class="oBtn" @tap="returnGoods(''+infos.order[0].ID+'')">确认</button>
+										</p>
+									</div>
+						<div v-for="(item,index) in infos.order">
+							<ul class="someThings">
+								<li>
+									<p class="left">邮费</p>
+									<p class="right">￥{{item.POSTFEE || 0}}</p>
+
+								<li> 
+									<p class="left">实付金额合计</p>
+									<p class="right orange">￥{{item.PAYMENT}}</p>
+								</li>
+								<li>
+									<p class="left">订单状态</p>
+									<p class="right">{{item.STATUS}}</p>
+								</li>
+								
+							</ul>
+							<ul class="someThings someThingsGray">
+								<li>
+									<p class="left">下单时间</p>
+									<p class="right">{{item.CDATE}}</p>
+								</li>
+								<li>
+									<p class="left">订单编号</p>
+									<p class="right">{{item.ID}}</p>
+								</
+								li>
+								<!--<li>
+									<p class="left">支付方式</p>
+									<p class="right">支付宝</p>
+								</li>-->
+							</ul>
+							<ul class="someThings someThingsBottom">
+								<li>
+									<p class="left">物流助手</p>
+								</li>
+								<li v-for="(i,index) in infos.trajectorys"> 
+									<p class="left">{{i.type}}</p>
+									<p class="right">{{i.time}}</p>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<!--<div class="footerMessage">
+					<div class="right">
+						<p class="buyAgin">再次购买</p>
+						<p class="look">查看物流</p>
+						<p class="zhuijia">追加评论</p>
+					</div>
+				</div>-->
+			</div>
+			
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/orderDetail.js"></script>
+	</body>
+
+</html>

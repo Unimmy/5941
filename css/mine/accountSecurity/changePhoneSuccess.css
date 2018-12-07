@@ -1,0 +1,32 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+.contentDiv{
+	width:100%;
+	text-align:center;
+}
+.contentDiv img{
+	width:0.7rem;
+	height:0.7rem;
+	display:inline-block;
+	margin-top:1rem;
+	margin-bottom:0.2rem;
+}
+.contentDiv p{
+	font-size:0.24rem;
+	color:#000000;
+}
+.oBtn{
+	width:96%;
+	height:0.7rem;
+	background:#ff4200;
+	color:#FFFFFF;
+	text-align:center;
+	margin-top:0.2rem;
+	line-height:0.7rem;
+	border-radius:0.08rem;
+	margin:0 auto;
+	font-size:0.26rem;
+	margin-bottom:0.2rem;
+	margin-top:2rem;
+}

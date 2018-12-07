@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/mine/setting.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">设置</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<ul class="someThings">
+							<li @tap="initUpdate();">
+								<p class="left">检查更新</p>
+								<p class="right redPack">
+									<i class="arrow_right"></i>
+								</p>
+							</li>	
+							<li class="scavengingCaching">
+								<p class="left redPack">清除缓存</p>
+							</li>
+						</ul>
+						<div @click="goLogin();" class="oBtn">退出</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/setting.js"></script>
+		<script>
+			var wgtVer=null;
+			//获取URL参数
+			function getUrlObj() { //获取url？号后面的值，以对象的形式存在
+				var strs = location.search.substr(1).split("&");			
+				var Obj = {}; 
+				strs.forEach(function(v,k){
+					Obj[v.split("=")[0]]=decodeURI(v.split("=")[1]); 
+				})
+				console.log(Obj.type);
+				if(Obj.type == 'clickOpen'){
+					initUpdate();
+				}
+				return Obj; 
+			}
+			getUrlObj();
+			
+			function plusReady(){ // 获取本地应用资源版本号
+			    plus.runtime.getProperty(plus.runtime.appid,function(inf){
+			        wgtVer=inf.version;
+			    });
+			}
+			//休眠方法
+			var ver;
+			function sleep(numberMillis) {
+			    var now = new Date();
+			    var exitTime = now.getTime() + numberMillis;
+			    while (true) {
+			        now = new Date();
+			        if (now.getTime() > exitTime)
+			            return;
+			    }
+			}
+			function initUpdate(){
+				console.log('开始更新了的');
+				mui.plusReady(function(){ 
+				    plus.runtime.getProperty(plus.runtime.appid, function(inf) {
+				            ver = inf.version;
+				            var url= serverUrl+'/version/select';
+				            var client;
+			            	console.log('当前版本：'+ver);
+				            var ua = navigator.userAgent.toLowerCase();
+				            if(/iphone|ipad|ipod/.test(ua)) {    //苹果手机     
+				            	 mui.ajax(url,{
+					                data:{},
+					                dataType:'json',
+					                type:'POST',
+					                timeout:10000,
+					                success:function(data){  
+					                    if(data.status == 200){
+				                			if(data.data[0].CODE>ver){                        
+		                                        mui.alert("发现新版本:V"+data.data[0].CODE,function(){
+		                                        	document.location.href='https://itunes.apple.com/cn/app/san-gu-hui/id1424059090?mt=8'; //上新APPStore下载地址
+		                                        },'div');             
+		                                    }else{
+		                                    	mui.toast('当前已是最新版本');
+		                                    	
+									            console.log('当前版本号已是最新');
+									            return;
+		                                    }
+				                		}
+					                },
+					                error: function(xhr, type, errerThrown) {
+					                    mui.toast('网络异常,请稍候再试');
+					                }
+					            });
+				            }else if(/android/.test(ua)) { 
+				                mui.ajax(url,{
+				                data:{},
+				                dataType:'json',
+				                type:'POST',
+				                timeout:10000,
+				                success:function(data){  
+				                    if(data.status == 200){
+			                			console.log(JSON.stringify(data));
+			                			console.log(ver);
+			                			console.log(JSON.stringify(data.data));
+			                			console.log(data.data[0].CODE);
+			                			if(data.data[0].CODE>ver){                        
+	                                        mui.toast("发现新版本:V"+data.data[0].CODE+',检测中请耐心等待');
+	                                        plus.nativeUI.showWaiting();
+											var dtask = plus.downloader.createDownload(data.data[0].URL, {}, function(d, status) {
+												plus.nativeUI.closeWaiting();
+					                            if (status == 200) {                                        
+					                                plus.nativeUI.toast("正在准备环境，请稍后！");
+					                               	sleep(1000);
+					                                var path = d.filename;//下载apk
+					                                console.log(path);
+					                                plus.runtime.install(path); // 自动安装apk文件
+					                            }else {
+					                                mui.alert('版本更新失败:' + status,function(){},'div');
+					                            }
+					                        });
+					                        dtask.start(); 
+	                                    }else{
+	                                    	mui.toast('当前已是最新版本');
+								            console.log('当前版本号已是最新');
+								            return;
+	                                    }
+			                		}
+				                },
+				                error: function(xhr, type, errerThrown) {
+				                    mui.toast('网络异常,请稍候再试');
+				                }
+				            });
+				        }
+				    });
+				     
+				});
+			}
+		</script>
+	</body>
+
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title>我的快乐币</title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/shopGuide/myCommission.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header v-if="identityType == 3 || identityType == 2" class="header mui-bar mui-bar-nav nav-home">	
+				<div id="header" >
+					<h1 class="mui-title">快乐币合计</h1>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				</div>
+				<div @tap="turnTo('moneyList','moneyList',''+identityType+'','2','已入账金额');" class="headerMain">
+					{{commissionMoney | moneyFiler}}
+				</div>
+				<p @tap="turnTo('moneyList','moneyList',''+identityType+'','2','已入账金额');" class="mingcheng">已入账金额</p>
+				<div class="headerMBottom">
+					<div @tap="turnTo('moneyList','moneyList',''+identityType+'','1','未入账金额');" class="left">
+						<p>{{nocommissionMoney | moneyFiler}}</p>
+						<p>未入账金额</p>
+					</div>
+					<i></i>
+					<div @tap="turnTo('moneyList','moneyList',''+identityType+'','3','已结算金额');" class="right">
+						<p>{{jiesuanMoney | moneyFiler}}</p>
+						<p>已结算金额</p>
+					</div>
+				</div>
+			</header>
+			<!---->
+			<header v-if="identityType == 1 || identityType == 0" class="header mui-bar mui-bar-nav nav-home">	
+				<div id="header" >
+					<h1 class="mui-title">快乐币合计</h1>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				</div>
+				<div class="headerMain">
+					{{commissionMoney | moneyFiler}}
+				</div>
+				<p class="mingcheng">已入账金额</p>
+				<div class="headerMBottom">
+					<div class="left">
+						<p>{{nocommissionMoney | moneyFiler}}</p>
+						<p>未入账金额</p>
+					</div>
+					<i></i>
+					<div class="right">
+						<p>{{jiesuanMoney | moneyFiler}}</p>
+						<p>已结算金额</p>
+					</div>
+				</div>
+			</header>
+			<!---->
+			<div class="mui-content">
+				<div id="pullrefresh"  class="">
+					<div class="products">
+						<div v-if="identityType == 0" class="contentDiv" >
+							<div id="header">
+								<h1 class="mui-title">门店贡献</h1>
+							</div>
+							<div @tap="turnTo('moneyList','moneyList','0','2','已入账金额');" class="headerMain">
+								{{mdCommissionMoney | moneyFiler}}
+							</div>
+							<p @tap="turnTo('moneyList','moneyList','0','2','已入账金额');" class="mingcheng">已入账金额</p>
+							<div class="headerMBottom">
+								<div @tap="turnTo('moneyList','moneyList','0','1','未入账金额');" class="left">
+									<p>{{mdNocommissionMoney | moneyFiler}}</p>
+									<p>未入账金额</p>
+								</div>
+								<i></i>
+								<div @tap="turnTo('moneyList','moneyList','0','3','已结算金额');" class="right">
+									<p>{{mdJiesuanMoney | moneyFiler}}</p>
+									<p>已结算金额</p>
+								</div>
+							</div>
+						</div>
+						<!---->
+						<div v-if="identityType == 0 || identityType == 1" class="contentDiv" >
+							<div id="header" > 
+								<h1 class="mui-title">分销商贡献</h1>
+							</div>
+							<div @tap="turnTo('moneyList','moneyList','1','2','已入账金额');" class="headerMain">
+								{{jxsCommissionMoney | moneyFiler}}
+							</div>
+							<p @tap="turnTo('moneyList','moneyList','1','2','已入账金额');" class="mingcheng">已入账金额</p>
+							<div class="headerMBottom">
+								<div @tap="turnTo('moneyList','moneyList','1','1','未入账金额');" class="left">
+									<p>{{jxsNocommissionMoney | moneyFiler}}</p>
+									<p>未入账金额</p>
+								</div>
+								<i></i>
+								<div @tap="turnTo('moneyList','moneyList','1','3','已结算金额');" class="right">
+									<p>{{jxsJiesuanMoney | moneyFiler}}</p>
+									<p>已结算金额</p>
+								</div>
+							</div>
+						</div>
+						<!---->
+						<div v-if="identityType == 0 || identityType == 1" class="contentDiv" >
+							<div id="header" >
+								<h1 class="mui-title">线上店主贡献</h1>
+							</div>
+							<div @tap="turnTo('moneyList','moneyList','2','2','已入账金额');" class="headerMain">
+								{{xsdzCommissionMoney | moneyFiler}}
+							</div>
+							<p @tap="turnTo('moneyList','moneyList','2','2','已入账金额');" class="mingcheng">已入账金额</p>
+							<div class="headerMBottom">
+								<div @tap="turnTo('moneyList','moneyList','2','1','未入账金额');" class="left">
+									<p>{{xsdzNocommissionMoney | moneyFiler}}</p>
+									<p>未入账金额</p>
+								</div>
+								<i></i>
+								<div @tap="turnTo('moneyList','moneyList','2','3','已结算金额');" class="right">
+									<p>{{xsdzJiesuanMoney | moneyFiler}}</p>
+									<p>已结算金额</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+			
+			
+			<!--佣金界面更改不需要了-->
+			<!--<div class="mui-content">
+				<div id="pullrefresh"  class="">
+					<div class="products">
+						<div class="contentDiv">
+							<div v-for="(item,index) in infos" class="section">
+								<div class="paddingAll">
+									<p class="title">
+										<span class="left">用户：{{item.phone1}}</span>
+										<span class="right">已完成</span>
+									</p>
+									<div class="centerMain">
+										<p class="mui-col-sm-4">
+											<span>{{item.ID}}</span>
+											<span class="two">订单编号</span>
+										</p>
+										<p class="mui-col-sm-4">
+											<span>{{item.NUM}}件</span>
+											<span class="two">商品数量</span>
+										</p>
+										<p class="mui-col-sm-4">
+											<span>{{item.PAYMENT | moneyFiler}}</span>
+											<span class="two">订单金额</span>
+										</p>
+									</div>
+								</div>
+								<p class="bottomWord">
+									<span class="right">佣金：{{item.Final | moneyFiler}}</span>
+								</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>-->
+			<!--//-->
+			
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/shopGuide/myCommission.js"></script>
+	</body>
+
+</html>

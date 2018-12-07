@@ -1,0 +1,19 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+html,body,.mui-bar-nav~.mui-content{
+	background: #FFFFFF;
+}
+.mui-content{
+	padding:0.2rem;
+	margin-top:0.2rem;
+}
+body,.mui-bar-nav~.mui-content pre{
+	padding:0 0.2rem;
+	margin-top:0.1rem;
+	white-space:pre-line;
+	padding-left:0;
+}
+.preprepre{
+	text-indent: 1em;
+}

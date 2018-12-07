@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title>绑定银行卡</title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/bankCard/bankCard.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">绑定银行卡</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<p class="tips">*为了您账户安全性，请绑定信息</p>
+					<ul>
+						<li>
+							<label for="name"><span class="w2">姓名</span></label>
+							<input type="text" v-model="name" id="name" placeholder="请输入真实姓名" value="" />
+						</li>
+						<li>
+							<label for="idCard"><span class="">身份证号</span></label>
+							<input type="tel" v-model="idCard" id="idCard" placeholder="请输入身份证号" value="" />
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<label for="bankCard"><span class="">所属银行</span></label>
+							<input type="text" v-model="bankCard" name="bankCard" id="bankCard" placeholder="请输入所属银行" value="" />
+						</li>
+						<li>
+							<label for="openBank"><span class="w3">开户行</span></label>
+							<input type="text" v-model="openBank" name="openBank" id="openBank" placeholder="请输入开户行" value="" />
+						</li>
+						<li>
+							<label for="cardNum"><span class="w2">卡号</span></label>
+							<input type="tel" v-model="cardNum" name="cardNum" id="cardNum" placeholder="请输入银行卡号" value="" />
+						</li>
+					</ul>
+					<ul>
+						<li>
+							<label for="phone"><span class="">手机号码</span></label>
+							<input type="tel" v-model="phone" name="phone" id="phone" placeholder="" readonly="readonly" value="" />
+						</li>
+						<li>
+							<label for="codeNum"><span class="w3">验证码</span></label>
+							<input type="tel" v-model="codeNum" name="codeNum" id="codeNum" placeholder="请输入验证码" value="" />
+							<p @click="sendCode();" class="codeBtn">发送验证码</p>
+						</li>
+					</ul>
+					<div @click="isBtn();" class="oBtn">确定</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/bankCard/bankCard.js"></script>
+	</body>
+
+</html>

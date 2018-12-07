@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myOrder/exchangeGoodsDetail.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">退换货详情</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll list-box">
+					<div class="contentDiv">
+						<div class="orderTop">
+							<div class="left">
+								<p>退换货交易</p>
+								<p>如遇到什么问题请联系我们的客服电话</p>
+							</div>
+							<div>
+								<img src="../../../img/mine/dingdanchenggong.png"/>
+							</div>
+						</div>
+						<div class="section">
+							<div v-for="(item,index) in infos" class="mainDiv">
+								<img :src="server+item.PICPATH"/>
+								<p class="name">{{item.TITLE}}<span>￥{{item.REFUND}}</span></p>
+								<!--<p v-if="item.SPECIFICATIONS == 1" class="center">
+									规格：{{item.MYSIZE}}
+								</p>
+								<p v-if="item.SPECIFICATIONS == 0" class="center">
+									尺码：{{item.MYSIZE}}
+								</p>
+								<p v-if="item.COLOUR != 1" class="center">
+									颜色：{{item.COLOUR}}
+								</p>-->
+								<p class="center">
+									数量：{{item.NUM}}{{item.COMPANY}}
+								</p>
+
+							</div>
+						</div>
+						<div v-for="(item,index) in infos">
+							<ul class="someThings">
+								<li>
+									<p class="left">审核状态</p>
+									<p v-if="item.ISTRUE == -1" class="right">未通过</p>
+									<p v-if="item.ISTRUE == 0 " class="right">审核中</p>
+									<p v-if="item.ISTRUE == 1||item.ISTRUE == 2||item.ISTRUE == 3" class="right">已通过</p>
+								</li>
+								<li>
+									<p class="left">提出申请原因</p>
+									<p class="right">{{item.REASON}}</p>
+								</li>
+								<li v-if="item.ISTRUE == -1">
+									<p class="left">检测结果</p>
+									<p class="right reasyP">
+										<span class="reasy">{{item.REFUSE}}</span>
+									</p>
+								</li>
+							</ul>
+							<ul class="someThings someThingsGray">
+								<li>
+									<p class="left">申请时间</p>
+									<p class="right">{{item.CDATE}}</p>
+								</li>
+								<li>
+									<p class="left">退货编号</p>
+									<p class="right">{{item.ID}}</p>
+								</li>
+								<!--<li>
+									<p class="left">所属订单号</p>
+									<p class="right">{{item.ORDERRELEVANCEID}}</p>
+								</li>-->
+								<!--<li>
+									<p class="left">支付方式</p>
+									<p class="right">支付宝</p>
+								</li>-->
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div v-if="item.ISTRUE  == -1 || item.ISTRUE == 0" v-for="(item,index) in infos" class="footerMessage">
+					<div class="right">
+						<!--<p v-if="item.ISTRUE  == -1" class="look">再次申请</p>-->
+						<p @tap="withdraw(''+item.ID+'');" class="zhuijia">取消申请</p>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/exchangeGoodsDetail.js"></script>
+	</body>
+
+</html>

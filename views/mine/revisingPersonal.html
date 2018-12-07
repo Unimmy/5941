@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/mine/revisingPersonal.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<link rel="stylesheet" href="../../lib/mui/mui.picker.min.css"/>
+	<link rel="stylesheet" href="../../lib/mui/mui.poppicker.css" />
+	<script src="../../lib/mui/mui.picker.min.js"></script>
+	<script src="../../lib/mui/mui.poppicker.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">个人资料</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<div class="header">
+							<div class="left uploadImg" @tap="UploadImg('imgUrl_h','imgUrl_h', 1, 72,72);">
+								<img :src="server+infos.portrait" id="imgUrl_h" alt="" />
+							</div>
+							<p class="imgBottom">点击头像可进行修改</p>
+						</div>
+						<div class="section">
+							<div class="sectionMain">
+								<p class="leftWord">昵称</p>
+								<input class="rightInput" type="text" v-model="infos.nickname"/>
+							</div>
+							<div class="sectionMain">
+								<p class="leftWord">手机</p>
+								<input class="rightInput" type="text" v-model="infos.phone" readonly="readonly"/>
+							</div>
+							<div class="sectionMain">
+								<p class="leftWord">性别</p>
+								<input class="rightInput" readonly="readonly" v-chose="{name: 'sizeName',desc:sizeName}"  placeholder="请选择性别"  v-model="infos.sex"/>
+							</div>
+							<div class="sectionMain">
+								<p class="leftWord">年龄</p>
+								<input maxlength="3" class="rightInput" type="tel" v-model="infos.age"/>
+							</div>
+							<div class="sectionMain">
+								<p class="leftWord">邮箱</p>
+								<input class="rightInput" type="text" v-model="infos.emil"/>
+							</div>
+						</div>
+						<div @click="saveData();" class="oBtn">保存</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/revisingPersonal.js"></script>
+	</body>
+
+</html>

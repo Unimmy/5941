@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="author" contect="[{name:liuhui,contact:402714516@qq.com},{name:lugang,contact:604616579@qq.com}]"> 
+    <title></title>	
+    <script src="../../js/common/calcSize.js"></script>
+    <link href="../../lib/mui/mui.min.css" rel="stylesheet"/>
+    <link href="../../lib/swiper3/swiper.min.css" rel="stylesheet">
+    <link href="../../css/common.css" rel="stylesheet"/>
+    <link href="../../css/mine/rechargeAmount.css" rel="stylesheet"/>
+    <script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../lib/mui/mui.min.js"></script>
+    <script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/swiper3/swiper.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">充值金额</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+    			<div class="swiper-container">
+    				<div class="swiper-wrapper">
+						<div class="swiper-slide" v-for="info in infos"></div>
+					</div>
+				</div>
+				<div class="checkDetilBox">
+					<p class="active">500元</p>
+					<p>1000元</p>
+				</div>
+				<div class="payMethodss">
+					<p class="title">支付方式</p>
+					<ul class="payMethod">
+						<li class="weChart">
+							<p class="leftImg"></p>
+							<p>微信支付</p>
+							<p @click="choosePay('0');" :class="{active:isChoosePay==0}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+						<li class="alipay">
+							<p class="leftImg"></p>
+							<p>支付宝</p>
+							<p @click="choosePay('1');" :class="{active:isChoosePay==1}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="pickProduct">
+					<div class="productTitle">
+						<i></i>
+						<span>温馨提示</span>
+						<i></i>
+					</div>
+					<p>1.余额暂不支持退款</p>
+					<p>2.余额开具发票明细为：预付卡销售和充值</p>
+					<p>3.余额支持app端使用，暂不支持小程序内使用</p>
+				</div>
+				<div class="oBtn">需支付100</div>
+			</div>
+		</div>
+		
+					
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/rechargeAmount.js"></script>
+	</body>
+</html>

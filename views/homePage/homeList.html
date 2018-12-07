@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/homePage/homeList.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">{{title}}</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+				<div class="imgDiv">
+					<img :src="bannerImg" alt="" />
+				</div>
+				<div id="pullrefresh"  class="">
+					<div class="products">
+						<dl @tap="isLogin(''+item.COMMODITYKEYID+'');" v-for="(item,index) in shops" class="shopps">
+							<dt><img v-bind:src="server+item.MAINIMAGE"/></dt>
+							<dd>
+								<p>{{item.NAME}}</p>
+								<span class="priceNew">￥ {{item.PRICE}}</span><span v-if="item.ORIGINALPRICE!='' && item.ORIGINALPRICE!=item.PRICE && item.ORIGINALPRICE!=null &&item.ORIGINALPRICE!=undefined " class="oldMoney">￥{{item.ORIGINALPRICE}}</span>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/homePage/homeList.js"></script>
+	</body>
+</html>

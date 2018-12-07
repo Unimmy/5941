@@ -1,0 +1,174 @@
+@charset "UTF-8";
+html{
+	height: 100%;
+background-color: #efeff4;
+}
+body{
+	line-height: 20px;
+}
+body, ul, ol, li, p, h1, h2, h3, h4, h5, h6, form, fieldset, table, td, img, div, tr,dd,dl,dt{margin:0; padding:0;}
+/* 设置内容左对齐，恢复因BODY设置剧中产生的继承 */
+/* 标签属性，textarea,input 强制输入时内容超出时换行 */
+textarea, input {word-wrap:break-word; word-break:break-all; padding:0px;font-family: "Microsoft YaHei", Verdana, Arial, sans-serif,"宋体";}
+input, select {font-size:12px; vertical-align:middle;}
+/* 清除ul列表标记的样式，ul列表更多的用在不需要列表前置符号的样式里 */
+li {list-style:none;}
+em{font-style:normal;}
+/* 定义默认的链接样式，仅仅是作为默认样式提供，可以在各自的实例中覆盖掉 */
+a:link,a:visited,a:active{text-decoration:none;} 
+a:hover{text-decoration:none;}
+/* 去掉链接的虚线框 */
+a {outline:none; star:expression_r(this.onFocus=this.blur());cursor: pointer;}
+/* 清除浮动 */
+.clearfix{*zoom: 1;}.clearfix:before,.clearfix:after{display:table;line-height:0;content:"";}.clearfix:after{clear: both;}
+
+input[type=text]{margin:0;}
+/*是否禁用*/
+.disabled{
+	pointer-events:none !important;
+}
+
+/*mui公共样式重置*/
+.mui-table-view-cell:after{
+	background-color:#ebebeb;
+}
+.btn-wrap .btn-style{
+	box-shadow:0 0.08rem 0.2rem -0.04rem #ff4200 !important;
+}
+.mui-btn.mui-active:enabled, .mui-btn:enabled:active, button.mui-active:enabled, button:enabled:active, input[type=button].mui-active:enabled, input[type=button]:enabled:active, input[type=reset].mui-active:enabled, input[type=reset]:enabled:active, input[type=submit].mui-active:enabled, input[type=submit]:enabled:active{
+	box-shadow:0 0.08rem 0.2rem -0.04rem #929292 !important;
+}
+
+
+body,.mui-bar-nav~.mui-content{
+	background: #fff;
+}
+#header{
+	box-shadow:none;
+	/*border-bottom:1px solid #EEEEEE !important;*/
+	height:0.75rem;
+	line-height:0.75rem;
+}
+#header .mui-title{
+	height:0.75rem;
+	line-height:0.75rem;
+	font-size:0.26rem;
+}
+#header span i{
+	font-style:normal;
+	font-size:0.18rem;
+}
+body,.mui-bar-nav~.mui-content{
+	background: #fff;
+}
+.mui-action-back{
+	color:#767676;
+}
+.mui-title{
+	color:#000;
+}
+.mui-bar-nav{
+	/*box-shadow: none;*/
+	border-bottom: none !important;
+	background-color: #fff;
+}
+.mui-bar-nav.mui-bar .mui-icon{
+	margin-right: -0.2rem;
+    margin-left: -0.2rem;
+    padding-right: 0.2rem;
+    padding-left: 0.2rem;
+}
+.mui-bar .mui-icon{
+	font-size: 0.35rem;
+    position: relative;
+    z-index: 20;
+    padding-top: 0.2rem;
+    padding-bottom: 0.15rem;
+}
+.mui-bar-nav~.mui-content{
+	padding-top:0.75rem;
+}
+
+/*mui.confrim样式更改*/
+.mui-popup{
+	width:5rem;
+}
+.mui-popup-inner{
+	padding:0.5rem;
+}
+.mui-popup-title{
+	font-size:0.3rem;
+}
+.mui-popup-title+.mui-popup-text{
+	font-size:0.24rem;
+	margin:0.25rem 0 0;
+}
+.mui-popup-buttons{
+	height:0.78rem;
+}
+.mui-popup-button{
+	color:#000000;
+	font-size:0.24rem;
+	height:0.8rem;
+	line-height:0.8rem;
+	padding:0 0.02rem;
+	
+}
+.mui-popup-button.mui-popup-button-bold{
+	font-weight:normal;
+	color:#ff4200;
+}
+/*重绘弹出框*/
+.mui-popup{
+	width: 90%;
+}
+.mui-popup-inner{
+	padding: 43px 30px 37px;
+	background-color: #FFFFFF;
+	border-radius: 8px 8px 0 0;
+}
+.mui-popup-inner:after{
+	background-color: transparent;
+}
+.mui-popup-inner .mui-popup-title{
+	display: none;
+}
+.mui-popup-inner .mui-popup-text{
+	font-size: 20px;
+	color: #262626;
+}
+.mui-popup-inner .mui-popup-text span{
+	color: #FA5453;
+}
+.mui-popup-buttons{
+	height: 70px;
+	background-color: #FFFFFF;
+	margin-top: -1px;
+}
+.mui-popup-buttons .mui-popup-button{
+	width: 34%;
+	height: 40px;
+	line-height: 38px;
+	margin-right: 25px;
+	font-size: 18px;
+	color: #FA5453;
+	border: 1px solid #FA5453;
+	border-radius: 20px;
+}
+.mui-popup-buttons .mui-popup-button-bold{
+	margin-right: 0;
+	/*font-weight: 100;*/
+	color: #FFFFFF !important;
+	border: none;
+	line-height: 40px;
+	background:#ff4200;
+	/*background: linear-gradient(to right, #ff7252, #fe5553);*/
+	/*background: -webkit-linear-gradient(left, #ff7252, #fe5553);*/
+	/*box-shadow: 0 2px 10px #ff7252;*/
+	border-radius: 20px !important;
+	font-size:0.28rem;
+}
+.mui-popup-input input{
+	margin-top:0.2rem;
+	height:0.5rem;
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myOrder/exchangeGoods.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">单品退换货列表</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+				<div id="pullrefresh"  class="" v-show="isNoMyOrder==true">
+					<div class="products">
+						<div class="contentDiv">
+							<ul class="mui-table-view use-wrap" v-for="(item,index) in infos">
+								<li class="mui-table-view-cell mui-row">
+									<p class="time">
+										<span>{{item.CDATE}}</span>
+										<span class="statusRight">{{item.STATUS}}</span>
+									</p>
+									<div class="main">
+										<p v-for="(i,inx) in item.image">
+											<img :src="server+i.PICPATH" v-if="inx<4"/>
+										</p>
+										<i v-if="item.sizenumber == 1">···</i>
+										 <!--@tap="turnTo('orderDetail',''+item.ORDERNUMBER+'')"-->
+										<span>共{{item.A}}件 </span>
+									</div>
+									<p class="money"><span class="left">退货编号：{{item.ID}}</span><span class="right">总价：{{item.PRICE | moneyFiler}}</span></p>
+									<div class="reason">
+										<p class="userR">
+											<span><i>用户申请原因：</i>{{item.REASON}}</span>
+										</p>
+										<p v-if="item.REFUND!='' && item.REFUND!=null && item.REFUND!=undefined" class="platformR">
+											<span><i>商家拒绝原因：</i>{{item.REFUND}}</span>
+										</p>
+									</div>
+								</li>	
+							</ul>
+						</div>
+					</div>	
+				</div>	
+				<div class="noMyOrder" v-show="isNoMyOrder==false">
+					<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+					<p>您没有相关订单~</p>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/exchangeGoodsSingle.js"></script>
+	</body>
+
+</html>

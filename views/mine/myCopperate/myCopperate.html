@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title>我要合作</title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myCopperate/myCopperate.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">我要合作</h1>
+				<a class="white mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="becomeDistributor">
+						<img v-bind:src="server+image2" alt="" />
+						<p @tap="choosePayShow('2');" v-if="isBtn2==1" class="oBtn">成为线上店主</p>
+						<p @tap="turnTo('searchStore','searchStore',zfid2)" v-if="isBtn2==2" class="oBtn">激活</p>
+						<p v-if="isBtn2==1 || isBtn2==2" class="xieyiP">
+							<input class="checkxieyi checkxieyi2" name="checkbox1" value="Item1" type="checkbox" checked>
+							<label class="xieyi">我已阅读并同意</label>
+							<a @tap="turnTo('agreementWord','agreementWord','1')" class="registerAgreement">《线上店主协议》</a>
+						</p>
+					</div>
+					<div class="becomeDistributor becomeDistributorss">
+						<img v-bind:src="server+image1" alt="" />
+						<p @tap="choosePayShow('1');" v-if="isBtn1==1" class="oBtn">成为分销商</p>
+						<p @tap="turnTo('searchStore','searchStore',zfid1)" v-if="isBtn1==2" class="oBtn">激活</p>
+						<p v-if="isBtn1==1 || isBtn1==2" class="xieyiP">
+							<input class="checkxieyi checkxieyi1" name="checkbox1" value="Item1" type="checkbox" checked>
+							<label class="xieyi">我已阅读并同意</label>
+							<a @tap="turnTo('agreementWord','agreementWord','2')" class="registerAgreement">《分销商协议》</a>
+						</p>
+					</div>
+				</div>
+			</div>
+			<div v-if="isShowDiv == true" class="showDiv">
+				<div class="showMain">
+					<ul class="payMethod">
+						<li class="weChart">
+							<p class="leftImg"></p>
+							<p>微信支付</p>
+							<p @tap="choosePay('0');" :class="{active:isChoosePay==0}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+						<li class="alipay">
+							<p class="leftImg"></p>
+							<p>支付宝</p>
+							<p @tap="choosePay('1');" :class="{active:isChoosePay==1}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+						<li class="oBtnss">
+							<p @tap="closeShowDiv();" class="close">取消</p>
+							<p @tap="goPayBtn();" class="goPay">去支付</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div v-if="isImgTu==true" class="hideDiv">
+			<div class="main">
+				<a href="../feedback.html"><img src="../../../img/check/f1.png"/></a>
+				<i @click="closeImg()"></i>
+			</div>
+		</div>
+		</div>
+		
+		<!--script--> 
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myCopperate/myCopperate.js"></script>
+	</body>
+
+</html>

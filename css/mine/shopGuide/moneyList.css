@@ -1,0 +1,44 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+	background:#FF4200;
+}
+#header .mui-title{
+	color:#FFFFFF;
+}
+.contentTable{
+	margin-top:0.2rem;
+	width:100%;
+	text-align:center;
+	background:#FFFFFF;
+	padding:0 0.2rem;
+}
+.contentTable tr{
+	height:0.85rem;
+	line-height:0.85rem;
+}
+.contentTable tr th,.contentTable tr td{
+	font-size:0.26rem;
+	font-weight:normal;
+	padding:0 0.1rem;
+}
+.contentTable tr td{
+	font-size:0.22rem;
+}
+.contentTable tr{
+	border-bottom:1px solid #cccccc;
+}
+.contentTable tr:last-child{
+	border:none;
+}
+.arrow_right{
+	width:0.4rem;
+	height:0.4rem;
+	background:url(../../../img/mine/arrow.png) no-repeat center;
+	background-size:0.15rem;
+}
+.white{
+	color:#FFFFFF;
+}

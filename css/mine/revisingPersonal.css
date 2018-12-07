@@ -1,0 +1,72 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+html,body,.mui-bar-nav~.mui-content{
+	background: #f3f3f3;
+}
+.contentDiv .header{
+	width:100%;
+	height:2.5rem;
+	background:#FFFFFF;
+}
+.contentDiv .header .uploadImg{
+	width:100%;
+	height:1.8rem;
+	line-height:1.8rem;
+	text-align:center;
+}
+.contentDiv .header .uploadImg img{
+	width:1.3rem;
+	height:1.3rem;
+	vertical-align: middle;
+	border-radius:0.65rem;
+}
+.contentDiv .header .imgBottom{
+	font-size:0.24rem;
+	color:#000000;
+	text-align:center;
+}
+.contentDiv .section{
+	width:100%;
+	min-height:4rem;
+	background:#FFFFFF;
+	margin-top:0.2rem;
+}
+.contentDiv .section .sectionMain{
+	width:100%;
+	height:1rem;
+	line-height:1rem;
+	border-bottom:1px solid #EEEEEE;
+	padding:0 0.2rem;
+}
+.contentDiv .section .sectionMain .leftWord{
+	font-size:0.24rem;
+	color:#000000;
+	display:inline-block;
+}
+.contentDiv .section .sectionMain .rightInput{
+	border:none;
+	display:inline-block;
+	float:right;
+	padding:0;
+	color:#b5b5b5;
+	width:80%;
+	text-align:right;
+	height:0.98rem;
+	font-size:0.24rem;
+	/*line-height:1rem;*/
+	margin:0;
+}
+.contentDiv .oBtn{
+	width:94%;
+	height:0.75rem;
+	line-height:0.75rem;
+	text-align:center;
+	font-size:0.28rem;
+	color:#FFFFFF;
+	background-color:#FF4200;
+	border-radius:0.08rem;
+	margin:0 auto;
+	margin-top:1rem;
+	letter-spacing:0.1rem;
+}

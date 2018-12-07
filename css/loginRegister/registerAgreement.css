@@ -1,0 +1,22 @@
+html{
+	background-color: #FFFFFF;
+}
+.btn-register{
+	display: block;
+	line-height: 44px;
+	color: #000000;
+	font-size: 16px;
+}
+#header{
+	box-shadow:none;
+	border-bottom:1px solid #EEEEEE !important;
+}
+body,.mui-bar-nav~.mui-content{
+	background: #fff;
+	padding-top:0;
+}
+body,.mui-bar-nav~.mui-content pre{
+	padding:0 0.2rem;
+	margin-top:0.1rem;
+	white-space:pre-line;
+}

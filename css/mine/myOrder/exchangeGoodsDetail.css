@@ -1,0 +1,185 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+.orderTop{
+	width:100%;
+	height:2rem;
+	background:url(../../../img/mine/jiaoyiwancheng-beijing.png) no-repeat center;
+	background-size:cover;
+	padding:0 0.3rem;
+}
+.orderTop div{
+	display:inline-block;
+	margin-top:0.6rem;
+}
+.orderTop div.left{
+	margin-right:10%;
+}
+.orderTop div.left p{
+	font-size:0.26rem;
+	color:#FFFFFF;
+}
+.orderTop div.left p:last-child{
+	font-size:0.24rem;
+	margin-top:0.1rem;
+}
+.orderTop div img{
+	widows: 0.6emrem;
+	height:0.7rem;
+}
+
+.list-box ul li{
+	position:relative;
+}
+.list-box ul li .details {
+	padding: 0.1rem 0.3rem 0.1rem 0.8rem;
+	border-bottom: 1px solid #E5E5E5;
+	background:#FFFFFF;
+}
+
+.list-box ul li .details .name {
+	font-size: 0.25rem;
+	line-height: 0.52rem;
+	color: #000000;
+}
+
+.list-box ul li .details .area {
+	font-size: 0.25rem;
+	line-height: 0.37rem;
+	color: #000000;
+}
+.list-box ul li .leftImg{
+	width:0.45rem;
+	height:0.5rem;
+	position:absolute;
+	left:0.15rem;
+	top:0.5rem;
+	background:url(../../../img/mine/wodedizhi.png) no-repeat 50%;
+	background-size:0.4rem;
+}
+.section{
+	padding:0.2rem 0;
+	display:flow-root;
+	background:#FFFFFF;
+	margin-top:0.2rem;
+}
+.section .mainDiv{
+	background:#FAFAFA;
+	padding:0.2rem;
+	overflow:auto;
+	margin-bottom:0.2rem;
+}
+.section .mainDiv:last-child{
+	margin-bottom:0;
+}
+.section .mainDiv img{
+	width:1rem;
+	height:1rem;
+	margin-right:0.2rem;
+	float:left;
+}
+.section .mainDiv p{
+	/*display:inline-block;*/
+}
+.section .mainDiv .name{
+	font-size:0.24rem;
+	color:#000000;
+}
+.section .mainDiv .name span{
+	float:right;
+}
+.section .mainDiv .center{
+	margin:0.1rem 0;
+	font-size:0.22rem;
+	color:#afafaf;
+}
+.section .applyBtn{
+	float:right;
+    vertical-align: -7rem;
+    margin-top: -0.5rem;
+    z-index: 99;
+    width:1.3rem;
+    height:0.5rem;
+    line-height:0.5rem;
+    text-align:center;
+    font-size:0.24rem;
+    color:#ff4200;
+    border:1px solid #ff4200;
+    border-radius:0.05rem;
+}
+.someThings{
+	margin-top:0.2rem;
+	background:#FFFFFF;
+}
+.someThings li{
+	height:0.8rem;
+	line-height:0.8rem;
+	border-bottom:1px solid #bebebe;
+	padding:0 0.2rem;
+}
+.someThings li:last-child{
+	border:none;
+}
+.someThings li p{
+	font-size:0.24rem;
+	color:#000000;
+	display:inline-block;
+}
+.someThings li p.right{
+	float:right;
+}
+.someThings li p.reasyP{
+	width:80%;
+	height:0.8rem;
+}
+.someThings li p.right .reasy{
+	font-size:0.2rem;
+	display:inline-block;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width:100%;
+}
+.someThings li p.orange{
+	color:#FF4200;
+}
+.someThingsGray li p{
+	color:#B5B5B5;
+}
+.someThingsGray{
+	margin-bottom:0.85rem;
+}
+.footerMessage{
+	width:100%;
+	height:0.8rem;
+	line-height:0.8rem;
+	background:#FFFFFF;
+	position:absolute;
+	left:0;
+	bottom:0;
+	border-top:1px solid #cccccc;
+	z-index:100;
+	padding:0 0.2rem;
+}
+.footerMessage .right{
+	float:right;
+}
+.footerMessage .right p{
+	display:inline-block;
+	width:1.5rem;
+	height:0.6rem;
+	line-height:0.6rem;
+	text-align:center;
+	color:#5e5e5e;
+	border:1px solid #b5b5b5;
+	border-radius:0.05rem;
+}
+.footerMessage .right p.look{
+	margin-right:0.2rem;
+}
+.displayNone{
+	display:none;
+}

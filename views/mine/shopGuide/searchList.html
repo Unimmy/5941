@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title>列表详情</title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link rel="stylesheet" href="../../../css/homePage/homeIndex.css" />
+	<link href="../../../css/mine/shopGuide/searchList.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<div class="mui-input-row mui-search white">
+				    <input v-model="searchName" placeholder="请输入订单编号来进行搜索" type="search" class="inputSearch mui-input-clear" placeholder="">
+				</div>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a style="color:#FFFFFF;" @tap="searchBtn();" class="mui-pull-right mui-pull-rightHeader white">搜索</a>
+			</header>
+			<div class="mui-content">
+				<div id="pullrefresh"  class="">
+					<div class="products">
+						<div class="contentDiv">
+							<div @tap="turnTo('../myOrder/orderDetail','orderDetail',''+item.ID+'',''+index+'');" class="section" v-for="(item,index) in infos">
+								<div class="paddingAll">
+									<p class="title">
+										<span class="left">用户：{{item.UNAME}}</span>
+										<span class="right">{{item.STATUS}}</span>
+										<!--{{item.STATUS}}-->
+									</p>
+									<div class="centerMain">
+										<p class="mui-col-sm-3">
+											<span style="color:red;">{{item.PAYMENT | moneyFiler}}</span>
+											<span class="two">订单金额</span>
+										</p>
+										<p class="mui-col-sm-3">
+											<span>{{item.NUM}}件</span>
+											<span class="two">商品数量</span>
+										</p>
+										<p class="mui-col-sm-6" v-if="item.ID">
+											<span>{{item.ID}}</span>
+											<span class="two">本产品的订单ID号</span>
+										</p>
+									</div>
+								</div>
+								<p class="bottomWord">
+									<!--<span class="left">分成：{{item.CLERK | moneyFiler}}</span>-->
+									<!--<span class="center">邮费：{{item.POSTFEE | moneyFiler}}</span>-->
+									<span class="right">快乐币：<span class="red">{{item.money}}元</span></span>
+								</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/shopGuide/searchList.js"></script>
+	</body>
+</html>

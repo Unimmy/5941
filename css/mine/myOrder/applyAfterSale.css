@@ -1,0 +1,160 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+.contentDiv{
+	margin-top:0.2rem;
+}
+.contentDiv .detail{
+	background:#FFFFFF;
+}
+.contentDiv .detail .title{
+	height:0.8rem;
+	line-height:0.8rem;
+	font-size:0.24rem;
+	color:#000000;
+	border-bottom:1px solid #bebebe;
+	padding:0 0.2rem;
+}
+.contentDiv .detail .mainDiv{
+	padding:0.2rem;
+	display:flow-root;
+	overflow:hidden;
+}
+.contentDiv .detail .mainDiv img{
+	width: 1.6rem;
+    height: 1.6rem;
+    margin-right: 0.2rem;
+    float: left;
+}
+.contentDiv .detail .mainDiv p{
+	/*display:inline-blo ck;*/
+}
+.contentDiv .detail .mainDiv .name{
+	font-size:0.24rem;
+	color:#000000;
+}
+.contentDiv .detail .mainDiv .center{
+	margin:0.03rem 0;
+}
+.contentDiv .detail .mainDiv .center .left{
+	font-size:0.22rem;
+	color:#afafaf;
+}
+.contentDiv .detail .mainDiv .money{
+	color:#3d3d3d;
+	font-size:0.23rem;
+}
+
+.someThings{
+	margin-top:0.2rem;
+	background:#FFFFFF;
+}
+.someThings li{
+	height:0.8rem;
+	line-height:0.8rem;
+	border-bottom:1px solid #bebebe;
+	padding:0 0.2rem;
+}
+.someThings li:last-child{
+	border:none;
+}
+.someThings li p{
+	font-size:0.24rem;
+	color:#000000;
+	display:inline-block;
+}
+.someThings li p.right{
+	float:right;
+}
+.someThings li p.orange{
+	color:#FF4200;
+}
+.someThingsGray li p{
+	color:#B5B5B5;
+}
+.someThingsGray{
+	margin-bottom:0.85rem;
+}
+.causeOfReturn{
+	margin-top:0.2rem;
+	background:#FFFFFF;
+	padding:0 0.2rem;
+}
+.causeOfReturn .title{
+	height:0.8rem;
+	line-height:0.8rem;
+	font-size:0.24rem;
+	color:#000000;
+}
+.causeOfReturn .causeText{
+	width:100%;
+	height:2.5rem;
+	background:#f7f7f7;
+	font-size:0.22rem;
+	text-indent:1em;
+	padding-top:0.1rem;
+	border:none;
+}
+textarea::-webkit-input-placeholder{
+    color:#c8c8c8;
+}
+textarea:-moz-placeholder{
+    color:#c8c8c8;
+}
+textarea::-moz-placeholder{
+    color:#c8c8c8;
+}
+textarea:-ms-input-placeholder{
+    color:#c8c8c8;
+}
+.oBtn{
+	width:96%;
+	margin:0 auto;
+	height:0.8rem;
+	background:#ff4200;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:0.8rem;
+	margin-bottom:0.3rem;
+	font-size:0.28rem;
+	border-radius:0.05rem;
+	margin-top:0.4rem;
+}
+.someThings li input.returnMoney{
+	display: inline-block;
+    width: 25%;
+    padding: 0;
+    border: none;
+    float: right;
+    height: 100%;
+    text-align:right;
+}
+.someThings li .btnp{
+	position: absolute;
+	right:-27%;
+	margin-top: 0.15rem;
+}
+
+.someThings li input.returnSize{
+    width: 10%;
+    padding: 0;
+    border: none;
+    height: 100%;
+    text-align:center;
+	position: relative;
+	top:-0.15rem;
+}
+.someThings li {
+	position: relative;
+}
+.someThings li form.returnform{
+   position: absolute;
+   top:0;
+   right:0.2rem;
+}
+.homeDelivery{
+	font-size:0.24rem;
+}

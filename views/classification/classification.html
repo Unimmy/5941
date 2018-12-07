@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+    <meta name="author" contect="[{name:liuhui,contact:402714516@qq.com},{name:lugang,contact:604616579@qq.com}]"> 
+    <title></title>	
+    <link href="../../lib/mui/mui.min.css" rel="stylesheet"/>
+  	<link href="../../lib/swiper3/swiper.min.css" rel="stylesheet">
+  	<link href="../../css/common.css" rel="stylesheet"/>
+    <link href="../../css/homePage/homeIndex.css" rel="stylesheet"/>
+    <link href="../../css/classification/classification.css" rel="stylesheet"/>
+    <script src="../../js/common/calcSize.js"></script>
+    <script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+    <script src="../../lib/mui/mui.min.js"></script>
+    <script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">  
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<div @click="turnTo('../homePage/searchSearch','searchSearch','searchSearch');" class="mui-input-row mui-search">
+				    <input placeholder="搜索你所喜欢的东西" disabled="disabled" type="search" class="mui-input-clear" placeholder="">
+				</div>
+				<a @click="turnTo('../homePage/cityChoose','cityChoose')" class="mui-pull-left"><span>{{locationPosition}}</span><i></i></a>
+				<!--<a style="width:1rem;" class="mui-pull-left"><span>5941</span></a>-->
+				<a @click="turnTo('../homePage/messageIndex','messageIndex')" class="mui-pull-right"><i></i></a>
+			</header>
+			<div class="mui-content" id="pullrefresh">
+				<div class="">
+					<div class="mui-row mui-fullscreen">
+						<div class="mui-col-xs-3 borderRight">
+							<div id="segmentedControls" class="mui-segmented-control mui-segmented-control-inverted mui-segmented-control-vertical">
+								<!--<a class="mui-control-item" v-for="(x,index) in infos" :data-id="x.stateId" :class="{'mui-active':x.indexs==0}" :data-index="x.indexs-1" :href="'#content'+x.indexs" >{{x.stateName}}</a>-->			
+								<a @click="chooseShop(''+x+'');" class="mui-control-item leftClickD" v-for="(x,index) in infosLeft" :data-id="index" :class="{'mui-active':index==0}" :data-index="index-1" >{{x}}</a>			
+							</div>
+						</div>
+						<div id="segmentedCon trolContents" class="mui-col-xs-9">
+							<div v-for="(x,index) in infosTop" :data-id="index"  :class="{'mui-active':index==0}" class="mui-control-content">
+								<p class="bannerImg">
+									<img :src="server+x.path"/>
+								</p>
+								<p class="titleName">
+									<i></i>
+									<span>{{x.describe}}</span> 
+									<i></i>
+								</p>
+								<div class="sectionDiv">
+									<dl v-for="(l,index) in infosRight" class="mui-col-sm-3">
+										<dt @click="turnTo('../homePage/homeList',''+l.describe+'',''+l.bys+'');">
+											<img :src="server+l.path"/>
+										</dt>
+										<dd>{{l.describe}}</dd>
+									</dl>
+								</div>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>	
+		</div>					
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/classification/classification.js"></script>
+	</body>
+</html>

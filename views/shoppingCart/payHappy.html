@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../js/common/common.js"></script>
+	<style type="text/css">
+		html,body, .mui-bar-nav~.mui-content{
+			background:#f3f3f3;
+		}
+		#header{
+			border-bottom:1px solid #CCCCCC !important;
+		}
+	</style>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">快乐币支付</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		var app = new Vue({
+		el: '#app',
+		data: {
+			orderId:'',	//id
+			isChoosePay:'',
+		},
+		methods: {
+			turnTo:function(name,id,type,orderType){
+				mui.openWindow({
+				    url:name+'.html?type='+type+'&&orderType='+orderType,
+				    id:id+'.html',
+				    styles:{
+				    	popGesture: 'close',
+				    },
+				    extras:{
+				      //自定义扩展参数，可以用来处理页面间传值
+				    },
+				    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+				    show:{
+				      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      aniShow:'slide-in-right',//页面显示动画，默认为”slide-in-right“；
+				      duration:200,//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				      event:'titleUpdate',//页面显示时机，默认为titleUpdate事件时显示
+				      extras:{}//窗口动画是否使用图片加速
+				    },
+				    waiting:{
+				      autoShow:true,//自动显示等待框，默认为true
+				      title:'加载中',//等待对话框上显示的提示内容
+				      options:{
+				        //width:120,等待框背景区域宽度，默认根据内容自动计算合适宽度
+				        //height:100,等待框背景区域高度，默认根据内容自动计算合适高度
+				      }
+				    }
+				})
+			},
+			//获取URL参数
+			getUrlObj:function () { //获取url？号后面的值，以对象的形式存在
+				var strs = location.search.substr(1).split("&");			
+				var Obj = {}; 
+				strs.forEach(function(v,k){
+					Obj[v.split("=")[0]]=decodeURI(v.split("=")[1]); 
+				})
+				this.orderId = Obj.data;
+				this.isChoosePay = Obj.isChoosePay;
+				return Obj; 
+			},
+		},
+		created: function() {
+			this.getUrlObj();
+//			this.payOrder(this.orderId);
+		},
+		mounted: function() {
+			
+			
+		}
+	});
+		//2.发起支付请求
+		function payOrder(type,ordersid){	
+		NetUtil.ajax('/pay/'+ordersid+'',{
+			uname:localStorage.getItem('uname'),
+			UID:localStorage.getItem('uuid')
+		},function(data){
+			if(data.status==200){
+				mui.alert(data.message,function(){
+					var pay = plus.webview.getWebviewById('pay.html');
+					var shopSettlement = plus.webview.getWebviewById('shopSettlement.html');
+					var commodityDetails = plus.webview.getWebviewById('commodityDetails.html');
+					var shopCart = plus.webview.getWebviewById('views/shoppingCart/shoppingCart.html');
+
+					mui.fire(shopCart, 'changeP', {
+		                name: 'name2'  //传往second.html的值  
+		           	});
+		           	setTimeout(function(){
+			           	if(commodityDetails){						           	
+			           	 	plus.webview.close(commodityDetails);
+			           	}
+			           plus.webview.close(shopSettlement);
+			           plus.webview.close(pay);
+		           	},1000)
+					app.turnTo('../mine/myOrder/myOrder','myOrder','2','1');	
+				},'div');
+		 		
+			}else{
+				mui.alert(data.message,function(){
+					var pay = plus.webview.getWebviewById('pay.html');
+					var shopSettlement = plus.webview.getWebviewById('shopSettlement.html');
+					var commodityDetails = plus.webview.getWebviewById('commodityDetails.html');
+					var shopCart = plus.webview.getWebviewById('views/shoppingCart/shoppingCart.html');
+
+					mui.fire(shopCart, 'changeP', {
+		                name: 'name2'  //传往second.html的值  
+		           	});
+		           	setTimeout(function(){
+			           	if(commodityDetails){						           	
+			           	 	plus.webview.close(commodityDetails);
+			           	}
+			           plus.webview.close(shopSettlement);
+			           plus.webview.close(pay);
+		           	},1000)
+					app.turnTo('../mine/myOrder/myOrder','myOrder','1','1');
+				},'div');
+			 	
+			}
+		})
+		};
+		setTimeout(function(){
+			payOrder(app.isChoosePay,app.orderId);
+		},500)
+	</script>
+
+</html>

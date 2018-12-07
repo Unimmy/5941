@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<script src="../../../js/common/common.js"></script>
+	<style type="text/css">
+		html,body, .mui-bar-nav~.mui-content{
+			background:#f3f3f3;
+		}
+		#header{
+			border-bottom:1px solid #CCCCCC !important;
+		}
+	</style>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">三方支付</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		var app = new Vue({
+		el: '#app',
+		data: {
+			orderId:'',	//id
+			isChoosePay:'',
+		},
+		methods: {
+			turnTo:function(name,id,type,orderType){
+				mui.openWindow({
+				    url:name+'.html?type='+type+'&&orderType='+orderType,
+				    id:id+'.html',
+				    styles:{
+				    	popGesture: 'close',
+				    },
+				    extras:{
+				      //自定义扩展参数，可以用来处理页面间传值
+				    },
+				    createNew:false,//是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+				    show:{
+				      autoShow:true,//页面loaded事件发生后自动显示，默认为true
+				      aniShow:'slide-in-right',//页面显示动画，默认为”slide-in-right“；
+				      duration:200,//页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+				      event:'titleUpdate',//页面显示时机，默认为titleUpdate事件时显示
+				      extras:{}//窗口动画是否使用图片加速
+				    },
+				    waiting:{
+				      autoShow:true,//自动显示等待框，默认为true
+				      title:'加载中',//等待对话框上显示的提示内容
+				      options:{
+				        //width:120,等待框背景区域宽度，默认根据内容自动计算合适宽度
+				        //height:100,等待框背景区域高度，默认根据内容自动计算合适高度
+				      }
+				    }
+				})
+			},
+			//获取URL参数
+			getUrlObj:function () { //获取url？号后面的值，以对象的形式存在
+				var strs = location.search.substr(1).split("&");			
+				var Obj = {}; 
+				strs.forEach(function(v,k){
+					Obj[v.split("=")[0]]=decodeURI(v.split("=")[1]); 
+				})
+				this.orderId = Obj.data;
+				this.isChoosePay = Obj.isChoosePay;
+				return Obj; 
+			},
+			
+//			//请求后台的订单
+//			payOrder:function(ordersid){
+//				//plus.nativeUI.showWaiting();
+////				NetUtil.ajax('/apay/'+ordersid+'',{},function(r){
+////					//plus.nativeUI.closeWaiting();
+////					console.log(r);
+////					if(r.status == 200){
+////						app.dataId = r.data;
+//						payOrder(app.isChoosePay,app.orderId,app.dataId);
+////					}else{
+////						console.log(r.message);
+////					}
+////				})
+//			},
+		},
+		created: function() {
+			this.getUrlObj();
+//			this.payOrder(this.orderId);
+		},
+		mounted: function() {
+			
+			
+		}
+	});
+		var wxChannel = null; // 微信支付 
+        var aliChannel = null; // 支付宝支付 
+		function plusReady() {
+			// 获取支付通道
+			plus.payment.getChannels(function(channels) {
+				channel = channels;
+				console.log(JSON.stringify(channels));
+				for(var i in channels){
+					if(channels[i].id == 'wxpay'){
+						wxChannel=channels[i];
+					}else{
+						aliChannel=channels[i];
+					}
+				}
+			}, function(e) {
+				mui.alert("获取支付通道失败：" + e.message,function(){},'div');
+			});
+		};
+//		function plusReady() {
+//			// 获取支付通道 
+//			plus.payment.getChannels(function(channels){ 
+//			for (var i in channels) { 
+//				console.log(JSON.stringify(channels));
+//				
+////				if (channels[i].id == &quot;wxpay&quot;) { 
+////					wxChannel=channels[i]; 
+////				}else{ 
+////					aliChannel=channels[i]; 
+////				} 
+//			} 
+//			},function(e){ 
+//				alert(&quot;获取支付通道失败：&quot;+e.message); 
+//			}); 
+//		};
+		
+		
+		document.addEventListener('plusready',plusReady,false);
+		//2.发起支付请求
+		function payOrder(type,ordersid){
+			plus.nativeUI.showWaiting();
+			var idx;
+			var PAYSERVER;
+//			console.log(type);
+//			console.log(ordersid);
+			if(type == 1){
+				PAYSERVER = server + '/apay/zsh/'+ordersid;
+//				PAYSERVER = 'https://openapi.alipaydev.com/gateway.do';
+				idx = 0;
+				channel =aliChannel;
+			}else{
+				//微信
+				PAYSERVER = server + '/wpay/zsh/'+ordersid;
+				idx = 1;
+				channel = wxChannel;
+			}
+			console.log(JSON.stringify(channel));
+			//从服务器请求支付订单
+			var xhr = new XMLHttpRequest();
+			xhr.onreadystatechange = function() {
+//				console.log(JSON.stringify(xhr.readyState));
+//				console.log(JSON.parse(xhr.responseText).data);
+//				var weixinArray = JSON.parse(xhr.responseText).data;
+				console.log(xhr.responseText);
+				console.log(JSON.stringify(JSON.parse(xhr.responseText).data));
+				switch(xhr.readyState) {
+					case 4:
+						if(xhr.status == 200) {
+							plus.payment.request(channel,JSON.parse(xhr.responseText).data, function(result) {
+								console.log(JSON.stringify(result));
+								plus.nativeUI.closeWaiting();
+								mui.alert('支付成功','提示',function(){
+									var pay = plus.webview.getWebviewById('zshPay.html');
+									var myCopperate = plus.webview.getWebviewById('myCopperate.html')
+									mui.fire(myCopperate, 'paySuccess', {});
+									plus.webview.close(pay);
+								},'div');
+							}, function(error) {
+								console.log(JSON.stringify(error));
+								plus.nativeUI.closeWaiting();
+								mui.alert('支付失败', '提示', function() {
+									var pay = plus.webview.getWebviewById('zshPay.html');
+									var myCopperate = plus.webview.getWebviewById('myCopperate.html')
+									mui.fire(myCopperate, 'paySuccess', {});
+									plus.webview.close(pay);
+								},'div');
+							});
+						} else {
+							mui.alert("获取订单信息失败！",function(){},'div');
+							plus.nativeUI.closeWaiting();
+						}
+						break;
+					default:
+						break;
+				}
+			}
+			xhr.open('POST',PAYSERVER);
+			xhr.setRequestHeader('Content-Type', 'application/json');
+			xhr.send();
+		};
+		setTimeout(function(){
+			payOrder(app.isChoosePay,app.orderId);
+		},500)
+	</script>
+
+</html>

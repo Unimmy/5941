@@ -1,0 +1,48 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+
+.someThings{
+	margin-top:0.2rem;
+	background:#FFFFFF;
+}
+.someThings li{
+	height:0.8rem;
+	line-height:0.8rem;
+	border-bottom:1px solid #bebebe;
+	padding:0 0.2rem;
+}
+.someThings li:last-child{
+	border:none;
+}
+.someThings li p{
+	font-size:0.24rem;
+	color:#000000;
+	display:inline-block;
+}
+.someThings li p.right{
+	float:right;
+}
+.someThings li .redPack{
+	color:#b5b5b5;
+}
+.someThings li .redPack .arrow_right{
+	display:inline-block;
+	background:url(../../img/mine/arrow.png) no-repeat center right;
+	width:0.3rem;
+	height:0.3rem;
+	background-size:0.15rem;
+	vertical-align:-0.05rem;
+}
+.oBtn{
+	width:94%;
+	height:0.7rem;
+	background:#ff4200;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:0.7rem;
+	border-radius:0.08rem;
+	margin:0 auto;
+	margin-top:1.5rem;
+	font-size:0.26rem;
+}

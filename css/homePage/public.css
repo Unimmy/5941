@@ -1,0 +1,122 @@
+@charset "utf-8";
+
+ul{list-style: none;padding: 0;margin: 0;}
+body{background: #fff;}
+input{color: #808080;}
+.mui-bar{background: #fff;box-shadow:none;z-index: 100000000;}
+.mui-bar:after{
+	position: absolute;
+    right: 0;
+    bottom: 0;
+    left: 0px;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+.mui-content{background: #fff;}
+/*input有内容时清空按钮隐藏*/
+.mui-input-row .mui-input-clear~.mui-icon-clear{display: none;}
+i,em{font-style: normal;}
+.fr{float: right;}
+.fl{float: left;}
+.pr{position: relative;}
+.clear:after{
+	content:".";
+    display:block;
+    height:0;
+    clear:both;
+    visibility:hidden;
+}
+.imgw{display: block;width: 100%;}
+.btn-yellow{
+	background: #ffd401;
+	color: #fff;
+}
+.module-limit-before:before{
+	position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+.module-limit-after:after{
+	position: absolute;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    height: 1px;
+    content: '';
+    -webkit-transform: scaleY(.5);
+    transform: scaleY(.5);
+    background-color: #c8c7cc;
+}
+/*tab-bar的切换效果*/
+.mui-bar-tab .mui-tab-item{width: 100%;font-size: 0;}
+.mui-bar-tab .mui-tab-item img{height: 50px;}
+.mui-bar-tab>.mui-tab-item>img:last-child{display: none;}
+.mui-bar-tab>.mui-tab-item.mui-active>img:first-child{display: none;}
+.mui-bar-tab>.mui-tab-item.mui-active>img:last-child{display: inline-block;}
+
+/*字体颜色*/
+.color1{color: #ffd401!important;}
+.color2{color: #999!important;}
+.color3{color: #3c3c3c!important;}
+.color4{color: #fff!important;}
+
+/*head设置*/
+.module-public-head{
+	height: 60px;
+	line-height: 60px;
+	padding: 0 15px;
+	font-size: 18px;
+	color: #000;
+}
+.module-public-content{
+	background: #fff;
+	margin-top: 10px;
+}
+.module-public-content:first-child{margin-top: 0;}
+/*类轮播*/
+.module-slide{
+	overflow-x: auto;
+	width: 100%;
+	overflow-y: hidden;
+	white-space: nowrap;
+	font-size: 0;
+	padding:0 15px 15px;
+}
+.module-slide-li{
+	display: inline-block;
+	width: 200px;
+	margin-right: 10px;
+}
+.module-slide::-webkit-scrollbar,.more-goods::-webkit-scrollbar {
+    width: 0px;
+    height: 0px;
+}
+/**/
+.btn-goods{
+	color: #ffd401;
+	height: 20px;
+	line-height: 20px;
+	padding: 0 10px;
+	font-size: 14px;
+	border: 1px solid #ffd401;
+	border-radius: 12px;
+}
+/**/
+.module-detail{
+	color: #999;
+	line-height: 26px;
+	font-size: 16px;
+	margin: 0;
+	padding: 10px 8px;
+}
+/**/
+.mui-bar.mui-bar-tab{background: #fff;}

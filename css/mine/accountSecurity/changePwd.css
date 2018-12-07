@@ -1,0 +1,103 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+html,body,.mui-bar-nav~.mui-content{
+	background: #f3f3f3;
+}
+
+.contentDiv{
+	background:#FFFFFF;
+	margin-top:0.2rem;
+}
+.contentDiv li{
+	height:0.9rem;
+	line-height:0.9rem;
+	padding:0 0.2rem;
+	border-bottom:1px solid #e5e5e5;
+}
+.contentDiv li p{
+	font-size:0.24rem;
+	color:#000000;
+	display:inline-block;
+}
+.contentDiv li .left{
+	text-align:left;
+	width:100%;
+}
+.contentDiv li .right{
+	float:right;
+}
+.contentDiv li p input{
+	font-size:0.24rem;
+	color:#000000;
+	border:none;
+	padding:0;
+	margin-bottom:0;
+	height:0.9rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {   
+ /* WebKit browsers */   
+	color: #b5b5b5;   
+}   
+input:-moz-placeholder, textarea:-moz-placeholder {   
+/* Mozilla Firefox 4 to 18 */   
+	color: #b5b5b5;   
+}   
+input::-moz-placeholder, textarea::-moz-placeholder {   
+ /* Mozilla Firefox 19+ */   
+	color: #b5b5b5;   
+}   
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {   
+ /* Internet Explorer 10+ */   
+	color: #b5b5b5;   
+} 
+.codeBox{
+	float: right;
+    text-align: center;
+    width: 28%;
+    line-height: 240%;
+    color: #5e5e5e;
+    font-size: 0.24rem;
+    margin-top: 0.15rem;
+    border-radius: 0.08rem;
+    border: 0.01rem solid #b5b5b5;
+}
+.disabledColor{
+	border-color:#ff4200;
+	color:#ff4200;
+}
+.disabled{
+	border-color:#b5b5b5;
+	color:#5e5e5e;
+}
+.oBtn{
+	width:96%;
+	height:0.7rem;
+	background:#cccccc;
+	color:#FFFFFF;
+	text-align:center;
+	margin-top:0.2rem;
+	line-height:0.7rem;
+	border-radius:0.08rem;
+	margin:0 auto;
+	font-size:0.26rem;
+	margin-bottom:0.2rem;
+	margin-top:1rem;
+}
+.oBtn.active{
+	background:#ff4200;
+}
+.mui-input-row .mui-input-clear~.mui-icon-clear, .mui-input-row .mui-input-password~.mui-icon-eye, .mui-input-row .mui-input-speech~.mui-icon-speech{
+	font-size:0.35rem;
+	top:0.3rem;
+}
+.contentDiv li .left label{
+	padding:0;
+	width:1.4rem;
+	height:0.9rem;
+	line-height:0.9rem;
+	font-size:0.24rem;
+}
+.mui-input-row label~input, .mui-input-row label~select, .mui-input-row label~textarea{
+	float:left;
+}

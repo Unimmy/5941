@@ -1,0 +1,55 @@
+	<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/shoppingCart/shopCoupon.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">可用优惠券</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div class="contentDiv" >
+						<div>
+							<div v-if="isNoMyOrder==true" @tap="chooseCouPon(''+item.id+'',''+item.title+'',''+item.numbera+'');" class="sectionMainDiv" v-for="(item,index) in infos">
+								<p class="time">
+									{{item.star1}} 至  {{item.end1}}
+								</p>
+								<div class="bottom">
+									<div class="left">
+										<p style="font-size:0.26rem;">{{item.numbera | moneyFiler}}</p>
+										<p>满{{item.numbermin | moneyFiler}}元可用</p>
+									</div>
+									<div class="right">
+										<p>{{item.title}}</p>
+									</div>
+								</div>
+								<span class="circularLeft"></span>
+								<span class="circularRight"></span>
+							</div>
+							<div class="noMyOrder"  v-if="isNoMyOrder==false">
+								<img src="../../img/mine/meiyouyouhuiquan.png" alt="" />
+								<p>暂无此类优惠券~</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/shoppingCart/shopCoupon.js"></script>
+	</body>
+
+</html>

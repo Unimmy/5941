@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/myOrder/commodityEvaluation.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">商品评价</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll list-box">
+					<div class="topTitle">
+						<div class="leftDiv">							
+							<img class="imgs" src="../../../img/shoppingCart/shopImg2.png"/>
+						</div>
+						<div class="rightDiv">
+							<p class="title">中款运动鞋防滑耐磨休闲透气跑步鞋2018新款，男女童休闲白色运动鞋</p>
+							<p>
+								<span class="left">尺码：37码</span>
+								<span class="right">￥ 125</span>
+							</p>
+						</div>
+					</div>
+					<div class="kong"></div>
+					<div class="section">
+						<form class="form-group">
+			                <div class="noPadding form-control mui-table-view-cell">
+			                    <label class="wordSize">商品评分</label>
+			          			<div class="icons mui-inline" style="margin-left: 6px;">
+			                        <i data-index="1" class="mui-icon mui-icon-star"></i>
+			                        <i data-index="2" class="mui-icon mui-icon-star"></i>
+			                        <i data-index="3" class="mui-icon mui-icon-star"></i>
+			                        <i data-index="4" class="mui-icon mui-icon-star"></i>
+			                        <i data-index="5" class="mui-icon mui-icon-star"></i>
+			                   </div>
+				            </div>
+			                <div class="form-control contentDiv">
+			                   <textarea onKeyUp="javascript:checkWord(this);" onMouseDown="javascript:checkWord(this);" style="overflow-y:scroll" maxlength="600" style="resize:none" name="" rows="" cols="" placeholder="分享体验心得，给千万想买的用户一个参考"></textarea>
+								<div class="statistics"><span id="wordCheck">0</span>/600</div>
+			                </div>
+			                
+		                    <div class="oBtn">提交</div>
+			           </form>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/commodityEvaluation.js"></script>
+	</body>
+	<script type="text/javascript">
+		mui.init();
+		mui('.icons').on('click','i',function(){
+		    var index = parseInt(this.getAttribute("data-index"));//获取当前元素的索引值
+		    var parent = this.parentNode;//获取当前元素的父节点
+		    var children = parent.children;//获取父节点下所有子元素
+		    if(this.classList.contains("mui-icon-star")){//判断当前节点列表中是否含有.mui-icon-star元素
+		        for(var i=0;i<index;i++  ){//亮星
+		                children[i].classList.remove('mui-icon-star');
+		                children[i].classList.add('mui-icon-star-filled');
+		        }
+		    }else{//重置已经亮星的元素
+		        for (var i = index; i < 5; i++  ) {
+		            children[i].classList.add('mui-icon-star')
+		            children[i].classList.remove('mui-icon-star-filled')
+		        }
+		    }
+//		    document.getElementById("info").innerHTML = parent.previousElementSibling.innerText   "：" index "星好评";
+		})
+		var maxstrlen=600;
+				    function Q(s){return document.getElementById(s);}
+				    function checkWord(c){
+				        len=maxstrlen;
+				        var str = c.value;
+				        myLen=getStrleng(str);
+				        var wck=Q("wordCheck");
+				        if(myLen>len*2){
+				            c.value=str.substring(0,i+1);
+				        }
+				        else{
+				            wck.innerHTML = Math.floor((len*2-myLen)/2);
+				           }
+				    }
+				    function getStrleng(str){
+				        myLen =0;
+				        i=0;
+				        for(;(i<str.length)&&(myLen<=maxstrlen*2);i++){
+				        if(str.charCodeAt(i)>0&&str.charCodeAt(i)<128)
+				        myLen++;
+				        else
+				        myLen+=2;
+				    }
+				    return myLen;
+				}
+	</script>
+
+</html>

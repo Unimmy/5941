@@ -1,0 +1,150 @@
+html,body,.mui-bar-nav~.mui-content{
+	background: #fff;
+}
+#header{
+	box-shadow:none;
+	border-bottom:1px solid #EEEEEE !important;
+}
+
+.swiper-container {
+	width: 100%;
+	height: 2.5rem;
+	margin: 0.3rem auto;
+	background: #fff;
+}
+.swiper-slide{
+	text-align: center;
+	background: #fff;
+	height: 2.5rem;
+	line-height:2.5rem;
+	width: 96% !important;
+	margin-left:2%;
+	margin-right:2%;
+}
+.swiper-slide:nth-child(1){
+	background: url(../../img/mine/500.png) no-repeat;
+	background-position: center;
+	background-size: 4rem;
+}
+.swiper-slide:nth-child(2){
+	background: url(../../img/mine/1000.png) no-repeat;
+	background-position: center;
+	background-size: 4rem;
+}
+.checkDetilBox{
+	width:100%;
+	text-align:center;
+}
+.checkDetilBox p{
+	display:inline-block;
+	font-size:0.26rem;
+	text-align:center;
+	margin:0.3rem  0.3rem;
+	margin-top:0;
+	color:#000000;
+	padding-bottom:0.05rem;
+}
+.checkDetilBox p.active{
+	color:#ff4200;
+	border-bottom:0.03rem solid #ff4200;
+}
+
+.payMethodss{
+	width:100%;
+}
+.payMethodss .title{
+	height:0.7rem;
+	line-height:0.7rem;
+	font-size:0.26rem;
+	color:#5E5E5E;
+	border-bottom:1px solid #CCCCCC;
+	padding:0 0.3rem;
+}
+
+.payMethod{
+	background:#FFFFFF;
+}
+.payMethod li{
+	height:0.8rem;
+	line-height:0.8rem;
+	border-bottom:1px solid #bebebe;
+	padding:0 0.2rem;
+}
+.payMethod li p{
+	font-size:0.24rem;
+	color:#000000;
+	display:inline-block;
+}
+
+.payMethod .weChart .leftImg{
+	background:url(../../img/shoppingCart/weixinzhifu.png) no-repeat center;
+	width:0.5rem;
+	height:0.5rem;
+	background-size:0.3rem;
+	vertical-align:-0.17rem;
+}
+.payMethod li .imgBtn{
+	float:right;
+}
+.payMethod li .imgBtn i{
+	display:inline-block;
+	background:url(../../img/shoppingCart/kongxinyuan.png) no-repeat center;
+	width:0.5rem;
+	height:0.5rem;
+	background-size:0.3rem;
+	vertical-align:-0.17rem;
+}
+.payMethod li .imgBtn.active i{
+	display:inline-block;
+	background:url(../../img/shoppingCart/shixinyuan.png) no-repeat center;
+	width:0.5rem;
+	height:0.5rem;
+	background-size:0.3rem;
+	vertical-align:-0.17rem;
+}
+.payMethod .alipay .leftImg{
+	background:url(../../img/shoppingCart/zhifubaozhifu.png) no-repeat center;
+	width:0.5rem;
+	height:0.5rem;
+	background-size:0.3rem;
+	vertical-align:-0.17rem;
+}
+
+.pickProduct .productTitle{
+ 	width:100%;
+ 	height:0.7rem;
+ 	text-align:center;
+ 	line-height:0.7rem;
+}
+.pickProduct .productTitle i{
+ 	width:0.8rem;
+ 	height:0.35rem;
+ 	border-bottom:1px solid #cccccc;
+ 	display:inline-block;
+ 	vertical-align: 0.05rem;
+}
+.pickProduct .productTitle span{
+ 	font-size:0.23rem;
+ 	color:#252525;
+ 	margin:0 0.35rem;
+}
+.pickProduct{
+	margin-top:1.5rem;
+}
+.pickProduct p{
+	padding:0.02rem 0.3rem;
+	color:#b5b5b5;
+}
+.oBtn{
+	width:94%;
+	height:0.7rem;
+	background:#ff4200;
+	color:#FFFFFF;
+	text-align:center;
+	line-height:0.7rem;
+	border-radius:0.08rem;
+	margin:0 auto;
+	margin-top:0.5rem;
+	font-size:0.26rem;
+	margin-bottom:0.2rem;
+}

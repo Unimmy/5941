@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/accountSecurity/accountSecurity.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">账户与安全</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="contentDiv">
+						<li>
+							<p class="left">手机号</p>
+							<p @tap="turnTo('changePhone',''+phone+'');" class="right">
+								<span v-if="isPhone==0" class="gobinding">立即绑定</span>
+								<span v-if="isPhone==1">{{phoneNum}}</span>
+								<i></i>
+							</p>
+						</li>
+						<li>
+							<p class="left">微信账号</p>
+							<p class="right">
+								<span id="wxLogin" v-if="isWechart==0" class="">立即绑定</span>
+								<span v-if="isWechart==1">{{wechartName}}</span>
+								<i v-if="isWechart==0"></i>
+								<i v-if="isWechart==1" style="display:inline-block;" class="iNone"></i>
+							</p>
+						</li>
+						<li>
+							<p class="left">密码修改</p>
+							<p @tap="turnTo('changePwd');" class="right">
+								<span class="">立即修改</span>
+								<i></i>
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/accountSecurity/accountSecurity.js"></script>
+	</body>
+	
+</html>

@@ -1,0 +1,93 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+html,body,.mui-bar-nav~.mui-content{
+	background: #f3f3f3;
+}
+
+.mui-content .tips{
+	height:0.6rem;
+	line-height:0.6rem;
+	font-size:0.2rem;
+	color:#FF4200;
+	padding:0 0.2rem;
+}
+.mui-content ul{
+	background:#FFFFFF;
+	margin-bottom:0.2rem;
+}
+.mui-content ul li{
+	padding:0 0.2rem;
+	height:0.8rem;
+	line-height:0.8rem;
+	font-size:0.24rem;
+}
+.mui-content ul li label{
+	height:100%;
+	display:inline-block;
+	width:5em;
+	text-align: center;
+}
+.mui-content ul li input{
+	height:0.78rem;
+	border:none;
+	font-size:0.24rem;
+	vertical-align: unset;
+	padding:0;
+	width:70%;
+	padding-left:0.3rem;
+}
+.mui-content ul li{
+	border-bottom:1px solid #dad7d7;
+}
+.mui-content ul li:last-child{
+	border-bottom:none;
+}
+.mui-content ul li .codeBtn{
+	width:1.5rem;
+	height:0.3rem;
+	line-height:0.3rem;
+	font-size:0.24rem;
+	text-align:right;
+	color:#FF4200;
+	display:inline-block;
+	float:right;
+	margin-top:0.25rem;
+	border-left:1px solid #f1f0f0;
+}
+.mui-content ul li #codeNum{
+	width:50%;
+}
+.w2{
+	letter-spacing:2em; /*如果需要y个字两端对齐，则为(x-y)/(y-1),这里是（4-2）/(2-1)=2em */
+	margin-right:-2em; /*同上*/
+}
+.w3{
+	letter-spacing:0.5em; /*如果需要y个字两端对齐，则为(x-y)/(y-1),这里是（4-3）/(3-1)=0.5em */
+	margin-right:-0.5em; /*同上*/
+}
+.oBtn{
+	width:96%;
+	height:0.8rem;
+	line-height:0.8rem;
+	background:#FF4200;
+	color:#FFFFFF;
+	text-align:center;
+	font-size:0.28rem;
+	letter-spacing: 1em;
+	border-radius:5px;
+	margin:0 auto;
+	margin-top:1rem;
+}
+input::-webkit-input-placeholder, textarea::-webkit-input-placeholder {/* WebKit browsers */
+    color:#b5b5b5;
+}
+input:-moz-placeholder, textarea:-moz-placeholder {/* Mozilla Firefox 4 to 18 */
+    color:#b5b5b5;
+}
+input::-moz-placeholder, textarea::-moz-placeholder {/* Mozilla Firefox 19+ */
+    color:#b5b5b5;
+}
+input:-ms-input-placeholder, textarea:-ms-input-placeholder {/* Internet Explorer 10+ */
+    color:#b5b5b5;
+}

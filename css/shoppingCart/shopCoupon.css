@@ -1,0 +1,117 @@
+.mui-scroll-wrapper,.mui-content{
+	background:#efeff4 !important;	
+}
+.sectionMainDiv{
+	background:#FFFFFF;
+	width:94%;
+	margin:0 3%;
+	padding:0 0.3rem;
+	border-radius:5px;
+	margin-top:0.2rem;
+	position:relative;
+}
+.sectionMainDiv .circularLeft{
+	width:0.3rem;
+	height:0.3rem;
+	border-radius:0.15rem;
+	background:#f3f3f3;
+	position:absolute;
+	left:-0.15rem;
+	top:0.55rem;
+}
+.sectionMainDiv .circularRight{
+	width:0.3rem;
+	height:0.3rem;
+	border-radius:0.15rem;
+	background:#f3f3f3;
+	position:absolute;
+	right:-0.15rem;
+	top:0.55rem;
+}
+.sectionMainDiv .time{
+	height:0.7rem;
+	color:#000000;
+	font-size:0.24rem;
+	line-height:0.7rem;
+	border-bottom:1px dashed #d6d4d4;
+}
+.sectionMainDiv .time.timeGray{
+	color:#b5b5b5;
+}
+.sectionMainDiv .bottom{
+	height:1.2rem;
+}
+.sectionMainDiv .bottom .left,.sectionMainDiv .bottom .right{
+	display:inline-block;
+	height:1.2rem;
+	float:left;
+}
+.sectionMainDiv .bottom .left{
+	width:35%;
+	text-align:center;
+	border-right:1px dashed #d6d4d4;
+}
+.sectionMainDiv .bottom .right{
+	width:65%;
+	position:relative;
+}
+.sectionMainDiv .bottom .right .bgImg{
+	width: 0.7rem;
+    height: 0.7rem;
+    position: absolute;
+    right: -0.2rem;
+    top: 0.3rem;	
+}
+.sectionMainDiv .bottom .right .bgImg.bgImg11{
+	background: url(../../img/mine/yiguoqi.png) no-repeat;
+    background-size: cover;
+}
+.sectionMainDiv .bottom .right .bgImg.bgImg22{
+	background: url(../../img/mine/yishiyogn.png) no-repeat;
+    background-size: cover;
+}
+
+
+.sectionMainDiv .bottom .left p{
+	height:0.4rem;
+	line-height:0.4rem;
+	font-size:0.22rem;
+	color:#ff4200;
+	overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sectionMainDiv .bottom.bottomGray .left p{
+	color:#000000;
+}
+.sectionMainDiv .bottom .left p span{
+	font-size:0.28rem;
+}
+.sectionMainDiv .bottom .left p:first-child{
+	margin-top:0.2rem;
+}
+.sectionMainDiv .bottom .right p{
+	margin-top:0.2rem;
+	margin-left:0.2rem;
+	font-size:0.22rem;
+	color:#000000; 
+}
+.sectionMainDiv .bottom.bottomGray .right p{
+	color:#b5b5b5;
+}
+.noMyOrder img{
+	display:block;
+	width:25% !important;
+	margin:0 auto;
+	margin-top:2rem;
+}
+.noMyOrder p{
+	margin-top:0.3rem;
+	text-align:center;
+	font-size:0.28rem;
+}
+
+
+[v-cloak] {
+    display: none !important;
+}

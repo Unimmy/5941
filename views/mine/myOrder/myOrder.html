@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link href="../../../css/common.css" rel="stylesheet"/>
+	<link href="../../../css/mine/myOrder/myOrder.css" rel="stylesheet" />
+	<script src="../../../js/common/calcSize.js"></script>
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<script src="../../../lib/mui/mui.pullToRefresh.js"></script>
+	<script src="../../../lib/mui/mui.pullToRefresh.material.js"></script>
+
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">订单列表</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item clickItem0" :class="{'mui-active':sendInfo.type==0}" href="#itemmobile">
+							全部
+							<!--<span class="mui-badge">1</span>-->
+						</a>
+						<a class="mui-control-item clickItem1" :class="{'mui-active':sendInfo.type==1}" href="#item1mobile">
+							待付款
+							<!--<span class="mui-badge mui-badge-primary">{{titleNum_pay}}</span>-->
+						</a>
+						<a class="mui-control-item clickItem2" :class="{'mui-active':sendInfo.type==2}" href="#item2mobile">
+							待发货
+							<!--<span class="mui-badge mui-badge-success">{{titleNum_fah}}</span>-->
+						</a>
+						<a class="mui-control-item clickItem3" :class="{'mui-active':sendInfo.type==3}" href="#item3mobile">
+							待收货
+							<!--<span class="mui-badge mui-badge-warning">{{titleNum_pj}}</span>-->
+						</a>
+						<a class="mui-control-item clickItem4" :class="{'mui-active':sendInfo.type==4}" href="#item4mobile">
+							已完成
+							<!--<span class="mui-badge mui-badge-danger">{{titleNum_th}}</span>-->
+<!--<span class="mui-badge mui-badge-royal mui-badge-inverted">6</span>-->
+						</a>
+					</div>
+					<div id="sliderProgressBar" :class="{'barOffset1':sendInfo.type==1,'barOffset2':sendInfo.type==2,'barOffset3':sendInfo.type==3,'barOffset4':sendInfo.type==4}" class="mui-slider-progress-bar mui-col-xs-3"></div>
+					<div class="mui-slider-group">
+						<div id="itemmobile" class="mui-slider-item mui-control-content mui-active">
+							<div v-show="isNoMyOrder==true" id="scroll1" class="mui-scroll-wrapper">
+								<div class="mui-scroll"> 
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ID+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p @tap="deleteOrder(''+item.ID+'');" v-if="item.STATUSTYPE==1&&orderType==1">删除订单</p>
+												<p @tap="deleteRefund(''+item.ID+'');" v-if="item.STATUSTYPE==8 || item.STATUSTYPE==2 || item.STATUSTYPE==9&&orderType==1">取消订单</p>
+												<p @tap="ImmediatePayment(''+item.ID+'',''+item.COUPONID+'');" v-if="item.STATUSTYPE==1&&orderType==1" class="goPay">立即付款</p>
+												<p @tap="confirmationReceipt(''+item.ID+'');" v-if="item.STATUSTYPE==3&&orderType==1" class="goPay">确认收货</p>
+												<p @tap="Arrival(''+item.ID+'');" v-if="item.STATUSTYPE==7&&orderType==2" class="goPay">收货</p>
+												<p @tap="sendDeliver(''+item.ID+'');" v-if="item.STATUSTYPE==6&&orderType==2" class="goPay">已交付</p>
+												<p @tap="turnTo('orderDetail',''+item.ID+'')" v-if="item.STATUSTYPE==4&&orderType==1" class="returnGoods">申请售后</p>
+									
+											</div>
+										</li>	
+									</ul>
+								</div>
+							</div>
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+						<div id="item1mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll2" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ID+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p @tap="deleteOrder(''+item.ID+'');" v-if="item.STATUSTYPE==1&&orderType==1">删除订单</p>
+												<p @tap="deleteRefund(''+item.ID+'');" v-if="item.STATUSTYPE==8 || item.STATUSTYPE==2 || item.STATUSTYPE==9&&orderType==1">取消订单</p>
+												<p @tap="ImmediatePayment(''+item.ID+'');"  v-if="item.STATUSTYPE==1&&orderType==1" class="goPay">立即付款</p>
+												<p @tap="confirmationReceipt(''+item.ID+'');"  v-if="item.STATUSTYPE==3&&orderType==1" class="goPay">确认收货</p>
+												<p @tap="Arrival(''+item.ID+'');"  v-if="item.STATUSTYPE==7&&orderType==2" class="goPay">收货</p>
+												<p @tap="sendDeliver(''+item.ID+'');"  v-if="item.STATUSTYPE==6&&orderType==2" class="goPay">已交付</p>
+												<p @tap="turnTo('orderDetail',''+item.ID+'')" v-if="item.STATUSTYPE==4&&orderType==1" class="returnGoods">申请退货</p>
+												<!--<p @tap="buyAgain(''+item.ID+'');" v-if="item.STATUSTYPE==4" class="aginPay">再次购买</p>-->
+											</div>
+										</li>	
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>	
+						<div id="item2mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll3" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ID+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p @tap="deleteOrder(''+item.ID+'');" v-if="item.STATUSTYPE==1&&orderType==1">删除订单</p>
+												<p @tap="deleteRefund(''+item.ID+'');" v-if="item.STATUSTYPE==8 || item.STATUSTYPE==2 || item.STATUSTYPE==9&&orderType==1">取消订单</p>
+												<p @tap="ImmediatePayment(''+item.ID+'');"  v-if="item.STATUSTYPE==1&&orderType==1" class="goPay">立即付款</p>
+												<p @tap="confirmationReceipt(''+item.ID+'');"  v-if="item.STATUSTYPE==3&&orderType==1" class="goPay">确认收货</p>
+												<p @tap="Arrival(''+item.ID+'');"  v-if="item.STATUSTYPE==7&&orderType==2" class="goPay">收货</p>
+												<p @tap="sendDeliver(''+item.ID+'');"  v-if="item.STATUSTYPE==6&&orderType==2" class="goPay">已交付</p>
+												<p @tap="turnTo('orderDetail',''+item.ID+'')" v-if="item.STATUSTYPE==4&&orderType==1" class="returnGoods">申请退货</p>
+												<!--<p @tap="buyAgain(''+item.ID+'');" v-if="item.STATUSTYPE==4" class="aginPay">再次购买</p>-->
+											</div>
+										</li>	
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+						<div id="item3mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll4" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ID+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p @tap="deleteOrder(''+item.ID+'');" v-if="item.STATUSTYPE==1&&orderType==1">删除订单</p>
+												<p @tap="deleteRefund(''+item.ID+'');" v-if="item.STATUSTYPE==8 || item.STATUSTYPE==2 || item.STATUSTYPE==9&&orderType==1">取消订单</p>
+												<p @tap="ImmediatePayment(''+item.ID+'');"  v-if="item.STATUSTYPE==1&&orderType==1" class="goPay">立即付款</p>
+												<p @tap="confirmationReceipt(''+item.ID+'');"  v-if="item.STATUSTYPE==3&&orderType==1" class="goPay">确认收货</p>
+												<p @tap="Arrival(''+item.ID+'');"  v-if="item.STATUSTYPE==7&&orderType==2" class="goPay">收货</p>
+												<p @tap="sendDeliver(''+item.ID+'');"  v-if="item.STATUSTYPE==6&&orderType==2" class="goPay">已交付</p>
+												<p @tap="turnTo('orderDetail',''+item.ID+'')" v-if="item.STATUSTYPE==4&&orderType==1" class="returnGoods">申请退货</p>
+												<!--<p @tap="buyAgain(''+item.ID+'');" v-if="item.STATUSTYPE==4" class="aginPay">再次购买</p>-->
+											</div>
+										</li>	
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+						<div id="item4mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll5" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ID+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p @tap="deleteOrder(''+item.ID+'');" v-if="item.STATUSTYPE==1&&orderType==1">删除订单</p>
+												<p @tap="deleteRefund(''+item.ID+'');" v-if="item.STATUSTYPE==8 || item.STATUSTYPE==2 || item.STATUSTYPE==9&&orderType==1">取消订单</p>
+												<p @tap="ImmediatePayment(''+item.ID+'');" v-if="item.STATUSTYPE==1&&orderType==1" class="goPay">立即付款</p>
+												<p @tap="confirmationReceipt(''+item.ID+'');"  v-if="item.STATUSTYPE==3&&orderType==1" class="goPay">确认收货</p>
+												<p @tap="Arrival(''+item.ID+'');"  v-if="item.STATUSTYPE==7&&orderType==2" class="goPay">收货</p>
+												<p @tap="sendDeliver(''+item.ID+'');"  v-if="item.STATUSTYPE==6&&orderType==2" class="goPay">已交付</p>
+												<p  @tap="turnTo('orderDetail',''+item.ID+'')" v-if="item.STATUSTYPE==4&&orderType==1" class="returnGoods">申请售后</p>
+												<!---->
+												<!--<p @tap="buyAgain(''+item.ID+'');" v-if="item.STATUSTYPE==4" class="aginPay">再次购买</p>-->
+											</div>
+										</li>	
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/myOrder.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link href="../../../css/common.css" rel="stylesheet"/>
+	<link href="../../../css/mine/myOrder/refundAndDelivery.css" rel="stylesheet" />
+	<script src="../../../js/common/calcSize.js"></script>
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<script src="../../../lib/mui/mui.pullToRefresh.js"></script>
+	<script src="../../../lib/mui/mui.pullToRefresh.material.js"></script>
+
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">门店单品退货管理</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item clickItem0" :class="{'mui-active':sendInfo.type==21}" href="#itemmobile">
+							未处理
+							<!--<span class="mui-badge">1</span>-->
+						</a>
+						<a class="mui-control-item clickItem1" :class="{'mui-active':sendInfo.type==22}" href="#item1mobile">
+							已同意
+							<!--<span class="mui-badge mui-badge-primary">{{titleNum_pay}}</span>-->
+						</a>
+						<a class="mui-control-item clickItem2" :class="{'mui-active':sendInfo.type==20}" href="#item2mobile">
+							已拒绝
+							<!--<span class="mui-badge mui-badge-success">{{titleNum_fah}}</span>-->
+						</a>
+						<a class="mui-control-item clickItem3" :class="{'mui-active':sendInfo.type==0}" href="#item3mobile">
+							全部
+							<!--<span class="mui-badge mui-badge-success">{{titleNum_fah}}</span>-->
+						</a>
+					</div>
+					<div id="sliderProgressBar" class="mui-slider-progress-bar mui-col-xs-3"></div>
+					<div class="mui-slider-group">
+						<div id="itemmobile" class="mui-slider-item mui-control-content mui-active">
+							<div v-show="isNoMyOrder==true" id="scroll1" class="mui-scroll-wrapper">
+								<div class="mui-scroll"> 
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ORDERNUMBER+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<!--<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>-->
+											<p class="money"><span class="left">退货编号：{{item.ID}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p v-if="item.STATUS1 == 21" class="btn" @tap="noReturnGoods(''+item.ID+'');">拒绝退货</p>
+												<p v-if="item.STATUS1 == 21" class="btn active" @tap="sureReturnGoods(''+item.ID+'');">确认退货</p>
+												<p v-if="item.STATUS1 == 22" class="btn active" @tap="sureReturnWarehouse(''+item.ID+'');">确认退仓</p>
+											</div>
+											
+											<div class="reason">
+												<p class="userR">
+													<span><i>用户申请原因：</i>{{item.BUYERMESEGE}}</span>
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+						<div id="item1mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll2" class="mui-scroll-wrapper">
+								<div class="mui-scroll"> 
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ORDERNUMBER+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<!--<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>-->
+											<p class="money"><span class="left">退货编号：{{item.ID}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p v-if="item.STATUS1 == 21" class="btn" @tap="noReturnGoods(''+item.ID+'');">拒绝退货</p>
+												<p v-if="item.STATUS1 == 21" class="btn active" @tap="sureReturnGoods(''+item.ID+'');">确认退货</p>
+												<p v-if="item.STATUS1 == 22" class="btn active" @tap="sureReturnWarehouse(''+item.ID+'');">确认退仓</p>
+											</div>
+											
+											<div class="reason">
+												<p class="userR">
+													<span><i>用户申请原因：</i>{{item.BUYERMESEGE}}</span>
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>	
+						<div id="item2mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll3" class="mui-scroll-wrapper">
+								<div class="mui-scroll"> 
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ORDERNUMBER+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<!--<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>-->
+											<p class="money"><span class="left">退货编号：{{item.ID}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p v-if="item.STATUS1 == 21" class="btn" @tap="noReturnGoods(''+item.ID+'');">拒绝退货</p>
+												<p v-if="item.STATUS1 == 21" class="btn active" @tap="sureReturnGoods(''+item.ID+'');">确认退货</p>
+												<p v-if="item.STATUS1 == 22" class="btn active" @tap="sureReturnWarehouse(''+item.ID+'');">确认退仓</p>
+											</div>
+											
+											<div class="reason">
+												<p class="userR">
+													<span><i>用户申请原因：</i>{{item.BUYERMESEGE}}</span>
+												</p>
+												<p v-if="item.TRAJECTORY!='' && item.TRAJECTORY!=null && item.TRAJECTORY!=undefined" class="platformR">
+													<span><i>商家拒绝原因：</i>{{item.TRAJECTORY}}</span>
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+						
+						<div id="item3mobile" class="mui-slider-item mui-control-content">
+							<div v-show="isNoMyOrder==true" id="scroll4" class="mui-scroll-wrapper">
+								<div class="mui-scroll"> 
+									<ul class="mui-table-view use-wrap">
+										<li v-for="(item,index) in infos" class="mui-table-view-cell mui-row">
+											<p class="time">
+												<span>{{item.CDATE}}</span>
+												<span class="statusRight">{{item.STATUS}}</span>
+											</p>
+											<div class="main">
+												<p v-for="(i,inx) in item.image">
+													<img :src="server+i.PICPATH" v-if="inx<4"/>
+												</p>
+												<i v-if="item.sizenumber == 1">···</i>
+												<span @tap="turnTo('orderDetail',''+item.ORDERNUMBER+'')">共{{item.imagesize}}件 ></span>
+											</div>
+											<!--<p class="money"><span class="left">运单号：{{item.POSTFEENUMBER}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>-->
+											<p class="money"><span class="left">退货编号：{{item.ID}}</span><span class="right">总价：￥{{item.PAYMENT}}</span></p>
+											<div class="liBtn">
+												<p v-if="item.STATUS1 == 21" class="btn" @tap="noReturnGoods(''+item.ID+'');">拒绝退货</p>
+												<p v-if="item.STATUS1 == 21" class="btn active" @tap="sureReturnGoods(''+item.ID+'');">确认退货</p>
+												<p v-if="item.STATUS1 == 22" class="btn active" @tap="sureReturnWarehouse(''+item.ID+'');">确认退仓</p>
+											</div>
+											
+											<div class="reason">
+												<p class="userR">
+													<span><i>用户申请原因：</i>{{item.BUYERMESEGE}}</span>
+												</p>
+												<p v-if="item.TRAJECTORY!='' && item.TRAJECTORY!=null && item.TRAJECTORY!=undefined" class="platformR">
+													<span><i>商家拒绝原因：</i>{{item.TRAJECTORY}}</span>
+												</p>
+											</div>
+										</li>
+									</ul>
+								</div>
+							</div>	
+							<div class="noMyOrder"  v-show="isNoMyOrder==false">
+								<img src="../../../img/mine/meiyoudingdan.png" alt="" />
+								<p>您没有相关订单~</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/myOrder/refundAndDelivery.js"></script>
+	</body>
+
+</html>

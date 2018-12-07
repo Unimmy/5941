@@ -1,0 +1,58 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#F3F3F3;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+
+.message{
+	background:#FFFFFF;
+	margin-top:0.2rem;
+}
+.message .mainDiv{
+	padding:0.2rem;
+	display:flow-root;
+	border-bottom:1px solid #bebebe;
+	overflow: hidden;
+}
+.message .mainDiv:last-child{
+	border:none;
+}
+.message .mainDiv img{
+	width:1.2rem;
+	height:1.2rem;
+	margin-right:0.2rem;
+	float:left;
+}
+.message .mainDiv p{
+	/*display:inline-block;*/
+}
+.message .mainDiv .name{
+	font-size:0.23rem;
+	color:#3D3D3D;
+}
+.message .mainDiv .center{
+	margin:0.1rem 0;
+	font-size:0.22rem;
+	color:#5e5e5e;
+}
+.message .mainDiv .money{
+	color:#5e5e5e;
+	font-size:0.23rem;
+	overflow:auto;
+}
+.message .mainDiv .money .left{
+	color:#ff4200;
+	font-size:0.28rem;
+}
+.message .mainDiv .money .right{
+	display:inline-block;
+	width:1.2rem;
+	height:0.45rem;
+	line-height:0.45rem;
+	text-align:center;
+	font-size:0.24rem;
+	border:1px solid #c8c8c8;
+	float:right;
+	border-radius:0.08rem;
+}

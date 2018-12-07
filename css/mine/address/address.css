@@ -1,0 +1,73 @@
+html,body, .mui-bar-nav~.mui-content{
+	background:#f3f3f3;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+
+.list-box ul li{
+	position:relative;
+}
+.list-box ul li .details {
+	padding: 0.1rem 0.6rem 0.1rem;
+	border-bottom: 1px solid #E5E5E5;
+	background:#FFFFFF;
+}
+
+.list-box ul li .details .name {
+	font-size: 0.25rem;
+	line-height: 0.52rem;
+	color: #595959;
+}
+
+.list-box ul li .details .area {
+	font-size: 0.25rem;
+	line-height: 0.37rem;
+	color: #595959;
+}
+.list-box ul li .leftImg{
+	width:0.5rem;
+	height:0.5rem;
+	position:absolute;
+	left:0.12rem;
+	top:0.4rem;
+	background:url(../../../img/mine/check1.png) no-repeat;
+	background-size:0.28rem;
+}
+.list-box ul li .leftImg.active{
+	background:url(../../../img/mine/choose.png) no-repeat;
+	background-size:0.28rem;
+}
+.list-box ul li .rightImg{
+	width:0.45rem;
+	height:0.5rem;
+	position:absolute;
+	right:0;
+	top:0.5rem;
+	background:url(../../../img/mine/update.png) no-repeat;
+	background-size:0.35rem;
+}
+
+.oBtnAdd{
+	position:absolute;
+	bottom:1rem;	
+	background:#f3f3f3;
+	border:1px solid #ff4200;
+	color:#ff4200;
+	width:90%;
+	height:0.8rem;
+	left:50%;
+	transform: translateX(-50%);
+	-ms-transform: translateX(-50%);
+	-moz-transform: translateX(-50%);
+	-webkit-transform: translateX(-50%);
+	-o-transform: translateX(-50%);
+	font-size:0.25rem;
+}
+.mui-scroll{
+	height:100%;
+}
+
+[v-cloak]{
+	display:none !important;
+}

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect="[]"> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/loginRegister/forgetPwd.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/valid/Validform_v5.3.2.js"></script> 
+    <script src="../../lib/valid/valid.js"></script>
+
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav">
+				<h1 class="mui-title">忘记密码</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content">
+				<div class="nextBox">
+					<form id="forgetPhone">
+						<ul class="mui-input-group">
+							<li class="mui-input-row">
+								<label><span class="mui-icon mui-icon-phone"></span></label>
+								<input type="tel" v-model="infos.memberAccount" datatype="zPhone" class="mui-input-clear" placeholder="请输入您的手机号" maxlength="11" nullmsg="请输入您的手机号"/>
+							</li>
+							<li class="mui-input-row">
+								<label><span class="mui-icon mui-icon-email"></span></label>
+								<input class="codeInput" type="text" datatype="Z6" v-model="infos.phoneCode" placeholder="请输入短信验证码" maxlength="6" nullmsg="请输入短信验证码"/>
+								<div class="codeBox" @tap="imgCode" :class="{disabled:isDisabled}">点击获取</div>
+							</li>
+							<li class="mui-input-row">
+								<label><span class="mui-icon mui-icon-locked"></span></label>
+								<input type="password" v-model="newpsd" datatype="regpass" name="pwd" class="mui-input-password" placeholder="请输入新密码" maxlength="20" nullmsg="请输入新密码">
+							</li>
+							<li class="mui-input-row">
+								<label><span class="mui-icon mui-icon-locked"></span></label>
+								<input type="password" datatype="*" recheck="pwd" class="mui-input-password" placeholder="请再次输入新密码" maxlength="20" nullmsg="请再次输入新密码">
+							</li>
+						</ul>
+						<button type="button" class="mui-btn mui-btn-primary next" v-bind:class="{btnColor:isActive}"  >立即修改</button>
+					</form>
+				</div>
+				<!--<div class="newPwdBox" v-show="!isShow">
+					<form id="updataPwd">
+						<ul class="mui-input-group">
+							<li class="mui-input-row">
+								<label><span class="mui-icon mui-icon-locked"></span></label>
+								<input type="password" v-model="newpsd" datatype="regpass" name="pwd" class="mui-input-password" placeholder="请输入新密码" maxlength="20" nullmsg="请输入新密码">
+							</li>
+							<li class="mui-input-row">
+								<label><span class="mui-icon mui-icon-locked"></span></label>
+								<input type="password" datatype="*" recheck="pwd" class="mui-input-password" placeholder="请再次输入新密码" maxlength="20" nullmsg="请再次输入新密码">
+							</li>
+						</ul>
+						<button type="button" class="mui-btn mui-btn-primary modify">立即修改</button>
+					</form>
+				</div>-->
+			</div>
+		</div>
+
+		<!--script-->
+		<script src="../../js/common/md5.js"></script>
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/loginRegister/forgetPwd.js"></script>
+	</body>
+
+</html>

@@ -1,0 +1,311 @@
+body,.mui-bar-nav~.mui-content{
+	background: #fff;
+}
+#header{
+	box-shadow:none;
+	border-bottom:1px solid #EEEEEE !important;
+	height:0.75rem;
+	line-height:0.75rem;
+}
+#header .mui-title{
+	height:0.75rem;
+	line-height:0.75rem;
+}
+#header span i{
+	font-style:normal;
+	font-size:0.22rem;
+}
+body,.mui-bar-nav~.mui-content{
+	background: #fff;
+}
+.mui-action-back{
+	color:#000;
+}
+.mui-title{
+	color:#000;
+}
+.mui-bar-nav{
+	/*box-shadow: none;*/
+	border-bottom: none !important;
+	background-color: #fff;
+}
+.btn-register{
+	display: block;
+	line-height: 0.75rem;
+	color: #5e5e5e;
+	font-size: 0.18rem;
+}
+.contentDiv .storeDiv .storeUl{
+	margin-bottom:0.2rem;
+}
+.contentDiv .storeDiv ul div{
+	height:0.65rem;
+	border-bottom:1px solid #EEEEEE;
+	line-height:0.65rem;
+}
+.contentDiv .storeDiv ul div label{
+	font-size:0.26rem !important;
+	line-height:0.45rem;
+	color:#000000;
+	padding:0;
+	margin-left:0.75rem;
+}
+.mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	font-family: Muiicons;
+    font-size: 0.3rem;
+    font-weight: 400;
+    line-height: 0.5rem;
+    text-decoration: none;
+    color: #aaa;
+    border-radius: 0;
+    background: 0 0;
+    -webkit-font-smoothing: antialiased;
+}
+.mui-checkbox input[type=checkbox]:checked:before, .mui-radio input[type=radio]:checked:before{
+	color:#ff4200;
+}
+.contentDiv .storeDiv ul li{
+	/*height:1.3rem;
+	line-height:1.3rem;*/
+}
+.contentDiv .storeDiv ul li .mui-checkbox{
+	height:1.8rem;
+	border-bottom:1px solid #EEEEEE;
+	line-height:1.8rem;
+}
+.contentDiv .storeDiv ul li .mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+    line-height: 1.6rem;
+}
+.contentDiv .storeDiv ul li div .right{
+	margin-left:0.8rem;
+}
+.contentDiv .storeDiv ul li div .right{
+	height:1.8rem;
+	padding:0.1rem 0;
+	border:none;
+}
+.contentDiv .storeDiv ul li div .right img{
+	width:1.4rem;
+	height:1.4rem;
+	/*display:inline-block;*/
+	margin-right:0.03rem;
+	margin-top:0.08rem;
+	float:left;
+}
+.contentDiv .storeDiv ul li div .right .main{
+	display:inline-block;
+	border:none;
+	height:100%;
+	margin-left:0.16rem;
+	width:71%;
+}
+.contentDiv .storeDiv ul li div .right .main h5{
+	font-size: 0.26rem;
+    height: 0.4rem;
+    color: #000000;
+    line-height: 0.4rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.contentDiv .storeDiv ul li div .right .main p{
+	font-size:0.22rem;
+	height:0.35rem;
+	color:#bbbbbb;
+	line-height:0.4rem;
+}
+.contentDiv .storeDiv ul li div .right .main span{
+	font-size:0.22rem;
+	height:0.22rem;
+	color:#333333;
+}
+ .contentDiv .storeDiv ul div .mui-numboxsss{
+	height:0.5rem;
+	width:1.56rem;
+	border-bottom:1px solid #bbb;
+	padding:0;
+}
+ .contentDiv .storeDiv ul div .numboxsss{
+ 	width:0.5rem;
+ }
+ .contentDiv .grayKong{
+ 	width:100%;
+ 	height:0.25rem;
+ 	background:#f3f3f3;
+ }
+ .contentDiv .pickProduct .productTitle{
+ 	width:100%;
+ 	height:0.7rem;
+ 	text-align:center;
+ 	line-height:0.7rem;
+ }
+ .contentDiv .pickProduct .productTitle i{
+ 	width:0.8rem;
+ 	height:0.35rem;
+ 	border-bottom:1px solid #cccccc;
+ 	display:inline-block;
+ 	vertical-align: 0.05rem;
+ }
+ .contentDiv .pickProduct .productTitle span{
+ 	font-size:0.23rem;
+ 	color:#252525;
+ 	margin:0 0.35rem;
+ }
+ .contentDiv .pickProduct .products{
+ 	text-align:center;
+ 	background:#FFFFFF;
+ }
+ .contentDiv .pickProduct .products .shopps{
+ 	width:3rem;
+ 	min-height:3.52rem;
+ 	display:inline-block;
+ 	margin:0 0.046rem;
+ 	margin-bottom:0.2rem;
+ }
+ .contentDiv .pickProduct .products .shopps dt{
+ 	width:3rem;
+ 	height:2.8rem;
+ }
+ .contentDiv .pickProduct .products .shopps dt img{
+ 	width:100%;
+ 	height:100%;
+ }
+ .contentDiv .pickProduct .products .shopps dd{
+ 	width:2.8rem;
+ 	margin-top:0.3rem;
+ 	text-align:left;
+ }
+ .contentDiv .pickProduct .products .shopps dd p{
+ 	font-size: 0.2rem;
+    color: #5e5e5e;
+    height: 0.6rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+ }
+.contentDiv .pickProduct .products .shopps dd span{
+	font-size:0.21rem;
+	color:#b4282d;
+}
+.contentDiv .pickProduct{
+	margin-bottom:0.8rem;
+}
+
+.settlementDiv{
+	height:0.8rem;
+	background:#FFFFFF;
+	position:fixed;
+	bottom:0;
+	width:100%;
+	z-index:99;
+	line-height:0.8rem;
+	border-top:1px solid #CCCCCC;
+}
+.settlementDiv div{
+	display:inline-block;
+}
+.settlementDiv .mui-checkbox input[type=checkbox]:before, .mui-radio input[type=radio]:before{
+	line-height:0.65rem;
+}
+.settlementDiv .mui-checkbox.mui-left label, .mui-radio.mui-left label{
+	padding-left:0.8rem;
+	font-size:0.25rem;
+}
+.settlementDiv .mui-right{
+	float:right;
+	line-height:0.8rem;
+}
+.settlementDiv .mui-right p{
+	display:inline-block;
+}
+.settlementDiv .mui-right p span{
+	color:#b4282d;
+}
+.settlementDiv .mui-right .settlementBtn{
+	width:1.9rem;
+	height:0.8rem;
+	background:#ff4200;
+	color:#FFFFFF;
+	border:none;
+	border-radius:0;
+}
+.mui-input-row .mui-btn~input, .mui-input-row .mui-btn~select, .mui-input-row .mui-btn~textarea{
+	font-size:0.24rem;
+}
+.contentDiv .noShop{
+	height:3rem;
+	width:100%;
+	overflow: hidden;
+}
+.contentDiv .noShop  div{
+	display:inline-block;
+}
+.contentDiv .noShop .left_img{
+	width:45%;
+	height:100%;
+	background:url(../../img/shoppingCart/shopCart.png) no-repeat right 50%;
+	background-size:1.5rem;
+	margin-right:5%;
+	float:left;
+}
+.contentDiv .noShop .right_word{
+	width:45%;
+	height:100%;
+	float:left;
+}
+.contentDiv .noShop .right_word p{
+	font-size: 0.26rem;
+    color: #000;
+    margin-top: 1.1rem;
+}
+.contentDiv .noShop .right_word a{
+	display: inline-block;
+    width: 1.3rem;
+    font-size: 0.24rem;
+    /*background: #ff4200;*/
+    text-align: center;
+    height: 0.5rem;
+    line-height: 0.5rem;
+    border-radius: 0.08rem;
+    margin-top: 0.2rem;
+    margin-left: 0.1rem;
+    color: #ff4200;
+    border:1px solid #ff4200;
+}
+.mui-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100%;
+}
+body,#app{
+	height:100%;
+	background:#f3f3f3;
+}
+#app{
+	padding-top:0.75rem;
+}
+.contentDiv .storeUl,.pickProduct,.contentDiv .noShop{
+	background:#FFFFFF;
+}
+.contentDiv .storeDiv{
+	margin-top:0.2rem;
+}
+#checkSmallAll{
+	width:40%;
+}
+.contentDiv .storeDiv ul li div .right .main p .newSpan{
+	width: 40%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: inline-block;
+    height: 0.35rem;
+}
+.contentDiv .storeDiv ul li div .right .main p .newSpans{
+	width:55%;
+}

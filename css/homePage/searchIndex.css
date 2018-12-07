@@ -1,0 +1,323 @@
+html{
+	background:#FFFFFF;
+}
+.mui-bar-nav~.mui-content{
+	padding-top:0.6rem;
+	margin-top:0.2rem;
+}
+.mui-content .imgDiv{
+	height:3.5rem;
+	margin-bottom:0.15rem;
+}
+.mui-content .imgDiv img{
+	width:100%;
+	height:100%;
+}
+.mui-content .products{
+ 	text-align:center;
+ }
+.mui-content .products .shopps{
+ 	width:3rem;
+ 	min-height:3.52rem;
+ 	display:inline-block;
+ 	margin:0 0.046rem;
+ 	margin-bottom:0.2rem;
+ }
+.mui-content .products .shopps dt{
+ 	width:3rem;
+ 	height:2.8rem;
+ }
+.mui-content .products .shopps dt img{
+ 	width:100%;
+ 	height:100%;
+ }
+.mui-content .products .shopps dd{
+ 	width:2.8rem;
+ 	margin-top:0.3rem;
+ 	text-align:left;
+ }
+.mui-content .products .shopps dd p{
+ 	font-size:0.2rem;
+ 	color:#5e5e5e;
+ }
+.mui-content .products .shopps dd span{
+	font-size:0.21rem;
+	color:#b4282d;
+}
+.mui-bar-nav~.mui-content .mui-pull-top-pocket{
+	top:4.1rem;
+}
+
+.mui-search{
+	display:inline-block;
+	width:80%;
+	margin-left:0.15rem;
+}
+.mui-search .mui-placeholder{
+	height:0.78rem;
+	line-height:0.78rem;
+}
+input[type=search]{
+	border-radius:0.06rem;
+	font-size:0.22rem;
+	background:#F3F3F3;
+}
+.mui-bar-nav.mui-bar .mui-icon{
+	float:left;
+	line-height:0.4rem;
+}
+.mui-icon-search:before{
+	padding-left:0.12rem;
+}
+.mui-bar .mui-search:before{
+	margin-top:-0.35rem;
+}
+.mui-bar input[type=search]{
+	height:0.58rem;
+}
+.mui-search .mui-placeholder .mui-icon{
+	font-size:0.32rem;
+}
+.mui-search.mui-active:before{
+	font-size:0.32rem;
+}
+.mui-search input[type=search]{
+	padding-left:0.5rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color:#ff4200;
+	border:none;
+}
+.mui-slider-indicator.mui-segmented-control{
+	height:0.8rem;
+	border-top:1px solid #e5e5e5;
+	border-bottom:1px solid #e5e5e5;
+	margin-bottom:0.2rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item{
+	line-height:0.8rem;
+	font-size:0.24rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item .arrow{
+	font-size:0.24rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item .arrow i{
+	font-size:0.2rem;
+	font-weight:bolder;
+	font-style:normal;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item .arrow i.active{
+	color:#333333;
+}
+.mui-pull-rightHeader{
+	font-size: 0.26rem;
+    color: #000000;
+}
+
+
+.mui-content .products{
+ 	text-align:left;
+ }
+.mui-content .products .shopps{
+ 	width:47%;
+ 	min-height:3.52rem;
+ 	display:inline-block;
+ 	margin:0 0.075rem;
+ 	margin-bottom:0.2rem;
+ }
+.mui-content .products .shopps dt{
+ 	width:100%;
+ 	height:2.8rem;
+ }
+.mui-content .products .shopps dt img{
+ 	width:100%;
+ 	height:100%;
+ }
+.mui-content .products .shopps dd{
+ 	width:2.8rem;
+ 	margin-top:0.3rem;
+ 	text-align:left;
+ }
+.mui-content .products .shopps dd p{
+ 	font-size: 0.2rem;
+    color: #5e5e5e;
+    height: 0.6rem;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+ }
+.mui-content .products .shopps dd span{
+	font-size:0.21rem;
+	color:#b4282d;
+}
+.mui-bar-nav~.mui-content .mui-pull-top-pocket{
+	top:1.7rem;
+}
+
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+	border:none;
+}
+.mui-fullscreen .mui-segmented-control~.mui-slider-group{
+	top:1rem;
+}
+.mui-pull-bottom-tips {
+    text-align: center;
+    background-color: #efeff4;
+    font-size: 15px;
+    line-height: 40px;
+    color: #777;
+}
+
+
+/*mui样式*/
+.mui-bar-nav~.mui-content .mui-slider.mui-fullscreen{
+	top:0.75rem;
+}
+.mui-action-back{
+	color:#000;
+}
+.mui-title{
+	color:#000;
+}
+.mui-bar-nav{
+	box-shadow: none;
+	border-bottom: none !important;
+	background-color: #fff;
+}
+.mui-control-content {
+	min-height: 400px;
+}
+.mui-control-content .mui-loading {
+	margin-top: 50px;
+}
+.mui-slider .mui-segmented-control.mui-segmented-control-inverted~.mui-slider-group .mui-slider-item{
+	border:none;
+}
+.mui-table-view-cell{
+	padding: 0;
+}
+.mui-table-view{
+	background-color: #f4f8fc;
+}
+.mui-segmented-control{
+	background:#fff;
+	height:0.7rem;
+}
+.mui-bar~.mui-content .mui-fullscreen {
+	top: 44px;
+	height: auto;
+}
+.mui-pull-top-tips {
+	position: absolute;
+	top: -20px;
+	left: 50%;
+	margin-left: -25px;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	z-index: 1;
+}
+.mui-bar~.mui-pull-top-tips {
+	top: 24px;
+}
+.mui-pull-top-wrapper {
+	width: 42px;
+	height: 42px;
+	display: block;
+	text-align: center;
+	background-color: #efeff4;
+	border: 1px solid #ddd;
+	border-radius: 25px;
+	background-clip: padding-box;
+	box-shadow: 0 4px 10px #bbb;
+	overflow: hidden;
+}
+.mui-pull-top-tips.mui-transitioning {
+	-webkit-transition-duration: 200ms;
+	transition-duration: 200ms;
+}
+.mui-pull-top-tips .mui-pull-loading {
+	/*-webkit-backface-visibility: hidden;
+	-webkit-transition-duration: 400ms;
+	transition-duration: 400ms;*/
+	
+	margin: 0;
+}
+.mui-pull-top-wrapper .mui-icon,
+.mui-pull-top-wrapper .mui-spinner {
+	margin-top: 7px;
+}
+.mui-pull-top-wrapper .mui-icon.mui-reverse {
+	/*-webkit-transform: rotate(180deg) translateZ(0);*/
+}
+.mui-pull-bottom-tips {
+	text-align: center;
+	background-color: #efeff4;
+	font-size: 15px;
+	line-height: 40px;
+	color: #777;
+}
+.mui-pull-top-canvas {
+	overflow: hidden;
+	background-color: #fafafa;
+	border-radius: 40px;
+	box-shadow: 0 4px 10px #bbb;
+	width: 40px;
+	height: 40px;
+	margin: 0 auto;
+}
+.mui-pull-top-canvas canvas {
+	width: 40px;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-scroll{
+	width: 100%;
+}
+.mui-segmented-control.mui-scroll-wrapper .mui-control-item {
+    width: 50%;
+}
+.mui-segmented-control .mui-control-item{
+	line-height:0.7rem;
+	font-size:0.235rem;
+}
+.mui-fullscreen .mui-segmented-control~.mui-slider-group{
+	top:1rem;
+}
+.mui-segmented-control.mui-segmented-control-inverted .mui-control-item.mui-active{
+	color:#ff4200;
+}
+.mui-segmented-control.mui-segmented-control-inverted~.mui-slider-progress-bar{
+	background-color:#ff4200;
+}
+.mui-col-xs-3{
+	width:20%;
+}
+
+.mui-badge {
+    font-size: 0.12rem;
+    line-height: 1;
+    display: inline-block;
+    /*padding: 0.06rem 0.12rem;*/
+    color: #333;
+    /*border-radius: 0.25rem;*/
+    background-color: #ff4200;
+    color:#FFFFFF;
+    padding:0;
+    width:0.26rem;
+    height:0.26rem;
+    border-radius:0.26rem;
+    text-align:center;
+    line-height:0.26rem;
+    position:absolute;
+    top:0.1rem;
+}
+.priceNew{
+	font-size:0.26rem !important;
+	font-weight:bolder;	
+}
+.oldMoney{
+	font-size:0.2rem;
+	color:#b5b5b5 !important;
+	margin-left:0.2rem;
+	text-decoration:line-through;
+}

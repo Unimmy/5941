@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/loginRegister/guideChangePwd.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">更改密码</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<ul class="contentDiv">
+						<li>
+							<p class="left lightGray mui-input-row">
+								<label for="oldPwd">原始密码：</label>
+								<input id="oldPwd" class="mui-input-clear" v-model="oldPwd" type="password" name="" placeholder="请输入旧密码" />
+							</p>
+						</li>
+						<li>
+							<p class="left lightGray mui-input-row">
+								<label for="newPwd">新密码：</label>
+								<input id="newPwd" class="mui-input-clear" v-model="newPwd" type="password" value="" placeholder="请输入新密码" />
+							</p>
+						</li>
+						<li>
+							<p class="left lightGray mui-input-row">
+								<label for="confirmPwd">确认密码：</label>
+								<input id="confirmPwd" class="mui-input-clear" v-model="aginPwd" type="password" value="" placeholder="请再次输入新密码" />
+							</p>
+						</li>
+					</ul>
+					<p class="messageTip">*首次登陆需修改密码后，方可重新登录</p>
+					<div @tap="submitBtn();" class="oBtn active">提交</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/loginRegister/guideChangePwd.js"></script>
+	</body>
+</html>

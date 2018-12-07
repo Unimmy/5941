@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/homePage/searchIndex.css" rel="stylesheet" />
+	<link href="../../css/homePage/searchIndex.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/mui/mui.pullToRefresh.js"></script>
+	<script src="../../lib/mui/mui.pullToRefresh.material.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<div class="mui-input-row mui-search">
+				    <input v-model="searchName" type="search" class="mui-input-clear" placeholder="">
+				</div>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a @tap="searchBtn();" class="mui-pull-right mui-pull-rightHeader">搜索</a>
+			</header>
+			<div class="mui-content">
+				<div id="slider" class="mui-slider mui-fullscreen">
+					<div id="sliderSegmentedControl" class="mui-slider-indicator mui-segmented-control mui-segmented-control-inverted">
+						<a class="mui-control-item mui-active" href="#item1mobile">
+							综合
+						</a>
+						<a @tap="priceSort();" class="mui-control-item" href="#item2mobile">
+							价格
+							<span class="arrow">
+								<i class="up" :class="{'active':isDown==true}">↑</i>
+								<i class="down" :class="{'active':isDown==false}">↓</i>
+							</span>
+						</a>
+						<a class="mui-control-item" href="#item3mobile">
+							促销
+						</a>
+					</div>
+					<div class="mui-slider-group"> 
+						<div id="item1mobile" class="mui-slider-item mui-control-content mui-active">
+							<div id="scroll1" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="products">
+										<dl @tap="isLogin(''+item.COMMODITYKEYID+'');" v-for="(item,index) in infos" class="shopps">
+											<dt><img v-bind:src="server+item.MAINIMAGE"/></dt>
+											<dd>
+												<p>{{item.NAME}}</p>
+												<span class="priceNew">￥ {{item.PRICE}}</span><span v-if="item.ORIGINALPRICE!='' && item.ORIGINALPRICE!=item.PRICE && item.ORIGINALPRICE!=null &&item.ORIGINALPRICE!=undefined " class="oldMoney">￥{{item.ORIGINALPRICE}}</span>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="item2mobile" class="mui-slider-item mui-control-content mui-active">
+							<div id="scroll2" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="products">
+										<dl @tap="isLogin(''+item.COMMODITYKEYID+'');" v-for="(item,index) in infos" class="shopps">
+											<dt><img v-bind:src="server+item.MAINIMAGE"/></dt>
+											<dd>
+												<p>{{item.NAME}}</p>
+												<span class="priceNew">￥ {{item.PRICE}}</span><span v-if="item.ORIGINALPRICE!='' && item.ORIGINALPRICE!=item.PRICE && item.ORIGINALPRICE!=null &&item.ORIGINALPRICE!=undefined " class="oldMoney">￥{{item.ORIGINALPRICE}}</span>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div id="item3mobile" class="mui-slider-item mui-control-content mui-active">
+							<div id="scroll3" class="mui-scroll-wrapper">
+								<div class="mui-scroll">
+									<div class="products">
+										<dl  @tap="isLogin(''+item.COMMODITYKEYID+'');" v-for="(item,index) in infos" class="shopps">
+											<dt><img v-bind:src="server+item.MAINIMAGE"/></dt>
+											<dd>
+												<p>{{item.NAME}}</p>
+												<span class="priceNew">￥ {{item.PRICE}}</span><span v-if="item.ORIGINALPRICE!='' && item.ORIGINALPRICE!=item.PRICE && item.ORIGINALPRICE!=null &&item.ORIGINALPRICE!=undefined " class="oldMoney">￥{{item.ORIGINALPRICE}}</span>
+											</dd>
+										</dl>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/homePage/searchIndex.js"></script>
+	</body>
+</html>

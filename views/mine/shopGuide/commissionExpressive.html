@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
+	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../../css/mine/shopGuide/commissionExpressive.css" rel="stylesheet" />
+	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../../lib/mui/mui.min.js"></script>
+	<script src="../../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header class="header mui-bar mui-bar-nav nav-home">	
+				<div id="header" >
+					<h1 class="mui-title">可提现金额</h1>
+					<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				</div>
+				<div class="headerMain">
+					{{ketixianMoney | moneyFiler}}元
+					<span @tap="putForward();">提现</span>
+				</div>
+				<div class="headerMBottom">
+					<div class="left">
+						<p>{{shenqingMoney | moneyFiler}}元</p>
+						<p>申请提现金额</p>
+					</div>
+					<i></i>
+					<div class="right">
+						<p>{{lishiMoney | moneyFiler}}元</p>
+						<p>历史提现金额</p>
+					</div>
+				</div>
+			</header>
+			<div class="mui-content">
+				<div id="pullrefresh"  class="">
+					<div class="products">
+						<div style="color:red;margin:.2rem 0 0 .1rem;font-size: 15px;">温馨提示：提现需收取0.15%手续费(手续费最低2元，最高25元)</div>
+						<div class="contentDiv">
+							<div v-for="(item,index) in infos" class="section">
+								<div class="paddingAll">
+									<p class="title">
+										<span class="left">支付宝：{{item.zfb}}</span>
+										<span class="right">{{item.type}}</span>
+									</p>
+									<div class="centerMain">
+										<p class="mui-col-sm-4">
+											<span>{{item.id}}</span>
+											<span class="two">提现编号</span>
+										</p>
+										<p class="mui-col-sm-4">
+											<span>{{item.num | moneyFiler}}</span>
+											<span class="two">提现金额</span>
+										</p>
+										<p class="mui-col-sm-4">
+											<span>{{item.id | timeFiler}}</span>
+											<span class="two">申请时间</span>
+										</p>
+									</div>
+								</div>
+								
+								<p class="bottomWord">
+									<!--<span class="left">分成：{{item.CLERK | moneyFiler}}</span>-->
+									<!--<span class="center">邮费：{{item.POSTFEE | moneyFiler}}</span>-->
+									<span class="right">备注：{{item.imagepath}}</span>
+								</p>
+							</div>
+						</div>
+					</div>	
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../../js/common/common.js"></script>
+		<script src="../../../js/mine/shopGuide/commissionExpressive.js"></script>
+	</body>
+
+</html>

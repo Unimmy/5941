@@ -1,0 +1,40 @@
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+html,body,.mui-bar-nav~.mui-content{
+	background: #f3f3f3;
+}
+.contentDiv .top{
+	background:#FFFFFF;
+	padding:0.2rem;
+}
+.contentDiv .top p{
+	font-size:0.24rem;
+	color:#010101;
+}
+.contentDiv .top p.center{
+	text-align:center;
+}
+.contentDiv .top h3{
+	color:#ff4200;
+	text-align:center;
+	font-size:0.4rem;
+	margin:0.2rem 0;
+	font-weight:normal;
+}
+.contentDiv .section{
+	padding:0.3rem;
+}
+.contentDiv .section li h4{
+	font-size:0.22rem;
+	color:#000000;
+}
+.contentDiv .section li p{
+	font-size:0.22rem;
+	color:#000000;
+	margin:0.25rem 0.3rem;
+	line-height:0.35rem;
+}
+.contentDiv .section li p span{
+	display:block;
+}
