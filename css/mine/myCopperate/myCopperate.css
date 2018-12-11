@@ -157,50 +157,21 @@ body,#app{
     color: #fff;
     border-radius: 0.2rem;
 }
-
-.hideDiv{
-	width:100%;
-	height:100%;
-	position:fixed;
-	z-index:996;
-	left:0;
-	top:0;
-	bottom:0;
+.hideDiv img{
+	
+	border-radius: 50%;
+	position: fixed;
 	right:0;
-	background-color: rgba(186,186,186,0.49);
-	-webkit-box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    box-shadow: 0 0 15px rgba(0, 0, 0, .1);
-    /*padding-top: 0.7rem;*/
-    font-size:0.5rem;
-    color:red;
+	z-index: 100;
+	top:3rem;
 }
-.hideDiv .main{
-	z-index:999;
-	color:red;
-	width:75%;
-	height:55%;
-	margin:0 auto;
-	margin-top:40%;
-	position:relative;
-	border-radius:0.08rem;
-	border:1px solid #c0c0c0;
-}
-.hideDiv .main img{
-	width:100%;
-	height:100%;
-}
-.hideDiv .main i{
-	width:0.5rem;
-	height:0.5rem;
-	position:absolute;
-	left:50%;
-	bottom:-0.7rem;
-	background:url(../../../img/homePage/shanchu.png) no-repeat;
-	z-index:1000;
-	background-size:0.5rem;
-	transform: translateX(-0.25rem);
-	-webkit-transform: translateX(-0.25rem); /*为Chrome/Safari*/
-	-moz-transform: translateX(-0.25rem); /*为Firefox*/
-	-ms-transform: translateX(-0.25rem); /*为IE*/
-	-o-transform: translateX(-0.25rem); /*为Opera*/
+.hideDiv h6{
+	color:#000000;
+	position: fixed;
+	right:0rem;
+	z-index: 100;
+	top:4rem;
+	font-size: 16px;
+	font-weight: 700;
+	color:gray;
 }

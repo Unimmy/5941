@@ -7,7 +7,7 @@
 	"id": "H587C53F1",/*应用的标识，创建应用时自动生成，勿手动修改*/
 	"name": "5491商城",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "1.2.8",/*应用版本名称*/
+		"name": "1.2.9",/*应用版本名称*/
 		"code": "83"
 	},
 	"description": "",/*应用描述信息*/
@@ -315,7 +315,9 @@
 					"img/common/renzheng1.png",
 					"img/common/main2.png",
 					"lib/jquery/jquery-3.2.1.min.js",
-					"views/classification/classification.html"
+					"views/classification/classification.html",
+					"img/common/wode--shiti.png",
+					"img/common/zhuye-kongxin.png"
 				],
 				"refer": [
 					"views/daidai/ddIndex.html",
@@ -2153,7 +2155,9 @@
 					"views/mine/shopGuide/cashAccountManagement.html",
 					"views/mine/myCoupon.html",
 					"views/mine/myOrder/exchangeGoodsSingle.html",
-					"views/mine/myCopperate/myCopperate.html"
+					"views/mine/myCopperate/myCopperate.html",
+					"views/mine/help.html",
+					"views/mine/helpShop.html"
 				],
 				"priority": 0
 			},
@@ -2306,7 +2310,9 @@
 			"views/mine/myCopperate/myCopperate.html": {
 				"resources": [],
 				"refer": [
-					"views/mine/feedback.html"
+					"views/mine/feedback.html",
+					"views/mine/myCopperate/zshPay.html",
+					"views/mine/myCopperate/searchStore.html"
 				],
 				"priority": 0
 			},
@@ -2321,6 +2327,28 @@
 				"resources": [],
 				"refer": [
 					"views/mine/myOrder/myOrder.html"
+				],
+				"priority": 0
+			},
+			"views/mine/shopGuide/cashAccountManagement.html": {
+				"resources": [],
+				"refer": [
+					"views/mine/shopGuide/changeAliPayNum.html"
+				],
+				"priority": 0
+			},
+			"views/mine/help.html": {
+				"resources": [],
+				"refer": [
+					"views/mine/helpDetails.html"
+				],
+				"priority": 0
+			},
+			"views/mine/helpShop.html": {
+				"resources": [],
+				"refer": [
+					"views/mine/helpDetails.html",
+					"views/mine/helpShopDetails.html"
 				],
 				"priority": 0
 			}

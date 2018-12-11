@@ -5,7 +5,6 @@
 
 //var serverUrl = "http://PC-20180516EPXK/";//
 var serverUrl = "http://192.168.5.254:8091/"	//罗玉波 
-
 //var serverUrl = "http://114.116.88.94:8091/"	//测试服务器
 //var serverUrl = "http://PC-20180516EPXK/"	//api
 //var serverUrl = "http://123.207.147.134:8091/"	//服务器地址
@@ -24,16 +23,11 @@ var serverUrl = "http://192.168.5.254:8091/"	//罗玉波
 //	method:'post',
 //	success:function(res){
 //		console.log(res.status)
-//		
 //	},
 //	 error:function(){
-//  	console.log(2222) 
 //  	serverUrl = "http://123.207.147.134:8092/"
 //           }
 //})
-
-
-/******************/
 
 var baseUrl = serverUrl;
 //var server = serverUrl +"UpdateBsnLicense";//图片服务器路径

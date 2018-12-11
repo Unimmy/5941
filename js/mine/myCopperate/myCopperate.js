@@ -17,7 +17,7 @@
 		methods:{
 			closeImg:function(){
 				this.isImgTu=false;
-				console.log(11111)
+				
 			},
 			/*跳转*/
 			turnTo: function(name,id,type) {

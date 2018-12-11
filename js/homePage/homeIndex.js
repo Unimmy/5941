@@ -45,9 +45,11 @@
 			},
 			/*跳转详情页面*/
 			turnToX: function(name,id,type,index) {
-				var imgurl = this.top[index].path
-				console.log(imgurl)
-				if(imgurl == ''){	
+				console.log(name)
+				if(name == 1){//name传1则不跳转
+					return
+				}
+				if(name == ''){	
 				mui.openWindow({
 					url:'../mine/myCopperate/myCopperate.html',
 					styles: {
@@ -73,7 +75,7 @@
 						}
 					}
 				})	
-				}
+				}else{
 				mui.openWindow({
 					url: name + '.html?type=' + type,
 					id: id + '.html',
@@ -100,6 +102,7 @@
 						}
 					}
 				})
+			  }
 			},
 			//导航点击
 			chooseTitle:function(index,name){

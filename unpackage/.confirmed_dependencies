@@ -24,7 +24,9 @@
 			"img/common/renzheng1.png",
 			"img/common/main2.png",
 			"lib/jquery/jquery-3.2.1.min.js",
-			"views/classification/classification.html"
+			"views/classification/classification.html",
+			"img/common/wode--shiti.png",
+			"img/common/zhuye-kongxin.png"
 		],
 		"refer": [
 			"views/homePage/homeIndex.html",
@@ -1784,7 +1786,9 @@
 			"views/mine/shopGuide/cashAccountManagement.html",
 			"views/mine/myCoupon.html",
 			"views/mine/myOrder/exchangeGoodsSingle.html",
-			"views/mine/myCopperate/myCopperate.html"
+			"views/mine/myCopperate/myCopperate.html",
+			"views/mine/help.html",
+			"views/mine/helpShop.html"
 		],
 		"resources": []
 	},
@@ -1908,7 +1912,9 @@
 	},
 	"views/mine/myCopperate/myCopperate.html": {
 		"refer": [
-			"views/mine/feedback.html"
+			"views/mine/feedback.html",
+			"views/mine/myCopperate/zshPay.html",
+			"views/mine/myCopperate/searchStore.html"
 		]
 	},
 	"views/mine/feedback.html": {
@@ -1919,6 +1925,22 @@
 	"views/shoppingCart/payHappy.html": {
 		"refer": [
 			"views/mine/myOrder/myOrder.html"
+		]
+	},
+	"views/mine/shopGuide/cashAccountManagement.html": {
+		"refer": [
+			"views/mine/shopGuide/changeAliPayNum.html"
+		]
+	},
+	"views/mine/help.html": {
+		"refer": [
+			"views/mine/helpDetails.html"
+		]
+	},
+	"views/mine/helpShop.html": {
+		"refer": [
+			"views/mine/helpDetails.html",
+			"views/mine/helpShopDetails.html"
 		]
 	}
 }

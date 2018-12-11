@@ -71,7 +71,10 @@
 			},
 			//确定
 			surnBtn:function(){
-				NetUtil.ajax('/zsh/jh',{
+			 var btnArray = ['否', '是'];
+                mui.confirm('推荐人:'+this.searchName, btnArray, function(e) {
+                    if (e.index == 1) {
+                    NetUtil.ajax('/zsh/jh',{
 					shopcode:this.code,
 					id:this.type,
 					uname:localStorage.getItem('uname'),
@@ -91,6 +94,11 @@
 						mui.alert(r.message,function(){},'div');
 					}
 				})
+                     
+                    }else{
+                    	console.log('用户取消了')
+                    }
+                },'div')
 			},
 			//选择
 			chooseRadio:function(code1,name){

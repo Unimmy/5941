@@ -22,22 +22,22 @@
 				<div class="mui-scroll">
 					<div class="becomeDistributor">
 						<img v-bind:src="server+image2" alt="" />
-						<p @tap="choosePayShow('2');" v-if="isBtn2==1" class="oBtn">成为线上店主</p>
+						<p @tap="choosePayShow('2');" v-if="isBtn2==1" class="oBtn">成为店铺合伙人</p>
 						<p @tap="turnTo('searchStore','searchStore',zfid2)" v-if="isBtn2==2" class="oBtn">激活</p>
 						<p v-if="isBtn2==1 || isBtn2==2" class="xieyiP">
 							<input class="checkxieyi checkxieyi2" name="checkbox1" value="Item1" type="checkbox" checked>
 							<label class="xieyi">我已阅读并同意</label>
-							<a @tap="turnTo('agreementWord','agreementWord','1')" class="registerAgreement">《线上店主协议》</a>
+							<a @tap="turnTo('agreementWord','agreementWord','1')" class="registerAgreement">《店铺合伙人协议》</a>
 						</p>
 					</div>
 					<div class="becomeDistributor becomeDistributorss">
 						<img v-bind:src="server+image1" alt="" />
-						<p @tap="choosePayShow('1');" v-if="isBtn1==1" class="oBtn">成为分销商</p>
+						<p @tap="choosePayShow('1');" v-if="isBtn1==1" class="oBtn">成为店铺分销商</p>
 						<p @tap="turnTo('searchStore','searchStore',zfid1)" v-if="isBtn1==2" class="oBtn">激活</p>
 						<p v-if="isBtn1==1 || isBtn1==2" class="xieyiP">
 							<input class="checkxieyi checkxieyi1" name="checkbox1" value="Item1" type="checkbox" checked>
 							<label class="xieyi">我已阅读并同意</label>
-							<a @tap="turnTo('agreementWord','agreementWord','2')" class="registerAgreement">《分销商协议》</a>
+							<a @tap="turnTo('agreementWord','agreementWord','2')" class="registerAgreement">《店铺分销商协议》</a>
 						</p>
 					</div>
 				</div>
@@ -66,10 +66,10 @@
 					</ul>
 				</div>
 			</div>
-			<div v-if="isImgTu==true" class="hideDiv">
-			<div class="main">
-				<a href="../feedback.html"><img src="../../../img/check/f1.png"/></a>
-				<i @click="closeImg()"></i>
+			<div class="hideDiv">
+				<a href="../feedback.html"><img src="../../../img/common/leavemessage.png"/></a>
+				<!--<i @click="closeImg()"></i>-->
+				<h6>点我留言</h6>
 			</div>
 		</div>
 		</div>

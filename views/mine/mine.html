@@ -147,6 +147,10 @@
 										<dt><img src="../../img/mine/youhuiquan.png"/></dt>
 										<dd>优惠券</dd>
 									</dl>
+									<dl @tap="turnTo('help')">
+										<dt><img src="../../img/mine/help.png"/></dt>
+										<dd>帮助中心</dd>
+									</dl>
 								</div>
 								<!--我的经营-->
 								<div v-if="clerk == true" class="myService">
@@ -199,12 +203,17 @@
 										<dt><img src="../../img/mine/huodongtongzhi.png"/></dt>
 										<dd>活动通知</dd>
 									</dl>-->
+									<dl @tap="turnTo('helpShop')">
+										<dt><img src="../../img/mine/help.png"/></dt>
+										<dd>商家帮助中心</dd>
+									</dl>
 								</div>
 								<div @tap="turnTo('myCopperate/myCopperate','myCopperate')" class="myCooperate">
 									我要合作
 								</div>
-								<div class="myGuide companyPhone" v-if="clerk == true">
-									技术热线：{{companyPhone}}
+								 <!--v-if="clerk == true" {{companyPhone}}-->
+								<div class="myGuide companyPhone">
+									服务热线：{{companyPhone}}
 								</div>
 							</div>
 						</div>	
