@@ -45,11 +45,12 @@
 			},
 			/*跳转详情页面*/
 			turnToX: function(name,id,type,index) {
-				console.log(name)
-				if(name == 1){//name传1则不跳转
+				console.log("name:"+name)
+				console.log("type:"+type)
+				if(name == '1'){//name传1则不跳转
 					return
 				}
-				if(name == ''){	
+				if(name == 'null'){	
 				mui.openWindow({
 					url:'../mine/myCopperate/myCopperate.html',
 					styles: {
