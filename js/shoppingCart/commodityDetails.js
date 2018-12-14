@@ -3,6 +3,10 @@
 	var app = new Vue({
 		el:'#app',
 		data:{
+			times:'',				//倒计时
+			secondsleave:false,    //是否显示秒杀
+			msPrice:'',			    //秒杀价
+			msOldPrice:'',			//秒杀原价
 			imgurls:'',            //单独显示图片的地址
 			isCollection:false,			//收藏
 			isChoose:false,			//选择
@@ -93,7 +97,7 @@
 				$j('.btnarr').hide()
 				var img = ser+imgurl;				
 				this.imgurls = img 
-					var timeOutEvent=0;
+				var timeOutEvent=0;
 				$j(function(){
 					$j("#touchArea").on({
 						touchstart: function(e){
@@ -139,6 +143,41 @@
 				//dtask.addEventListener("statechanged", onStateChanged, false);
 				dtask.start(); 
 
+			},
+			//倒计时
+			resetTime:function(times){
+				if(times == ''||times == undefined){
+					 	this.secondsleave = false
+					 	return
+				}else{
+					this.secondsleave = true
+				}
+				 var timer=null;
+				  timer=setInterval(function(){
+				  	app.secondsleave = true
+				    var day=0,
+				      hour=0,
+				      minute=0,
+				      second=0;//时间默认值
+				    if(times > 0){
+				      day = Math.floor(times / (60 * 60 * 24));
+				      hour = Math.floor(times / (60 * 60)) - (day * 24);
+				      minute = Math.floor(times / 60) - (day * 24 * 60) - (hour * 60);
+				      second = Math.floor(times) - (day * 24 * 60 * 60) - (hour * 60 * 60) - (minute * 60);
+				    }
+				    if (day <= 9) day = '0' + day;
+				    if (hour <= 9) hour = '0' + hour;
+				    if (minute <= 9) minute = '0' + minute;
+				    if (second <= 9) second = '0' + second;
+					app.times = hour+":"+minute+":"+second;			    
+				    times--;
+				    if(times<0){ 
+				    	console.log(times)
+				  	app.secondsleave = false
+				    clearInterval(timer); 
+				  }
+				  },1000);
+				  
 			},
 			//点击收藏
 			collectionBtn:function(){
@@ -238,6 +277,8 @@
 					console.log(r);
 					if(r.status == 200){
 						app.infos = r.data;
+						app.msPrice = r.data.num.MINPRICE;
+						app.msOldPrice = r.data.num.MAXPRICE;
 						app.name = r.data.commodity[0].ID;
 						app.specificationOrSize = r.data.commodity[0].SPECIFICATIONS;
 						app.numMaxNum();
@@ -467,18 +508,21 @@
 		},
 		created:function(){
 			this.getUrlObj();
-			this.loadding();
-			
+			this.loadding();	
 			window.addEventListener('comDetail', function(event) {
-				app.loadding();
+				app.loadding();	
 			}, false);
 			window.addEventListener('changeP', function(event) {
 				app.loadding();
 			}, false);
 			this.showSinglePicture()
+			this.resetTime(10)
+		
+			
 //			console.log(this.store);
 		},
 		mounted:function(){
+				$j("#newPrice").html()
 			mui.init();
 			mui('.mui-scroll-wrapper').scroll({
 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006

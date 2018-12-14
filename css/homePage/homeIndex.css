@@ -302,8 +302,18 @@ input[type=search]{
 .bigImgTodetails p{
 	margin:0.1rem 0;																																																																																																																																																																																																																		
 }
-
-
 [v-cloak] {
     display: none !important;
+}
+.seconds{
+	text-align: center;
+	width:1.5rem;
+	/*border:1px solid #ff6530;*/
+	position: absolute;
+	top:0.26rem;
+	right: -0.32rem;
+	transform: rotate(45deg);
+	background: #ff6530;
+	color:#ffffff;
+	
 }

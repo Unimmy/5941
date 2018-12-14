@@ -4,10 +4,10 @@
  */
 
 //var serverUrl = "http://PC-20180516EPXK/";//
-//var serverUrl = "http://192.168.5.254:8091/"	//罗玉波 
+var serverUrl = "http://192.168.5.254:8091/"	//罗玉波 
 //var serverUrl = "http://114.116.88.94:8091/"	//测试服务器
 //var serverUrl = "http://PC-20180516EPXK/"	//api
-var serverUrl = "http://123.207.147.134:8091/"	//服务器地址
+//var serverUrl = "http://123.207.147.134:8091/"	//服务器地址
 //var serverUrl= "http://123.207.147.134:8092/"  //备用正式服务器(暂未启用)
 //var serverUrl = "http://1y74625t01.iok.la:19023/"
 //var baseUrl = serverUrl + "f/";
@@ -41,9 +41,6 @@ var baseProJectApp = baseUrl;
  * 防篡改js封装
  * 
  */
-
-
-	
 var NetUtil = {
     postRequest: function (str_Url, json_Data,sign,fnOnSuccess,fnBefore, fnComplete) {
     	json_Data.sign = sign;

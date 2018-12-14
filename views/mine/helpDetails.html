@@ -7,7 +7,7 @@
 	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
-	<link rel="stylesheet" href="../../css/mine/help.css" />
+	<link rel="stylesheet" href="../../css/mine/helpDetails.css" />
 	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../../lib/mui/mui.min.js"></script>
 	<script src="../../lib/vue/vue.min.js"></script>
@@ -28,8 +28,8 @@
 					<div class="products">
 						<div class="contentDiv">
 							<ul class="message">
-								<li>
-									<img src="../../img/mine/help1.png"/>	
+								<li v-for="item in infos">
+									<img :src="server+item.CONTENT" alt="出错了" style="width:95%;"/>
 								</li>
 							</ul>
 						</div>
@@ -39,6 +39,7 @@
 		</div>
 		<!--script-->
 		<script src="../../js/common/common.js"></script> 
+		<script src="../../js/mine/helpdetail.js"></script>
 	</body>
 
 </html>

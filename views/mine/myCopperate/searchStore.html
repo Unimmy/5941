@@ -27,10 +27,10 @@
 					<div class="products">
 						<ul class="contentDiv">
 							<div v-for="(item,index) in infos" class="section">
-							<li @tap="chooseRadio(infos[index].CODE,infos[index].SHOPNAME);" class="mui-checkbox">
-								<!--<input class="checkxieyi" name="checkbox" value="" type="radio">-->
-								<label class="mdName">{{item.SHOPNAME}}
-									<a style="color:#ff6530;border:1px solid #ff6530;width:1rem;text-align: center;border-radius: 0.1rem;" @tap="surnBtn();" class="mui-pull-right mui-pull-rightHeader white">确定</a>
+							<li @tap="chooseRadio(infos[0].CODE,infos[0].SHOPNAME);" class="mui-checkbox">
+								<input class="checkxieyi" name="checkbox" value="" type="radio" @tap="surnBtn();" >
+								<label class="mdName"  @tap="surnBtn();">{{item.SHOPNAME}}
+									<!--<a style="color:#ff6530;border:1px solid #ff6530;width:1rem;text-align: center;border-radius: 0.1rem;" @tap="surnBtn();" class="mui-pull-right mui-pull-rightHeader white">确定</a>-->
 								</label>
 								
 							</li>

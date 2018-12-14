@@ -21,7 +21,7 @@
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
 				<span class="mui-pull-right btn-register">
 					<i @click="goHomeIndex();" class="homeImg"></i>
-					<!--<i onclick="shareHref();" id="shareShare" class="share"></i>-->
+					<i onclick="shareHref();" id="shareShare" class="share"></i>
 				</span>
 			</header>
 			<div class="mui-content mui-scroll-wrapper">
@@ -29,12 +29,36 @@
 					<div class="contentDiv">
 						<div class="message">
 							<div class="swiper-container">
-							  	<div class="swiper-wrapper">
+							  	<div class="swiper-wrapper" style="position: relative;">
 									<img v-for="(x,index) in infos.mainimage" class="swiper-slide" :src="server+x" alt="" @tap="showSinglePicture(server,x);" />
 									<p v-for="(x,index) in infos.mainimage" id="shareImg" style="display:none;">
 										{{x}}
 									</p>
 							  	</div>	
+							  	<!--秒杀-->
+							  	<!--<div class="leaveseconds" v-if="secondsleave">
+							  		<div style="position:relative;">
+							  			<p>&yen;<b id="newPrice">{{msPrice}}</b>.<b style="font-size:14px;">00</b></p>
+							  			<p class="mstext">限时秒杀</p>
+							  			<p class="yjtext"><i style="font-size: 14px;text-decoration: line-through;" id="oldPrice">&yen;{{msOldPrice}}</i></p>
+							  		</div>
+							  		<div>
+							  			<p>距结束还剩：</p>
+							  			<p style="font-size: 18px;position: relative;top:-.1rem " id="timer">{{times}}</p>
+							  		</div>
+							  	</div>-->
+							  	<!--拼团-->
+							  	<div class="leaveseconds" v-if="secondsleave">
+							  		<div style="position:relative;">
+							  			<p>&yen;<b id="newPrice">{{msPrice}}</b>.<b style="font-size:14px;">00</b></p>
+							  			<p class="mstext">2人拼团</p>
+							  			<p class="yjtext"><i style="font-size: 14px;text-decoration: line-through;" id="oldPrice">&yen;{{msOldPrice}}</i></p>
+							  		</div>
+							  		<div>
+							  			<p>距结束还剩：</p>
+							  			<p style="font-size: 18px;position: relative;top:-.1rem " id="timer">{{times}}</p>
+							  		</div>
+							  	</div>
 								<!--底部滑块-->
 							  	<div class="swiper-pagination"></div>
 							</div>
@@ -46,7 +70,7 @@
 								<span v-if="!shopPrice && isActivity != 1 && infos.num.MINPRICE!=infos.num.MAXPRICE" class="leftMoney">￥{{infos.num.MINPRICE}}~{{infos.num.MAXPRICE}}</span>
 								<span v-if="!shopPrice && isActivity != 1 && infos.num.MINPRICE==infos.num.MAXPRICE" class="leftMoney">￥{{infos.num.MINPRICE}}</span>
 								<span v-if="isActivity == 1" class="leftMoney">￥{{surePrice.price1}} <i class="oldMoneyss">￥{{surePrice.price}}</i></span>
-								<span class="rightSell">已售{{infos.commodity[0].SALESIZE}}&nbsp;&nbsp;库存{{infos.num.NUM}}份</span>					
+								<span class="rightSell">已售{{infos.commodity[0].SALESIZE}}&nbsp;&nbsp;库存{{infos.num.NUM}}份 </span>					
 							</div>
 						</div>	
 						<ul class="choose" style="margin-bottom:0.1rem;">
@@ -135,9 +159,9 @@
 						</ul>
 						<div class="modityImg">
 							<p v-for="(item,index) in infos.detailsimage">
-								<img v-bind:src="server+item" alt=""  @tap="showSinglePicture(server,item);"/>
+								<img  v-bind:src="server+item" alt=""  @tap="showSinglePicture(server,item);"style="width:100%"/>
 							</p>
-						</div>
+						</div>-
 					</div>
 				</div>	
 				<div class="showSinglePicture" v-if="imgurls" @tap="showSinglePicture();">
@@ -153,7 +177,8 @@
 					<button @click="collectionBtn();" :class="{active:isCollection==true}" class="collection"></button>
 					<button @click="goShopCart();" class="kefu gowuche"><i>{{infos.ShoppingCard}}</i></button>
 					<button @tap="purchaseImmediately();" class="buy">立即购买</button>
-					<button @tap="addCar();" class="addCart">加入购物车</button>
+					<button @tap="addCar();" class="addCart" v-if="!secondsleave">加入购物车</button>
+					<button @tap="addCar();" class="addCart" v-if="secondsleave">立即拼团</button>
 				</div>
 			</div>
 		</div>

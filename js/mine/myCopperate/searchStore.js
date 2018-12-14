@@ -56,6 +56,7 @@
 			},
 			//搜索
 			searchBtn:function(){
+				console.log(this.type)
 				NetUtil.ajax('/shop/getShopByShopNameLike',{
 					shopname:this.searchName,
 					uname:localStorage.getItem('uname'),
@@ -72,11 +73,11 @@
 			//确定
 			surnBtn:function(){
 			 var btnArray = ['否', '是'];
-                mui.confirm('推荐人:'+this.searchName, btnArray, function(e) {
-                    if (e.index == 1) {
+                mui.confirm('邀请码:'+this.searchName, btnArray, function(e) {
+                    if (e.index == 1) {	
                     NetUtil.ajax('/zsh/jh',{
-					shopcode:this.code,
-					id:this.type,
+					shopcode:app.code,
+					id:app.type,
 					uname:localStorage.getItem('uname'),
 					UID:localStorage.getItem('uuid')
 				},function(r){
@@ -102,7 +103,8 @@
 			},
 			//选择
 			chooseRadio:function(code1,name){
-				this.shopname=name;
+//				console.log('code1:'+code1,'name:'+name)
+				this.shopname=this.infos[0].SHOPNAME;
 				this.code=code1;
 				this.isSurnBtn = 1;
 			},
@@ -113,6 +115,7 @@
 		},
 		created:function(){
 			this.getUrlObj();
+			console.log(this.type)
 		},
 		filters:{
 			moneyFiler:function(value){

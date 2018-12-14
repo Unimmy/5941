@@ -23,31 +23,10 @@
 					<div class="products">
 						<div class="contentDiv">
 							<ul class="message">
-								<li @tap="turnToX('helpDetails')">
+								<li @tap="turnToX('helpDetails',''+item.TITLE2+'')" v-for="item in infos" >
 									<img src="../../img/mine/help1.png"/>
-									123
+									{{item.TITLE2}}
 								</li>
-								<li>
-									<img src="../../img/mine/help1.png"/>
-									123
-								</li>
-								<li>
-									<img src="../../img/mine/help1.png"/>
-									123
-								</li>
-								<li>
-									<img src="../../img/mine/help1.png"/>
-									123
-								</li>
-								<li>
-									<img src="../../img/mine/help1.png"/>
-									123
-								</li>
-								<li>
-									<img src="../../img/mine/help1.png"/>
-									123
-								</li>
-								
 							</ul>
 						</div>
 					</div>	

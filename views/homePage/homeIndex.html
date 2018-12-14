@@ -59,7 +59,7 @@
 								<p @tap="turnTo('homeList','homeList',''+item.mk+'')" class="topTitle">{{item.mk}}</p>
 								<div class="products">
 									<dl v-for="(i,index) in item.listmap" @tap="portrait(''+i.COMMODITYKEYID+'');" class="shopps">
-										<dt><img v-bind:src="server+i.MAINIMAGE"/></dt>
+										<dt style="position: relative;overflow: hidden;"><img v-bind:src="server+i.MAINIMAGE"/><p class="seconds">限时秒杀</p></dt>
 										<dd> 
 											<p>{{i.NAME}}</p> 
 											<span class="priceNew">￥{{i.PRICE}}</span><span v-if="i.ORIGINALPRICE!='' && i.ORIGINALPRICE!=i.PRICE && i.ORIGINALPRICE!=null &&i.ORIGINALPRICE!=undefined " class="oldMoney">￥{{i.ORIGINALPRICE}}</span>
