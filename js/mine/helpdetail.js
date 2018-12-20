@@ -25,13 +25,13 @@
 				}, function(r) {
 					console.log(r.status);
 					app.infos = r.data
+					console.log(r.data.length)
 				});
 			},
 		},
 		created: function() {
 			this.getUrlObj()
 			this.getInfo()
-			console.log(this.infos)
 		},
 		mounted: function() {
 

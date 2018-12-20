@@ -45,8 +45,6 @@
 			},
 			/*跳转详情页面*/
 			turnToX: function(name,id,type,index) {
-				console.log("name:"+name)
-				console.log("type:"+type)
 				if(name == '1'){//name传1则不跳转
 					return
 				}
@@ -164,7 +162,7 @@
 			//判断是否登陆了的 登录了 跳转详情页面  没有登录 跳转登录页面
 			portrait:function(id){
 				var _this = this;
-				console.log(id);
+//				console.log(id);
 				this.turnToX('../shoppingCart/commodityDetails','commodityDetails',id);
 			},
 			//关闭刚刚进来时打开的图片

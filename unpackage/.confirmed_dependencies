@@ -26,7 +26,13 @@
       "lib/jquery/jquery-3.2.1.min.js",
       "views/classification/classification.html",
       "img/common/wode--shiti.png",
-      "img/common/zhuye-kongxin.png"
+      "img/common/zhuye-kongxin.png",
+      "img/common/shopping-shiti.png",
+      "img/common/shopping-kongxin.png",
+      "img/common/zhuye-shiti.png",
+      "img/common/fenlei-kongxin.png",
+      "img/common/wode-kongxin.png",
+      "img/common/fenlei-shiti.png"
     ],
     "refer": [
       "views/homePage/homeIndex.html",
@@ -1790,7 +1796,31 @@
       "views/mine/help.html",
       "views/mine/helpShop.html"
     ],
-    "resources": []
+    "resources": [
+      "img/mine/tixianguanli.png",
+      "img/mine/zhanghuyuanquan.png",
+      "img/mine/kehutuihuo.png",
+      "img/mine/shoucangkongxin.png",
+      "img/mine/yiwancheng.png",
+      "img/mine/daizhifu.png",
+      "img/mine/daishouhuo.png",
+      "img/mine/wodedizhi.png",
+      "img/mine/duihuanquanhexiao.jpg",
+      "img/mine/yijinafankui.png",
+      "img/mine/daifahuo.png",
+      "img/mine/tixian.png",
+      "img/mine/wodexiaoshou.png",
+      "css/mine/mine.css",
+      "img/mine/youhuiquan.png",
+      "css/common.css",
+      "img/mine/kehuliebiao.png",
+      "img/mine/erweima.png",
+      "img/mine/kehudingdan.png",
+      "img/mine/help.png",
+      "img/mine/head.png",
+      "img/mine/tuihuanhuo.png",
+      "img/mine/shezhi.png"
+    ]
   },
   "views/mine/setting.html": {
     "refer": [
@@ -1809,7 +1839,11 @@
       "views/homePage/homeList.html",
       "views/homePage/cityChoose.html"
     ],
-    "resources": []
+    "resources": [
+      "css/common.css",
+      "css/classification/classification.css",
+      "css/homePage/homeIndex.css"
+    ]
   },
   "views/mine/accountSecurity/accountSecurity.html": {
     "refer": [
@@ -1821,7 +1855,8 @@
     "refer": [
       "views/shoppingCart/shopSettlement.html",
       "views/shoppingCart/shoppingCart.html",
-      "views/loginRegister/login.html"
+      "views/loginRegister/login.html",
+      "views/shoppingCart/groupbuying.html"
     ],
     "resources": []
   },
@@ -1843,7 +1878,10 @@
       "views/shoppingCart/commodityDetails.html",
       "views/homePage/homeList.html"
     ],
-    "resources": []
+    "resources": [
+      "css/shoppingCart/shoppingCart.css",
+      "css/common.css"
+    ]
   },
   "views/shoppingCart/pay.html": {
     "refer": [

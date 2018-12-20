@@ -43,7 +43,7 @@
 												</p>
 												<p>
 													<span style="color:#b4282d;font-size:0.28rem;" class="spanLeftMr">{{item.PRICE | moneyFiler}}元</span>
-													<!--<span style="color:#bbbbbb" class="xiaoNum">小计：{{item.PRICE*item.NUM}}元</span>-->
+													<!--<span style="color:#bbbbbb" class="xiaoNum">小计：{{item .PRICE*item.NUM}}元</span>-->
 												</p>
 												<div class="mui-numbox mui-numboxsss" :class="addClassName(index)" data-numbox-step='0' data-numbox-min='0' data-numbox-max='100'>
 												  <!-- "-"按钮，点击可减小当前数值 -->

@@ -4,9 +4,16 @@
 		el:'#app',
 		data:{
 			times:'',				//倒计时
-			secondsleave:false,    //是否显示秒杀
+			msTimes:'',				//传入倒计时的时间
+			startTimes:'',			//是否开始倒计时
+			days:'',				//倒计时天数
 			msPrice:'',			    //秒杀价
 			msOldPrice:'',			//秒杀原价
+			msNum:'1',				//秒杀数量	
+			code:'',				//商品编号
+			showGrop:0,			//显示拼团按钮 0不显示,1显示
+			showMs:0,			//显示秒杀按钮 0不显示,1显示
+			showYs:0,			//显示预售 0不显示,1显示
 			imgurls:'',            //单独显示图片的地址
 			isCollection:false,			//收藏
 			isChoose:false,			//选择
@@ -93,6 +100,7 @@
 					}
 				})
 			},
+			//点击放大图片
 			showSinglePicture:function(ser,imgurl){
 				$j('.btnarr').hide()
 				var img = ser+imgurl;				
@@ -140,21 +148,17 @@
 						mui.alert("Download failed: " + status); 
 					}  
 				});
-				//dtask.addEventListener("statechanged", onStateChanged, false);
 				dtask.start(); 
-
 			},
 			//倒计时
 			resetTime:function(times){
-				if(times == ''||times == undefined){
-					 	this.secondsleave = false
+				times = times/1000
+				if(times == ''||times == undefined || times <0){
 					 	return
-				}else{
-					this.secondsleave = true
 				}
 				 var timer=null;
 				  timer=setInterval(function(){
-				  	app.secondsleave = true
+//				  	app.secondsleave = true
 				    var day=0,
 				      hour=0,
 				      minute=0,
@@ -169,15 +173,160 @@
 				    if (hour <= 9) hour = '0' + hour;
 				    if (minute <= 9) minute = '0' + minute;
 				    if (second <= 9) second = '0' + second;
-					app.times = hour+":"+minute+":"+second;			    
+					app.times = hour + ":" + minute + ":" + second;	
+					app.days = day +'天'
 				    times--;
 				    if(times<0){ 
-				    	console.log(times)
-				  	app.secondsleave = false
+				    	app.showMs = 0;
+				    	app.showYs = 0;
+				    	app.showGrop = 0;
 				    clearInterval(timer); 
 				  }
-				  },1000);
-				  
+				  },1000); 	
+				
+			},
+			//ID秒杀查询
+			msSelect:function(){
+				NetUtil.ajax('/ms/bykeyid',{
+					keyid:this.name,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+//					console.log(r);
+					if(r.status == 200){
+						if(r.data.length<1){return}
+						app.startTimes = r.data[0].STAR; 
+						app.msTimes = r.data[0].END - r.timestamp;
+						app.msPrice = r.data[0].PRICE
+						app.resetTime(app.msTimes);
+						var nowtime = new Date().getTime()	
+						console.log('starttime:'+app.startTimes)
+						console.log('nowtime:'+nowtime)
+						if(app.msTimes>0 && nowtime > app.startTimes){
+							app.showMs = 1;
+						}
+					}else{
+						mui.alert(r.message,function(){},'div');
+					}
+				})
+			},
+			//条码秒杀查询
+			msSingleSelect:function(){
+				NetUtil.ajax('/ms/bycode',{
+					code:this.code,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+					if(r.status == 200){
+						if(r.data.length<1){return}
+						app.msNum = r.data[0].NUM;
+						app.startTimes = r.data[0].STAR; 
+						app.msPrice = r.data[0].PRICE;
+						app.msTimes = r.data[0].END - r.timestamp;
+						app.resetTime(app.msTimes);
+						console.log(app.msNum)
+						var nowtime = new Date().getTime()
+						if(app.msTimes>0 && nowtime > app.startTimes){
+							app.showMs = 1;
+						}
+					}else{
+						mui.alert(r.message,function(){},'div');
+					}
+				})
+			},
+			//ID预售查询
+			ysSelect:function(){
+				NetUtil.ajax('/ys/bykeyid',{
+					keyid:this.name,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+//					console.log(r);
+
+					if(r.status == 200){
+						if(r.data.length<1){return}
+						app.msNum = r.data[0].NUM;
+						app.startTimes = r.data[0].STAR; 
+						app.msTimes = r.data[0].END - r.timestamp
+						app.msPrice = r.data[0].PRICE
+						app.resetTime(app.msTimes);
+						console.log('starttime:'+app.startTimes)
+						var nowtime = new Date().getTime()
+						console.log('nowtime:'+nowtime)
+						if(app.msTimes>0 && nowtime > app.startTimes){
+							app.showYs = 1;
+						}
+					}else{
+						mui.alert(r.message,function(){},'div');
+					}
+				})
+			},
+			//条码预售查询
+			ysSingleSelect:function(){
+				NetUtil.ajax('/ys/bycode',{
+					code:this.code,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+					if(r.status == 200){
+						app.startTimes = r.data[0].STAR;
+						app.msPrice = r.data[0].PRICE;
+						app.msTimes = r.data[0].END - r.timestamp;
+						app.resetTime(app.msTimes);
+						var nowtime = new Date().getTime()
+						if(app.msTimes>0 && nowtime>app.startTimes){
+							app.showYs = 1;
+						}
+					}else{
+						mui.alert(r.message,function(){},'div');
+					}
+				})
+			},
+			//ID拼团查询
+			pddSelect:function(){
+				NetUtil.ajax('/pdd/bykeyid',{
+					keyid:this.name,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+//					console.log(r);
+					if(r.status == 200){
+						if(r.data.length <1 ){ return }
+						app.startTimes = r.data[0].STAR;
+						app.msTimes = r.data[0].END - r.timestamp
+						app.msPrice = r.data[0].PRICE
+						app.resetTime(app.msTimes);
+						var nowtime = new Date().getTime()
+						if(app.msTimes > 0 && nowtime > app.startTimes){
+							app.showGrop = 1;
+						}
+					}else{
+						mui.alert(r.message,function(){},'div');
+					}
+				})
+			},
+			//条码拼团查询
+			pddSingleSelect:function(){
+				NetUtil.ajax('/pdd/bycode',{
+					code:this.code,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+					if(r.status == 200){
+						if(r.data.length < 1){ return }
+						app.msNum = r.data[0].NUM;
+						app.startTimes = r.data[0].STAR;
+						app.msPrice = r.data[0].PRICE;
+						app.msTimes = r.data[0].END - r.timestamp;
+						app.resetTime(app.msTimes);
+						var nowtime = new Date().getTime()
+						if(app.msTimes>0 && nowtime>app.startTimes){
+							app.showGrop = 1;
+						}
+					}else{
+						mui.alert(r.message,function(){},'div');
+					}
+				})
 			},
 			//点击收藏
 			collectionBtn:function(){
@@ -273,12 +422,11 @@
 					UID:localStorage.getItem('uuid')
 				},function(r){
 //					plus.nativeUI.closeWaiting();
-//					console.log(JSON.stringify(r));
-					console.log(r);
+////					console.log(JSON.stringify(r));
+//					console.log(r);
 					if(r.status == 200){
 						app.infos = r.data;
-						app.msPrice = r.data.num.MINPRICE;
-						app.msOldPrice = r.data.num.MAXPRICE;
+						app.msOldPrice = r.data.num.MAXORIGINALPRICE;
 						app.name = r.data.commodity[0].ID;
 						app.specificationOrSize = r.data.commodity[0].SPECIFICATIONS;
 						app.numMaxNum();
@@ -319,12 +467,14 @@
 						mui.toast(r.message);
 					}
 				})
-				this.chooseSureBtn()
+//				this.chooseSureBtn()
 			},
 			//选择规格或者尺码
 			chooseSize:function(index,name,type){
+				console.log("***************************")
 				this.mysizeIndex = index;
 				this.mysizeName = name;
+				console.log('choose:'+name)
 				this.inventorySurplus();
 				//选择尺码查询颜色状况
 				NetUtil.ajax('/commodity/coloursize',{
@@ -335,6 +485,7 @@
 					console.log(r);
 					if(r.status==200){
 						app.infos.colour = r.data;
+						
 					}else{
 						mui.toast(r.message);
 					}
@@ -367,7 +518,11 @@
 						if(r.status==200){
 							app.infos.num.NUM = r.data.num.NUM;
 							app.shopPrice = r.data.price;
+							app.code = r.data.code;
 							app.numMaxNum();
+							if(app.showMs == 1 && app.infos.num.NUM ){ this.resetTime = null; app.msSingleSelect();}
+							if(app.showYs == 1 && app.infos.num.NUM ){this.resetTime = null; app.ysSingleSelect();}
+							if(app.showGrop == 1 && app.infos.num.NUM ){this.resetTime = null;app.ysSingleSelect();}
 						}else{
 							app.infos.num.NUM = '0';
 							app.shopPrice = '';
@@ -428,6 +583,7 @@
 					if(!this.addCarId){
 						mui.alert('请先选择商品类型',function(){},'div');
 					}else{
+						console.log(this.addCarId)
 						//plus.nativeUI.showWaiting();
 						NetUtil.ajax('/card/add',{
 							id:this.addCarId,
@@ -466,6 +622,7 @@
 					}
 				}
 			},
+
 			//点击购物车
 			goShopCart:function(){
 				this.chooseSureBtn()
@@ -475,7 +632,6 @@
 					},'div')
 				}else{
 					var shopCart = plus.webview.getWebviewById('views/shoppingCart/shoppingCart.html');
-					
 		           	setTimeout(function(){
 		           		mui.fire(shopCart, 'changeP', {  
 			                name: 'name2'  //传往second.html的值  
@@ -508,21 +664,20 @@
 		},
 		created:function(){
 			this.getUrlObj();
-			this.loadding();	
+			this.loadding();
+			this.msSelect();
+			this.ysSelect();
+			this.pddSelect();
 			window.addEventListener('comDetail', function(event) {
 				app.loadding();	
 			}, false);
 			window.addEventListener('changeP', function(event) {
 				app.loadding();
 			}, false);
-			this.showSinglePicture()
-			this.resetTime(10)
-		
-			
-//			console.log(this.store);
+			this.showSinglePicture();	
+			console.log('name:'+this.name)
 		},
-		mounted:function(){
-				$j("#newPrice").html()
+		mounted:function(){	
 			mui.init();
 			mui('.mui-scroll-wrapper').scroll({
 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006

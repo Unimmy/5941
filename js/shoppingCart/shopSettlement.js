@@ -89,6 +89,7 @@
 			//选择支付模式
 			choosePay:function(index){
 				this.isChoosePay = index;
+				console.log(index)
 			},
 			//获取URL后面的值
 			getUrlObj:function () { //获取url？号后面的值，以对象的形式存在
@@ -200,8 +201,6 @@
 			//去支付
 			goPayBtn:function(){
 				if(this.orderId == ''){
-//					console.log(this.modelId);
-//					console.log(this.addressId);
 					console.log(this.couponArrayId);
 					console.log(this.infos[0].data[0].num);
 					//支付宝或者微信下单
@@ -224,14 +223,13 @@
 								UID:localStorage.getItem('uuid')
 							},function(msg){
 								if(msg.status==200){
-									console.log(msg);
 									if(app.isChoosePay == 0 || app.isChoosePay == 1 ){
 									app.turnTo('pay','pay',msg.data,app.isChoosePay);
 									}else{
 									app.turnTo('payHappy','payHappy',msg.data,app.isChoosePay);
 							}
 							}else{
-										mui.alert(r.message,function(){},'div');
+								mui.alert(r.message,function(){},'div');
 									}
 								})
 							}else{
@@ -239,16 +237,14 @@
 							}
 								})
 							}
-				else if(app.isChoosePay == 1){
-					//支付宝支付
-					app.apay()
-				
+				else if(app.isChoosePay == 0 || app.isChoosePay == 1 ){
+					app.allpay()
 				}else{
 					app.happyPay()
 				}
 						},
 						//订单号存在支付宝支付
-						apay:function(){
+						allpay:function(){
 						NetUtil.ajax('/orders/'+this.orderId+'',{
 							uname:localStorage.getItem('uname'),
 							UID:localStorage.getItem('uuid')
@@ -263,7 +259,7 @@
 						},
 						//快乐币支付
 						happyPay:function(){
-							NetUtil.ajax('/orders/'+this.orderId+'',{
+						NetUtil.ajax('/orders/'+this.orderId+'',{
 						uname:localStorage.getItem('uname'),
 						UID:localStorage.getItem('uuid')
 					},function(msg){

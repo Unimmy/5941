@@ -7,7 +7,7 @@
 	"id": "H587C53F1",/*应用的标识，创建应用时自动生成，勿手动修改*/
 	"name": "5941商城",/*应用名称，程序桌面图标名称*/
 	"version": {
-		"name": "1.3.0",/*应用版本名称*/
+		"name": "1.3.4",/*应用版本名称*/
 		"code": "83"
 	},
 	"description": "",/*应用描述信息*/
@@ -133,8 +133,8 @@
 				},
 				"share": {
 					"weixin": {
-						"appid": "wx1152a02fb11a23a9",
-						"appsecret": "7cd330f13a11d0e2e5dbfe5583b97dcd",
+						"appid": "wxbf8a9c74b0da22f8",
+						"appsecret": "e1c3986c9947ff030aa88e08c0a67d8b",
 						"description": "微信分享"
 					},
 					"sina": {
@@ -151,8 +151,9 @@
 				"oauth": {
 					"weixin": {
 						"description": "微信登录授权",
-						"appid": "wx1152a02fb11a23a9",
-						"appsecret": "7cd330f13a11d0e2e5dbfe5583b97dcd"
+						"appid": "wxbf8a9c74b0da22f8",
+						"appsecret": "e1c3986c9947ff030aa88e08c0a67d8b"
+						
 					}
 				},
 				"payment": {
@@ -162,7 +163,7 @@
 					},
 					"weixin": {
 						"description": "微信支付",
-						"appid": "wx1152a02fb11a23a9"
+						"appid": "wxbf8a9c74b0da22f8"
 					}
 				}
 			},
@@ -317,7 +318,13 @@
 					"lib/jquery/jquery-3.2.1.min.js",
 					"views/classification/classification.html",
 					"img/common/wode--shiti.png",
-					"img/common/zhuye-kongxin.png"
+					"img/common/zhuye-kongxin.png",
+					"img/common/shopping-shiti.png",
+					"img/common/shopping-kongxin.png",
+					"img/common/zhuye-shiti.png",
+					"img/common/fenlei-kongxin.png",
+					"img/common/wode-kongxin.png",
+					"img/common/fenlei-shiti.png"
 				],
 				"refer": [
 					"views/daidai/ddIndex.html",
@@ -2135,7 +2142,31 @@
 				"priority": 0
 			},
 			"views/mine/mine.html": {
-				"resources": [],
+				"resources": [
+					"img/mine/tixianguanli.png",
+					"img/mine/zhanghuyuanquan.png",
+					"img/mine/kehutuihuo.png",
+					"img/mine/shoucangkongxin.png",
+					"img/mine/yiwancheng.png",
+					"img/mine/daizhifu.png",
+					"img/mine/daishouhuo.png",
+					"img/mine/wodedizhi.png",
+					"img/mine/duihuanquanhexiao.jpg",
+					"img/mine/yijinafankui.png",
+					"img/mine/daifahuo.png",
+					"img/mine/tixian.png",
+					"img/mine/wodexiaoshou.png",
+					"css/mine/mine.css",
+					"img/mine/youhuiquan.png",
+					"css/common.css",
+					"img/mine/kehuliebiao.png",
+					"img/mine/erweima.png",
+					"img/mine/kehudingdan.png",
+					"img/mine/help.png",
+					"img/mine/head.png",
+					"img/mine/tuihuanhuo.png",
+					"img/mine/shezhi.png"
+				],
 				"refer": [
 					"views/mine/myOrder/myOrder.html",
 					"views/mine/setting.html",
@@ -2176,7 +2207,11 @@
 				"priority": 0
 			},
 			"views/classification/classification.html": {
-				"resources": [],
+				"resources": [
+					"css/common.css",
+					"css/classification/classification.css",
+					"css/homePage/homeIndex.css"
+				],
 				"refer": [
 					"views/homePage/homeList.html",
 					"views/homePage/cityChoose.html"
@@ -2195,7 +2230,8 @@
 				"refer": [
 					"views/shoppingCart/shopSettlement.html",
 					"views/shoppingCart/shoppingCart.html",
-					"views/loginRegister/login.html"
+					"views/loginRegister/login.html",
+					"views/shoppingCart/groupbuying.html"
 				],
 				"priority": 0
 			},
@@ -2213,7 +2249,10 @@
 				"priority": 0
 			},
 			"views/shoppingCart/shoppingCart.html": {
-				"resources": [],
+				"resources": [
+					"css/shoppingCart/shoppingCart.css",
+					"css/common.css"
+				],
 				"refer": [
 					"views/shoppingCart/shopSettlement.html",
 					"views/shoppingCart/commodityDetails.html",

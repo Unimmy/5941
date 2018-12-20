@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/shoppingCart/shopSettlement.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">团购信息</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper">
+				<div class="mui-scroll">
+					<div v-for="(i,index) in infos" class="message">
+						<p class="title"><i></i>{{i.onename}}</p>
+						<div v-for="(item,index) in i.data" class="mainDiv">
+							<img :src="server+item.picpath"/>
+							<p class="name">{{item.title}}</p>
+							<p class="center">
+								<span class="left">{{item.colour}}：{{item.mysize}}</span>
+								<span class="right">×{{item.num}}</span>
+							</p>
+							<p class="money">{{item.price | moneyFiler}}</p>
+							<p class="huodong" v-if="item.mPromotion != null">
+								<span class="huodongLeft">{{item.mPromotion.title}}:{{item.mPromotion.introduce}}</span> 
+								<span class="jiangjiaRight">-{{item.mPromotion.reduce}}</span>
+							</p>
+						</div>
+						<ul class="someThings">
+							<li>
+								<p class="left">运费</p>
+								<p class="right" v-if="isChooseModey==1">{{i.postfee | moneyFiler}}</p>
+								<p class="right" v-if="isChooseModey==3">{{0 | moneyFiler}}</p>
+								<p class="postFeessee" style="display:none;">{{i.postfee}}</p>
+							</li>
+							<!--<li v-if="freightMoney!=0">
+								<p class="left">运费险</p>
+								<p @click="freightRisk();" class="right yunfeixian" :class="{active:isfreightRisk==true}">
+									<span>￥{{freightMoney}}</span>
+									<i></i>
+								</p>
+							</li>-->
+							<!--<li>
+								<p class="left">红包</p>
+								<p class="right redPack">
+									无可用红包<i class="arrow_right"></i>
+								</p>
+							</li>-->
+							<li v-if="couponShow==true" @click="goShopCoupon(i);" style="position:relative;">
+								<p style="float:left;" class="left">优惠券</p>
+								<p :class="i.onephone" style="margin-left:0.2rem;width:80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"></p>
+								<p :class="'num'+i.onephone" class="couponIdA" style="display:none;"></p>
+								<input type="text" :class="'numbera'+i.onephone" class="numberaA" style="display:none;"/>
+								<p :class="'oneone'+i.onephone" class="oneA" style="display:none;"></p>
+								<span class="rightImg"></span>
+							</li>
+							<li>
+								<p class="left">商品总价</p>
+								<p class="right shopzongjia" v-if="isChooseModey==1">{{i.numall | moneyFiler}}</p>
+								<p class="right shopzongjia" v-if="isChooseModey==3">{{i.numall-i.postfee | moneyFiler}}</p>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="list-box">
+						<ul>
+							<li v-if="modelId == 2 && addressIsTrue==0" style="padding: 0.1rem 0.25rem 0;border-bottom: 1px solid #bebebe;height: 0.7rem;line-height: 0.5rem;font-size: 0.26rem;">收货地址：</li>
+							<li v-if="modelId == 2 && addressIsTrue==0" @tap="turnTo('../mine/address/address','address');">
+								<div v-for="(x,index) in address" class="details">
+									<div class="name mui-clearfix">
+										<div class="mui-pull-left">{{x.name}}</div>
+										<div class="mui-pull-right">{{x.phone}}</div>
+									</div>
+									<div class="area">{{x.detailed}}</div>
+								</div>
+								<span class="rightImg"></span>
+							</li>
+						</ul>
+						<ul>
+							<li v-if="modelId == 2 && addressIsTrue==1" style="padding: 0.1rem 0.25rem 0;border-bottom: 1px solid #bebebe;height: 0.7rem;line-height: 0.5rem;font-size: 0.26rem;">收货地址：</li>
+							<li v-if="modelId == 2 && addressIsTrue==1" @tap="turnToAdd('../mine/address/address','address','shopSettlement');">
+								<div class="details">
+									<div class="name mui-clearfix">
+										暂无收货地址,请点击前去设置收货地址
+									</div>
+								</div>
+								<span class="rightImg"></span>
+							</li>
+						</ul>
+						<ul>
+							<li v-if="modelId == 1" style="padding: 0.1rem 0.25rem 0;border-bottom: 1px solid #bebebe;height: 0.7rem;line-height: 0.5rem;font-size: 0.26rem;">提货地址：</li>
+							<li v-if="modelId == 1">
+								<div class="details">
+									<div class="name mui-clearfix">
+										<div class="mui-pull-left">{{shopaddress.name}}</div>
+										<div class="mui-pull-right">{{shopaddress.phone}}</div>
+									</div>
+									<div class="area">{{shopaddress.detailed}}</div>
+								</div>
+								<span class="rightImg"></span>
+							</li>
+							<li class="peisongS">
+								<p class="left">配送方式</p>
+								<p class="right">
+									<label for="homeDelivery">快递到家：</label><input @click="distributionMode('2');" id="homeDelivery" type="radio" name="model" checked="checked" />
+									<label for="selfLifting">快递到店：</label><input @change="distributionMode('1');" id="selfLifting" type="radio" name='model'/>
+									<label for="homeDelivery">现货直提：</label><input @click="distributionMode('3');" id="homeDelivery" type="radio" name="model" />
+								</p>
+							</li>
+						</ul>
+					</div>
+					<div class="tipsMessage">
+						* 温馨提示：12点前下单当日发货，12点后下单次日发货
+					</div>
+					<ul class="payMethod">
+						<li class="weChart">
+							<p class="leftImg"></p>
+							<p>微信支付</p>
+							<p @click="choosePay('0');" :class="{active:isChoosePay==0}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+						<li class="alipay">
+							<p class="leftImg"></p>
+							<p>支付宝</p>
+							<p @click="choosePay('1');" :class="{active:isChoosePay==1}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+						<li class="happy">
+							<p class="leftImg"></p>
+							<p>快乐币支付</p>
+							<p @click="choosePay('2');" :class="{active:isChoosePay==2}" class="imgBtn">
+								<i></i>
+							</p>
+						</li>
+					</ul>
+				</div>
+				<div class="goPay">
+					<div class="leftMoney">
+						<p class="word">应付金额：</p>
+						<p class="money yingfuMoneyAll" v-if="isChooseModey==1">{{moneyAll | moneyFiler}}</p>
+						<p class="money yingfuMoneyAll" v-if="isChooseModey==3">{{moneyAll-postFeePostFee | moneyFiler}}</p>
+					</div>
+					<div @tap="goPayBtn();" class="rightGoPay">去支付</div>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/shoppingCart/shopSettlement.js"></script>
+	</body>
+
+</html>

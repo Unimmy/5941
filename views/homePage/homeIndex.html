@@ -21,9 +21,9 @@
 				<div @click="turnTo('searchSearch','searchSearch','searchSearch');" class="mui-input-row mui-search">
 				    <input placeholder="搜索你所喜欢的东西" disabled="disabled" type="search" class="mui-input-clear" placeholder="">
 				</div>
-				<a @click="turnTo('cityChoose','cityChoose')" class="mui-pull-left"><span>{{locationPosition}}</span><i></i></a>
+				<a @tap="turnTo('cityChoose','cityChoose')" class="mui-pull-left"><span>{{locationPosition}}</span><i></i></a>
 				<!--<a style="width:1rem;" class="mui-pull-left"><span>5941</span></a>-->
-				<a @click="turnTo('messageIndex','messageIndex')" class="mui-pull-right"><i></i></a>
+				<a @tap="turnTo('messageIndex','messageIndex')" class="mui-pull-right"><i></i></a>
 			</header>
 			<div class="mui-content" id="pullrefresh">
 				<div class="">
@@ -59,7 +59,13 @@
 								<p @tap="turnTo('homeList','homeList',''+item.mk+'')" class="topTitle">{{item.mk}}</p>
 								<div class="products">
 									<dl v-for="(i,index) in item.listmap" @tap="portrait(''+i.COMMODITYKEYID+'');" class="shopps">
-										<dt style="position: relative;overflow: hidden;"><img v-bind:src="server+i.MAINIMAGE"/><p class="seconds">限时秒杀</p></dt>
+										<!---->
+										<dt style="position: relative;overflow: hidden;">
+											<img v-bind:src="server+i.MAINIMAGE"/>
+											<p class="seconds" v-if="i.MS!='0'">限时秒杀</p>
+											<p class="seconds" v-if="i.YS!='0'">限时预售</p>
+											<p class="seconds" v-if="i.PDD!='0'">限时拼团</p>
+										</dt>
 										<dd> 
 											<p>{{i.NAME}}</p> 
 											<span class="priceNew">￥{{i.PRICE}}</span><span v-if="i.ORIGINALPRICE!='' && i.ORIGINALPRICE!=i.PRICE && i.ORIGINALPRICE!=null &&i.ORIGINALPRICE!=undefined " class="oldMoney">￥{{i.ORIGINALPRICE}}</span>

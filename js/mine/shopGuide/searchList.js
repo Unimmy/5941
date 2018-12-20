@@ -16,7 +16,7 @@
 		},
 		methods:{
 			turnTo:function(name,nameId,id,index){//id是下面113行跳转用的，避免重复创建
-				if(this.infos[index].ID===undefined || this.infos[index].ID==''){
+				if(this.infos[index].ID===undefined || this.infos[index].ID=='' ||  this.infos[index].ID == null ||this.infos[index].ID=='核销反佣金'){
 					return
 				}
 				mui.openWindow({

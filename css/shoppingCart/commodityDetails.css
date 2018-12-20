@@ -351,18 +351,17 @@ html,body, .mui-bar-nav~.mui-content{
 	height:0.8rem;
 	z-index: 9999;
 	display: flex;
+	background:linear-gradient(to right, #FF7A4C,#FF523D ); /* 标准的语法 ;*/
+	flex-wrap: nowrap;
 }
 .leaveseconds div:first-child{
 	width:70%;
-	background:linear-gradient(to right, #FF7A4C,#FF523D ); /* 标准的语法 ;*/
 }
 .leaveseconds div:last-child{
 	width:30%;
-	background:#f7f7f7; /* 标准的语法 */
 }
 .leaveseconds div:last-child p{
-	color: #FF7A4C !important;
-	font-size: 10px;
+	color: #fff !important;
 	text-align: center;
 }
 .leaveseconds div p:first-child{
@@ -370,19 +369,24 @@ html,body, .mui-bar-nav~.mui-content{
 }
 .mstext{
 	position: absolute;
-	bottom:-.1rem;
-	left:-.2rem;
-	border:1px solid #FFFFFF;
 	color: #FFFFFF !important;
-	width:1.3rem;
 	text-align: center;
+	font-size: .4rem !important;
+	line-height:0.6rem ;
+}
+.msGrop{
+	position: absolute;
+	color: #FFFFFF !important;
+	left:1.3rem;
+	bottom:-.1rem;
+	font-size:.2rem !important;
 }
 .yjtext{
 	position: absolute;
-	bottom:-.1rem;
-	left:1rem;
+	top:0;
+	left:1.2rem;
 	color: #FFFFFF !important;
-	width:1.3rem;
+	width:1.1rem;
 	text-align: center;
 	font-size: 10px;
 }

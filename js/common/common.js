@@ -1,10 +1,8 @@
-
 /**
  * 设置服务器地址
  */
-
 //var serverUrl = "http://PC-20180516EPXK/";//
-var serverUrl = "http://192.168.5.254:8091/"	//罗玉波 
+var serverUrl = "http://192.168.1.254:8091/"	//罗玉波 
 //var serverUrl = "http://114.116.88.94:8091/"	//测试服务器
 //var serverUrl = "http://PC-20180516EPXK/"	//api
 //var serverUrl = "http://123.207.147.134:8091/"	//服务器地址
@@ -19,20 +17,22 @@ var serverUrl = "http://192.168.5.254:8091/"	//罗玉波
 //		page:1,
 //		rows:1
 //	},
+//	timeout:500,
 //	async: false,
 //	method:'post',
 //	success:function(res){
 //		console.log(res.status)
 //	},
 //	 error:function(){
-//  	serverUrl = "http://123.207.147.134:8092/"
-//           }
+//	 	//启动备用服务器
+//	 	console.log(456)
+//  	serverUrl = "http://123.207.147.134:8091/"
+//  }
 //})
 
 var baseUrl = serverUrl;
 //var server = serverUrl +"UpdateBsnLicense";//图片服务器路径
 var server = serverUrl;//图片服务器路径
-
 var baseFtp = "";//文件服务器地址
 var baseUrlWEB = baseUrl;
 var baseUrlAPP = baseUrl;
