@@ -173,6 +173,14 @@
 				"password": "",/*iOS应用打包个人证书导入密码*/
 				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
 				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+				"urltypes": [
+					{
+						"urlidentifier":"io.dcloud.H5E369D9B",
+						"urlschemes": [
+							"H5E369D9B"
+						]
+					}
+				],
 				"frameworks": [],
 				"plistcmds": [
 					"Set :NSCameraUsageDescription 请允许打开相机,拍摄照片,以便于头像设置",

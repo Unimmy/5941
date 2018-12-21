@@ -29,7 +29,7 @@
 					show: {
 						autoShow: true, //页面loaded事件发生后自动显示，默认为true
 						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
-						duration: 200, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						duration: 10, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
 						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
 						extras: {} //窗口动画是否使用图片加速
 					},
@@ -61,7 +61,7 @@
 					show: {
 						autoShow: true, //页面loaded事件发生后自动显示，默认为true
 						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
-						duration: 200, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						duration: 10, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
 						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
 						extras: {} //窗口动画是否使用图片加速
 					},
@@ -88,7 +88,7 @@
 					show: {
 						autoShow: true, //页面loaded事件发生后自动显示，默认为true
 						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
-						duration: 200, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						duration: 10, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
 						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
 						extras: {} //窗口动画是否使用图片加速
 					},
@@ -221,7 +221,7 @@
                     },
                 }
             });
-			this.netAjAx();
+//			this.netAjAx();
 			window.addEventListener('changeP', function(event) {
 				app.netAjAx();
 				console.log('login homeIndex刷新');
@@ -231,6 +231,8 @@
 			},false);
 		},
 		mounted: function() {
+			this.netAjAx();
+			
 			mui('.mui-scroll-wrapper').scroll({
 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
 

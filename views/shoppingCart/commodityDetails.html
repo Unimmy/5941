@@ -3,7 +3,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 	<meta name="author" contect=""> 
-	<title></title>
+	<title>商品详情</title>
 	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
 	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
@@ -153,10 +153,10 @@
 					<button @click="kefuCall();" class="kefu"></button>
 					<button @click="collectionBtn();" :class="{active:isCollection==true}" class="collection"></button>
 					<button @click="goShopCart();" class="kefu gowuche"><i>{{infos.ShoppingCard}}</i></button>
-					<button @tap="purchaseImmediately();" class="buy"v-if="showMs==0 && showYs==0 && showGrop==0 || showGrop ==1">立即购买</button>
-					<button @tap="purchaseImmediately();" class="buy" v-if="showYs == 1">支付定金</button>
-					<button @tap="purchaseImmediately();" class="buy" v-if="showMs == 1">立即秒杀</button>
-					<button @tap="purchaseImmediately();" class="addCart" v-if="showGrop == 1">立即拼团</button>
+					<button @tap="purchaseImmediately();" class="buy"v-if="showMs==0 && showYs==0 && showGrop==0 || showGrop ==1 || msNum <= 0">立即购买</button>
+					<button @tap="purchaseImmediately();" class="buy" v-if="showYs == 1 && msNum>0 ">支付定金</button>
+					<button @tap="purchaseImmediately();" class="buy" v-if="showMs == 1 && msNum>0">立即秒杀</button>
+					<button @tap="purchaseImmediately();" class="addCart" v-if="showGrop == 1 && msNum>0">立即拼团</button>
 					<button @tap="addCar();" class="addCart" v-if="showMs==0 || showYs==0 || showGrop==0">加入购物车</button>
 				</div>
 			</div>
@@ -235,7 +235,7 @@
          				console.log("图片路径:"+imgShare)
          			 var msg = {
 		                content: '分享-商品详情',
-		                href:  "http://123.207.147.134:8091/register/"+localStorage.nickId+"",
+		                href:  "http://www.bming.net:8091/register/"+localStorage.nickId+"",
 		//              title: 'HGDQ-分享测试-title',
 		                title:document.getElementById('displayTitle').innerHTML,
 		//              content: 'HGDQ-分享测试-content',

@@ -111,6 +111,7 @@
 							localStorage.memberId = r.data.id;
 							localStorage.bindPhone = r.data.phone;
 							localStorage.memberLoginSize = r.data.membersize;
+							localStorage.setItem('s_type',r.data.m_type)
 							if(r.data.mShop){
 								localStorage.shopId = r.data.mShop.id;
 							}else{

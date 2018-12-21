@@ -153,7 +153,7 @@
 			//倒计时
 			resetTime:function(times){
 				times = times/1000
-				if(times == ''||times == undefined || times <0){
+				if(times == ''|| times == undefined || times <0){
 					 	return
 				}
 				 var timer=null;
@@ -195,6 +195,7 @@
 //					console.log(r);
 					if(r.status == 200){
 						if(r.data.length<1){return}
+						app.msNum = r.data[0].NUM;
 						app.startTimes = r.data[0].STAR; 
 						app.msTimes = r.data[0].END - r.timestamp;
 						app.msPrice = r.data[0].PRICE
@@ -202,7 +203,7 @@
 						var nowtime = new Date().getTime()	
 						console.log('starttime:'+app.startTimes)
 						console.log('nowtime:'+nowtime)
-						if(app.msTimes>0 && nowtime > app.startTimes){
+						if(app.msTimes>0 && nowtime > app.startTimes && app.msNum > 0){
 							app.showMs = 1;
 						}
 					}else{
@@ -218,7 +219,7 @@
 					UID:localStorage.getItem('uuid')
 				},function(r){
 					if(r.status == 200){
-						if(r.data.length<1){return}
+						if(r.data.length<=0){ app.showMs = 0; return}
 						app.msNum = r.data[0].NUM;
 						app.startTimes = r.data[0].STAR; 
 						app.msPrice = r.data[0].PRICE;
@@ -226,7 +227,7 @@
 						app.resetTime(app.msTimes);
 						console.log(app.msNum)
 						var nowtime = new Date().getTime()
-						if(app.msTimes>0 && nowtime > app.startTimes){
+						if(app.msTimes>0 && nowtime > app.startTimes && app.msNum > 0){
 							app.showMs = 1;
 						}
 					}else{
@@ -242,9 +243,8 @@
 					UID:localStorage.getItem('uuid')
 				},function(r){
 //					console.log(r);
-
 					if(r.status == 200){
-						if(r.data.length<1){return}
+					if(r.data.length<1){return}
 						app.msNum = r.data[0].NUM;
 						app.startTimes = r.data[0].STAR; 
 						app.msTimes = r.data[0].END - r.timestamp
@@ -253,7 +253,7 @@
 						console.log('starttime:'+app.startTimes)
 						var nowtime = new Date().getTime()
 						console.log('nowtime:'+nowtime)
-						if(app.msTimes>0 && nowtime > app.startTimes){
+						if(app.msTimes>0 && nowtime > app.startTimes && app.msNum > 0){
 							app.showYs = 1;
 						}
 					}else{
@@ -269,12 +269,14 @@
 					UID:localStorage.getItem('uuid')
 				},function(r){
 					if(r.status == 200){
+					if(r.data.length == '0'){app.showYs = 0;return}
+						app.msNum = r.data[0].NUM;
 						app.startTimes = r.data[0].STAR;
 						app.msPrice = r.data[0].PRICE;
 						app.msTimes = r.data[0].END - r.timestamp;
 						app.resetTime(app.msTimes);
 						var nowtime = new Date().getTime()
-						if(app.msTimes>0 && nowtime>app.startTimes){
+						if(app.msTimes>0 && nowtime>app.startTimes && app.msNum > 0){
 							app.showYs = 1;
 						}
 					}else{
@@ -291,13 +293,14 @@
 				},function(r){
 //					console.log(r);
 					if(r.status == 200){
-						if(r.data.length <1 ){ return }
+						if(r.data.length<1){return}
+						app.msNum = r.data[0].NUM;
 						app.startTimes = r.data[0].STAR;
 						app.msTimes = r.data[0].END - r.timestamp
 						app.msPrice = r.data[0].PRICE
 						app.resetTime(app.msTimes);
 						var nowtime = new Date().getTime()
-						if(app.msTimes > 0 && nowtime > app.startTimes){
+						if(app.msTimes > 0 && nowtime > app.startTimes && app.msNum > 0){
 							app.showGrop = 1;
 						}
 					}else{
@@ -313,14 +316,14 @@
 					UID:localStorage.getItem('uuid')
 				},function(r){
 					if(r.status == 200){
-						if(r.data.length < 1){ return }
+						if(r.data.length<1){app.showGrop = 0;return}
 						app.msNum = r.data[0].NUM;
 						app.startTimes = r.data[0].STAR;
 						app.msPrice = r.data[0].PRICE;
 						app.msTimes = r.data[0].END - r.timestamp;
 						app.resetTime(app.msTimes);
 						var nowtime = new Date().getTime()
-						if(app.msTimes>0 && nowtime>app.startTimes){
+						if(app.msTimes>0 && nowtime>app.startTimes && app.msNum > 0){
 							app.showGrop = 1;
 						}
 					}else{
@@ -414,6 +417,9 @@
 			},
 			//接受数据
 			loadding:function(){
+				this.msSelect();
+				this.ysSelect();
+				this.pddSelect();
 //				plus.nativeUI.showWaiting();
 				NetUtil.ajax('/commodity/selectInfoByname',{
 					name:this.name,
@@ -467,14 +473,12 @@
 						mui.toast(r.message);
 					}
 				})
-//				this.chooseSureBtn()
+				this.chooseSureBtn()
 			},
 			//选择规格或者尺码
 			chooseSize:function(index,name,type){
-				console.log("***************************")
 				this.mysizeIndex = index;
 				this.mysizeName = name;
-				console.log('choose:'+name)
 				this.inventorySurplus();
 				//选择尺码查询颜色状况
 				NetUtil.ajax('/commodity/coloursize',{
@@ -484,8 +488,7 @@
 				},function(r){
 					console.log(r);
 					if(r.status==200){
-						app.infos.colour = r.data;
-						
+						app.infos.colour = r.data;	
 					}else{
 						mui.toast(r.message);
 					}
@@ -520,9 +523,12 @@
 							app.shopPrice = r.data.price;
 							app.code = r.data.code;
 							app.numMaxNum();
-							if(app.showMs == 1 && app.infos.num.NUM ){ this.resetTime = null; app.msSingleSelect();}
-							if(app.showYs == 1 && app.infos.num.NUM ){this.resetTime = null; app.ysSingleSelect();}
-							if(app.showGrop == 1 && app.infos.num.NUM ){this.resetTime = null;app.ysSingleSelect();}
+							if(app.infos.num.NUM>0){app.showMs = 1;app.showYs = 1;app.showGrop = 1;}
+//							console.log("app.infos.num.NUM:"+app.infos.num.NUM)
+//							console.log("app.showMs:"+app.showMs)
+							if(app.showMs == 1){app.resetTime = null; app.msSingleSelect();}
+							if(app.showYs == 1){app.resetTime = null; app.ysSingleSelect();}
+							if(app.showGrop == 1){app.resetTime = null; app.pddSingleSelect();}
 						}else{
 							app.infos.num.NUM = '0';
 							app.shopPrice = '';
@@ -534,10 +540,10 @@
 			//选择完确定
 			chooseSureBtn:function(){
 				if(!this.colorName){
-					mui.toast('请选择颜色');
+//					mui.toast('请选择颜色');
 					return false;
 				}else if(!this.mysizeName && this.specificationOrSize==0){
-					mui.toast('请选择商品尺码');
+//					mui.toast('请选择商品尺码');
 					return false;
 				}else if(!this.mysizeName && this.specificationOrSize==1){
 					mui.toast('请选择商品规格');
@@ -665,9 +671,6 @@
 		created:function(){
 			this.getUrlObj();
 			this.loadding();
-			this.msSelect();
-			this.ysSelect();
-			this.pddSelect();
 			window.addEventListener('comDetail', function(event) {
 				app.loadding();	
 			}, false);
@@ -675,7 +678,6 @@
 				app.loadding();
 			}, false);
 			this.showSinglePicture();	
-			console.log('name:'+this.name)
 		},
 		mounted:function(){	
 			mui.init();

@@ -2,33 +2,14 @@
  * 设置服务器地址
  */
 //var serverUrl = "http://PC-20180516EPXK/";//
-var serverUrl = "http://192.168.1.254:8091/"	//罗玉波 
+var serverUrl = "http://192.168.1.254:8091/";  //罗玉波 
+//var serverUrl = "http://www.bming.net:8091/";  //正式服域名
 //var serverUrl = "http://114.116.88.94:8091/"	//测试服务器
 //var serverUrl = "http://PC-20180516EPXK/"	//api
 //var serverUrl = "http://123.207.147.134:8091/"	//服务器地址
 //var serverUrl= "http://123.207.147.134:8092/"  //备用正式服务器(暂未启用)
 //var serverUrl = "http://1y74625t01.iok.la:19023/"
 //var baseUrl = serverUrl + "f/";
-
-//判断是否启用备用服务器,暂未启用
-//$.ajax({
-//	url:serverUrl+'commodity/selectAll',
-//	data:{	
-//		page:1,
-//		rows:1
-//	},
-//	timeout:500,
-//	async: false,
-//	method:'post',
-//	success:function(res){
-//		console.log(res.status)
-//	},
-//	 error:function(){
-//	 	//启动备用服务器
-//	 	console.log(456)
-//  	serverUrl = "http://123.207.147.134:8091/"
-//  }
-//})
 
 var baseUrl = serverUrl;
 //var server = serverUrl +"UpdateBsnLicense";//图片服务器路径
@@ -52,7 +33,7 @@ var NetUtil = {
 				    async: true,
 				    dataType: 'json',
 				    type: 'post',
-				    timeout: 30000,
+				    timeout: 3000,
 				    headers:{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
 	                beforeSend: fnBefore,
 				    success: fnOnSuccess,
@@ -78,7 +59,7 @@ var NetUtil = {
 				    dataType: 'json',
 				    crossDomain: true, //强制使用5+跨域
 				    type: 'post',
-				    timeout: 30000,
+				    timeout: 3000,
 				    headers:{'Content-Type': 'application/x-www-form-urlencoded; charset=UTF-8'},
 	                beforeSend: fnBefore,
 				    success: fnOnSuccess,
@@ -118,7 +99,7 @@ var NetUtil = {
 				    async: true,
 				    dataType: 'json',
 				    type: 'get',
-				    timeout: 30000,
+				    timeout: 3000,
 	                beforeSend: fnBefore,
 				    success: fnOnSuccess,
 				    error: function (XMLHttpRequest, textStatus, errorThrown) {
@@ -142,7 +123,7 @@ var NetUtil = {
 				    dataType: 'json',
 				    crossDomain: true, //强制使用5+跨域
 				    type: 'get',
-				    timeout: 30000,
+				    timeout: 3000,
 	                beforeSend: fnBefore,
 				    success: fnOnSuccess,
 				    error: function (XMLHttpRequest, textStatus, errorThrown) {

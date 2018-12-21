@@ -10,6 +10,7 @@
 			userName:'',		//用户昵称
 			goldcoin:'',		//积分
 			companyPhone:'',	//技术热线
+			s_type:localStorage.getItem('s_type')
 		},
 		methods:{
 			turnTo:function(name,id,type,orderType){
@@ -70,7 +71,6 @@
 					}else{
 						mui.alert(r.message,function(){},'div');
 					}
-					
 				});
 			},
 			pulldownRefresh:function(){

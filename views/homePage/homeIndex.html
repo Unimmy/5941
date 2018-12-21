@@ -30,7 +30,7 @@
 					<div class="mui-scroll">
 						<div class="contentDiv">
 							<div class="navTitle">
-								<a v-for="(item,index) in type" @click="chooseTitle(''+index+'',item.LARGECLASS);" class="" :class="{active:isTitle==''+index+''}" href="javascript:void(0);">{{item.LARGECLASS}}</a>
+								<a v-for="(item,index) in type" @tap="chooseTitle(''+index+'',item.LARGECLASS);" class="" :class="{active:isTitle==''+index+''}" href="javascript:void(0);">{{item.LARGECLASS}}</a>
 							</div>
 							<div class="banner">
 								<div class="swiper-container">
@@ -59,12 +59,11 @@
 								<p @tap="turnTo('homeList','homeList',''+item.mk+'')" class="topTitle">{{item.mk}}</p>
 								<div class="products">
 									<dl v-for="(i,index) in item.listmap" @tap="portrait(''+i.COMMODITYKEYID+'');" class="shopps">
-										<!---->
 										<dt style="position: relative;overflow: hidden;">
 											<img v-bind:src="server+i.MAINIMAGE"/>
-											<p class="seconds" v-if="i.MS!='0'">限时秒杀</p>
-											<p class="seconds" v-if="i.YS!='0'">限时预售</p>
-											<p class="seconds" v-if="i.PDD!='0'">限时拼团</p>
+											<p class="seconds" v-if="i.MS=='1'">限时秒杀</p>
+											<p class="seconds" v-if="i.YS=='1'">限时预售</p>
+											<p class="seconds" v-if="i.PDD=='1'">限时拼团</p>
 										</dt>
 										<dd> 
 											<p>{{i.NAME}}</p> 
@@ -80,7 +79,7 @@
 			<div v-show="isImgTu==true" class="hideDiv">
 				<div class="main">
 					<img :src="server+Eject.path"/>
-					<i @click="closeImg();"></i>
+					<i @tap="closeImg();"></i>
 				</div>
 			</div>
 		</div>					
