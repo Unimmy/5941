@@ -55,7 +55,7 @@
 						plus.webview.currentWebview().close();
 					}else{
 						mui.confirm('是否退出应用',function(e){
-					   		if (e.index == 0) {
+					   		if (e.index == 1) {
 	                      		plus.runtime.quit();
 	                    	}	
 					   	},'div')

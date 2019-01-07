@@ -1,5 +1,5 @@
 (function(){	
-	var $j = jQuery.noConflict(true);		
+	var $j = jQuery.noConflict(true);
 	var app = new Vue({
 		el:'#app',
 		data:{
@@ -130,7 +130,6 @@
 			},
 			//保存图片
 			savePic:function(iscl){				
-					$j('.btnarr').hide()
 					if(iscl == 1){
 						return
 					}
@@ -417,9 +416,6 @@
 			},
 			//接受数据
 			loadding:function(){
-				this.msSelect();
-				this.ysSelect();
-				this.pddSelect();
 //				plus.nativeUI.showWaiting();
 				NetUtil.ajax('/commodity/selectInfoByname',{
 					name:this.name,
@@ -546,7 +542,7 @@
 //					mui.toast('请选择商品尺码');
 					return false;
 				}else if(!this.mysizeName && this.specificationOrSize==1){
-					mui.toast('请选择商品规格');
+//					mui.toast('请选择商品规格');
 					return false;
 				}else{
 //					plus.nativeUI.showWaiting();
@@ -677,9 +673,13 @@
 			window.addEventListener('changeP', function(event) {
 				app.loadding();
 			}, false);
-			this.showSinglePicture();	
+
 		},
 		mounted:function(){	
+			$j('.btnarr').hide()
+			this.msSelect();
+			this.ysSelect();
+			this.pddSelect();
 			mui.init();
 			mui('.mui-scroll-wrapper').scroll({
 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
@@ -707,5 +707,4 @@
 			
 		}
 	});	
-	
 })();

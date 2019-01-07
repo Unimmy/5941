@@ -42,7 +42,7 @@
 			ificationAjax:function(){
 //				plus.nativeUI.showWaiting();
 				NetUtil.ajax('/appIndexType',{},function(msg){
-					console.log(msg);
+//					console.log(msg);
 //					console.log(JSON.stringify(msg));
 //					plus.nativeUl.closeWaiting();
 					app.infosLeft = msg.data.LEFT;

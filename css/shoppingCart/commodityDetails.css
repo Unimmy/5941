@@ -138,6 +138,7 @@ html,body, .mui-bar-nav~.mui-content{
 	position:absolute;
 	bottom:0;
 	z-index:99;
+	overflow: hidden;
 }
 .contentDiv button{
 	display:inline-block;
@@ -389,4 +390,7 @@ html,body, .mui-bar-nav~.mui-content{
 	width:1.1rem;
 	text-align: center;
 	font-size: 10px;
+}
+[v-cloak]{
+  display: none !important; 
 }

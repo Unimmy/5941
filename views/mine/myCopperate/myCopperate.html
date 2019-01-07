@@ -7,10 +7,12 @@
 	<link href="../../../lib/mui/mui.min.css" rel="stylesheet" />
 	<link rel="stylesheet" type="text/css" href="../../../css/common.css"/>
 	<script src="../../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../../js/common/md5.js" type="text/javascript" charset="utf-8"></script>
 	<link href="../../../css/mine/myCopperate/myCopperate.css" rel="stylesheet" />
 	<script src="../../../lib/jquery/jquery-3.2.1.min.js"></script>
 	<script src="../../../lib/mui/mui.min.js"></script>
 	<script src="../../../lib/vue/vue.min.js"></script>
+	
 	<body>
 		<!--html-->
 		<div id="app" v-cloak>
@@ -21,7 +23,8 @@
 			<div class="mui-content mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<div class="becomeDistributor">
-						<img v-bind:src="server+image2" alt="" />
+						<img :src="image1" alt=""/>
+						<!--<img src="http://NWN44981DEBOK1Z:8091/upload/images/20181225/1545704574053.jpg" alt="" />-->
 						<p @tap="choosePayShow('2');" v-if="isBtn2==1" class="oBtn">成为店铺合伙人</p>
 						<p @tap="turnTo('searchStore','searchStore',zfid2)" v-if="isBtn2==2" class="oBtn">激活</p>
 						<p v-if="isBtn2==1 || isBtn2==2" class="xieyiP">
@@ -31,7 +34,7 @@
 						</p>
 					</div>
 					<div class="becomeDistributor becomeDistributorss">
-						<img v-bind:src="server+image1" alt="" />
+						<img :src="image2" alt="" />
 						<p @tap="choosePayShow('1');" v-if="isBtn1==1" class="oBtn">成为店铺分销商</p>
 						<p @tap="turnTo('searchStore','searchStore',zfid1)" v-if="isBtn1==2" class="oBtn">激活</p>
 						<p v-if="isBtn1==1 || isBtn1==2" class="xieyiP">
@@ -66,14 +69,12 @@
 					</ul>
 				</div>
 			</div>
-			<div class="hideDiv">
-				<a href="../feedback.html"><img src="../../../img/common/leavemessage.png"/></a>
-				<!--<i @click="closeImg()"></i>-->
+			<div class="hideDiv" @tap="turnTo('../feedback')">
+				<img src="../../../img/common/leavemessage.png"/>
 				<h6>点我留言</h6>
 			</div>
 		</div>
 		</div>
-		
 		<!--script--> 
 		<script src="../../../js/common/common.js"></script>
 		<script src="../../../js/mine/myCopperate/myCopperate.js"></script>

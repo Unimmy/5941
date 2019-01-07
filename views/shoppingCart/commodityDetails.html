@@ -15,7 +15,7 @@
 	<script src="../../lib/mui/mui.min.js"></script>
 	<body>
 		<!--html-->
-		<div id="app">
+		<div id="app" v-cloak>
 			<header id="header" class="mui-bar mui-bar-nav nav-home">		
 				<h1 class="mui-title">商品详情</h1>
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
@@ -149,7 +149,7 @@
 				 	<button type="button" class="mui-btn" @tap="savePic(1)">查看原图</button>
 				 	<button type="button" class="mui-btn" @tap="savePic()">保存</button>
 				</div>
-				<div class="btnDiv">
+				<div class="btnDiv"  v-cloak>
 					<button @click="kefuCall();" class="kefu"></button>
 					<button @click="collectionBtn();" :class="{active:isCollection==true}" class="collection"></button>
 					<button @click="goShopCart();" class="kefu gowuche"><i>{{infos.ShoppingCard}}</i></button>
@@ -157,7 +157,7 @@
 					<button @tap="purchaseImmediately();" class="buy" v-if="showYs == 1 && msNum>0 ">支付定金</button>
 					<button @tap="purchaseImmediately();" class="buy" v-if="showMs == 1 && msNum>0">立即秒杀</button>
 					<button @tap="purchaseImmediately();" class="addCart" v-if="showGrop == 1 && msNum>0">立即拼团</button>
-					<button @tap="addCar();" class="addCart" v-if="showMs==0 || showYs==0 || showGrop==0">加入购物车</button>
+					<button @tap="addCar();" class="addCart">加入购物车</button>
 				</div>
 			</div>
 		</div>

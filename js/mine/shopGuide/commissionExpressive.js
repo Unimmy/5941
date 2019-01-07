@@ -43,6 +43,14 @@
 				})
 			},
 			pulldownRefresh: function() { //下拉刷新具体业务实现
+				NetUtil.ajax('/member/updatememberinfo',{
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+					if(r.status==200){
+							console.log("用户数据刷新成功")
+					}
+				})
 				this.sendInfo.pageNo = 1;
 				this.getInfo();
 			},

@@ -10,7 +10,8 @@
 			userName:'',		//用户昵称
 			goldcoin:'',		//积分
 			companyPhone:'',	//技术热线
-			s_type:localStorage.getItem('s_type')
+			s_type:localStorage.getItem('s_type'),
+			is_stype:false
 		},
 		methods:{
 			turnTo:function(name,id,type,orderType){
@@ -107,6 +108,8 @@
 			
 		},
 		created:function(){
+			if(this.s_type =='0'||this.s_type =='1'||this.s_type =='2'){this.is_stype=true}
+			else{this.is_stype=false}
 			mui.init({
   				swipeBack: false,
                 pullRefresh: {
@@ -133,6 +136,8 @@
 			mui('.mui-scroll-wrapper').scroll({
 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
 			});
+		},
+		watch:function(){
 			
 		}
 	});		 

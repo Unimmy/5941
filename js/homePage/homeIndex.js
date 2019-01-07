@@ -3,7 +3,8 @@
 	var app = new Vue({
 		el: '#app',
 		data: {
-			isTitle:'0',	//导航
+			isTitle:'0',
+			titleName:'推荐',   //导航
 			top:[],		   //banner
 			advertisement:[],	//广告
 			shops:[],		//商品
@@ -12,6 +13,11 @@
 			locationPosition:'定位中',	//定位
 			Eject:[],		
 			isImgTu:false,
+			sendInfo:{
+				pageNo:1,
+				pageAll:0,
+				pageSize:10
+			}
 		},
 		methods: {
 			/*跳转*/
@@ -29,7 +35,7 @@
 					show: {
 						autoShow: true, //页面loaded事件发生后自动显示，默认为true
 						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
-						duration: 10, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						duration: 200, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
 						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
 						extras: {} //窗口动画是否使用图片加速
 					},
@@ -45,12 +51,15 @@
 			},
 			/*跳转详情页面*/
 			turnToX: function(name,id,type,index) {
+				var user = localStorage.getItem('s_type')
 				if(name == '1'){//name传1则不跳转
 					return
 				}
-				if(name == 'null'){	
-				mui.openWindow({
+				else if(name == '../mine/myCopperate/myCopperate'){
+					if(user=='3'||user=='4'){return}
+					mui.openWindow({
 					url:'../mine/myCopperate/myCopperate.html',
+					id:'../mine/myCopperate/myCopperate.html',
 					styles: {
 						popGesture: 'close'
 					},
@@ -61,34 +70,7 @@
 					show: {
 						autoShow: true, //页面loaded事件发生后自动显示，默认为true
 						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
-						duration: 10, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
-						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
-						extras: {} //窗口动画是否使用图片加速
-					},
-					waiting: {
-						autoShow: true, //自动显示等待框，默认为true
-						title: '加载中', //等待对话框上显示的提示内容
-						options: {
-							//width:120,等待框背景区域宽度，默认根据内容自动计算合适宽度
-							//height:100,等待框背景区域高度，默认根据内容自动计算合适高度
-						}
-					}
-				})	
-				}else{
-				mui.openWindow({
-					url: name + '.html?type=' + type,
-					id: id + '.html',
-					styles: {
-						popGesture: 'close'
-					},
-					extras: {
-						//自定义扩展参数，可以用来处理页面间传值
-					},
-					createNew: false, //是否重复创建同样id的webview，默认为false:不重复创建，直接显示
-					show: {
-						autoShow: true, //页面loaded事件发生后自动显示，默认为true
-						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
-						duration: 10, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						duration: 200, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
 						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
 						extras: {} //窗口动画是否使用图片加速
 					},
@@ -101,11 +83,41 @@
 						}
 					}
 				})
-			  }
+				}else{
+					mui.openWindow({
+					url: name + '.html?type=' + type,
+					id: id + '.html',
+					styles: {
+						popGesture: 'close'
+					},
+					extras: {
+						//自定义扩展参数，可以用来处理页面间传值
+					},
+					createNew: false, //是否重复创建同样id的webview，默认为false:不重复创建，直接显示
+					show: {
+						autoShow: true, //页面loaded事件发生后自动显示，默认为true
+						aniShow: 'slide-in-right', //页面显示动画，默认为”slide-in-right“；
+						duration: 200, //页面动画持续时间，Android平台默认100毫秒，iOS平台默认200毫秒；
+						event: 'titleUpdate', //页面显示时机，默认为titleUpdate事件时显示
+						extras: {} //窗口动画是否使用图片加速
+					},
+					waiting: {
+						autoShow: true, //自动显示等待框，默认为true
+						title: '加载中', //等待对话框上显示的提示内容
+						options: {
+							//width:120,等待框背景区域宽度，默认根据内容自动计算合适宽度
+							//height:100,等待框背景区域高度，默认根据内容自动计算合适高度
+						}
+					}
+				})
+				}
 			},
 			//导航点击
 			chooseTitle:function(index,name){
+				mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 				this.isTitle = index;
+				this.titleName = name;
+				this.sendInfo.pageNo = 1;
 				if(name == '推荐'){
 					app.netAjAx();
 				}else{
@@ -113,12 +125,47 @@
 						largeclass:name,
 						type:1,
 						mk:'mk',
-						rows:'10000'
+						rows:'10',
+						page:app.sendInfo.pageNo
 					},function(msg){
 						console.log(msg);
 						app.shops = msg.data;
 					})
 				}
+			},
+			//加载更多
+			loadMore:function(type){
+//				console.log("page:"+this.sendInfo.pageNo)
+				NetUtil.ajax("/commodity/selectBySelect",{
+					largeclass:app.titleName,
+					type:1,
+					mk:'mk',
+					rows:'10',
+					page:app.sendInfo.pageNo
+				}, function(r) {
+					console.log(r);
+					console.log(JSON.stringify(r));
+					//plus.nativeUI.closeWaiting();
+					if(r.status == 200) {				 	
+					 	if(type == 'up' ){
+					 		console.log(JSON.stringify(r.data[0].listmap));
+					 		if(r.data[0].listmap.length<=0){
+					 			mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+							}else{
+									app.shops = app.shops.concat(r.data);
+								mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
+							}
+					 	}else{
+					 		app.shops = r.data;
+					 		mui('#pullrefresh').pullRefresh().refresh(true);
+					 		mui('#pullrefresh').pullRefresh().endPulldownToRefresh(r.data[0].listmap.length<=0); 
+					 		mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
+					 		
+					 	}
+					} else {
+						mui.alert(r.message,function(){},'div')
+					}
+				});
 			},
 			//进来请求后台数据
 			netAjAx:function(){
@@ -194,17 +241,27 @@
 				});
 			},
 			pulldownRefresh:function(){
-				setTimeout(function(){
+					setTimeout(function(){
 					app.netAjAx();
 					app.isTitle = '0';
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
 				},1000)
+			},
+			pullupRefresh:function(){
+				this.sendInfo.pageNo++;
+				this.loadMore('up')
+				mui('#pullrefresh').pullRefresh().disablePullupToRefresh(); // 关闭显示更多的提示
+				setTimeout(function () {
+				    mui('#pullrefresh').pullRefresh().enablePullupToRefresh();
+				    mui('#pullrefresh').pullRefresh().endPullupToRefresh();
+				}, 1000)       //设置1s后执行(需要大于1s)不然就会自动执行一次加载.
 			}
 		},
 		created: function() {
 //			mui.init({
 //				swipeBack: false
 //			});
+			
   			mui.init({
   				swipeBack: false,
                 pullRefresh: {
@@ -219,8 +276,14 @@
 						auto: false,
 						callback: this.pulldownRefresh
                     },
+                    up: {
+                    	auto: false,
+						contentrefresh: '正在加载...',
+						contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+						callback: this.pullupRefresh
+                    }
                 }
-            });
+           });
 //			this.netAjAx();
 			window.addEventListener('changeP', function(event) {
 				app.netAjAx();
@@ -258,7 +321,8 @@
 			var swiper = new Swiper('.swiper-container', {
 				pagination: '.swiper-pagination',
 				grabCursor: true,
-//				loop: true,
+				loop: true,
+				lazyLoading : true,
 				observer: true, //修改swiper自己或子元素时，自动初始化swiper
 				observeParents: true, //修改swiper的父元素时，自动初始化swiper
 				autoplay: 5000,

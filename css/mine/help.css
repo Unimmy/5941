@@ -1,17 +1,17 @@
 .message{
-	border-top: 1px solid #000000;
+	border-top: 1px solid #ccc;
 }
 
 .message li{
 	line-height: 1.5rem;
 	padding-left: 0.5rem;
-	font-size: 28px;
+	font-size: 0.3rem;
 	border-bottom:1px dashed #DDDDDD;
 }
 .message li img{
 	vertical-align: middle;
-	width: 5%;
-	height:5%;
+	width: 4%;
+	height:4%;
 	margin-right:0.3rem;
 }
 .mui-content{

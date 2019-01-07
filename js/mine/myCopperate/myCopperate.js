@@ -12,13 +12,8 @@
 			zfid2:'',
 			image1:'',		//分销商图片
 			image2:'',		//线上店主图片
-			isImgTu:true  //
 		},
-		methods:{
-			closeImg:function(){
-				this.isImgTu=false;
-				
-			},
+		methods: {
 			/*跳转*/
 			turnTo: function(name,id,type) {
 				mui.openWindow({
@@ -104,21 +99,24 @@
 			},
 			//接收数据
 			loadding:function(){
-				var self = this;
+				var time = new Date().getTime()
+				console.log("开始时间:"+time)
 				NetUtil.ajax('/MyItCooperation',{
 					uname:localStorage.getItem('uname'),
 					UID:localStorage.getItem('uuid')
 				},function(r){
-					console.log(r);
+//					console.log(r);
+						app.image1 = "http://www.bming.net:8091/"+r.data.image1[0].path;	//分销商图片
+						app.image2 = "http://www.bming.net:8091/"+r.data.image2[0].path; //线上店主图片
 					if(r.status  == '200'){
+						var times = new Date().getTime()
+						console.log("结束时间:"+time)
 						app.isBtn1 = r.data.type1;	//分销商
 						app.isBtn2 = r.data.type2;	//线上店主
-						app.zfid1=r.data.obj1;
-						app.zfid2=r.data.obj2;
-						app.image1 = r.data.image1[0].path;	//分销商图片
-						app.image2 = r.data.image2[0].path; //线上店主图片
-						console.log(app.zfid1);
-						console.log(app.zfid2);
+						app.zfid1= r.data.obj1;
+						app.zfid2= r.data.obj2;
+//						console.log(app.zfid1);
+//						console.log(app.zfid2);
 					}else{
 						mui.alert(r.message,function(){},'div');
 					}

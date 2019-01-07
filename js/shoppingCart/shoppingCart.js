@@ -15,6 +15,7 @@
 			isNoShop:'',		//没有商品 true   有商品 false
 			isShowshopCart:'0',	//0没有返回箭头  1有返回箭头
 			isCheckS:false,
+			page:1
 		
 		},
 		methods:{
@@ -241,12 +242,12 @@
 //				plus.nativeUI.showWaiting();
 				NetUtil.ajax('/card/select2',{
 					page:'1',
-					rows:'100000',
+					rows:'10',
 					uname:localStorage.getItem('uname'),
 					UID:localStorage.getItem('uuid')
 				},function(r){
 //					plus.nativeUI.closeWaiting();
-					console.log(r);
+//					console.log(r);
 //					console.log(JSON.stringify(r));
 					if(r.status==200){
 						setTimeout(function(){
@@ -379,13 +380,14 @@
 			pickWeek:function(){
 				//plus.nativeUI.showWaiting();
 				NetUtil.ajax('/commodity/selectBySelect',{
-//					rows:12
-					type:1
+					type:1,
+					page:this.page,
+					rows:20
 				},function(r){
 //					plus.nativeUI.closeWaiting();
 					console.log(r);
 					if(r.status == 200){
-						app.shops = r.data;
+						app.shops =app.shops.concat(r.data) ;
 					}else{
 						mui.alert(r.message,function(){},'div');
 					}
@@ -393,7 +395,6 @@
 			},
 			//购物车返回详情页面刷新
 			backCommodityDetail:function(id){
-				
 				this.turnToX('commodityDetails','commodityDetails',''+id+'');
 				var comId = plus.webview.getWebviewById('commodityDetails.html');
 				console.log(JSON.stringify(comId));
@@ -408,11 +409,14 @@
 					app.shopCartShuaXin();
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
 				},1500)
-			}
-
+			},
+//			pullupRefresh:function(){
+//				this.page++
+//				app.pickWeek()
+//			}
+			
 		},
 		created:function(){
-			
   			mui.init({
   				swipeBack: false,
                 pullRefresh: {
@@ -427,6 +431,12 @@
 						auto: false,
 						callback: this.pulldownRefresh
                     },
+//                  up: {
+//                  	auto: false,
+//						contentrefresh: '正在加载...',
+//						contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+//						callback: this.pullupRefresh
+//                  }
                 }
            });
 //         this.shopCartShuaXin();
