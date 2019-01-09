@@ -1,0 +1,23 @@
+.goldtitle{
+	width:100%;
+	font-size: 0.5rem;
+	margin-bottom: .5rem;
+	padding-top:.2rem;
+		
+}
+.goldtitle>img{
+	margin-right: 0.8rem;
+	width:10%;
+	height: 10%;
+	border-radius:50%;
+	vertical-align: middle;
+}
+.golddetails{
+	display: flex;
+	flex-wrap: nowrap;
+	justify-content: space-between;
+	border-bottom: 1px solid #ccc;
+}
+.golddetails span{
+	margin-top: 0.2rem;
+}

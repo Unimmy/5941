@@ -150,14 +150,14 @@
 					 	if(type == 'up' ){
 					 		console.log(JSON.stringify(r.data[0].listmap));
 					 		if(r.data[0].listmap.length<=0){
-					 			mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+					 			mui('#pullrefresh').pullRefresh().endPullupToRefresh();
 							}else{
-									app.shops = app.shops.concat(r.data);
+								app.shops = app.shops.concat(r.data);
 								mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
 							}
 					 	}else{
 					 		app.shops = r.data;
-					 		mui('#pullrefresh').pullRefresh().refresh(true);
+					 		mui('#pullrefresh').pullRefresh().refresh();
 					 		mui('#pullrefresh').pullRefresh().endPulldownToRefresh(r.data[0].listmap.length<=0); 
 					 		mui('#pullrefresh').pullRefresh().endPullupToRefresh(false); //参数为true代表没有更多数据了。
 					 		

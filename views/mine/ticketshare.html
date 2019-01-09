@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/mine/ticketshare.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">兑换详情</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<div class="imgBottom" v-for="item in cards">
+							<!--<p>{{item.ID}}</p>-->
+							<p class="card1">{{item.NUMBERA}}</p>
+							<p class="card2">{{item.NUMBERMIN}}</p>
+							<p class="card3">{{item.GOLDCOINNUM}}积分可兑换</p>
+							<p class="card4">{{item.TITLE}}</p>
+							<img src="../../img/mine/card.png" alt="" width="100%" @tap="turnTo('ticketshare',''+item.ID+'')"/>
+						</div>
+					<div class="bottomdiv">
+						<ul>
+							<li class="mui-table-view-cell" >
+							<a class="mui-navigate" href="#">卡券详情</a>
+								<div class="mui-collapse-content">
+								<p>礼品卡使用规则1</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell" >
+							<a class="mui-navigate" href="#">卡券详情</a>
+								<div class="mui-collapse-content">
+								<p>礼品卡使用规则2</p>
+								</div>
+							</li>
+							<li class="mui-table-view-cell"  >
+							<a class="mui-navigate" href="#">卡券详情</a>
+								<div class="mui-collapse-content">
+								<p>礼品卡使用规则3</p>
+								</div>
+							</li>
+					</ul>	
+					<p class="shareMyticket" @tap="getMyticket()">
+						兑换优惠券
+					</p>
+					</div>
+				
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/Ticketshare.js"></script>
+	</body>
+</html>

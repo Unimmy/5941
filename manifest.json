@@ -2190,7 +2190,8 @@
 					"views/mine/myOrder/exchangeGoodsSingle.html",
 					"views/mine/myCopperate/myCopperate.html",
 					"views/mine/help.html",
-					"views/mine/helpShop.html"
+					"views/mine/helpShop.html",
+					"views/mine/myticket.html"
 				],
 				"priority": 0
 			},
@@ -2390,6 +2391,14 @@
 				"refer": [
 					"views/mine/helpDetails.html",
 					"views/mine/helpShopDetails.html"
+				],
+				"priority": 0
+			},
+			"views/mine/myticket.html": {
+				"resources": [],
+				"refer": [
+					"views/mine/ticketshare.html",
+					"views/mine/golddetails.html"
 				],
 				"priority": 0
 			}

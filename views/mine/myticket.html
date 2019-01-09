@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/mine/myTicket.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">优惠券兑换中心</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+				<div class="mui-scroll">
+					<div class="contentDiv">
+						<div class="header">
+							<img src="../../img/common/logo-1024.png"/>
+							<span @tap="turnTo('golddetails')">{{goldcoin}}分 
+							<p class="jfmx"><img src="../../img/mine/jth.png"/>积分明细</p> 
+							</span>
+							
+							<div class="jfgz" @tap="showMessage()">
+								<img src="../../img/mine/jfc.png" alt="" />
+								<span>积分规则</span>
+							</div>
+						</div>
+						<p class="yhticket"></p>
+						<div class="imgBottom" v-for="item in cards">
+							<p class="card1">{{item.NUMBERA}}</p>
+							<p class="card2">{{item.NUMBERMIN}}</p>
+							<p class="card3">{{item.GOLDCOINNUM}}积分可兑换</p>
+							<p class="card4">{{item.TITLE}}</p>
+							<img src="../../img/mine/card.png" alt="" width="100%" @tap="turnTo('ticketshare',''+item.ID+'')"/>
+						</div>
+					</div>
+				</div>	
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/myTicket.js"></script>
+	</body>
+
+</html>
