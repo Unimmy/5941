@@ -101,7 +101,7 @@
 		},function(data){
 			if(data.status==200){
 				mui.alert(data.message,function(){
-					var pay = plus.webview.getWebviewById('pay.html');
+					var payHappy = plus.webview.getWebviewById('payHappy.html');
 					var shopSettlement = plus.webview.getWebviewById('shopSettlement.html');
 					var commodityDetails = plus.webview.getWebviewById('commodityDetails.html');
 					var shopCart = plus.webview.getWebviewById('views/shoppingCart/shoppingCart.html');
@@ -114,14 +114,14 @@
 			           	 	plus.webview.close(commodityDetails);
 			           	}
 			           plus.webview.close(shopSettlement);
-			           plus.webview.close(pay);
+			           plus.webview.close(payHappy);
 		           	},1000)
 					app.turnTo('../mine/myOrder/myOrder','myOrder','2','1');	
 				},'div');
 		 		
 			}else{
 				mui.alert(data.message,function(){
-					var pay = plus.webview.getWebviewById('pay.html');
+					var payHappy = plus.webview.getWebviewById('payHappy.html');
 					var shopSettlement = plus.webview.getWebviewById('shopSettlement.html');
 					var commodityDetails = plus.webview.getWebviewById('commodityDetails.html');
 					var shopCart = plus.webview.getWebviewById('views/shoppingCart/shoppingCart.html');
@@ -134,7 +134,7 @@
 			           	 	plus.webview.close(commodityDetails);
 			           	}
 			           plus.webview.close(shopSettlement);
-			           plus.webview.close(pay);
+			           plus.webview.close(payHappy);
 		           	},1000)
 					app.turnTo('../mine/myOrder/myOrder','myOrder','1','1');
 				},'div');

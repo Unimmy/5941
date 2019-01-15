@@ -89,7 +89,7 @@
 			//选择支付模式
 			choosePay:function(index){
 				this.isChoosePay = index;
-				console.log(index)
+//				console.log(index)
 			},
 			//获取URL后面的值
 			getUrlObj:function () { //获取url？号后面的值，以对象的形式存在

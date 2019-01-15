@@ -43,14 +43,20 @@
 	right:0.3rem;
 }
 .imgBottom p{
-	color: #FFFFFF;
+	color: #ef895b;
+}
+.imgBottom img{
+	border-radius:0  0 .2rem .2rem;
 }
 .imgBottom .card1{
 	position:absolute;
+	/*border: 1px solid #000000;*/
 	z-index: 999;
-	right: 0.5rem;
+	left:2rem;
 	bottom:1.2rem;
-	font-size: 1rem;
+	font-size: .5rem;
+	width:2rem;
+	text-align: center;
 	
 }
 .imgBottom .card2{
@@ -58,8 +64,8 @@
 	position:absolute;
 	width: 0.5rem;
 	z-index: 999;
-	top: 1.1rem;
-	left:0.88rem;
+	top: 1.37rem;
+	right:1.15rem;
 	font-size: 0.3rem;
 	font-weight: bold;
 }
@@ -67,13 +73,18 @@
 	position:absolute;
 	z-index: 999;
 	right: 0.5rem;
-	bottom:0.3rem;
+	bottom:.5rem;
 }
 .imgBottom .card4{
 	position:absolute;
 	z-index: 999;
-	top:0.5rem;
-	left:0.3rem;
-	font-size:0.5rem;
+	top:0.4rem;
+	left:0.6rem;
+	font-size:0.3rem;
+	font-weight: bold;
 
+}
+
+[v-cloak] {
+  display: none;
 }

@@ -83,11 +83,11 @@
 //				mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
 //			},
 			showMessage:function(){
-				var message = '积分规则,积分规则,积分规则,积分规则,积分规则,积分规则,积分规则'
+				var message = '在5941商城购买的商品,每消费10元可获得1积分,积分可兑换优惠券使用'
 				mui.alert(message,function(){},'div')
 			}
 		},
-		created:function(){
+		created:function(){  
 				this.selectTickets()
 				this.selectCards()
 				mui.init({

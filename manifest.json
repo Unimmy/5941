@@ -1,297 +1,319 @@
 {
-	"@platforms": [
-		"android",
-		"iPhone",
-		"iPad"
-	],
-	"id": "H5244A0F9",/*应用的标识，创建应用时自动生成，勿手动修改*/
-	"name": "5941商城",/*应用名称，程序桌面图标名称*/
-	"version": {
-		"name": "1.3.5",/*应用版本名称*/
-		"code": "83"
-	},
-	"description": "",/*应用描述信息*/
-	"icons": {
-		"72": "icon.png"
-	},
-	"launch_path": "main.html",/*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
-	"developer": {
-		"name": "",/*开发者名称*/
-		"email": "",/*开发者邮箱地址*/
-		"url": "http://www.dcloud.io"
-	},
-	"permissions": {
-		"Accelerometer": {
-			"description": "访问加速度感应器"
-		},
-		"Payment": {
-			"description": "管理支付插件"
-		},
-		"Cache": {
-			"description": "管理应用缓存"
-		},
-		"Camera": {
-			"description": "访问摄像头"
-		},
-		"Console": {
-			"description": "跟踪调试输出日志"
-		},
-		"Device": {
-			"description": "访问设备信息"
-		},
-		"Downloader": {
-			"description": "文件下载管理"
-		},
-		"Events": {
-			"description": "应用扩展事件"
-		},
-		"File": {
-			"description": "访问本地文件系统"
-		},
-		"Gallery": {
-			"description": "访问系统相册"
-		},
+    "@platforms" : [ "android", "iPhone", "iPad" ],
+    "id" : "H5244A0F9", /*应用的标识，创建应用时自动生成，勿手动修改*/
+    "name" : "5941商城", /*应用名称，程序桌面图标名称*/
+    "version" : {
+        "name" : "1.3.6", /*应用版本名称*/
+        "code" : "83"
+    },
+    "description" : "", /*应用描述信息*/
+    "icons" : {
+        "72" : "icon.png"
+    },
+    "launch_path" : "main.html", /*应用的入口页面，默认为根目录下的index.html；支持网络地址，必须以http://或https://开头*/
+    "developer" : {
+        "name" : "", /*开发者名称*/
+        "email" : "", /*开发者邮箱地址*/
+        "url" : "http://www.dcloud.io"
+    },
+    "permissions" : {
+        "Accelerometer" : {
+            "description" : "访问加速度感应器"
+        },
+        "Payment" : {
+            "description" : "支付管理"
+        },
+        "Cache" : {
+            "description" : "管理应用缓存"
+        },
+        "Camera" : {
+            "description" : "访问摄像头"
+        },
+        "Console" : {
+            "description" : "跟踪调试输出日志"
+        },
+        "Device" : {
+            "description" : "访问设备信息"
+        },
+        "Downloader" : {
+            "description" : "文件下载管理"
+        },
+        "Events" : {
+            "description" : "应用扩展事件"
+        },
+        "File" : {
+            "description" : "访问本地文件系统"
+        },
+        "Gallery" : {
+            "description" : "访问系统相册"
+        },
+        "Invocation" : {
+            "description" : "使用Native.js能力"
+        },
+        "Messaging" : {
+            "description" : "短彩信邮件消息"
+        },
+        "Orientation" : {
+            "description" : "访问方向感应器"
+        },
+        "Proximity" : {
+            "description" : "访问距离感应器"
+        },
+        "Storage" : {
+            "description" : "管理应用本地数据"
+        },
+        "Uploader" : {
+            "description" : "管理文件上传任务"
+        },
+        "Runtime" : {
+            "description" : "访问运行期环境"
+        },
+        "XMLHttpRequest" : {
+            "description" : "跨域网络访问"
+        },
+        "Zip" : {
+            "description" : "文件压缩与解压缩"
+        },
+        "Barcode" : {
+            "description" : " 二维码"
+        },
+        "Maps" : {
+            "description" : "管理地图插件"
+        },
+        "Webview" : {
+            "description" : "窗口管理"
+        },
+        "NativeUI" : {
+            "description" : "原生UI控件"
+        },
+        "Navigator" : {
+            "description" : "浏览器信息"
+        },
+        "NativeObj" : {
+            "description" : "原生对象"
+        },
+        "OAuth" : {
+            "description" : "登录鉴权"
+        },
+        "Share" : {
+            "description" : "分享管理"
+        },
+        "Contacts" : {
+            "description" : "访问通讯录"
+        },
+        "Statistic" : {}
+    },
+    "plus" : {
+        "splashscreen" : {
+            "autoclose" : true, /*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
+            "waiting" : true,
+            "delay" : "2500"
+        },
+        "runmode" : "liberate", /*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
+        "signature" : "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==", /*可选，保留给应用签名，暂不使用*/
+        "distribute" : {
+            "plugins" : {
+                "statics" : {
+                    "umeng" : {
+                        "appkey_ios" : "5b99c8a6a40fa34f9600003f",
+                        "channelid_ios" : "Appstore",
+                        "appkey_android" : "5b988d4cb27b0a5dd0000169",
+                        "channelid_android" : "unknown"
+                    }
+                },
+                "share" : {
+                    "weixin" : {
+                        "appid" : "wxbf8a9c74b0da22f8",
+                        "appsecret" : "e1c3986c9947ff030aa88e08c0a67d8b",
+                        "description" : "微信分享"
+                    },
+                    "sina" : {
+                        "appkey" : "2842679930",
+                        "appsecret" : "fdc54495d7b1505534fa34faf42d6747",
+                        "redirect_uri" : "http://open.weibo.com/apps/2842679930/privilege/oauth",
+                        "description" : "新浪微博分享"
+                    },
+                    "qq" : {
+                        "appid" : "1107464818",
+                        "description" : "QQ分享"
+                    }
+                },
+                "oauth" : {
+                    "weixin" : {
+                        "description" : "微信登录授权",
+                        "appid" : "wxbf8a9c74b0da22f8",
+                        "appsecret" : "e1c3986c9947ff030aa88e08c0a67d8b"
+                    }
+                },
+                "payment" : {
+                    "alipay" : {
+                        "description" : "支付宝支付",
+                        "scheme" : ""
+                    },
+                    "weixin" : {
+                        "description" : "微信支付",
+                        "appid" : "wxbf8a9c74b0da22f8"
+                    }
+                }
+            },
+            "apple" : {
+                "appid" : "", /*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
+                "mobileprovision" : "", /*iOS应用打包配置文件*/
+                "password" : "", /*iOS应用打包个人证书导入密码*/
+                "p12" : "", /*iOS应用打包个人证书，打包配置文件关联的个人证书*/
+                "devices" : "universal", /*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
+                "urltypes" : [
+                    {
+                        "urlidentifier" : "com.app.5941shop",
+                        "urlschemes" : [ "fifthshop" ]
+                    }
+                ],
+                "frameworks" : [],
+                "plistcmds" : [
+                    "Set :NSCameraUsageDescription 请允许打开相机,拍摄照片,以便于头像设置",
+                    "Set :NSMicrophoneUsageDescription 请允许打开录制音频文件/语音识别,以便于语音录入",
+                    "Set :NSPhotoLibraryUsageDescription 请允许打开相册,以便于选择/保存图片",
+                    "Set :NSPhotoLibraryAddUsageDescription 请否允许打开相册,以便于存储商品图片",
+                    "Set :NSLocationAlwaysUsageDescription 请允许打开您的位置权限，以便于为您提供定位当前城市服务",
+                    "Set :NSLocationWhenInUseUsageDescription 请允许打开您的位置权限，以便于为您提供定位当前城市服务",
+                    "Set :NSLocationAlwaysAndWhenInUseUsageDescription 请允许打开您的位置权限，以便于为您提供定位当前城市服务"
+                ]
+            },
+            "google" : {
+                "packagename" : "", /*Android应用包名，如io.dcloud.HelloH5*/
+                "keystore" : "", /*Android应用打包使用的密钥库文件*/
+                "password" : "", /*Android应用打包使用密钥库中证书的密码*/
+                "aliasname" : "", /*Android应用打包使用密钥库中证书的别名*/
+                "schemes" : ["fifthshop"],
+                "permissions" : [
+                    "<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.VIBRATE\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_LOGS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera.autofocus\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>",
+                    "<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>",
+                    "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+                    "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+                    "<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>",
+                    "<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>",
+                    "<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>",
+                    "<uses-permission android:name=\"android.permission.SEND_SMS\"/>",
+                    "<uses-permission android:name=\"android.permission.INTERNET\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>",
+                    "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>",
+                    "<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>",
+                    "<uses-permission android:name=\"android.permission.CALL_PHONE\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>",
+                    "<uses-feature android:name=\"android.hardware.camera\"/>",
+                    "<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>",
+                    "<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>",
+                    "<uses-permission android:name=\"android.permission.WRITE_SMS\"/>",
+                    "<uses-permission android:name=\"android.permission.READ_SMS\"/>"
+                ]
+            },
+            "orientation" : [ "portrait-primary", "portrait-secondary" ], /*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
+            "icons" : {
+                "ios" : {
+                    "prerendered" : true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
 
-		"Invocation": {
-			"description": "使用Native.js能力"
-		},
-		"Messaging": {
-			"description": "短彩信邮件消息"
-		},
-		"Orientation": {
-			"description": "访问方向感应器"
-		},
-		"Proximity": {
-			"description": "访问距离感应器"
-		},
-		"Storage": {
-			"description": "管理应用本地数据"
-		},
+                    /*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
+                    "iphone" : {
+                        "normal" : "unpackage/res/icons/57x57.png", /*iPhone普通屏幕程序图标，分辨率：57x57*/
+                        "retina" : "unpackage/res/icons/114x114.png", /*iPhone高分屏程序图标，分辨率：114x114*/
 
-		"Uploader": {
-			"description": "管理文件上传任务"
-		},
-		"Runtime": {
-			"description": "访问运行期环境"
-		},
-		"XMLHttpRequest": {
-			"description": "跨域网络访问"
-		},
-		"Zip": {
-			"description": "文件压缩与解压缩"
-		},
-		"Barcode": {
-			"description": " 二维码"
-		},
-		"Maps": {
-			"description": "管理地图插件"
-		},
+                        /*iPhone iOS7高分屏程序图标，分辨率：120x120*/
+                        "spotlight-normal" : "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
+                        "spotlight-retina" : "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
 
-		"Webview": {
-			"description": "窗口管理"
-		},
-		"NativeUI": {
-			"description": "原生UI控件"
-		},
-		"Navigator": {
-			"description": "浏览器信息"
-		},
-		"NativeObj": {
-			"description": "原生对象"
-		},
-		"Payment": {
-			"description": "支付管理"
-		},
-		"OAuth": {
-			"description": "登录鉴权"
-		},
-		"Share": {
-			"description": "分享管理"
-		},
-		"Contacts": {
-			"description": "访问通讯录"
-		},
-		"Statistic": {}
-	},
-	"plus": {
-		"splashscreen": {
-			"autoclose": true,/*是否自动关闭程序启动界面，true表示应用加载应用入口页面后自动关闭；false则需调plus.navigator.closeSplashscreen()关闭*/
-			"waiting": true,
-			"delay": "2500"
-		},
-		"runmode": "liberate",/*应用的首次启动运行模式，可取liberate或normal，liberate模式在第一次启动时将解压应用资源（Android平台File API才可正常访问_www目录）*/
-		"signature": "Sk9JTiBVUyBtYWlsdG86aHIyMDEzQGRjbG91ZC5pbw==",/*可选，保留给应用签名，暂不使用*/
-		"distribute": {
-			"plugins": {
-				"statics": {
-					"umeng": {
-						"appkey_ios": "5b99c8a6a40fa34f9600003f",
-						"channelid_ios": "Appstore",
-						"appkey_android": "5b988d4cb27b0a5dd0000169",
-						"channelid_android": "unknown"
-					}
-				},
-				"share": {
-					"weixin": {
-						"appid": "wxbf8a9c74b0da22f8",
-						"appsecret": "e1c3986c9947ff030aa88e08c0a67d8b",
-						"description": "微信分享"
-					},
-					"sina": {
-						"appkey": "2842679930",
-						"appsecret": "fdc54495d7b1505534fa34faf42d6747",
-						"redirect_uri": "http://open.weibo.com/apps/2842679930/privilege/oauth",
-						"description": "新浪微博分享"
-					},
-					"qq": {
-						"appid": "1107464818",
-						"description": "QQ分享"
-					}
-				},
-				"oauth": {
-					"weixin": {
-						"description": "微信登录授权",
-						"appid": "wxbf8a9c74b0da22f8",
-						"appsecret": "e1c3986c9947ff030aa88e08c0a67d8b"
-						
-					}
-				},
-				"payment": {
-					"alipay": {
-						"description": "支付宝支付",
-						"scheme": ""
-					},
-					"weixin": {
-						"description": "微信支付",
-						"appid": "wxbf8a9c74b0da22f8"
-					}
-				}
-			},
-			"apple": {
-				"appid": "",/*iOS应用标识，苹果开发网站申请的appid，如io.dcloud.HelloH5*/
-				"mobileprovision": "",/*iOS应用打包配置文件*/
-				"password": "",/*iOS应用打包个人证书导入密码*/
-				"p12": "",/*iOS应用打包个人证书，打包配置文件关联的个人证书*/
-				"devices": "universal",/*iOS应用支持的设备类型，可取值iphone/ipad/universal*/
-				"urltypes":[ { "urlidentifier":"com.app.5941shop", "urlschemes":["fifthshop"]}],
-				"frameworks": [],
-				"plistcmds": [
-					"Set :NSCameraUsageDescription 请允许打开相机,拍摄照片,以便于头像设置",
-					"Set :NSMicrophoneUsageDescription 请允许打开录制音频文件/语音识别,以便于语音录入",
-					"Set :NSPhotoLibraryUsageDescription 请允许打开相册,以便于选择/保存图片",
-					"Set :NSPhotoLibraryAddUsageDescription 请否允许打开相册,以便于存储商品图片",
-					"Set :NSLocationAlwaysUsageDescription 请允许打开您的位置权限，以便于为您提供定位当前城市服务",
-					"Set :NSLocationWhenInUseUsageDescription 请允许打开您的位置权限，以便于为您提供定位当前城市服务",
-					"Set :NSLocationAlwaysAndWhenInUseUsageDescription 请允许打开您的位置权限，以便于为您提供定位当前城市服务"
-				]
-			},
-			"google": {
-				"packagename": "",/*Android应用包名，如io.dcloud.HelloH5*/
-				"keystore": "",/*Android应用打包使用的密钥库文件*/
-				"password": "",/*Android应用打包使用密钥库中证书的密码*/
-				"aliasname": "",/*Android应用打包使用密钥库中证书的别名*/
-				"schemes":["fifthshop"],
-				"permissions": ["<uses-permission android:name=\"android.permission.MOUNT_UNMOUNT_FILESYSTEMS\"/>","<uses-permission android:name=\"android.permission.READ_CONTACTS\"/>","<uses-permission android:name=\"android.permission.VIBRATE\"/>","<uses-permission android:name=\"android.permission.READ_LOGS\"/>","<uses-permission android:name=\"android.permission.ACCESS_WIFI_STATE\"/>","<uses-feature android:name=\"android.hardware.camera.autofocus\"/>","<uses-permission android:name=\"android.permission.WRITE_CONTACTS\"/>","<uses-permission android:name=\"android.permission.ACCESS_NETWORK_STATE\"/>","<uses-permission android:name=\"android.permission.RECEIVE_BOOT_COMPLETED\"/>","<uses-permission android:name=\"com.android.launcher.permission.UNINSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.CAMERA\"/>","<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>","<uses-permission android:name=\"android.permission.GET_ACCOUNTS\"/>","<uses-permission android:name=\"android.permission.MODIFY_AUDIO_SETTINGS\"/>","<uses-permission android:name=\"com.android.launcher.permission.INSTALL_SHORTCUT\"/>","<uses-permission android:name=\"android.permission.SEND_SMS\"/>","<uses-permission android:name=\"android.permission.INTERNET\"/>","<uses-permission android:name=\"android.permission.READ_PHONE_STATE\"/>","<uses-permission android:name=\"android.permission.CHANGE_WIFI_STATE\"/>","<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>","<uses-permission android:name=\"android.permission.FLASHLIGHT\"/>","<uses-permission android:name=\"android.permission.CALL_PHONE\"/>","<uses-permission android:name=\"android.permission.ACCESS_COARSE_LOCATION\"/>","<uses-feature android:name=\"android.hardware.camera\"/>","<uses-permission android:name=\"android.permission.ACCESS_FINE_LOCATION\"/>","<uses-permission android:name=\"android.permission.WRITE_EXTERNAL_STORAGE\"/>","<uses-permission android:name=\"android.permission.RECEIVE_USER_PRESENT\"/>","<uses-permission android:name=\"android.permission.WRITE_SETTINGS\"/>","<uses-permission android:name=\"android.permission.WRITE_SMS\"/>","<uses-permission android:name=\"android.permission.READ_SMS\"/>"]
-			},
-			"orientation": [
-				"portrait-primary",
-				"portrait-secondary"
-			],/*应用支持的方向，portrait-primary：竖屏正方向；portrait-secondary：竖屏反方向；landscape-primary：横屏正方向；landscape-secondary：横屏反方向*/
-			"icons": {
-				"ios": {
-					"prerendered": true, /*应用图标是否已经高亮处理，在iOS6及以下设备上有效*/
-					/*应用图标，分辨率：512x512，用于自动生成各种尺寸程序图标*/
-					"iphone": {
-						"normal": "unpackage/res/icons/57x57.png",/*iPhone普通屏幕程序图标，分辨率：57x57*/
-						"retina": "unpackage/res/icons/114x114.png",/*iPhone高分屏程序图标，分辨率：114x114*/
-						/*iPhone iOS7高分屏程序图标，分辨率：120x120*/
-						"spotlight-normal": "unpackage/res/icons/29x29.png", /*iPhone Spotlight搜索程序图标，分辨率：29x29*/
-						"spotlight-retina": "unpackage/res/icons/58x58.png", /*iPhone高分屏Spotlight搜索程序图标，分辨率：58x58*/
-						/*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						"settings-normal": "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+                        /*iPhone iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
+                        "settings-normal" : "unpackage/res/icons/29x29.png", /*iPhone设置页面程序图标，分辨率：29x29*/
+                        "app@2x" : "unpackage/res/icons/120x120.png",
+                        "app@3x" : "unpackage/res/icons/180x180.png",
+                        "settings@3x" : "unpackage/res/icons/87x87.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "spotlight@3x" : "unpackage/res/icons/120x120.png",
+                        "notification@3x" : "unpackage/res/icons/60x60.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png"
+                    },
+                    "ipad" : {
+                        "normal" : "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
+                        "retina" : "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
 
+                        /*iPad iOS7程序图标，分辨率：76x76*//*iPad iOS7高分屏程序图标，分辨率：152x152*/
+                        "spotlight-normal" : "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
+                        "spotlight-retina" : "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
 
-						"app@2x": "unpackage/res/icons/120x120.png",
-						"app@3x": "unpackage/res/icons/180x180.png",
-						"settings@3x": "unpackage/res/icons/87x87.png",
-						"settings@2x": "unpackage/res/icons/58x58.png",
-						"spotlight@2x": "unpackage/res/icons/80x80.png",
-						"spotlight@3x": "unpackage/res/icons/120x120.png",
-						"notification@3x": "unpackage/res/icons/60x60.png",
-						"notification@2x": "unpackage/res/icons/40x40.png"
-					},
-					"ipad": {
-						"normal": "unpackage/res/icons/72x72.png", /*iPad普通屏幕程序图标，分辨率：72x72*/
-						"retina": "unpackage/res/icons/144x144.png", /*iPad高分屏程序图标，分辨率：144x144*/
-						/*iPad iOS7程序图标，分辨率：76x76*/
-						/*iPad iOS7高分屏程序图标，分辨率：152x152*/
-						"spotlight-normal": "unpackage/res/icons/50x50.png", /*iPad Spotlight搜索程序图标，分辨率：50x50*/
-						"spotlight-retina": "unpackage/res/icons/100x100.png", /*iPad高分屏Spotlight搜索程序图标，分辨率：100x100*/
-						/*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*/
-						/*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*/
-						/*iPad设置页面程序图标，分辨率：29x29*/
-						"app": "unpackage/res/icons/76x76.png",
-						"app@2x": "unpackage/res/icons/152x152.png",
-						"settings": "unpackage/res/icons/29x29.png",
-						"proapp@2x": "unpackage/res/icons/167x167.png",
-						"spotlight": "unpackage/res/icons/40x40.png",
-						"settings@2x": "unpackage/res/icons/58x58.png",
-						"spotlight@2x": "unpackage/res/icons/80x80.png",
-						"notification": "unpackage/res/icons/20x20.png",
-						"notification@2x": "unpackage/res/icons/40x40.png"
-					},
-					"appstore": "unpackage/res/icons/1024x1024.png"
-				},
-				"android": {
-					"mdpi": "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
-					"ldpi": "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
-					"hdpi": "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
-					"xhdpi": "unpackage/res/icons/96x96.png",/*720P高分屏程序图标，分辨率：96x96*/
-					"xxhdpi": "unpackage/res/icons/144x144.png",
-					"xxxhdpi": "unpackage/res/icons/192x192.png"
-				}
-			},
-			"splashscreen": {
-				"ios": {
-					"iphone": {
-						"default": "",
-						"iphonex": "unpackage/res/iosStart/iphone1125-2436.png",
-						"retina47": "unpackage/res/iosStart/iphone750-1334.png",
-						"iphonexl": "unpackage/res/iosStart/iphone2436-1125.png",
-						"retina35": "unpackage/res/iosStart/iphone640-960.png",
-						"retina40": "unpackage/res/iosStart/iphone640-1136.png",
-						"retina55": "unpackage/res/iosStart/iphone1242-2208.png",
-						"retina55l": "unpackage/res/iosStart/iphone2208-1242.png"
-					},
-					"ipad": {
-						"portrait": "unpackage/res/iosStart/iphone768-1004.png",
-						"landscape": "unpackage/res/iosStart/iphone1024-748.png",
-						"portrait7": "unpackage/res/iosStart/iphone768-1024.png",
-						"landscape7": "unpackage/res/iosStart/iphone1024-768.png",
-						"portrait-retina": "unpackage/res/iosStart/iphone1536-2008.png",
-						"portrait-retina7": "unpackage/res/iosStart/iphone1536-2048.png",
-						"landscape-retina": "unpackage/res/iosStart/iphone2048-1496.png",
-						"landscape-retina7": "unpackage/res/iosStart/iphone2048-1536.png"
-					}
-				},
-				"android": {
-					"mdpi": "", /*普通屏启动图片，分辨率：240x282*/
-					"ldpi": "",
-					"hdpi": "unpackage/res/androidStart/android480-762.png",
-					"xhdpi": "unpackage/res/androidStart/android启动页720-1242.png",
-					"xxhdpi": "unpackage/res/androidStart/android1080-1882.png"
-				}
-			},
-			"debug": false
-		},
-		"ads": {
-			"rp": false,
-			"splash": false,
-			"push": false,
-			"spot": false
-		}
-	},
-	"dependencies": {
+                        /*iPad iOS7 Spotlight搜索程序图标，分辨率：40x40*//*iPad iOS7高分屏Spotlight搜索程序图标，分辨率：80x80*//*iPad设置页面程序图标，分辨率：29x29*/
+                        "app" : "unpackage/res/icons/76x76.png",
+                        "app@2x" : "unpackage/res/icons/152x152.png",
+                        "settings" : "unpackage/res/icons/29x29.png",
+                        "proapp@2x" : "unpackage/res/icons/167x167.png",
+                        "spotlight" : "unpackage/res/icons/40x40.png",
+                        "settings@2x" : "unpackage/res/icons/58x58.png",
+                        "spotlight@2x" : "unpackage/res/icons/80x80.png",
+                        "notification" : "unpackage/res/icons/20x20.png",
+                        "notification@2x" : "unpackage/res/icons/40x40.png"
+                    },
+                    "appstore" : "unpackage/res/icons/1024x1024.png"
+                },
+                "android" : {
+                    "mdpi" : "unpackage/res/icons/48x48.png", /*普通屏程序图标，分辨率：48x48*/
+                    "ldpi" : "unpackage/res/icons/48x48.png", /*大屏程序图标，分辨率：48x48*/
+                    "hdpi" : "unpackage/res/icons/72x72.png", /*高分屏程序图标，分辨率：72x72*/
+                    "xhdpi" : "unpackage/res/icons/96x96.png", /*720P高分屏程序图标，分辨率：96x96*/
+                    "xxhdpi" : "unpackage/res/icons/144x144.png",
+                    "xxxhdpi" : "unpackage/res/icons/192x192.png"
+                }
+            },
+            "splashscreen" : {
+                "ios" : {
+                    "iphone" : {
+                        "default" : "",
+                        "iphonex" : "unpackage/res/iosStart/iphone1125-2436.png",
+                        "retina47" : "unpackage/res/iosStart/iphone750-1334.png",
+                        "iphonexl" : "unpackage/res/iosStart/iphone2436-1125.png",
+                        "retina35" : "unpackage/res/iosStart/iphone640-960.png",
+                        "retina40" : "unpackage/res/iosStart/iphone640-1136.png",
+                        "retina55" : "unpackage/res/iosStart/iphone1242-2208.png",
+                        "retina55l" : "unpackage/res/iosStart/iphone2208-1242.png"
+                    },
+                    "ipad" : {
+                        "portrait" : "unpackage/res/iosStart/iphone768-1004.png",
+                        "landscape" : "unpackage/res/iosStart/iphone1024-748.png",
+                        "portrait7" : "unpackage/res/iosStart/iphone768-1024.png",
+                        "landscape7" : "unpackage/res/iosStart/iphone1024-768.png",
+                        "portrait-retina" : "unpackage/res/iosStart/iphone1536-2008.png",
+                        "portrait-retina7" : "unpackage/res/iosStart/iphone1536-2048.png",
+                        "landscape-retina" : "unpackage/res/iosStart/iphone2048-1496.png",
+                        "landscape-retina7" : "unpackage/res/iosStart/iphone2048-1536.png"
+                    }
+                },
+                "android" : {
+                    "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
+                    "ldpi" : "",
+                    "hdpi" : "unpackage/res/androidStart/android480-762.png",
+                    "xhdpi" : "unpackage/res/androidStart/android启动页720-1242.png",
+                    "xxhdpi" : "unpackage/res/androidStart/android1080-1882.png"
+                }
+            },
+            "debug" : false
+        },
+        "ads" : {
+            "rp" : false,
+            "splash" : false,
+            "push" : false,
+            "spot" : false
+        }
+    },
+    "dependencies" : {
 		"pages": {
 			"index.html": {
 				"resources": [
@@ -2399,6 +2421,13 @@
 				"refer": [
 					"views/mine/ticketshare.html",
 					"views/mine/golddetails.html"
+				],
+				"priority": 0
+			},
+			"views/mine/shopGuide/commissionExpressive.html": {
+				"resources": [],
+				"refer": [
+					"views/mine/shopGuide/cashAccountManagement.html"
 				],
 				"priority": 0
 			}

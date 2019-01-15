@@ -22,13 +22,14 @@
 				<div class="mui-scroll">
 					<div class="contentDiv">
 					<p class="goldtitle">
-						<img src="../../img/common/logo-1024.png" alt=""/>
-						当前积分：{{goldcoin}}
+						<span class="jf">积分</span>
+						<br />
+						<span class="jfen">{{goldcoin}}分</span>
 					</p>
 					<p v-for="item in infos" class="golddetails">
-						<span>{{item.title}}</span> 
-						<span>积分：{{item.num}}</span>  
-						<span>时间：{{item.id | myCurrency}}</span>
+						<span class="title">{{item.title}}</span> 
+						<span class="num">{{item.num | jfdetail}}</span>  
+						<span class="time">{{item.id | myCurrency}}</span>
 					</p>
 					</div>
 				</div>	

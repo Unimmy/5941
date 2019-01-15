@@ -23,7 +23,7 @@
 					uname:localStorage.getItem('uname'),
 					UID:localStorage.getItem('uuid')
 				},function(r) {
-					console.log(r.data.length)
+//					console.log(r.data.length)
 					app.cards =r.data;
 				})
 			},
@@ -38,7 +38,7 @@
 							UID:localStorage.getItem('uuid')
 						},function(r) {
 							if(r.message == '兑换成功'){
-								mui.alert('兑换成功，请到我的优惠券中查看',function(){
+								mui.alert('兑换成功，请到优惠券中查看',function(){
 									var  ticketshare = plus.webview.getWebviewById('ticketshare.html');
 									plus.webview.close(ticketshare);
 								},'div');
@@ -55,6 +55,7 @@
 		created:function(){
 			this.getUrlObj()
 			this.selectCard()
-		}
+		},
+		mounted:function(){}
 	})
 })()

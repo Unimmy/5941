@@ -79,7 +79,13 @@
 			    oMin = oDate.getMinutes(),
 			    oTime = oYear +'-'+ addZero(oMonth) +'-'+ addZero(oDay) +' '+ addZero(oHour) +':'+addZero(oMin)
 	　　　　　　　　return oTime
-	　　　　　　}
+	　　　　　　},
+			jfdetail:function(str){
+				if(str>0){return "+"+str}
+				else {
+					return str
+				}
+			}
 　　　　}
 	})
 })()

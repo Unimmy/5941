@@ -1,23 +1,47 @@
+.contentDiv{
+	position:relative;
+	background: #FFFFFF;
+	padding: 0;
+	margin:0;
+}
 .goldtitle{
 	width:100%;
 	font-size: 0.5rem;
-	margin-bottom: .5rem;
-	padding-top:.2rem;
-		
+	height: 3.5rem;
+	text-align: center;	
+	color:#FFFFFF;
+	line-height: 1rem;
+	background:#FF5E30;
 }
-.goldtitle>img{
-	margin-right: 0.8rem;
-	width:10%;
-	height: 10%;
-	border-radius:50%;
-	vertical-align: middle;
+.goldtitle .jf{
+	position: relative;
+	top:0.5rem;
+	font-size: 0.35rem;
 }
 .golddetails{
-	display: flex;
-	flex-wrap: nowrap;
-	justify-content: space-between;
+	position: relative;
 	border-bottom: 1px solid #ccc;
+	height:1rem ;
+	color:#000000;
+	margin-top:.2rem;
 }
-.golddetails span{
-	margin-top: 0.2rem;
+.golddetails .num{
+	position: absolute;
+	bottom:0.1rem;
+	right:0;
+	font-size: 0.4rem;
+	color:red;
+}
+.golddetails .num1{
+	position: absolute;
+	bottom:0.1rem;
+	right:0;
+	font-size: 0.4rem;
+	color:green;
+}
+.golddetails .time{
+	position: absolute;
+	bottom:0;
+	left:0;
+	color:#7d7d7d;
 }
