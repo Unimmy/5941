@@ -44,13 +44,16 @@
 								</div>	
 							</div>
 							<!--广告-->
-							<!--<p class="advertisement">
+							<!-- <p class="advertisement" @tap="turnTo('turntable','turntable')">
 								<span class="leftImg" :style="{backgroundImage:'url('+server+advertisement.path+')'}"></span>
 								<i class="shu"></i>
 								<span class="rightWord">
 									<i>{{advertisement.describe}}</i>
 								</span>
-							</p>-->
+							</p> -->
+								<p class="advertisement" @tap="turnTo('turntable','turntable')">
+									<img src="../../img/homePage/gjgg.png" alt="" height="57px" width="100%">
+								</p>
 							<!--广告大图可跳转详情-->
 							<div class="bigImgTodetails">
 								<p class="toImg" @tap="turnToX(''+item.url+'','commodityDetails',''+item.pagekey+'')" v-for="(item,index) in topBelow" :style="{backgroundImage:'url('+server+item.path+')'}"></p>

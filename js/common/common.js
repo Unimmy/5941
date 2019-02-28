@@ -2,7 +2,7 @@
  * 设置服务器地址
  */
 //var serverUrl = "http://PC-20180516EPXK/";//
-var serverUrl = "http://192.168.1.254:8091/";  //罗玉波  
+var serverUrl = "http://192.168.1.88:8091/";  //罗玉波  
 //var serverUrl = "http://www.bming.net:8091/";  //正式服域名
 //var serverUrl = "http://114.116.88.94:8091/"	//测试服务器
 //var serverUrl = "http://PC-20180516EPXK/"	//api

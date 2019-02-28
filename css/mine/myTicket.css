@@ -42,7 +42,7 @@
 }
 .header .wdjfmx{
 	position: absolute;
-	padding-top:.3rem;
+	padding-top:.4rem;
 	width:1.5rem;
 	height: 1.5rem;
 	border-radius:50%;
@@ -75,16 +75,14 @@
 	left:75%;
 	padding-left:0.3rem;
 	width:35%;
-	height: .8rem;
-	/*float:right;*/
-	/*border:1px solid #FFFFFF;*/
+	height: .5rem;
 	background: #FB4511;
 	border-radius:0.9rem;
 }
 .jfgz span{
 	font-weight:normal;
 	font-size: 0.25rem;
-	line-height: 0.8rem;
+	line-height: 0.5rem;
 	margin:0;
 	color:#FFFFFF;
 }
@@ -104,20 +102,22 @@
 	padding-left:.1rem;
 	color:#FFFFFF;
 }
+.imgBottom{
+	margin:0 .2rem;
+}
 .imgBottom img{
 	margin-bottom: 0.5rem;
 	position: relative;
 }
 .imgBottom p{
-	color: #ef895b;
+	color: #FFFFFF;
 }
 .imgBottom .card1{
 	position:absolute;
-	/*border: 1px solid #000000;*/
 	z-index: 999;
-	left:2.2rem;
-	bottom:1.85rem;
-	font-size: .5rem;
+	left:.5rem;
+	bottom:1.6rem;
+	font-size: 1.1rem;
 	width:2rem;
 	text-align: center;
 	
@@ -127,22 +127,26 @@
 	position:absolute;
 	width: 0.5rem;
 	z-index: 999;
-	top: 1.47rem;
-	right:1.25rem;
-	font-size: 0.3rem;
-	font-weight: bold;
+	top: .9rem;
+	left:2.87rem;
+	font-size: 0.35rem;
+	/*font-weight: bold;*/
+	color:rgba(255,255,255,.7)
 }
 .imgBottom .card3{
 	position:absolute;
 	z-index: 999;
-	right: 0.5rem;
-	bottom:.9rem;
+	right:1.6rem;
+	bottom:1.1rem;
 }
-.imgBottom .card4{
+/*.imgBottom .card4{
 	position:absolute;
 	z-index: 999;
 	top:0.5rem;
 	left:0.6rem;
 	font-size:0.3rem;
 	font-weight: bold;
+}*/
+[v-cloak] {
+  display: none;
 }

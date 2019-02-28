@@ -28,6 +28,9 @@
 			qufenCouPonId:'',		//立即支付和普通
 			isChooseModey:'1',		//选取配送方式
 			postFeePostFee:'',		//所有运费钱
+			orderscardid:'',//实物卡编号
+			isUse:'不使用',//是否使用实物卡
+			stcards:[],		//实体卡
 		},
 		methods: {
 			turnTo:function(name,id,data,isChoosePay){
@@ -212,6 +215,7 @@
 						myaddressid:this.addressId,
 						numsize:this.infos[0].data[0].num,
 						couponArray:this.couponArrayId,
+						orderscardid:this.orderscardid,
 						uname:localStorage.getItem('uname'),
 						UID:localStorage.getItem('uuid')
 					},function(r){
@@ -249,8 +253,9 @@
 							uname:localStorage.getItem('uname'),
 							UID:localStorage.getItem('uuid')
 						},function(msg){
+							console.log(msg.data);
 						if(msg.status==200){
-							console.log(msg);
+							
 							app.turnTo('pay','pay',msg.data,app.isChoosePay);
 						}else{
 							mui.alert(r.message,function(){},'div');
@@ -263,21 +268,9 @@
 						uname:localStorage.getItem('uname'),
 						UID:localStorage.getItem('uuid')
 					},function(msg){
+						console.log(msg.data)
 						if(msg.status==200){
 						app.turnTo('payHappy','payHappy',msg.data,app.isChoosePay);
-//							console.log(msg);
-//
-//									NetUtil.ajax('/pay/'+msg.data+'',{
-//										uname:localStorage.getItem('uname'),
-//										UID:localStorage.getItem('uuid')
-//									},function(data){
-//										if(data.status==200){
-////											console.log(data);
-//											mui.alert(data.message,function(){},'div');
-//										}else{
-//											mui.alert(data.message);
-//										}
-//									})
 						}else{
 							mui.alert(r.message,function(){},'div');
 						}
@@ -307,6 +300,47 @@
 				localStorage.setItem('JsonArray',this.itemIdCoupon);
 				this.turnToAdd('shopCoupon','shopCoupon',numberMoney,data.onephone);
 			},
+			//改变状态
+			changeStatus:function(str){
+				if(str=='true'){
+					this.selectSTKP()
+					this.isUse = '正在选择'
+				}else{
+					this.isUse = '不使用'
+					this.orderscardid=""
+				}
+			},
+			//查询已绑定的实体卡片数量
+			selectSTKP:function(){
+				NetUtil.ajax('/OrdersCard/list',{
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid'),
+					page:1,
+					rows:1000
+				},function(r){
+					// console.log(JSON.stringify(r))
+					if(r.status==200){
+						app.stcards = r.data
+					}else{
+						mui.mui.alert(r.message,function () {},'div')
+					}
+				})
+			},
+			//选择卡片
+			chooseImg:function(code){
+				this.orderscardid=code
+				this.isUse ='已选择'
+			},
+			// 选择卡片结束
+// 			sureSTKP:function(){
+// 				if(this.orderscardid.length>1){
+// 					mui.alert('请只选择一张卡片!',function(){},'div')
+// 					return
+// 				}else{
+// 					this.isUse = '已选择'
+// 				}
+// 				
+// 			}
 		},
 		created: function() {
 			this.getUrlObj();

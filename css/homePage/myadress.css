@@ -1,0 +1,22 @@
+html{
+	background: #FFFFFF;
+}
+#header{
+	border-bottom:1px solid #ccc!important;
+}
+#app{
+	position: relative;
+}
+.content{
+	width:100%;
+	position: absolute;
+	top:1rem;
+	padding:0 .5rem 0 .5rem; 
+	left:50%;
+	margin-left:-50%;
+}
+.mui-btn.mui-btn-primary{
+	position:absolute;
+	right:0.5rem;
+	bottom:-.7rem;
+}

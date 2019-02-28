@@ -94,11 +94,15 @@
 		}
 	});
 		//2.发起支付请求
-		function payOrder(type,ordersid){	
+		function payOrder(type,ordersid){
+			console.log("payhappy:"+ordersid)
 		NetUtil.ajax('/pay/'+ordersid+'',{
 			uname:localStorage.getItem('uname'),
 			UID:localStorage.getItem('uuid')
 		},function(data){
+			
+			console.log(JSON.stringify(data))
+			console.log(data.status)
 			if(data.status==200){
 				mui.alert(data.message,function(){
 					var payHappy = plus.webview.getWebviewById('payHappy.html');

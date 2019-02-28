@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/mine/kaquan.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">卡券中心</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a class="mui-icon mui-pull-right" @tap="hidediv('open')">绑定</a>
+			</header>
+			<div class="mui-content mui-scroll-wrapper" id="pullrefresh">
+				<div class="mui-scroll">
+					<!-- <p style="margin:.2rem .1rem .1rem 5rem" @tap="turnTo('kpuse','kpuse')" >*卡片使用规则</p> -->
+					<div class="contentDiv">
+						<div v-if="infos.length<1" class="noCard">
+							<img src="../../img/mine/meiyoudingdan.png" alt=""/>
+							<p>您没有相关卡片~</p>
+						</div>
+						<div v-for="item in infos" v-if="infos.length>0">
+							<span class="id">No:{{item.id}}</span>
+							<img src="../../img/mine/1000.png" alt="" width="100%"/>
+						</div>
+					</div>
+				</div>	
+			</div>
+			<div id="kuquanhideDiv" v-if="showopen">
+				<a class="mui-icon mui-pull-right mui-icon-close" @tap="hidediv('close')"></a>
+				<div class="btnarray">
+					<p>绑定实体卡</p>
+					<p><input type="text" placeholder="请输入实体卡卡号" v-model="usercode"></p>
+					<p><input type="text" placeholder="请输入实体卡密码"  v-model="userpwd"></p>
+					<p><input type="button" value="确定" class="sureBtn" @tap="binding()"></p>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/mine/kaquan.js"></script>
+	</body>
+
+</html>

@@ -205,6 +205,8 @@
 	border-radius:5px;
 	margin-top:0.2rem;
 	position:relative;
+	background: #F26E5F;
+	
 }
 .sectionMainDiv .circularLeft{
 	width:0.3rem;
@@ -214,6 +216,7 @@
 	position:absolute;
 	left:-0.15rem;
 	top:0.55rem;
+	
 }
 .sectionMainDiv .circularRight{
 	width:0.3rem;
@@ -223,16 +226,17 @@
 	position:absolute;
 	right:-0.15rem;
 	top:0.55rem;
+	
 }
 .sectionMainDiv .time{
 	height:0.7rem;
-	color:#000000;
+	color:#FFFFFF;
 	font-size:0.24rem;
 	line-height:0.7rem;
 	border-bottom:1px dashed #d6d4d4;
 }
 .sectionMainDiv .time.timeGray{
-	color:#b5b5b5;
+	color:#FFFFFF;
 }
 .sectionMainDiv .bottom{
 	height:1.2rem;
@@ -241,6 +245,7 @@
 	display:inline-block;
 	height:1.2rem;
 	float:left;
+	color:#FFFFFF;
 }
 .sectionMainDiv .bottom .left{
 	width:35%;
@@ -272,13 +277,13 @@
 	height:0.4rem;
 	line-height:0.4rem;
 	font-size:0.22rem;
-	color:#ff4200;
+	color:#FFFFFF;
 	overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
 }
 .sectionMainDiv .bottom.bottomGray .left p{
-	color:#000000;
+	color:#FFFFFF;
 }
 .sectionMainDiv .bottom .left p span{
 	font-size:0.28rem;
@@ -289,13 +294,13 @@
 .sectionMainDiv .bottom .right p{
 	margin-left:0.2rem;
 	font-size:0.22rem;
-	color:#000000; 
+	color:#FFFFFF; 
 }
 .sectionMainDiv .bottom .right p:first-child{
 	margin-top:0.2rem;
 }
 .sectionMainDiv .bottom.bottomGray .right p{
-	color:#b5b5b5;
+	color:#FFFFFF;
 }
 
 

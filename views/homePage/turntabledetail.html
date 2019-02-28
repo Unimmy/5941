@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/homePage/turntabledetail.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery-3.2.1.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">我的奖品明细</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a class="mui-icon mui-icon-info mui-pull-right" @tap="showhidediv(1)"></a>
+			</header>
+			<div class="mui-content">
+				<div id="pullrefresh"  class="">
+					<div class='contents'>
+						<div class="content" v-for="item in infos" v-if="item.jc_name!='谢谢参与'">
+							<p class="contents-item">奖品名称: {{item.jc_name}}</p>
+							<p class="contents-item1">中奖时间: {{item.id | getMyDate}}</p>
+							<p class="contents-item2">状态：{{item.t}}</p>
+							<p class="contents-item3">抽奖方式：{{item.type | getType}}</p>
+							<p class="contents-item4">No:{{item.id}}</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="hide" v-if="showdiv">
+				<a class="mui-icon mui-icon-close mui-pull-right"  @tap="showhidediv('false')"></a>
+				<div class="section" v-for="item in price_infos">
+					<p>实物奖励名称:{{item.JC_TITLE}}</p>
+					<p>收件人姓名:{{item.MEMBER_NAME}}</p>
+					<p>收件人电话:{{item.MEMBER_PHONE}}</p>
+					<p>中奖编号:{{item.ID}}</p>
+					<p>快递单号:{{item.ZIP_CODE}}</p>
+					<p>收件人地址:{{item.MEMBER_ADDRESS}}</p>
+				</div>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/homePage/turntabledetail.js"></script>
+	</body>
+</html>

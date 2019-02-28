@@ -1,0 +1,43 @@
+html{
+	background:#ffffff;
+}
+.mui-icon{
+	color:#ff5930;
+}
+#header{
+	border-bottom: 1px solid #ccc !important;
+}
+.content{
+	position: relative;
+	margin:.2rem;
+	/* border:1px solid #7d7d7d; */
+	background:#ff5930; 
+}
+.content p{
+	margin-top:.1rem;
+	padding-left:.1rem;
+	color:#fff;
+}
+.contents-item4{
+	position: absolute;
+	right: 0.1rem;
+	bottom:0;
+}
+.hide{
+	position:fixed;
+	width:100%;
+	height: 12rem;
+	background: #fff;
+	top:.75rem;
+	/* left:50%; */
+	/* margin-left:-42.5%; */
+	overflow: auto;
+}
+.section{
+	margin:.1rem;
+	margin-top:.4rem;
+	background: #ff5930;
+}
+.section p{
+	color:#fff;
+}

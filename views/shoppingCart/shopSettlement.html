@@ -16,8 +16,17 @@
 		<div id="app" v-cloak>
 			<header id="header" class="mui-bar mui-bar-nav nav-home">		
 				<h1 class="mui-title">确认信息</h1>
-				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  v-if="isUse!='正在选择'"></a>
+				<!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right"  v-if="isUse=='正在选择'" @tap="sureSTKP()"></a> -->
 			</header>
+			<div class="stkpdivhide" v-if="isUse=='正在选择'">
+				<a class="mui-icon mui-icon-closeempty mui-pull-right" @tap="changeStatus('false')" style="position: fixed;top:0.2rem;right:0.1rem"></a>
+				<div class="Stcards" v-for="item in stcards" @tap="chooseImg(''+item.id+'')" >
+					<p>{{item.id}}</p>
+					<div class="circle"></div>
+					<img src="../../img/mine/1000.png" width="100%">
+				</div>
+			</div>
 			<div class="mui-content mui-scroll-wrapper">
 				<div class="mui-scroll">
 					<div v-for="(i,index) in infos" class="message">
@@ -55,7 +64,7 @@
 									无可用红包<i class="arrow_right"></i>
 								</p>
 							</li>-->
-							<li v-if="couponShow==true" @click="goShopCoupon(i);" style="position:relative;">
+							<li v-if="couponShow==true" @tap="goShopCoupon(i);" style="position:relative;">
 								<p style="float:left;" class="left">优惠券</p>
 								<p :class="i.onephone" style="margin-left:0.2rem;width:80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap"></p>
 								<p :class="'num'+i.onephone" class="couponIdA" style="display:none;"></p>
@@ -63,7 +72,15 @@
 								<p :class="'oneone'+i.onephone" class="oneA" style="display:none;"></p>
 								<span class="rightImg"></span>
 							</li>
-							<li>
+							<li v-if="couponShow==true" @tap="changeStatus('true')" style="position:relative;">
+								<p style="float:left;" class="left">实物卡</p>
+								<span class="isUse" :class="isUse=='不使用'?'red':'green'"><input type="text" v-model="isUse" disabled></span>
+							</li>
+							<li v-if="couponShow==true && isUse=='已选择'"style="position:relative;">
+								<p style="float:left;" class="left"  style="margin-left:0.2rem;width:80%;overflow: hidden;text-overflow: ellipsis;white-space: nowrap">实物卡编号:</p>
+								<span class="isUse">{{orderscardid}}</span>
+							</li>
+							<li >
 								<p class="left">商品总价</p>
 								<p class="right shopzongjia" v-if="isChooseModey==1">{{i.numall | moneyFiler}}</p>
 								<p class="right shopzongjia" v-if="isChooseModey==3">{{i.numall-i.postfee | moneyFiler}}</p>

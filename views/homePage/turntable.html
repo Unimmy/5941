@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<link href="../../css/homePage/turntable.css" rel="stylesheet" />
+	<script src="../../lib/jquery/jquery.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/homePage/turntable.css"/>
+	<body class="main_box" style="background-color: #eee">
+		<!--html-->
+		<div id="app" v-cloak>
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">福利中心</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+				<a class="mui-icon mui-icon-reload  mui-pull-right" @tap="restart()"></a>
+			</header>
+			<div class="box">
+				<p class="myPrize" @tap="turnTo('turntabledetail','turntabledetail')">我的奖品</p>
+				<p class="myAddress" @tap="turnTo('myaddress','myaddress')">我的地址</p>
+			    <div class="bg_in">
+			        <div class="title">•&nbsp;刮奖区&nbsp;•</div>
+			    </div>
+			    <div class="content">
+			        <div id="mask_img_bg" ><span class="cont-span">{{cjtitle}}</span>
+			            <!--<img/>-->
+			        </div>
+			        <img id="redux" src="../../img/homePage/layer.png"/>
+			    </div>
+			    <!--次数-->
+			    <div class="hint-num" v-if="select_max>0">
+			        <h4>你还有 <strong class="clicknum">{{select_max}}</strong> 次免费刮奖机会</h4>
+			    </div>
+				 <div class="hint-num" v-if="select_max<=0">
+				    <h4>本次抽奖消耗 <strong class="clicknum">{{M_NUM}}</strong>积分</h4>
+					<h6>您还剩余{{goldcoin}}积分</h6>
+				</div>
+				<h3 class="title">奖品列表</h3>
+					<div class="advertisements">
+						<div class="ad-item" v-for="item in imgs">
+							<img :src="item.imagepath | httpgl" alt="">
+							<p>{{item.title}}</p>
+						</div>
+					</div>
+			</div>
+		
+			<div class="thanks hint-show">
+				<!-- <div class="mui-btn-success" @tap='restart()'>点我再来一次</div>
+				<div class="mui-btn-danger">关闭</div> -->
+				  <img class="hint-img" src="../../img/homePage/thanks.png">
+				<!-- <img class="colour-img" src="../../img/homePage/colour.png"> -->
+				<!-- <span class="prize-span">{{cjtitle}}</span> -->
+				<a class="close"></a>
+				<a class="btn"  @tap='restart()'></a>
+			</div>
+			<div class="hint-show">
+			    <img class="hint-img" src="../../img/homePage/hint.png">
+			    <img class="colour-img" src="../../img/homePage/colour.png">
+			    <span class="prize-span">{{cjtitle}}</span>
+			    <a class="close"></a>
+			    <a class="btn"  @tap='restart()'></a>
+			</div>	
+			<div class="mask"></div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/homePage/jquery.eraser.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/homePage/turntable.js" type="text/javascript" charset="utf-8"></script>
+	</body>
+</html>

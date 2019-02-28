@@ -1,0 +1,69 @@
+html{
+	background: #FFFFFF;
+}
+#header{
+	border-bottom:1px solid #E5E5E5 !important;
+}
+.contentDiv{
+	padding:0.2rem;
+	position:relative;
+}
+.contentDiv div{
+	position:relative;
+}
+.id{
+	position: absolute;
+	top:1.5rem;
+	right:-.5rem;
+	color:#FFFFFF;transform: rotate(90deg);
+}
+.noCard{
+	margin-top:1rem;
+	text-align: center;
+	background: transparent;
+	
+}
+.noCard img{
+	width:20%;
+	height: 20%;
+}
+.mui-icon.mui-pull-right{
+	color:#000000;
+	font-size:.2rem;
+	line-height: .5rem;
+}
+#kuquanhideDiv{
+	width:80%;
+	position: fixed;
+	top:2rem;
+	left:50%;
+	margin-left:-40%;
+	background: #FFFFFF;
+	height: 5.5rem;
+	border-radius: .2rem;
+	border:1px solid #ccc;
+	box-sizing:border-box;
+}
+.mui-icon-close{
+	position: absolute;
+	right:.1rem;
+}
+.btnarray{
+	position:absolute;
+	top:.8rem;
+	width:100%;
+	left:50%;
+	margin-left:-40%;
+}
+.btnarray p{
+	width:80%;
+}
+.btnarray input{
+	margin-top:.5rem;
+	height: .8rem;
+	width:100%;
+}
+.sureBtn{
+	border:1px solid #ff5930 !important;
+	color:#ff5930!important;
+}

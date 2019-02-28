@@ -43,18 +43,14 @@
 	right:0.3rem;
 }
 .imgBottom p{
-	color: #ef895b;
-}
-.imgBottom img{
-	border-radius:0  0 .2rem .2rem;
+	color: #FFFFFF;
 }
 .imgBottom .card1{
 	position:absolute;
-	/*border: 1px solid #000000;*/
 	z-index: 999;
-	left:2rem;
-	bottom:1.2rem;
-	font-size: .5rem;
+	left:.5rem;
+	bottom:1rem;
+	font-size: 1.1rem;
 	width:2rem;
 	text-align: center;
 	
@@ -64,26 +60,27 @@
 	position:absolute;
 	width: 0.5rem;
 	z-index: 999;
-	top: 1.37rem;
-	right:1.15rem;
-	font-size: 0.3rem;
-	font-weight: bold;
+	top: .9rem;
+	left:2.87rem;
+	font-size: 0.35rem;
+	/*font-weight: bold;*/
+	color:rgba(255,255,255,.7)
 }
 .imgBottom .card3{
 	position:absolute;
 	z-index: 999;
-	right: 0.5rem;
-	bottom:.5rem;
+	right:1.6rem;
+	bottom:.65rem;
 }
-.imgBottom .card4{
+/*.imgBottom .card4{
 	position:absolute;
 	z-index: 999;
-	top:0.4rem;
+	top:0.5rem;
 	left:0.6rem;
 	font-size:0.3rem;
 	font-weight: bold;
+}*/
 
-}
 
 [v-cloak] {
   display: none;

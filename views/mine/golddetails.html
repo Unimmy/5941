@@ -28,7 +28,7 @@
 					</p>
 					<p v-for="item in infos" class="golddetails">
 						<span class="title">{{item.title}}</span> 
-						<span class="num">{{item.num | jfdetail}}</span>  
+						<span class="num" :class="item.num>0?'red':'green'" >{{item.num | jfdetail}}</span>  
 						<span class="time">{{item.id | myCurrency}}</span>
 					</p>
 					</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+	<meta name="author" contect=""> 
+	<title></title>
+	<link href="../../lib/mui/mui.min.css" rel="stylesheet" />
+	<link rel="stylesheet" type="text/css" href="../../css/common.css"/>
+	<script src="../../js/common/calcSize.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../../lib/jquery/jquery.min.js"></script>
+	<script src="../../lib/mui/mui.min.js"></script>
+	<script src="../../lib/vue/vue.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/homePage/myadress.css"/>
+	<body>
+		<!--html-->
+		<div id="app">
+			<header id="header" class="mui-bar mui-bar-nav nav-home">		
+				<h1 class="mui-title">我的地址</h1>
+				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
+			</header>
+			<div class="content" v-if="infos.length==0">
+				<p class="member_name">用户名: <input type="text"  placeholder="请输入姓名" v-model="sendInfo.username"></p>
+				<p class="member_phone">电话:<input type="number"  placeholder="请输入电话号码"  v-model="sendInfo.phone"></p>
+				<p class="member_address">地址:<input type="text" class="mui-input-clear" placeholder="请输入地址"  v-model="sendInfo.address"></p>
+				<button type="button" class="mui-btn mui-btn-primary" @tap="sendInfos()">提交信息</button>
+			</div>
+			<div class="content" v-if="infos.length!=0">
+				<p class="member_name">用户名:<input type="text"  placeholder="请输入姓名" :value="infos[0].MEMBER_NAME" disabled></p>
+				<p class="member_phone">电话:<input type="number"  placeholder="请输入电话号码" :value="infos[0].MEMBER_PHONE"disabled></p>
+				<p class="member_address">地址:<input type="text" class="mui-input-clear" placeholder="请输入地址" :value="infos[0].MEMBER_ADDRESS" disabled></p>
+				<button type="button" class="mui-btn mui-btn-primary" @tap="changeinfo">修改信息</button>
+			</div>
+		</div>
+		<!--script-->
+		<script src="../../js/common/common.js"></script>
+		<script src="../../js/homePage/myaddress.js"></script>
+	</body>
+</html>

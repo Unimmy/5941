@@ -172,3 +172,6 @@ body,.mui-bar-nav~.mui-content{
 	margin-top:0.2rem;
 	height:0.5rem;
 }
+[v-cloak]{
+	display: none;
+}

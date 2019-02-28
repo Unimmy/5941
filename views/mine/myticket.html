@@ -1,4 +1,4 @@
-       <!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
@@ -13,7 +13,7 @@
 	<script src="../../lib/vue/vue.min.js"></script>
 	<body>
 		<!--html-->
-		<div id="app">
+		<div id="app" v-cloak>
 			<header id="header" class="mui-bar mui-bar-nav nav-home">		
 				<h1 class="mui-title">兑换中心</h1>
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
@@ -37,7 +37,7 @@
 							<p class="card1">{{item.NUMBERA}}</p>
 							<p class="card2">{{item.NUMBERMIN}}</p>
 							<p class="card3">{{item.GOLDCOINNUM}}积分可兑换</p>
-							<p class="card4">{{item.TITLE}}</p>
+							<!--<p class="card4">{{item.TITLE}}</p>-->
 							<img src="../../img/mine/card.png" alt="" width="100%" @tap="turnTo('ticketshare',''+item.ID+'')"/>
 						</div>
 					</div>

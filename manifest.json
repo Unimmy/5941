@@ -3,7 +3,7 @@
     "id" : "H5244A0F9", /*应用的标识，创建应用时自动生成，勿手动修改*/
     "name" : "5941商城", /*应用名称，程序桌面图标名称*/
     "version" : {
-        "name" : "1.3.6", /*应用版本名称*/
+        "name" : "1.3.7", /*应用版本名称*/
         "code" : "83"
     },
     "description" : "", /*应用描述信息*/
@@ -277,31 +277,31 @@
                 "ios" : {
                     "iphone" : {
                         "default" : "",
-                        "iphonex" : "unpackage/res/iosStart/iphone1125-2436.png",
-                        "retina47" : "unpackage/res/iosStart/iphone750-1334.png",
-                        "iphonexl" : "unpackage/res/iosStart/iphone2436-1125.png",
-                        "retina35" : "unpackage/res/iosStart/iphone640-960.png",
-                        "retina40" : "unpackage/res/iosStart/iphone640-1136.png",
-                        "retina55" : "unpackage/res/iosStart/iphone1242-2208.png",
-                        "retina55l" : "unpackage/res/iosStart/iphone2208-1242.png"
+                        "iphonex" : "unpackage/res/iosStart/1125-2436 (2).png",
+                        "retina47" : "unpackage/res/iosStart/750-1334.png",
+                        "iphonexl" : "unpackage/res/iosStart/2436-1125 (2).png",
+                        "retina35" : "unpackage/res/iosStart/640-960 (2).png",
+                        "retina40" : "unpackage/res/iosStart/640-1136 (2).png",
+                        "retina55" : "unpackage/res/iosStart/1242-2208 (2).png",
+                        "retina55l" : "unpackage/res/iosStart/2208-1242 (2).png"
                     },
                     "ipad" : {
-                        "portrait" : "unpackage/res/iosStart/iphone768-1004.png",
-                        "landscape" : "unpackage/res/iosStart/iphone1024-748.png",
-                        "portrait7" : "unpackage/res/iosStart/iphone768-1024.png",
-                        "landscape7" : "unpackage/res/iosStart/iphone1024-768.png",
-                        "portrait-retina" : "unpackage/res/iosStart/iphone1536-2008.png",
-                        "portrait-retina7" : "unpackage/res/iosStart/iphone1536-2048.png",
-                        "landscape-retina" : "unpackage/res/iosStart/iphone2048-1496.png",
-                        "landscape-retina7" : "unpackage/res/iosStart/iphone2048-1536.png"
+                        "portrait" : "unpackage/res/iosStart/768-1004 (2).png",
+                        "landscape" : "unpackage/res/iosStart/1024-748 (2).png",
+                        "portrait7" : "unpackage/res/iosStart/768-1024 (2).png",
+                        "landscape7" : "unpackage/res/iosStart/1024-768 (2).png",
+                        "portrait-retina" : "unpackage/res/iosStart/1536-2008 (2).png",
+                        "portrait-retina7" : "unpackage/res/iosStart/1536-2048 (2).png",
+                        "landscape-retina" : "unpackage/res/iosStart/2048-1496 (2).png",
+                        "landscape-retina7" : "unpackage/res/iosStart/2048-1536 (2).png"
                     }
                 },
                 "android" : {
                     "mdpi" : "", /*普通屏启动图片，分辨率：240x282*/
                     "ldpi" : "",
-                    "hdpi" : "unpackage/res/androidStart/android480-762.png",
-                    "xhdpi" : "unpackage/res/androidStart/android启动页720-1242.png",
-                    "xxhdpi" : "unpackage/res/androidStart/android1080-1882.png"
+                    "hdpi" : "unpackage/res/androidStart/480-762 (2).png",
+                    "xhdpi" : "unpackage/res/androidStart/720-1242 (2).png",
+                    "xxhdpi" : "unpackage/res/androidStart/1080-1882 (2).png"
                 }
             },
             "debug" : false
@@ -500,7 +500,8 @@
 					"views/shoppingCart/commodityDetails.html",
 					"views/homePage/searchSearch.html",
 					"views/mine/setting.html",
-					"views/mine/myCopperate/myCopperate.html"
+					"views/mine/myCopperate/myCopperate.html",
+					"views/homePage/turntable.html"
 				],
 				"priority": 0
 			},
@@ -2189,7 +2190,8 @@
 					"img/mine/help.png",
 					"img/mine/head.png",
 					"img/mine/tuihuanhuo.png",
-					"img/mine/shezhi.png"
+					"img/mine/shezhi.png",
+					"img/mine/jifen.png"
 				],
 				"refer": [
 					"views/mine/myOrder/myOrder.html",
@@ -2429,6 +2431,13 @@
 				"refer": [
 					"views/mine/shopGuide/cashAccountManagement.html"
 				],
+				"priority": 0
+			},
+			"views/homePage/turntable.html": {
+				"resources": [
+					"css/homePage/turntable.css"
+				],
+				"refer": [],
 				"priority": 0
 			}
 		},

@@ -1,2011 +1,2020 @@
 {
-  "index.html": {
-    "resources": [
-      "js/common/index.js",
-      "lib/mui/mui.min.js",
-      "views/homePage/homeIndex.html",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.css",
-      "lib/fonts/mui.ttf",
-      "img/common/home.png",
-      "img/common/homeHover.png",
-      "img/common/loan.png",
-      "img/common/mine.png",
-      "img/common/daidai.png",
-      "img/common/mineHover.png",
-      "img/common/loanHover.png",
-      "img/common/daidaiHover.png",
-      "img/common/home1.png",
-      "img/common/home2.png",
-      "img/common/zhangdan2.png",
-      "img/common/zhangdan1.png",
-      "img/common/main1.png",
-      "img/common/renzheng2.png",
-      "img/common/renzheng1.png",
-      "img/common/main2.png",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "views/classification/classification.html",
-      "img/common/wode--shiti.png",
-      "img/common/zhuye-kongxin.png",
-      "img/common/shopping-shiti.png",
-      "img/common/shopping-kongxin.png",
-      "img/common/zhuye-shiti.png",
-      "img/common/fenlei-kongxin.png",
-      "img/common/wode-kongxin.png",
-      "img/common/fenlei-shiti.png"
-    ],
-    "refer": [
-      "views/homePage/homeIndex.html",
-      "views/daidai/ddIndex.html",
-      "views/mine/mineIndex.html",
-      "views/loan/loanIndex.html",
-      "views/certificate/certificate.html",
-      "views/check/checkIndex.html",
-      "views/loginRegister/login.html",
-      "views/shoppingCart/shoppingCart.html",
-      "views/classification/classification.html",
-      "views/mine/mine.html"
-    ]
-  },
-  "views/daidai/ddIndex.html": {
-    "resources": [
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "css/daidai/ddIndex.css",
-      "lib/vue/vue.min.js",
-      "js/daidai/ddIndex.js",
-      "img/daidai/organisationalGoal.png",
-      "lib/mui/mui.css",
-      "img/daidai/platformProfile.png",
-      "lib/fonts/mui.ttf",
-      "img/daidai/recruitment.png",
-      "img/daidai/serviceTenet.png",
-      "img/daidai/contactUs.png",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "css/common.css"
-    ],
-    "refer": [
-      "views/daidai/platformProfile.html",
-      "views/daidai/organisationalGoal.html",
-      "views/daidai/serviceTenet.html",
-      "views/daidai/recruitment.html",
-      "views/daidai/contactUs.html"
-    ]
-  },
-  "views/mine/mineIndex.html": {
-    "resources": [
-      "css/mine/mineIndex.css",
-      "js/mine/mineIndex.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/vue/vue.min.js",
-      "img/mine/index/myMessage.png",
-      "img/mine/index/myNews.png",
-      "lib/fonts/mui.ttf",
-      "img/mine/index/setting.png",
-      "img/mine/index/myTeam.png",
-      "img/mine/index/teamPerformance.png",
-      "img/mine/index/mineQRcode.png",
-      "img/mine/index/invalidCustomer.png",
-      "img/mine/index/userHeader.png",
-      "img/mine/index/commission.png",
-      "img/mine/index/myLoan1.png",
-      "img/mine/index/myCard.png",
-      "img/mine/index/effectiveCustomer.png",
-      "img/mine/index/myLoan2.png",
-      "img/mine/index/releaseCommission.png",
-      "img/mine/index/InvalidCurve.png",
-      "js/common/common.js",
-      "lib/mui/mui.min.js",
-      "img/mine/main.jpg",
-      "img/mine/head.png",
-      "js/common/calcSize.js",
-      "img/mine/rec.png",
-      "img/mine/set.png",
-      "img/mine/reply.png",
-      "img/mine/friend.png",
-      "img/mine/loan.png",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": [
-      "views/mine/mineCard.html",
-      "views/mine/myInfo.html",
-      "views/mine/mineLoan/mineLoan.html",
-      "views/mine/customer/customer.html",
-      "views/mine/myMessage/myMessage.html",
-      "views/mine/recommendedLoan/recommendedLoan.html",
-      "views/mine/invalidCustomer/invalidCustomer.html",
-      "views/mine/invalidRateCurve.html",
-      "views/mine/myTeam/myTeam.html",
-      "views/mine/myTeam/teamPerformance.html",
-      "views/mine/myCommission/myCommission.html",
-      "views/mine/myCommission/commissionRecord.html",
-      "views/mine/setting/setting.html",
-      "views/mine/QRCode.html",
-      "views/loginRegister/login.html",
-      "views/certificate/certificate.html",
-      "views/mine/accountDetail/accountDetail.html",
-      "views/mine/setUp/setUp.html",
-      "views/mine/friendInvitation/friendInvitation.html",
-      "views/loginRegister/register.html"
-    ]
-  },
-  "views/homePage/homeIndex.html": {
-    "resources": [
-      "js/homePage/homeIndex.js",
-      "css/homePage/homeIndex.css",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/vue/vue.min.js",
-      "lib/swiper2/idangerous.swiper.3dflow.css",
-      "lib/swiper2/idangerous.swiper.css",
-      "lib/swiper2/idangerous.swiper-2.0.min.js",
-      "lib/swiper2/idangerous.swiper.3dflow.js",
-      "img/homePage/1.jpg",
-      "img/homePage/2.jpg",
-      "img/homePage/3.jpg",
-      "lib/swiper3/swiper.min.js",
-      "lib/swiper3/swiper.min.css",
-      "img/homePage/4.jpg",
-      "img/homePage/wannaLoan.png",
-      "img/homePage/applVIP.png",
-      "css/common.css",
-      "img/homePage/\u001f\u000f7.png",
-      "img/homePage/bussinessLoan.png",
-      "img/homePage/carLoan.png",
-      "img/homePage/houseLoan.png",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/homePage/joinUs.png",
-      "img/homePage/\u001f\u000f7.png",
-      "lib/fonts/mui.ttf",
-      "js/common/common.js",
-      "img/homePage/bg1.jpg",
-      "img/homePage/dateIcon.png",
-      "img/homePage/companyIcon.png",
-      "img/homePage/message.png",
-      "img/homePage/studentLoan.png",
-      "img/homePage/tips.png",
-      "img/homePage/personalLoan.png",
-      "js/common/calcSize.js",
-      "img/homePage/personalIcon.png",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": [
-      "views/homePage/applyMember.html",
-      "views/homePage/join.html",
-      "views/homePage/productDetails.html",
-      "views/loan/loanIndex.html",
-      "views/homePage/projectDetil.html",
-      "views/mine/setUp/platformActivities.html",
-      "views/loginRegister/login.html",
-      "views/homePage/messageIndex.html",
-      "views/homePage/homeList.html",
-      "views/homePage/cityChoose.html",
-      "views/shoppingCart/commodityDetails.html",
-      "views/homePage/searchSearch.html",
-      "views/mine/setting.html",
-      "views/mine/myCopperate/myCopperate.html"
-    ]
-  },
-  "views/loan/loanIndex.html": {
-    "resources": [
-      "js/loan/loanIndex.js",
-      "css/loan/loanIndex.css",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/vue/vue.min.js",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/homePage/houseLoan.png",
-      "img/homePage/1.jpg",
-      "img/homePage/2.jpg",
-      "img/homePage/carLoan.png",
-      "img/homePage/3.jpg",
-      "img/homePage/4.jpg",
-      "img/homePage/bussinessLoan.png",
-      "img/homePage/applVIP.png",
-      "img/homePage/wannaLoan.png",
-      "img/homePage/joinUs.png",
-      "lib/fonts/mui.ttf",
-      "lib/mui/mui.min.js",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.picker.min.css",
-      "views/loan/loanIndex.html",
-      "img/loan/ownCar.png",
-      "img/loan/checkedIcon.png",
-      "img/loan/ownHouse.png",
-      "img/loan/ownSecu.png",
-      "img/loan/ownSesame.png",
-      "img/loan/ownLicense.png",
-      "img/loan/phoned.png",
-      "img/loan/taobao.png",
-      "img/loan/ownBussiness.png",
-      "lib/valid/Validform_v5.3.2/Validform_v5.3.2_min.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2/Validform_v5.3.2/demo/css/demo.css",
-      "lib/valid/Validform_v5.3.2/Validform_v5.3.2/demo/css/style.css",
-      "lib/valid/Validform_v5.3.2/Validform_v5.3.2.js",
-      "lib/valid/Validform_v5.3.2_min.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": [
-      "views/loan/loanIndex.html"
-    ]
-  },
-  "views/homePage/applyMember.html": {
-    "resources": [
-      "css/homePage/applyMember.css",
-      "lib/fonts/mui.ttf",
-      "js/homePage/applyMember.js",
-      "img/loan/ownCar.png",
-      "img/loan/ownLicense.png",
-      "img/loan/ownSecu.png",
-      "img/loan/ownHouse.png",
-      "lib/mui/mui.picker.min.css",
-      "img/loan/ownBussiness.png",
-      "lib/mui/mui.min.js",
-      "img/loan/taobao.png",
-      "lib/mui/mui.picker.min.js",
-      "img/loan/phoned.png",
-      "img/loan/ownSesame.png",
-      "lib/mui/mui.min.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "css/common.css",
-      "img/loan/checkedIcon.png",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": []
-  },
-  "views/homePage/join.html": {
-    "resources": [
-      "css/homePage/join.css",
-      "js/homePage/join.js",
-      "lib/city.data-3.js",
-      "lib/city.data.js",
-      "img/loginAndRegister/checkYes.png",
-      "img/loginAndRegister/contact.png",
-      "img/loginAndRegister/PWDdown.png",
-      "img/loginAndRegister/checkNo.png",
-      "img/loginAndRegister/code.png",
-      "img/loginAndRegister/QRCodeTop.png",
-      "img/loginAndRegister/PWDup.png",
-      "lib/mui/mui.min.css",
-      "lib/mui/mui.picker.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/common.css",
-      "lib/mui/mui.picker.min.js",
-      "img/loginAndRegister/QRCodeBig.png",
-      "img/loginAndRegister/closePop.png",
-      "lib/feedback.js",
-      "lib/feedback.css",
-      "lib/uploaderImg.js",
-      "lib/qrcode/jquery.qrcode.js",
-      "lib/qrcode/utf.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": []
-  },
-  "views/homePage/productDetails.html": {
-    "resources": [
-      "js/homePage/productDetails.js",
-      "lib/fonts/mui.ttf",
-      "css/homePage/productDetails.css",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/mui/mui.picker.min.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/mui/mui.picker.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/homePage/detailBg.png",
-      "img/homePage/bussiness.png",
-      "img/homePage/moneyIcon.png",
-      "img/homePage/dateIcon.png",
-      "lib/mui/mui.js"
-    ],
-    "refer": []
-  },
-  "views/mine/mineCard.html": {
-    "resources": [
-      "img/mine/mineCard/validCard.png",
-      "css/mine/mineCard.css",
-      "img/mine/mineCard/state.png",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "img/mine/mineCard/invalidCard.png",
-      "img/mine/mineCard/cardNull.png",
-      "js/mine/mineCard.js",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/myInfo.html": {
-    "resources": [
-      "js/mine/myInfo.js",
-      "css/mine/myInfo.css",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/vue/vue.min.js",
-      "lib/fonts/mui.ttf",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/mui/mui.min.js",
-      "img/mine/myInfo/code.png",
-      "lib/qrcode/jquery.qrcode.js",
-      "lib/qrcode/utf.js"
-    ],
-    "refer": []
-  },
-  "views/mine/customer/customer.html": {
-    "resources": [
-      "css/mine/customer/customer.css",
-      "js/mine/customer/customer.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/homePage/dateIcon.png",
-      "img/homePage/bussiness.png",
-      "img/homePage/detailBg.png",
-      "img/common/search.png",
-      "img/mine/customer/bg.png",
-      "img/common/seachIcon.png",
-      "img/mine/customer/ý\r.png",
-      "img/mine/customer/4ý.png",
-      "img/mine/customer/rankIcon.png",
-      "img/mine/customer/classifyA.png",
-      "img/mine/customer/poitrait.png",
-      "img/mine/customer/noInfoBg.png",
-      "img/common/right.png",
-      "img/mine/customer/ý\r.png",
-      "img/mine/customer/4ý.png",
-      "lib/mui/mui.picker.min.css",
-      "lib/mui/mui.picker.min.js",
-      "img/mine/customer/classifyB.png"
-    ],
-    "refer": [
-      "views/mine/customer/loanInfo.html",
-      "views/mine/customer/cardInfo.html"
-    ]
-  },
-  "views/mine/customer/loanInfo.html": {
-    "resources": [
-      "css/mine/customer/loanInfo.css",
-      "js/mine/customer/loanInfo.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/mine/customer/rankIcon.png",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/mine/customer/classifyA.png",
-      "img/mine/customer/noInfoBg.png",
-      "css/common.css",
-      "img/mine/customer/poitrait.png",
-      "img/mine/customer/bg.png",
-      "img/mine/customer/recomend.png"
-    ],
-    "refer": [
-      "views/mine/customer/loanInfoDetails.html"
-    ]
-  },
-  "views/mine/customer/cardInfo.html": {
-    "resources": [
-      "js/mine/customer/cardInfo.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "lib/fonts/mui.ttf",
-      "css/mine/customer/cardInfo.css",
-      "img/mine/mineCard/state.png",
-      "img/mine/mineCard/validCard.png",
-      "img/mine/mineCard/noInfo2.png"
-    ],
-    "refer": []
-  },
-  "views/mine/customer/loanInfoDetails.html": {
-    "resources": [
-      "js/mine/customer/loanInfoDetails.js",
-      "img/mine/customer/noInfoBg.png",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/mine/customer/loanInfoDetails.css"
-    ],
-    "refer": []
-  },
-  "views/mine/invalidCustomer/invalidCustomer.html": {
-    "resources": [
-      "css/mine/invalidCustomer/invalidCustomer.css",
-      "js/mine/invalidCustomer/invalidCustomer.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/mine/customer/rankIcon.png",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/mine/customer/classifyA.png",
-      "img/mine/customer/noInfoBg.png",
-      "css/common.css",
-      "img/mine/customer/poitrait.png",
-      "img/mine/customer/bg.png",
-      "img/common/seachIcon.png",
-      "img/common/search.png",
-      "img/common/right.png",
-      "lib/mui/mui.picker.min.css",
-      "lib/mui/mui.picker.min.js"
-    ],
-    "refer": [
-      "views/mine/invalidCustomer/submitAppeal.html",
-      "views/mine/invalidCustomer/appealRecord.html"
-    ]
-  },
-  "views/mine/invalidCustomer/submitAppeal.html": {
-    "resources": [
-      "js/mine/invalidCustomer/submitAppeal.js",
-      "img/mine/customer/noInfoBg.png",
-      "img/mine/customer/poitrait.png",
-      "img/common/search.png",
-      "lib/mui/mui.min.css",
-      "css/mine/invalidCustomer/submitAppeal.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "img/common/right.png",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/invalidCustomer/appealRecord.html": {
-    "resources": [
-      "js/mine/invalidCustomer/appealRecord.js",
-      "css/mine/invalidCustomer/appealRecord.css",
-      "img/common/search.png",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "views/mine/invalidCustomer/appealRecordSub.html"
-    ],
-    "refer": [
-      "views/mine/invalidCustomer/appealRecordSub.html"
-    ]
-  },
-  "views/mine/invalidRateCurve.html": {
-    "resources": [
-      "js/mine/invalidRateCurve.js",
-      "img/common/search.png",
-      "lib/echarts-all.js",
-      "img/common/right.png",
-      "css/mine/invalidRateCurve.css",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/invalidCustomer/appealRecordSub.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "js/mine/invalidCustomer/appealRecord.js",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/mine/invalidCustomer/appealRecord.css",
-      "lib/fonts/mui.ttf",
-      "js/mine/invalidCustomer/appealRecordSub.js"
-    ],
-    "refer": []
-  },
-  "views/mine/myTeam/myTeam.html": {
-    "resources": [
-      "img/mine/customer/noInfoBg.png",
-      "img/mine/customer/classifyA.png",
-      "js/mine/myTeam/myTeam.js",
-      "css/mine/myTeam/myTeam.css",
-      "img/mine/customer/poitrait.png",
-      "img/common/seachIcon.png",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/mine/customer/rankIcon.png",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/common.css",
-      "img/mine/customer/bg.png",
-      "img/mine/myTeam/total.png",
-      "img/common/right.png",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.picker.min.css"
-    ],
-    "refer": [
-      "views/mine/myTeam/memberPerformance.html"
-    ]
-  },
-  "views/mine/myTeam/memberPerformance.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "css/mine/myTeam/memberPerformance.css",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/mine/myTeam/memberPerformance.js",
-      "img/mine/customer/noInfoBg.png",
-      "lib/fonts/mui.ttf",
-      "img/mine/customer/poitrait.png",
-      "img/mine/customer/bg.png",
-      "img/common/seachIcon.png",
-      "img/mine/myTeam/total.png",
-      "img/mine/myTeam/member.png",
-      "img/common/right.png"
-    ],
-    "refer": []
-  },
-  "views/mine/myTeam/teamPerformance.html": {
-    "resources": [
-      "img/mine/customer/noInfoBg.png",
-      "js/mine/myTeam/teamPerformance.js",
-      "img/mine/customer/poitrait.png",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/mine/myTeam/teamPerformance.css",
-      "img/mine/myTeam/member.png",
-      "img/common/seachIcon.png",
-      "img/mine/customer/bg.png",
-      "img/common/right.png",
-      "img/common/search.png",
-      "lib/valid/valid.js",
-      "lib/mui/mui.picker.min.css",
-      "lib/valid/Validform_v5.3.2.js",
-      "js/common/common.js",
-      "lib/mui/mui.picker.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/myCommission/myCommission.html": {
-    "resources": [
-      "img/mine/customer/noInfoBg.png",
-      "img/mine/customer/poitrait.png",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "css/mine/myCommission/myCommission.css",
-      "lib/mui/mui.min.js",
-      "js/mine/myCommission/myCommission.js",
-      "img/mine/customer/bg.png",
-      "img/common/seachIcon.png",
-      "img/mine/myTeam/total.png",
-      "img/common/search.png",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.picker.min.css"
-    ],
-    "refer": [
-      "views/mine/myCommission/commissionDetails.html"
-    ]
-  },
-  "views/mine/myCommission/commissionDetails.html": {
-    "resources": [
-      "js/mine/myCommission/commissionDetails.js",
-      "css/mine/myCommission/commissionDetails.css",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/myCommission/commissionRecord.html": {
-    "resources": [
-      "css/mine/myCommission/commissionRecord.css",
-      "js/mine/myCommission/commissionRecord.js",
-      "img/common/search.png",
-      "img/mine/customer/noInfoBg.png",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/myMessage/myMessage.html": {
-    "resources": [
-      "css/mine/myMessage/myMessage.css",
-      "lib/mui/mui.min.css",
-      "js/mine/myMessage/myMessage.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/mine/customer/noInfoBg.png"
-    ],
-    "refer": [
-      "views/mine/myMessage/messageDetails.html"
-    ]
-  },
-  "views/mine/myMessage/messageDetails.html": {
-    "resources": [
-      "img/mine/customer/noInfoBg.png",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/mine/myMessage/messageDetails.css",
-      "js/mine/myMessage/messageDetails.js"
-    ],
-    "refer": []
-  },
-  "views/mine/setting/setting.html": {
-    "resources": [
-      "js/mine/setting/setting.js",
-      "css/mine/setting/setting.css",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js"
-    ],
-    "refer": [
-      "views/mine/setting/myComplaint.html",
-      "views/mine/setting/myAppeal.html",
-      "views/mine/setting/modifyPhoneNum.html",
-      "views/mine/setting/modifyPWD.html",
-      "views/loginAndRegister/login.html"
-    ]
-  },
-  "views/mine/setting/myAppeal.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/mine/setting/myAppeal.js",
-      "css/mine/setting/myAppeal.css",
-      "img/mine/customer/noInfoBg.png",
-      "img/mine/customer/bg.png",
-      "img/mine/customer/recomend.png",
-      "lib/fonts/mui.ttf",
-      "img/common/seachIcon.png",
-      "img/common/search.png",
-      "lib/mui/mui.picker.min.css",
-      "lib/mui/mui.picker.min.js"
-    ],
-    "refer": [
-      "views/mine/setting/appealDetails.html"
-    ]
-  },
-  "views/mine/setting/appealDetails.html": {
-    "resources": [
-      "css/mine/setting/appealDetails.css",
-      "js/mine/setting/appealDetails.js",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/setting/myComplaint.html": {
-    "resources": [
-      "img/common/search.png",
-      "img/mine/customer/noInfoBg.png",
-      "lib/fonts/mui.ttf",
-      "js/mine/setting/myComplaint.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/mine/setting/myComplaint.css",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js"
-    ],
-    "refer": [
-      "views/mine/setting/complaintDetails.html"
-    ]
-  },
-  "views/mine/setting/complaintDetails.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "css/mine/setting/complaintDetails.css",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/mine/setting/complaintDetails.js"
-    ],
-    "refer": []
-  },
-  "views/mine/setting/modifyPhoneNum.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/mine/setting/modifyPhoneNum.css",
-      "js/mine/setting/modifyPhoneNum.js",
-      "img/loginAndRegister/PWDdown.png",
-      "img/loginAndRegister/code.png",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": []
-  },
-  "views/mine/setting/modifyPWD.html": {
-    "resources": [
-      "css/mine/setting/modifyPWD.css",
-      "js/mine/setting/modifyPWD.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/loginAndRegister/PWDdown.png",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/loginAndRegister/PWDup.png"
-    ],
-    "refer": []
-  },
-  "views/daidai/platformProfile.html": {
-    "resources": [
-      "js/daidai/platformProfile.js",
-      "css/daidai/platformProfile.css",
-      "img/daidai/platformProfile-bg.png",
-      "lib/mui/mui.min.css"
-    ],
-    "refer": []
-  },
-  "views/daidai/organisationalGoal.html": {
-    "resources": [
-      "js/daidai/organisationalGoal.js",
-      "img/daidai/organisationalGoal-bg.png",
-      "css/daidai/organisationalGoal.css"
-    ],
-    "refer": []
-  },
-  "views/daidai/serviceTenet.html": {
-    "resources": [
-      "img/daidai/serviceTenet-bg.png",
-      "css/daidai/serviceTenet.css",
-      "js/daidai/serviceTenet.js",
-      "js//common/common.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "lib/jquery/jquery-3.2.1.min.js"
-    ],
-    "refer": []
-  },
-  "views/daidai/recruitment.html": {
-    "resources": [
-      "css/daidai/recruitment.css",
-      "js/daidai/recruitment.js",
-      "img/daidai/recruitment-bg.png"
-    ],
-    "refer": []
-  },
-  "views/daidai/contactUs.html": {
-    "resources": [
-      "img/daidai/contactUs-bg.png",
-      "css/daidai/contactUs.css",
-      "js/daidai/contactUs.js"
-    ],
-    "refer": []
-  },
-  "views/mine/QRCode.html": {
-    "resources": [
-      "js/mine/QRCode.js",
-      "img/loginAndRegister/QRCodeBig.png",
-      "css/mine/QRCode.css",
-      "img/mine/QRcodeBox.png",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "img/mine/index/userHeader.png",
-      "lib/qrcode/jquery.qrcode.js",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/qrcode/utf.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/mineLoan.html": {
-    "resources": [
-      "img/mine/mineLoan/loanTop.png",
-      "js/mine/mineLoan/mineLoan.js",
-      "img/mine/mineLoan/topRight.png",
-      "css/mine/mineLoan/mineLoan.css",
-      "lib/mui/mui.js",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "js/common/common.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/mine/gray.png",
-      "img/mine/yellow.png",
-      "img/mine/green.png",
-      "lib/mui/mui.pullToRefresh.material.js",
-      "lib/mui/mui.pullToRefresh.js"
-    ],
-    "refer": [
-      "views/mine/mineLoan/loanDetails.html",
-      "views/mine/mineLoan/loanDetail.html",
-      "views/loginRegister/login.html"
-    ]
-  },
-  "views/mine/recommendedLoan/recommendedLoan.html": {
-    "resources": [
-      "js/mine/recommendedLoan/recommendedLoan.js",
-      "img/mine/recommendedLoan/securedLoan.png",
-      "css/mine/recommendedLoan/recommendedLoan.css",
-      "img/mine/recommendedLoan/nonLending.png",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js"
-    ],
-    "refer": [
-      "views/mine/recommendedLoan/securedLoan.html",
-      "views/mine/recommendedLoan/list.html"
-    ]
-  },
-  "views/mine/recommendedLoan/securedLoan.html": {
-    "resources": [
-      "js/mine/recommendedLoan/securedLoan.js",
-      "img/mine/recommendedLoan/demand.png",
-      "css/mine/recommendedLoan/securedLoan.css",
-      "img/common/search.png",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "views/mine/recommendedLoan/securedLoanSub.html",
-      "img/mine/customer/noInfoBg.png",
-      "lib/mui/mui1.min.js",
-      "lib/mui/mui1.min.css",
-      "lib/mui/mui2.min.js",
-      "lib/mui/mui2.min.css",
-      "img/daidai/contactUs.png",
-      "lib/mui/mui.min.js",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.picker.min.css"
-    ],
-    "refer": [
-      "views/mine/recommendedLoan/securedLoanSub.html"
-    ]
-  },
-  "views/mine/recommendedLoan/list.html": {
-    "resources": [
-      "css/mine/recommendedLoan/list.css",
-      "js/mine/recommendedLoan/list.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "img/mine/mineLoan/topRight.png",
-      "img/common/search.png",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "img/common/right.png"
-    ],
-    "refer": [
-      "views/mine/recommendedLoan/details.html"
-    ]
-  },
-  "views/mine/recommendedLoan/details.html": {
-    "resources": [
-      "css/mine/recommendedLoan/details.css",
-      "js/mine/recommendedLoan/details.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/recommendedLoan/securedLoanSub.html": {
-    "resources": [
-      "js/mine/recommendedLoan/securedLoanSub.js",
-      "img/mine/recommendedLoan/demand.png",
-      "img/mine/customer/noInfoBg.png",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "css/mine/recommendedLoan/securedLoan.css"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/loanDetails.html": {
-    "resources": [
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "js/mine/mineLoan/loanDetails.js",
-      "img/mine/mineLoan/representations.png",
-      "css/common.css",
-      "img/mine/mineLoan/plan.png",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/mine/mineLoan/agreement.png",
-      "img/mine/mineLoan/dataImg.png",
-      "img/mine/mineLoan/file.png",
-      "lib/vue/vue.min.js",
-      "css/mine/mineLoan/loanDetails.css",
-      "img/mine/mineLoan/complaint.png"
-    ],
-    "refer": [
-      "views/mine/mineLoan/agreement.html",
-      "views/mine/mineLoan/importantFile.html",
-      "views/mine/mineLoan/repaymentPlan.html",
-      "views/mine/mineLoan/appeal.html",
-      "views/mine/mineLoan/complaint.html"
-    ]
-  },
-  "views/mine/mineLoan/agreement.html": {
-    "resources": [
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "img/mine/mineLoan/agreementTest.png",
-      "css/common.css",
-      "css/mine/mineLoan/agreement.css",
-      "img/mine/mineLoan/text2.png",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "js/mine/mineLoan/agreement.js",
-      "lib/vue/vue.min.js",
-      "img/mine/mineLoan/text3.png"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/importantFile.html": {
-    "resources": [
-      "lib/mui/mui.js",
-      "js/mine/mineLoan/importantFile.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "css/mine/mineLoan/importantFile.css"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/repaymentPlan.html": {
-    "resources": [
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "css/mine/mineLoan/repaymentPlan.css",
-      "js/mine/mineLoan/repaymentPlan.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/appeal.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "img/mine/mineLoan/addImage.png",
-      "js/mine/mineLoan/appeal.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "css/mine/mineLoan/appeal.css",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/mine/mineLoan/agreementTest.png"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/complaint.html": {
-    "resources": [
-      "img/mine/mineLoan/star2.png",
-      "lib/mui/mui.min.css",
-      "css/mine/mineLoan/complaint.css",
-      "js/mine/mineLoan/complaint.js",
-      "css/common.css",
-      "img/mine/mineLoan/addImage.png",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/mine/mineLoan/star1.png",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "img/mine/mineLoan/agreementTest.png"
-    ],
-    "refer": []
-  },
-  "views/loginAndRegister/login.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "lib/mui/mui.js",
-      "img/loginAndRegister/password.png",
-      "img/loginAndRegister/username.png",
-      "js/loginAndRegister/login.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/loginAndRegister/rightNormal.png",
-      "img/loginAndRegister/rightCheck.png",
-      "img/loginAndRegister/PWDdown.png",
-      "lib/vue/vue.min.js",
-      "css/loginAndRegister/login.css",
-      "img/loginAndRegister/cutLine.png",
-      "img/loginAndRegister/reset.png",
-      "css/common.css",
-      "img/loginAndRegister/logoTrue.png",
-      "img/loginAndRegister/weChat.png",
-      "img/loginAndRegister/PWDup.png",
-      "lib/mui/mui.min.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "js/common/common.js"
-    ],
-    "refer": [
-      "views/loginAndRegister/forgotPWD.html",
-      "views/loginAndRegister/register.html",
-      "index.html"
-    ]
-  },
-  "views/loginAndRegister/forgotPWD.html": {
-    "resources": [
-      "css/loginAndRegister/forgotPWD.css",
-      "js/loginAndRegister/forgotPWD.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "img/loginAndRegister/PWDdown.png",
-      "lib/vue/vue.min.js",
-      "img/loginAndRegister/code.png",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/loginAndRegister/register.html": {
-    "resources": [
-      "js/loginAndRegister/register.js",
-      "lib/city.data-3.js",
-      "lib/mui/mui.poppicker.js",
-      "css/loginAndRegister/register.css",
-      "img/loginAndRegister/code.png",
-      "lib/city.data.js",
-      "img/loginAndRegister/checkYes.png",
-      "img/loginAndRegister/contact.png",
-      "lib/mui/mui.min.css",
-      "lib/qrcode/jquery.qrcode.js",
-      "lib/fonts/mui.ttf",
-      "lib/mui/mui.picker.min.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "img/loginAndRegister/PWDdown.png",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "lib/qrcode/utf.js",
-      "img/loginAndRegister/checkNo.png",
-      "img/loginAndRegister/QRCodeTop.png",
-      "css/common.css",
-      "lib/mui/mui.picker.min.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "img/loginAndRegister/closePop.png",
-      "img/loginAndRegister/PWDup.png",
-      "js/common/common.js",
-      "img/daidai/organisationalGoal.png"
-    ],
-    "refer": []
-  },
-  "views/check/checkIndex.html": {
-    "resources": [
-      "lib/valid/valid.js",
-      "lib/mui/mui.min.css",
-      "css/common.css",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/mui/mui.picker.min.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.min.js",
-      "css/check/checkIndex.css",
-      "lib/fonts/mui.ttf",
-      "js/check/checkIndex.js",
-      "lib/swiper3/swiper.min.js",
-      "js/common/calcSize.js",
-      "js/common/common.js",
-      "lib/swiper3/swiper.min.css",
-      "img/check/bg.png",
-      "img/common/u2802.jpg",
-      "img/check/noInfo.png"
-    ],
-    "refer": [
-      "views/check/repayment.html",
-      "views/check/historyCheck.html",
-      "views/loginRegister/login.html"
-    ]
-  },
-  "views/certificate/certificate.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "js/certificate/certificate.js",
-      "css/certificate/certificate.css",
-      "js/common/common.js",
-      "img/certificate/nameIcon.png",
-      "img/certificate/creditIcon.png",
-      "img/certificate/sesameIcon.png",
-      "img/certificate/bankIcon.png",
-      "img/certificate/phoneIcon.png",
-      "img/certificate/basicIcon.png",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/common.css",
-      "js/common/calcSize.js",
-      "img/certificate/basicPIcon.png",
-      "img/certificate/basicCIcon.png"
-    ],
-    "refer": [
-      "views/certificate/basicDatum.html",
-      "views/certificate/phoneLicense.html",
-      "views/certificate/bankCer.html",
-      "views/certificate/creditCer.html",
-      "views/certificate/realNameCer.html",
-      "views/certificate/sesameCer.html",
-      "views/loginRegister/login.html",
-      "views/certificate/IDauthentication.html",
-      "views/certificate/JDauthentication.html",
-      "views/certificate/DRauthentiacation.html",
-      "views/certificate/BKauthentiacation.html",
-      "views/certificate/TBauthentiacation.html"
-    ]
-  },
-  "views/loginRegister/login.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "lib/fonts/mui.ttf",
-      "css/loginRegister/login.css",
-      "js/loginRegister/login.js",
-      "img/common/u2802.jpg",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/common.js",
-      "css/common.css",
-      "js/common/calcSize.js",
-      "js/common/md5.js"
-    ],
-    "refer": [
-      "views/loginRegister/register.html",
-      "views/loginRegister/forgetPwd.html",
-      "index.html"
-    ]
-  },
-  "views/loginRegister/register.html": {
-    "resources": [
-      "css/loginRegister/register.css",
-      "js/loginRegister/register.js",
-      "lib/mui/mui.min.css",
-      "js/common/calcSize.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/mui/mui.min.js",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "js/common/md5.js"
-    ],
-    "refer": [
-      "views/loginRegister/login.html",
-      "views/loginRegister/registerAgreement.html",
-      "index.html"
-    ]
-  },
-  "views/homePage/projectDetil.html": {
-    "resources": [
-      "css/homePage/projectDetil.css",
-      "js/homePage/projectDetil.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/swiper3/swiper.min.css",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/swiper3/swiper.min.js",
-      "lib/vue/vue.min.js",
-      "js/common/calcSize.js",
-      "img/homePage/productDetail/bg.png",
-      "img/homePage/studentLoan.png",
-      "img/homePage/productDetail/moneyIcon.png",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": [
-      "views/homePage/loanApplication.html",
-      "views/loginRegister/login.html"
-    ]
-  },
-  "views/homePage/loanApplication.html": {
-    "resources": [
-      "js/homePage/loanApplication.js",
-      "css/homePage/loanApplication.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/homePage/loanApply/upLoad.png",
-      "img/homePage/loanApply/checkIcon.png",
-      "img/homePage/loanApply/checkedIcon.png",
-      "lib/mui/mui.poppicker.js",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.picker.min.css",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": [
-      "views/mine/friendInvitation/interestFree.html",
-      "views/loginRegister/registerAgreement.html"
-    ]
-  },
-  "views/certificate/basicDatum.html": {
-    "resources": [
-      "js/certificate/basicDatum.js",
-      "css/certificate/basicDatum.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "lib/iscroll/iscroll.js",
-      "lib/mui/mui.js",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.picker.min.css",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": []
-  },
-  "views/certificate/phoneLicense.html": {
-    "resources": [
-      "js/certificate/phoneLicense.js",
-      "css/certificate/phoneLicense.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/certificate/bgPhone.png",
-      "img/certificate/bgPhone.jpg",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "js/common/md5.js"
-    ],
-    "refer": []
-  },
-  "views/certificate/bankCer.html": {
-    "resources": [
-      "js/certificate/bankCer.js",
-      "css/certificate/bankCer.css",
-      "lib/mui/mui.min.css",
-      "lib/valid/valid.js",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": []
-  },
-  "views/certificate/creditCer.html": {
-    "resources": [
-      "css/certificate/creditCer.css",
-      "img/certificate/bgCredit.jpg",
-      "js/certificate/creditCer.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js"
-    ],
-    "refer": []
-  },
-  "views/certificate/realNameCer.html": {
-    "resources": [
-      "css/certificate/realNameCer.css",
-      "js/certificate/realNameCer.js",
-      "img/certificate/idCardFront.png",
-      "img/certificate/idCardAll.png",
-      "lib/mui/mui.min.css",
-      "css/certificate/certificate.css",
-      "img/certificate/idCardBack.png",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/common.js",
-      "css/common.css",
-      "js/common/calcSize.js",
-      "img/certificate/bankIcon.png"
-    ],
-    "refer": []
-  },
-  "views/mine/mineLoan/loanDetail.html": {
-    "resources": [
-      "css/mine/mineLoan/loanDetail.css",
-      "js/mine/mineLoan/loanDetail.js",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "js/common/calcSize.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "css/common.css"
-    ],
-    "refer": [
-      "views/mine/mineLoan/prepayment.html",
-      "views/check/applyExtension.html",
-      "views/check/repayment.html",
-      "views/loginRegister/registerAgreement.html"
-    ]
-  },
-  "views/mine/mineLoan/prepayment.html": {
-    "resources": [
-      "img/mine/checkedIcon.png",
-      "js/mine/mineLoan/prepayment.js",
-      "css/mine/mineLoan/prepayment.css",
-      "lib/mui/mui.min.css",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js"
-    ],
-    "refer": [
-      "views/mine/mineLoan/prepaymentDetail.html"
-    ]
-  },
-  "views/mine/mineLoan/prepaymentDetail.html": {
-    "resources": [
-      "js/mine/mineLoan/prepaymentDetail.js",
-      "css/mine/mineLoan/prepaymentDetail.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": []
-  },
-  "views/mine/accountDetail/accountDetail.html": {
-    "resources": [
-      "css/mine/accountDetail/accountDetail.css",
-      "js/mine/accountDetail/accountDetail.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/check/noInfo.png"
-    ],
-    "refer": []
-  },
-  "views/mine/setUp/modifyPwd.html": {
-    "resources": [
-      "css/mine/setUp/modifyPwd.css",
-      "js/mine/setUp/modifyPwd.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "js/common/md5.js"
-    ],
-    "refer": [
-      "views/loginRegister/login.html"
-    ]
-  },
-  "views/mine/setUp/setUp.html": {
-    "resources": [
-      "js/mine/setUp/setUp.js",
-      "css/mine/setUp/setUp.css",
-      "lib/mui/mui.min.css",
-      "lib/mui/mui.min.js",
-      "lib/fonts/mui.ttf",
-      "js/common/common.js",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": [
-      "views/mine/setUp/modifyPwd.html",
-      "views/mine/setUp/aboutUs.html",
-      "views/mine/setUp/platformActivities.html",
-      "views/mine/setUp/help.html",
-      "views/loginRegister/register.html",
-      "views/loginRegister/login.html",
-      "views/mine/setUp/feedback.html",
-      "views/mine/setUp/authorization.html",
-      "views/certificate/bankCer.html"
-    ]
-  },
-  "views/mine/friendInvitation/friendInvitation.html": {
-    "resources": [
-      "js/mine/friendInvitation/friendInvitation.js",
-      "css/mine/friendInvitation/friendInvitation.css",
-      "img/homePage/bg1.jpg",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/mine/weChat.png",
-      "img/mine/button.png",
-      "img/mine/left.png",
-      "img/mine/right.png",
-      "img/homePage/company1.png",
-      "img/mine/friendCircle.png",
-      "img/mine/QQ.png",
-      "lib/fonts/mui.ttf"
-    ],
-    "refer": [
-      "views/mine/friendInvitation/interestFree.html"
-    ]
-  },
-  "views/mine/friendInvitation/interestFree.html": {
-    "resources": [
-      "lib/fonts/mui.ttf",
-      "js/mine/friendInvitation/interestFree.js",
-      "css/mine/friendInvitation/interestFree.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/mine/useBg.png",
-      "img/mine/useUnCheckedIcon.png",
-      "img/mine/useCheckedIcon.png",
-      "img/mine/useUnBg.png",
-      "lib/mui/mui.pullToRefresh.material.js",
-      "lib/mui/mui.pullToRefresh.js"
-    ],
-    "refer": []
-  },
-  "views/certificate/sesameCer.html": {
-    "resources": [
-      "js/certificate/sesameCer.js",
-      "css/certificate/sesameCer.css",
-      "img/certificate/bgSesame.jpg",
-      "lib/mui/mui.min.css",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/common.js",
-      "css/common.css",
-      "js/common/calcSize.js"
-    ],
-    "refer": []
-  },
-  "views/check/repayment.html": {
-    "resources": [
-      "css/check/repayment.css",
-      "js/check/repayment.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "lib/swiper3/swiper.min.js",
-      "lib/swiper3/swiper.min.css"
-    ],
-    "refer": []
-  },
-  "views/check/historyCheck.html": {
-    "resources": [
-      "lib/valid/valid.js",
-      "js/check/historyCheck.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "lib/mui/mui.picker.min.css",
-      "css/check/historyCheck.css",
-      "lib/mui/mui.picker.min.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": []
-  },
-  "views/mine/setUp/aboutUs.html": {
-    "resources": [
-      "js/mine/setUp/aboutUs.js",
-      "css/mine/setUp/aboutUs.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": []
-  },
-  "views/mine/setUp/platformActivities.html": {
-    "resources": [
-      "js/mine/setUp/platformActivities.js",
-      "css/mine/setUp/platformActivities.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": [
-      "views/mine/setUp/activitiesDetail.html"
-    ]
-  },
-  "views/mine/setUp/help.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "js/mine/setUp/help.js",
-      "css/mine/setUp/help.css",
-      "js/common/common.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "lib/fonts/mui.ttf"
-    ],
-    "refer": []
-  },
-  "views/mine/setUp/activitiesDetail.html": {
-    "resources": [
-      "js/mine/setUp/activitiesDetail.js",
-      "css/mine/setUp/activitiesDetail.css",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": []
-  },
-  "views/check/applyExtension.html": {
-    "resources": [
-      "lib/mui/mui.min.css",
-      "css/check/applyExtension.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "js/check/applyExtension.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/homePage/loanApply/checkIcon.png",
-      "lib/mui/mui.picker.min.css",
-      "img/homePage/loanApply/checkedIcon.png",
-      "lib/mui/mui.picker.min.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js"
-    ],
-    "refer": [
-      "views/loginRegister/registerAgreement.html"
-    ]
-  },
-  "views/loginRegister/forgetPwd.html": {
-    "resources": [
-      "css/loginRegister/forgetPwd.css",
-      "lib/mui/mui.min.css",
-      "lib/mui/mui.min.js",
-      "js/loginRegister/forgetPwd.js",
-      "lib/valid/valid.js",
-      "lib/valid/Validform_v5.3.2.js",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "js/common/md5.js",
-      "js/common/calcSize.js"
-    ],
-    "refer": [
-      "views/loginRegister/login.html"
-    ]
-  },
-  "views/mine/setUp/feedback.html": {
-    "resources": [
-      "css/mine/setUp/feedback.css",
-      "js/mine/setUp/feedback.js",
-      "img/mine/addImage.png",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "lib/fonts/mui.ttf",
-      "lib/jquery/jquery-3.2.1.min.js",
-      "lib/vue/vue.min.js",
-      "lib/mui/mui.min.js",
-      "js/common/calcSize.js",
-      "img/certificate/basicCIcon.png"
-    ],
-    "refer": []
-  },
-  "views/mine/setUp/authorization.html": {
-    "resources": [
-      "img/mine/fail.png",
-      "lib/mui/mui.min.css",
-      "img/mine/scucces.png",
-      "js/mine/setUp/authorization.js",
-      "css/mine/setUp/authorization.css"
-    ],
-    "refer": []
-  },
-  "views/loginRegister/registerAgreement.html": {
-    "resources": [
-      "js/loginRegister/registerAgreement.js",
-      "css/loginRegister/registerAgreement.css",
-      "lib/mui/mui.min.js",
-      "lib/mui/mui.min.css",
-      "js/common/common.js",
-      "css/common.css",
-      "lib/fonts/mui.ttf",
-      "lib/vue/vue.min.js"
-    ],
-    "refer": []
-  },
-  "views/homePage/messageIndex.html": {
-    "refer": [
-      "views/homePage/homeMessage.html",
-      "views/loginRegister/login.html"
-    ],
-    "resources": []
-  },
-  "main.html": {
-    "refer": [
-      "guidePage.html",
-      "index.html"
-    ],
-    "resources": []
-  },
-  "guidePage.html": {
-    "refer": [
-      "index.html"
-    ],
-    "resources": []
-  },
-  "views/mine/mine.html": {
-    "refer": [
-      "views/mine/myOrder/myOrder.html",
-      "views/mine/setting.html",
-      "views/mine/address/address.html",
-      "views/mine/accountSecurity/accountSecurity.html",
-      "views/mine/barcode.html",
-      "views/mine/myCollection.html",
-      "views/mine/feedback.html",
-      "views/mine/revisingPersonal.html",
-      "views/mine/myOrder/exchangeGoods.html",
-      "lib/qrcode/qrcode.html",
-      "views/mine/shopGuide/customerList.html",
-      "views/mine/shopGuide/myCommission.html",
-      "views/mine/shopGuide/customerReturns.html",
-      "views/mine/myOrder/refundAndDelivery.html",
-      "views/mine/shopGuide/commissionExpressive.html",
-      "views/mine/shopGuide/cashAccountManagement.html",
-      "views/mine/myCoupon.html",
-      "views/mine/myOrder/exchangeGoodsSingle.html",
-      "views/mine/myCopperate/myCopperate.html",
-      "views/mine/help.html",
-      "views/mine/helpShop.html",
-      "views/mine/myticket.html"
-    ],
-    "resources": [
-      "img/mine/tixianguanli.png",
-      "img/mine/zhanghuyuanquan.png",
-      "img/mine/kehutuihuo.png",
-      "img/mine/shoucangkongxin.png",
-      "img/mine/yiwancheng.png",
-      "img/mine/daizhifu.png",
-      "img/mine/daishouhuo.png",
-      "img/mine/wodedizhi.png",
-      "img/mine/duihuanquanhexiao.jpg",
-      "img/mine/yijinafankui.png",
-      "img/mine/daifahuo.png",
-      "img/mine/tixian.png",
-      "img/mine/wodexiaoshou.png",
-      "css/mine/mine.css",
-      "img/mine/youhuiquan.png",
-      "css/common.css",
-      "img/mine/kehuliebiao.png",
-      "img/mine/erweima.png",
-      "img/mine/kehudingdan.png",
-      "img/mine/help.png",
-      "img/mine/head.png",
-      "img/mine/tuihuanhuo.png",
-      "img/mine/shezhi.png"
-    ]
-  },
-  "views/mine/setting.html": {
-    "refer": [
-      "views/loginRegister/login.html"
-    ],
-    "resources": []
-  },
-  "views/mine/address/address.html": {
-    "refer": [
-      "views/mine/address/addAddress.html"
-    ],
-    "resources": []
-  },
-  "views/classification/classification.html": {
-    "refer": [
-      "views/homePage/homeList.html",
-      "views/homePage/cityChoose.html"
-    ],
-    "resources": [
-      "css/common.css",
-      "css/classification/classification.css",
-      "css/homePage/homeIndex.css"
-    ]
-  },
-  "views/mine/accountSecurity/accountSecurity.html": {
-    "refer": [
-      "views/mine/accountSecurity/changePhone.html"
-    ],
-    "resources": []
-  },
-  "views/shoppingCart/commodityDetails.html": {
-    "refer": [
-      "views/shoppingCart/shopSettlement.html",
-      "views/shoppingCart/shoppingCart.html",
-      "views/loginRegister/login.html",
-      "views/shoppingCart/groupbuying.html"
-    ],
-    "resources": []
-  },
-  "views/shoppingCart/shopSettlement.html": {
-    "refer": [
-      "views/shoppingCart/pay.html",
-      "views/mine/address/address.html",
-      "views/shoppingCart/shopCoupon.html",
-      "views/shoppingCart/payHappy.html",
-      "views/shoppingCart/commodityDetails.html",
-      "views/mine/myOrder/myOrder.html",
-      "views/homePage/homeIndex.html"
-    ],
-    "resources": []
-  },
-  "views/shoppingCart/shoppingCart.html": {
-    "refer": [
-      "views/shoppingCart/shopSettlement.html",
-      "views/shoppingCart/commodityDetails.html",
-      "views/homePage/homeList.html"
-    ],
-    "resources": [
-      "css/shoppingCart/shoppingCart.css",
-      "css/common.css"
-    ]
-  },
-  "views/shoppingCart/pay.html": {
-    "refer": [
-      "views/mine/myOrder/myOrder.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myOrder/myOrder.html": {
-    "refer": [
-      "views/shoppingCart/shopSettlement.html",
-      "views/mine/myOrder/orderDetail.html"
-    ],
-    "resources": []
-  },
-  "views/homePage/searchSearch.html": {
-    "refer": [
-      "views/homePage/searchIndex.html"
-    ],
-    "resources": []
-  },
-  "views/homePage/homeList.html": {
-    "refer": [
-      "views/shoppingCart/commodityDetails.html"
-    ],
-    "resources": []
-  },
-  "views/homePage/searchIndex.html": {
-    "refer": [
-      "views/shoppingCart/commodityDetails.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myCollection.html": {
-    "refer": [
-      "views/shoppingCart/commodityDetails.html"
-    ],
-    "resources": []
-  },
-  "views/mine/shopGuide/myCommission.html": {
-    "refer": [
-      "views/mine/shopGuide/moneyList.html"
-    ],
-    "resources": []
-  },
-  "views/mine/shopGuide/moneyList.html": {
-    "refer": [
-      "views/mine/shopGuide/searchList.html"
-    ],
-    "resources": []
-  },
-  "views/mine/shopGuide/searchList.html": {
-    "refer": [
-      "views/mine/myOrder/orderDetail.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myOrder/orderDetail.html": {
-    "refer": [
-      "views/mine/myOrder/applyAfterSale.html",
-      "views/shoppingCart/commodityDetails.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myOrder/exchangeGoods.html": {
-    "refer": [
-      "views/mine/myOrder/orderDetail.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myOrder/refundAndDelivery.html": {
-    "refer": [
-      "views/mine/myOrder/orderDetail.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myCopperate/myCopperate.html": {
-    "refer": [
-      "views/mine/feedback.html",
-      "views/mine/myCopperate/zshPay.html",
-      "views/mine/myCopperate/searchStore.html"
-    ],
-    "resources": []
-  },
-  "views/mine/feedback.html": {
-    "refer": [
-      "views/mine/myCopperate/myCopperate.html"
-    ],
-    "resources": []
-  },
-  "views/shoppingCart/payHappy.html": {
-    "refer": [
-      "views/mine/myOrder/myOrder.html"
-    ],
-    "resources": []
-  },
-  "views/mine/shopGuide/cashAccountManagement.html": {
-    "refer": [
-      "views/mine/shopGuide/changeAliPayNum.html"
-    ],
-    "resources": []
-  },
-  "views/mine/help.html": {
-    "refer": [
-      "views/mine/helpDetails.html"
-    ],
-    "resources": []
-  },
-  "views/mine/helpShop.html": {
-    "refer": [
-      "views/mine/helpDetails.html",
-      "views/mine/helpShopDetails.html"
-    ],
-    "resources": []
-  },
-  "views/mine/myticket.html": {
-    "refer": [
-      "views/mine/ticketshare.html",
-      "views/mine/golddetails.html"
-    ]
-  },
-  "views/mine/shopGuide/commissionExpressive.html": {
-    "refer": [
-      "views/mine/shopGuide/cashAccountManagement.html"
-    ]
-  }
+	"index.html": {
+		"resources": [
+			"js/common/index.js",
+			"lib/mui/mui.min.js",
+			"views/homePage/homeIndex.html",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.css",
+			"lib/fonts/mui.ttf",
+			"img/common/home.png",
+			"img/common/homeHover.png",
+			"img/common/loan.png",
+			"img/common/mine.png",
+			"img/common/daidai.png",
+			"img/common/mineHover.png",
+			"img/common/loanHover.png",
+			"img/common/daidaiHover.png",
+			"img/common/home1.png",
+			"img/common/home2.png",
+			"img/common/zhangdan2.png",
+			"img/common/zhangdan1.png",
+			"img/common/main1.png",
+			"img/common/renzheng2.png",
+			"img/common/renzheng1.png",
+			"img/common/main2.png",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"views/classification/classification.html",
+			"img/common/wode--shiti.png",
+			"img/common/zhuye-kongxin.png",
+			"img/common/shopping-shiti.png",
+			"img/common/shopping-kongxin.png",
+			"img/common/zhuye-shiti.png",
+			"img/common/fenlei-kongxin.png",
+			"img/common/wode-kongxin.png",
+			"img/common/fenlei-shiti.png"
+		],
+		"refer": [
+			"views/homePage/homeIndex.html",
+			"views/daidai/ddIndex.html",
+			"views/mine/mineIndex.html",
+			"views/loan/loanIndex.html",
+			"views/certificate/certificate.html",
+			"views/check/checkIndex.html",
+			"views/loginRegister/login.html",
+			"views/shoppingCart/shoppingCart.html",
+			"views/classification/classification.html",
+			"views/mine/mine.html"
+		]
+	},
+	"views/daidai/ddIndex.html": {
+		"resources": [
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"css/daidai/ddIndex.css",
+			"lib/vue/vue.min.js",
+			"js/daidai/ddIndex.js",
+			"img/daidai/organisationalGoal.png",
+			"lib/mui/mui.css",
+			"img/daidai/platformProfile.png",
+			"lib/fonts/mui.ttf",
+			"img/daidai/recruitment.png",
+			"img/daidai/serviceTenet.png",
+			"img/daidai/contactUs.png",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"css/common.css"
+		],
+		"refer": [
+			"views/daidai/platformProfile.html",
+			"views/daidai/organisationalGoal.html",
+			"views/daidai/serviceTenet.html",
+			"views/daidai/recruitment.html",
+			"views/daidai/contactUs.html"
+		]
+	},
+	"views/mine/mineIndex.html": {
+		"resources": [
+			"css/mine/mineIndex.css",
+			"js/mine/mineIndex.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/vue/vue.min.js",
+			"img/mine/index/myMessage.png",
+			"img/mine/index/myNews.png",
+			"lib/fonts/mui.ttf",
+			"img/mine/index/setting.png",
+			"img/mine/index/myTeam.png",
+			"img/mine/index/teamPerformance.png",
+			"img/mine/index/mineQRcode.png",
+			"img/mine/index/invalidCustomer.png",
+			"img/mine/index/userHeader.png",
+			"img/mine/index/commission.png",
+			"img/mine/index/myLoan1.png",
+			"img/mine/index/myCard.png",
+			"img/mine/index/effectiveCustomer.png",
+			"img/mine/index/myLoan2.png",
+			"img/mine/index/releaseCommission.png",
+			"img/mine/index/InvalidCurve.png",
+			"js/common/common.js",
+			"lib/mui/mui.min.js",
+			"img/mine/main.jpg",
+			"img/mine/head.png",
+			"js/common/calcSize.js",
+			"img/mine/rec.png",
+			"img/mine/set.png",
+			"img/mine/reply.png",
+			"img/mine/friend.png",
+			"img/mine/loan.png",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": [
+			"views/mine/mineCard.html",
+			"views/mine/myInfo.html",
+			"views/mine/mineLoan/mineLoan.html",
+			"views/mine/customer/customer.html",
+			"views/mine/myMessage/myMessage.html",
+			"views/mine/recommendedLoan/recommendedLoan.html",
+			"views/mine/invalidCustomer/invalidCustomer.html",
+			"views/mine/invalidRateCurve.html",
+			"views/mine/myTeam/myTeam.html",
+			"views/mine/myTeam/teamPerformance.html",
+			"views/mine/myCommission/myCommission.html",
+			"views/mine/myCommission/commissionRecord.html",
+			"views/mine/setting/setting.html",
+			"views/mine/QRCode.html",
+			"views/loginRegister/login.html",
+			"views/certificate/certificate.html",
+			"views/mine/accountDetail/accountDetail.html",
+			"views/mine/setUp/setUp.html",
+			"views/mine/friendInvitation/friendInvitation.html",
+			"views/loginRegister/register.html"
+		]
+	},
+	"views/homePage/homeIndex.html": {
+		"resources": [
+			"js/homePage/homeIndex.js",
+			"css/homePage/homeIndex.css",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/vue/vue.min.js",
+			"lib/swiper2/idangerous.swiper.3dflow.css",
+			"lib/swiper2/idangerous.swiper.css",
+			"lib/swiper2/idangerous.swiper-2.0.min.js",
+			"lib/swiper2/idangerous.swiper.3dflow.js",
+			"img/homePage/1.jpg",
+			"img/homePage/2.jpg",
+			"img/homePage/3.jpg",
+			"lib/swiper3/swiper.min.js",
+			"lib/swiper3/swiper.min.css",
+			"img/homePage/4.jpg",
+			"img/homePage/wannaLoan.png",
+			"img/homePage/applVIP.png",
+			"css/common.css",
+			"img/homePage/\u001f\u000f7.png",
+			"img/homePage/bussinessLoan.png",
+			"img/homePage/carLoan.png",
+			"img/homePage/houseLoan.png",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/homePage/joinUs.png",
+			"img/homePage/\u001f\u000f7.png",
+			"lib/fonts/mui.ttf",
+			"js/common/common.js",
+			"img/homePage/bg1.jpg",
+			"img/homePage/dateIcon.png",
+			"img/homePage/companyIcon.png",
+			"img/homePage/message.png",
+			"img/homePage/studentLoan.png",
+			"img/homePage/tips.png",
+			"img/homePage/personalLoan.png",
+			"js/common/calcSize.js",
+			"img/homePage/personalIcon.png",
+			"lib/mui/mui.min.js"
+		],
+		"refer": [
+			"views/homePage/applyMember.html",
+			"views/homePage/join.html",
+			"views/homePage/productDetails.html",
+			"views/loan/loanIndex.html",
+			"views/homePage/projectDetil.html",
+			"views/mine/setUp/platformActivities.html",
+			"views/loginRegister/login.html",
+			"views/homePage/messageIndex.html",
+			"views/homePage/homeList.html",
+			"views/homePage/cityChoose.html",
+			"views/shoppingCart/commodityDetails.html",
+			"views/homePage/searchSearch.html",
+			"views/mine/setting.html",
+			"views/mine/myCopperate/myCopperate.html",
+			"views/homePage/turntable.html"
+		]
+	},
+	"views/loan/loanIndex.html": {
+		"resources": [
+			"js/loan/loanIndex.js",
+			"css/loan/loanIndex.css",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/vue/vue.min.js",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/homePage/houseLoan.png",
+			"img/homePage/1.jpg",
+			"img/homePage/2.jpg",
+			"img/homePage/carLoan.png",
+			"img/homePage/3.jpg",
+			"img/homePage/4.jpg",
+			"img/homePage/bussinessLoan.png",
+			"img/homePage/applVIP.png",
+			"img/homePage/wannaLoan.png",
+			"img/homePage/joinUs.png",
+			"lib/fonts/mui.ttf",
+			"lib/mui/mui.min.js",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.picker.min.css",
+			"views/loan/loanIndex.html",
+			"img/loan/ownCar.png",
+			"img/loan/checkedIcon.png",
+			"img/loan/ownHouse.png",
+			"img/loan/ownSecu.png",
+			"img/loan/ownSesame.png",
+			"img/loan/ownLicense.png",
+			"img/loan/phoned.png",
+			"img/loan/taobao.png",
+			"img/loan/ownBussiness.png",
+			"lib/valid/Validform_v5.3.2/Validform_v5.3.2_min.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2/Validform_v5.3.2/demo/css/demo.css",
+			"lib/valid/Validform_v5.3.2/Validform_v5.3.2/demo/css/style.css",
+			"lib/valid/Validform_v5.3.2/Validform_v5.3.2.js",
+			"lib/valid/Validform_v5.3.2_min.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": [
+			"views/loan/loanIndex.html"
+		]
+	},
+	"views/homePage/applyMember.html": {
+		"resources": [
+			"css/homePage/applyMember.css",
+			"lib/fonts/mui.ttf",
+			"js/homePage/applyMember.js",
+			"img/loan/ownCar.png",
+			"img/loan/ownLicense.png",
+			"img/loan/ownSecu.png",
+			"img/loan/ownHouse.png",
+			"lib/mui/mui.picker.min.css",
+			"img/loan/ownBussiness.png",
+			"lib/mui/mui.min.js",
+			"img/loan/taobao.png",
+			"lib/mui/mui.picker.min.js",
+			"img/loan/phoned.png",
+			"img/loan/ownSesame.png",
+			"lib/mui/mui.min.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"css/common.css",
+			"img/loan/checkedIcon.png",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": []
+	},
+	"views/homePage/join.html": {
+		"resources": [
+			"css/homePage/join.css",
+			"js/homePage/join.js",
+			"lib/city.data-3.js",
+			"lib/city.data.js",
+			"img/loginAndRegister/checkYes.png",
+			"img/loginAndRegister/contact.png",
+			"img/loginAndRegister/PWDdown.png",
+			"img/loginAndRegister/checkNo.png",
+			"img/loginAndRegister/code.png",
+			"img/loginAndRegister/QRCodeTop.png",
+			"img/loginAndRegister/PWDup.png",
+			"lib/mui/mui.min.css",
+			"lib/mui/mui.picker.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/common.css",
+			"lib/mui/mui.picker.min.js",
+			"img/loginAndRegister/QRCodeBig.png",
+			"img/loginAndRegister/closePop.png",
+			"lib/feedback.js",
+			"lib/feedback.css",
+			"lib/uploaderImg.js",
+			"lib/qrcode/jquery.qrcode.js",
+			"lib/qrcode/utf.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": []
+	},
+	"views/homePage/productDetails.html": {
+		"resources": [
+			"js/homePage/productDetails.js",
+			"lib/fonts/mui.ttf",
+			"css/homePage/productDetails.css",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/mui/mui.picker.min.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/mui/mui.picker.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/homePage/detailBg.png",
+			"img/homePage/bussiness.png",
+			"img/homePage/moneyIcon.png",
+			"img/homePage/dateIcon.png",
+			"lib/mui/mui.js"
+		],
+		"refer": []
+	},
+	"views/mine/mineCard.html": {
+		"resources": [
+			"img/mine/mineCard/validCard.png",
+			"css/mine/mineCard.css",
+			"img/mine/mineCard/state.png",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"img/mine/mineCard/invalidCard.png",
+			"img/mine/mineCard/cardNull.png",
+			"js/mine/mineCard.js",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/myInfo.html": {
+		"resources": [
+			"js/mine/myInfo.js",
+			"css/mine/myInfo.css",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/vue/vue.min.js",
+			"lib/fonts/mui.ttf",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/mui/mui.min.js",
+			"img/mine/myInfo/code.png",
+			"lib/qrcode/jquery.qrcode.js",
+			"lib/qrcode/utf.js"
+		],
+		"refer": []
+	},
+	"views/mine/customer/customer.html": {
+		"resources": [
+			"css/mine/customer/customer.css",
+			"js/mine/customer/customer.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/homePage/dateIcon.png",
+			"img/homePage/bussiness.png",
+			"img/homePage/detailBg.png",
+			"img/common/search.png",
+			"img/mine/customer/bg.png",
+			"img/common/seachIcon.png",
+			"img/mine/customer/ï¿½\r.png",
+			"img/mine/customer/4ï¿½.png",
+			"img/mine/customer/rankIcon.png",
+			"img/mine/customer/classifyA.png",
+			"img/mine/customer/poitrait.png",
+			"img/mine/customer/noInfoBg.png",
+			"img/common/right.png",
+			"img/mine/customer/ï¿½\r.png",
+			"img/mine/customer/4ï¿½.png",
+			"lib/mui/mui.picker.min.css",
+			"lib/mui/mui.picker.min.js",
+			"img/mine/customer/classifyB.png"
+		],
+		"refer": [
+			"views/mine/customer/loanInfo.html",
+			"views/mine/customer/cardInfo.html"
+		]
+	},
+	"views/mine/customer/loanInfo.html": {
+		"resources": [
+			"css/mine/customer/loanInfo.css",
+			"js/mine/customer/loanInfo.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/mine/customer/rankIcon.png",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/mine/customer/classifyA.png",
+			"img/mine/customer/noInfoBg.png",
+			"css/common.css",
+			"img/mine/customer/poitrait.png",
+			"img/mine/customer/bg.png",
+			"img/mine/customer/recomend.png"
+		],
+		"refer": [
+			"views/mine/customer/loanInfoDetails.html"
+		]
+	},
+	"views/mine/customer/cardInfo.html": {
+		"resources": [
+			"js/mine/customer/cardInfo.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"lib/fonts/mui.ttf",
+			"css/mine/customer/cardInfo.css",
+			"img/mine/mineCard/state.png",
+			"img/mine/mineCard/validCard.png",
+			"img/mine/mineCard/noInfo2.png"
+		],
+		"refer": []
+	},
+	"views/mine/customer/loanInfoDetails.html": {
+		"resources": [
+			"js/mine/customer/loanInfoDetails.js",
+			"img/mine/customer/noInfoBg.png",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/mine/customer/loanInfoDetails.css"
+		],
+		"refer": []
+	},
+	"views/mine/invalidCustomer/invalidCustomer.html": {
+		"resources": [
+			"css/mine/invalidCustomer/invalidCustomer.css",
+			"js/mine/invalidCustomer/invalidCustomer.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/mine/customer/rankIcon.png",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/mine/customer/classifyA.png",
+			"img/mine/customer/noInfoBg.png",
+			"css/common.css",
+			"img/mine/customer/poitrait.png",
+			"img/mine/customer/bg.png",
+			"img/common/seachIcon.png",
+			"img/common/search.png",
+			"img/common/right.png",
+			"lib/mui/mui.picker.min.css",
+			"lib/mui/mui.picker.min.js"
+		],
+		"refer": [
+			"views/mine/invalidCustomer/submitAppeal.html",
+			"views/mine/invalidCustomer/appealRecord.html"
+		]
+	},
+	"views/mine/invalidCustomer/submitAppeal.html": {
+		"resources": [
+			"js/mine/invalidCustomer/submitAppeal.js",
+			"img/mine/customer/noInfoBg.png",
+			"img/mine/customer/poitrait.png",
+			"img/common/search.png",
+			"lib/mui/mui.min.css",
+			"css/mine/invalidCustomer/submitAppeal.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"img/common/right.png",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/invalidCustomer/appealRecord.html": {
+		"resources": [
+			"js/mine/invalidCustomer/appealRecord.js",
+			"css/mine/invalidCustomer/appealRecord.css",
+			"img/common/search.png",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"views/mine/invalidCustomer/appealRecordSub.html"
+		],
+		"refer": [
+			"views/mine/invalidCustomer/appealRecordSub.html"
+		]
+	},
+	"views/mine/invalidRateCurve.html": {
+		"resources": [
+			"js/mine/invalidRateCurve.js",
+			"img/common/search.png",
+			"lib/echarts-all.js",
+			"img/common/right.png",
+			"css/mine/invalidRateCurve.css",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/invalidCustomer/appealRecordSub.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"js/mine/invalidCustomer/appealRecord.js",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/mine/invalidCustomer/appealRecord.css",
+			"lib/fonts/mui.ttf",
+			"js/mine/invalidCustomer/appealRecordSub.js"
+		],
+		"refer": []
+	},
+	"views/mine/myTeam/myTeam.html": {
+		"resources": [
+			"img/mine/customer/noInfoBg.png",
+			"img/mine/customer/classifyA.png",
+			"js/mine/myTeam/myTeam.js",
+			"css/mine/myTeam/myTeam.css",
+			"img/mine/customer/poitrait.png",
+			"img/common/seachIcon.png",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/mine/customer/rankIcon.png",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/common.css",
+			"img/mine/customer/bg.png",
+			"img/mine/myTeam/total.png",
+			"img/common/right.png",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.picker.min.css"
+		],
+		"refer": [
+			"views/mine/myTeam/memberPerformance.html"
+		]
+	},
+	"views/mine/myTeam/memberPerformance.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"css/mine/myTeam/memberPerformance.css",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/mine/myTeam/memberPerformance.js",
+			"img/mine/customer/noInfoBg.png",
+			"lib/fonts/mui.ttf",
+			"img/mine/customer/poitrait.png",
+			"img/mine/customer/bg.png",
+			"img/common/seachIcon.png",
+			"img/mine/myTeam/total.png",
+			"img/mine/myTeam/member.png",
+			"img/common/right.png"
+		],
+		"refer": []
+	},
+	"views/mine/myTeam/teamPerformance.html": {
+		"resources": [
+			"img/mine/customer/noInfoBg.png",
+			"js/mine/myTeam/teamPerformance.js",
+			"img/mine/customer/poitrait.png",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/mine/myTeam/teamPerformance.css",
+			"img/mine/myTeam/member.png",
+			"img/common/seachIcon.png",
+			"img/mine/customer/bg.png",
+			"img/common/right.png",
+			"img/common/search.png",
+			"lib/valid/valid.js",
+			"lib/mui/mui.picker.min.css",
+			"lib/valid/Validform_v5.3.2.js",
+			"js/common/common.js",
+			"lib/mui/mui.picker.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/myCommission/myCommission.html": {
+		"resources": [
+			"img/mine/customer/noInfoBg.png",
+			"img/mine/customer/poitrait.png",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"css/mine/myCommission/myCommission.css",
+			"lib/mui/mui.min.js",
+			"js/mine/myCommission/myCommission.js",
+			"img/mine/customer/bg.png",
+			"img/common/seachIcon.png",
+			"img/mine/myTeam/total.png",
+			"img/common/search.png",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.picker.min.css"
+		],
+		"refer": [
+			"views/mine/myCommission/commissionDetails.html"
+		]
+	},
+	"views/mine/myCommission/commissionDetails.html": {
+		"resources": [
+			"js/mine/myCommission/commissionDetails.js",
+			"css/mine/myCommission/commissionDetails.css",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/myCommission/commissionRecord.html": {
+		"resources": [
+			"css/mine/myCommission/commissionRecord.css",
+			"js/mine/myCommission/commissionRecord.js",
+			"img/common/search.png",
+			"img/mine/customer/noInfoBg.png",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/myMessage/myMessage.html": {
+		"resources": [
+			"css/mine/myMessage/myMessage.css",
+			"lib/mui/mui.min.css",
+			"js/mine/myMessage/myMessage.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/mine/customer/noInfoBg.png"
+		],
+		"refer": [
+			"views/mine/myMessage/messageDetails.html"
+		]
+	},
+	"views/mine/myMessage/messageDetails.html": {
+		"resources": [
+			"img/mine/customer/noInfoBg.png",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/mine/myMessage/messageDetails.css",
+			"js/mine/myMessage/messageDetails.js"
+		],
+		"refer": []
+	},
+	"views/mine/setting/setting.html": {
+		"resources": [
+			"js/mine/setting/setting.js",
+			"css/mine/setting/setting.css",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js"
+		],
+		"refer": [
+			"views/mine/setting/myComplaint.html",
+			"views/mine/setting/myAppeal.html",
+			"views/mine/setting/modifyPhoneNum.html",
+			"views/mine/setting/modifyPWD.html",
+			"views/loginAndRegister/login.html"
+		]
+	},
+	"views/mine/setting/myAppeal.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/mine/setting/myAppeal.js",
+			"css/mine/setting/myAppeal.css",
+			"img/mine/customer/noInfoBg.png",
+			"img/mine/customer/bg.png",
+			"img/mine/customer/recomend.png",
+			"lib/fonts/mui.ttf",
+			"img/common/seachIcon.png",
+			"img/common/search.png",
+			"lib/mui/mui.picker.min.css",
+			"lib/mui/mui.picker.min.js"
+		],
+		"refer": [
+			"views/mine/setting/appealDetails.html"
+		]
+	},
+	"views/mine/setting/appealDetails.html": {
+		"resources": [
+			"css/mine/setting/appealDetails.css",
+			"js/mine/setting/appealDetails.js",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/setting/myComplaint.html": {
+		"resources": [
+			"img/common/search.png",
+			"img/mine/customer/noInfoBg.png",
+			"lib/fonts/mui.ttf",
+			"js/mine/setting/myComplaint.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/mine/setting/myComplaint.css",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js"
+		],
+		"refer": [
+			"views/mine/setting/complaintDetails.html"
+		]
+	},
+	"views/mine/setting/complaintDetails.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"css/mine/setting/complaintDetails.css",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/mine/setting/complaintDetails.js"
+		],
+		"refer": []
+	},
+	"views/mine/setting/modifyPhoneNum.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/mine/setting/modifyPhoneNum.css",
+			"js/mine/setting/modifyPhoneNum.js",
+			"img/loginAndRegister/PWDdown.png",
+			"img/loginAndRegister/code.png",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": []
+	},
+	"views/mine/setting/modifyPWD.html": {
+		"resources": [
+			"css/mine/setting/modifyPWD.css",
+			"js/mine/setting/modifyPWD.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/loginAndRegister/PWDdown.png",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/loginAndRegister/PWDup.png"
+		],
+		"refer": []
+	},
+	"views/daidai/platformProfile.html": {
+		"resources": [
+			"js/daidai/platformProfile.js",
+			"css/daidai/platformProfile.css",
+			"img/daidai/platformProfile-bg.png",
+			"lib/mui/mui.min.css"
+		],
+		"refer": []
+	},
+	"views/daidai/organisationalGoal.html": {
+		"resources": [
+			"js/daidai/organisationalGoal.js",
+			"img/daidai/organisationalGoal-bg.png",
+			"css/daidai/organisationalGoal.css"
+		],
+		"refer": []
+	},
+	"views/daidai/serviceTenet.html": {
+		"resources": [
+			"img/daidai/serviceTenet-bg.png",
+			"css/daidai/serviceTenet.css",
+			"js/daidai/serviceTenet.js",
+			"js//common/common.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"lib/jquery/jquery-3.2.1.min.js"
+		],
+		"refer": []
+	},
+	"views/daidai/recruitment.html": {
+		"resources": [
+			"css/daidai/recruitment.css",
+			"js/daidai/recruitment.js",
+			"img/daidai/recruitment-bg.png"
+		],
+		"refer": []
+	},
+	"views/daidai/contactUs.html": {
+		"resources": [
+			"img/daidai/contactUs-bg.png",
+			"css/daidai/contactUs.css",
+			"js/daidai/contactUs.js"
+		],
+		"refer": []
+	},
+	"views/mine/QRCode.html": {
+		"resources": [
+			"js/mine/QRCode.js",
+			"img/loginAndRegister/QRCodeBig.png",
+			"css/mine/QRCode.css",
+			"img/mine/QRcodeBox.png",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"img/mine/index/userHeader.png",
+			"lib/qrcode/jquery.qrcode.js",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/qrcode/utf.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/mineLoan.html": {
+		"resources": [
+			"img/mine/mineLoan/loanTop.png",
+			"js/mine/mineLoan/mineLoan.js",
+			"img/mine/mineLoan/topRight.png",
+			"css/mine/mineLoan/mineLoan.css",
+			"lib/mui/mui.js",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"js/common/common.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/mine/gray.png",
+			"img/mine/yellow.png",
+			"img/mine/green.png",
+			"lib/mui/mui.pullToRefresh.material.js",
+			"lib/mui/mui.pullToRefresh.js"
+		],
+		"refer": [
+			"views/mine/mineLoan/loanDetails.html",
+			"views/mine/mineLoan/loanDetail.html",
+			"views/loginRegister/login.html"
+		]
+	},
+	"views/mine/recommendedLoan/recommendedLoan.html": {
+		"resources": [
+			"js/mine/recommendedLoan/recommendedLoan.js",
+			"img/mine/recommendedLoan/securedLoan.png",
+			"css/mine/recommendedLoan/recommendedLoan.css",
+			"img/mine/recommendedLoan/nonLending.png",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js"
+		],
+		"refer": [
+			"views/mine/recommendedLoan/securedLoan.html",
+			"views/mine/recommendedLoan/list.html"
+		]
+	},
+	"views/mine/recommendedLoan/securedLoan.html": {
+		"resources": [
+			"js/mine/recommendedLoan/securedLoan.js",
+			"img/mine/recommendedLoan/demand.png",
+			"css/mine/recommendedLoan/securedLoan.css",
+			"img/common/search.png",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"views/mine/recommendedLoan/securedLoanSub.html",
+			"img/mine/customer/noInfoBg.png",
+			"lib/mui/mui1.min.js",
+			"lib/mui/mui1.min.css",
+			"lib/mui/mui2.min.js",
+			"lib/mui/mui2.min.css",
+			"img/daidai/contactUs.png",
+			"lib/mui/mui.min.js",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.picker.min.css"
+		],
+		"refer": [
+			"views/mine/recommendedLoan/securedLoanSub.html"
+		]
+	},
+	"views/mine/recommendedLoan/list.html": {
+		"resources": [
+			"css/mine/recommendedLoan/list.css",
+			"js/mine/recommendedLoan/list.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"img/mine/mineLoan/topRight.png",
+			"img/common/search.png",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"img/common/right.png"
+		],
+		"refer": [
+			"views/mine/recommendedLoan/details.html"
+		]
+	},
+	"views/mine/recommendedLoan/details.html": {
+		"resources": [
+			"css/mine/recommendedLoan/details.css",
+			"js/mine/recommendedLoan/details.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/recommendedLoan/securedLoanSub.html": {
+		"resources": [
+			"js/mine/recommendedLoan/securedLoanSub.js",
+			"img/mine/recommendedLoan/demand.png",
+			"img/mine/customer/noInfoBg.png",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"css/mine/recommendedLoan/securedLoan.css"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/loanDetails.html": {
+		"resources": [
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"js/mine/mineLoan/loanDetails.js",
+			"img/mine/mineLoan/representations.png",
+			"css/common.css",
+			"img/mine/mineLoan/plan.png",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/mine/mineLoan/agreement.png",
+			"img/mine/mineLoan/dataImg.png",
+			"img/mine/mineLoan/file.png",
+			"lib/vue/vue.min.js",
+			"css/mine/mineLoan/loanDetails.css",
+			"img/mine/mineLoan/complaint.png"
+		],
+		"refer": [
+			"views/mine/mineLoan/agreement.html",
+			"views/mine/mineLoan/importantFile.html",
+			"views/mine/mineLoan/repaymentPlan.html",
+			"views/mine/mineLoan/appeal.html",
+			"views/mine/mineLoan/complaint.html"
+		]
+	},
+	"views/mine/mineLoan/agreement.html": {
+		"resources": [
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"img/mine/mineLoan/agreementTest.png",
+			"css/common.css",
+			"css/mine/mineLoan/agreement.css",
+			"img/mine/mineLoan/text2.png",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"js/mine/mineLoan/agreement.js",
+			"lib/vue/vue.min.js",
+			"img/mine/mineLoan/text3.png"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/importantFile.html": {
+		"resources": [
+			"lib/mui/mui.js",
+			"js/mine/mineLoan/importantFile.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"css/mine/mineLoan/importantFile.css"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/repaymentPlan.html": {
+		"resources": [
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"css/mine/mineLoan/repaymentPlan.css",
+			"js/mine/mineLoan/repaymentPlan.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/appeal.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"img/mine/mineLoan/addImage.png",
+			"js/mine/mineLoan/appeal.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"css/mine/mineLoan/appeal.css",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/mine/mineLoan/agreementTest.png"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/complaint.html": {
+		"resources": [
+			"img/mine/mineLoan/star2.png",
+			"lib/mui/mui.min.css",
+			"css/mine/mineLoan/complaint.css",
+			"js/mine/mineLoan/complaint.js",
+			"css/common.css",
+			"img/mine/mineLoan/addImage.png",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/mine/mineLoan/star1.png",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"img/mine/mineLoan/agreementTest.png"
+		],
+		"refer": []
+	},
+	"views/loginAndRegister/login.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"lib/mui/mui.js",
+			"img/loginAndRegister/password.png",
+			"img/loginAndRegister/username.png",
+			"js/loginAndRegister/login.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/loginAndRegister/rightNormal.png",
+			"img/loginAndRegister/rightCheck.png",
+			"img/loginAndRegister/PWDdown.png",
+			"lib/vue/vue.min.js",
+			"css/loginAndRegister/login.css",
+			"img/loginAndRegister/cutLine.png",
+			"img/loginAndRegister/reset.png",
+			"css/common.css",
+			"img/loginAndRegister/logoTrue.png",
+			"img/loginAndRegister/weChat.png",
+			"img/loginAndRegister/PWDup.png",
+			"lib/mui/mui.min.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"js/common/common.js"
+		],
+		"refer": [
+			"views/loginAndRegister/forgotPWD.html",
+			"views/loginAndRegister/register.html",
+			"index.html"
+		]
+	},
+	"views/loginAndRegister/forgotPWD.html": {
+		"resources": [
+			"css/loginAndRegister/forgotPWD.css",
+			"js/loginAndRegister/forgotPWD.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"img/loginAndRegister/PWDdown.png",
+			"lib/vue/vue.min.js",
+			"img/loginAndRegister/code.png",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/loginAndRegister/register.html": {
+		"resources": [
+			"js/loginAndRegister/register.js",
+			"lib/city.data-3.js",
+			"lib/mui/mui.poppicker.js",
+			"css/loginAndRegister/register.css",
+			"img/loginAndRegister/code.png",
+			"lib/city.data.js",
+			"img/loginAndRegister/checkYes.png",
+			"img/loginAndRegister/contact.png",
+			"lib/mui/mui.min.css",
+			"lib/qrcode/jquery.qrcode.js",
+			"lib/fonts/mui.ttf",
+			"lib/mui/mui.picker.min.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"img/loginAndRegister/PWDdown.png",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"lib/qrcode/utf.js",
+			"img/loginAndRegister/checkNo.png",
+			"img/loginAndRegister/QRCodeTop.png",
+			"css/common.css",
+			"lib/mui/mui.picker.min.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"img/loginAndRegister/closePop.png",
+			"img/loginAndRegister/PWDup.png",
+			"js/common/common.js",
+			"img/daidai/organisationalGoal.png"
+		],
+		"refer": []
+	},
+	"views/check/checkIndex.html": {
+		"resources": [
+			"lib/valid/valid.js",
+			"lib/mui/mui.min.css",
+			"css/common.css",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/mui/mui.picker.min.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.min.js",
+			"css/check/checkIndex.css",
+			"lib/fonts/mui.ttf",
+			"js/check/checkIndex.js",
+			"lib/swiper3/swiper.min.js",
+			"js/common/calcSize.js",
+			"js/common/common.js",
+			"lib/swiper3/swiper.min.css",
+			"img/check/bg.png",
+			"img/common/u2802.jpg",
+			"img/check/noInfo.png"
+		],
+		"refer": [
+			"views/check/repayment.html",
+			"views/check/historyCheck.html",
+			"views/loginRegister/login.html"
+		]
+	},
+	"views/certificate/certificate.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"js/certificate/certificate.js",
+			"css/certificate/certificate.css",
+			"js/common/common.js",
+			"img/certificate/nameIcon.png",
+			"img/certificate/creditIcon.png",
+			"img/certificate/sesameIcon.png",
+			"img/certificate/bankIcon.png",
+			"img/certificate/phoneIcon.png",
+			"img/certificate/basicIcon.png",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/common.css",
+			"js/common/calcSize.js",
+			"img/certificate/basicPIcon.png",
+			"img/certificate/basicCIcon.png"
+		],
+		"refer": [
+			"views/certificate/basicDatum.html",
+			"views/certificate/phoneLicense.html",
+			"views/certificate/bankCer.html",
+			"views/certificate/creditCer.html",
+			"views/certificate/realNameCer.html",
+			"views/certificate/sesameCer.html",
+			"views/loginRegister/login.html",
+			"views/certificate/IDauthentication.html",
+			"views/certificate/JDauthentication.html",
+			"views/certificate/DRauthentiacation.html",
+			"views/certificate/BKauthentiacation.html",
+			"views/certificate/TBauthentiacation.html"
+		]
+	},
+	"views/loginRegister/login.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"lib/fonts/mui.ttf",
+			"css/loginRegister/login.css",
+			"js/loginRegister/login.js",
+			"img/common/u2802.jpg",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/common.js",
+			"css/common.css",
+			"js/common/calcSize.js",
+			"js/common/md5.js"
+		],
+		"refer": [
+			"views/loginRegister/register.html",
+			"views/loginRegister/forgetPwd.html",
+			"index.html"
+		]
+	},
+	"views/loginRegister/register.html": {
+		"resources": [
+			"css/loginRegister/register.css",
+			"js/loginRegister/register.js",
+			"lib/mui/mui.min.css",
+			"js/common/calcSize.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/mui/mui.min.js",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"js/common/md5.js"
+		],
+		"refer": [
+			"views/loginRegister/login.html",
+			"views/loginRegister/registerAgreement.html",
+			"index.html"
+		]
+	},
+	"views/homePage/projectDetil.html": {
+		"resources": [
+			"css/homePage/projectDetil.css",
+			"js/homePage/projectDetil.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/swiper3/swiper.min.css",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/swiper3/swiper.min.js",
+			"lib/vue/vue.min.js",
+			"js/common/calcSize.js",
+			"img/homePage/productDetail/bg.png",
+			"img/homePage/studentLoan.png",
+			"img/homePage/productDetail/moneyIcon.png",
+			"lib/mui/mui.min.js"
+		],
+		"refer": [
+			"views/homePage/loanApplication.html",
+			"views/loginRegister/login.html"
+		]
+	},
+	"views/homePage/loanApplication.html": {
+		"resources": [
+			"js/homePage/loanApplication.js",
+			"css/homePage/loanApplication.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/homePage/loanApply/upLoad.png",
+			"img/homePage/loanApply/checkIcon.png",
+			"img/homePage/loanApply/checkedIcon.png",
+			"lib/mui/mui.poppicker.js",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.picker.min.css",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": [
+			"views/mine/friendInvitation/interestFree.html",
+			"views/loginRegister/registerAgreement.html"
+		]
+	},
+	"views/certificate/basicDatum.html": {
+		"resources": [
+			"js/certificate/basicDatum.js",
+			"css/certificate/basicDatum.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"lib/iscroll/iscroll.js",
+			"lib/mui/mui.js",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.picker.min.css",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": []
+	},
+	"views/certificate/phoneLicense.html": {
+		"resources": [
+			"js/certificate/phoneLicense.js",
+			"css/certificate/phoneLicense.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/certificate/bgPhone.png",
+			"img/certificate/bgPhone.jpg",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"js/common/md5.js"
+		],
+		"refer": []
+	},
+	"views/certificate/bankCer.html": {
+		"resources": [
+			"js/certificate/bankCer.js",
+			"css/certificate/bankCer.css",
+			"lib/mui/mui.min.css",
+			"lib/valid/valid.js",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": []
+	},
+	"views/certificate/creditCer.html": {
+		"resources": [
+			"css/certificate/creditCer.css",
+			"img/certificate/bgCredit.jpg",
+			"js/certificate/creditCer.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js"
+		],
+		"refer": []
+	},
+	"views/certificate/realNameCer.html": {
+		"resources": [
+			"css/certificate/realNameCer.css",
+			"js/certificate/realNameCer.js",
+			"img/certificate/idCardFront.png",
+			"img/certificate/idCardAll.png",
+			"lib/mui/mui.min.css",
+			"css/certificate/certificate.css",
+			"img/certificate/idCardBack.png",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/common.js",
+			"css/common.css",
+			"js/common/calcSize.js",
+			"img/certificate/bankIcon.png"
+		],
+		"refer": []
+	},
+	"views/mine/mineLoan/loanDetail.html": {
+		"resources": [
+			"css/mine/mineLoan/loanDetail.css",
+			"js/mine/mineLoan/loanDetail.js",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"js/common/calcSize.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"css/common.css"
+		],
+		"refer": [
+			"views/mine/mineLoan/prepayment.html",
+			"views/check/applyExtension.html",
+			"views/check/repayment.html",
+			"views/loginRegister/registerAgreement.html"
+		]
+	},
+	"views/mine/mineLoan/prepayment.html": {
+		"resources": [
+			"img/mine/checkedIcon.png",
+			"js/mine/mineLoan/prepayment.js",
+			"css/mine/mineLoan/prepayment.css",
+			"lib/mui/mui.min.css",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js"
+		],
+		"refer": [
+			"views/mine/mineLoan/prepaymentDetail.html"
+		]
+	},
+	"views/mine/mineLoan/prepaymentDetail.html": {
+		"resources": [
+			"js/mine/mineLoan/prepaymentDetail.js",
+			"css/mine/mineLoan/prepaymentDetail.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": []
+	},
+	"views/mine/accountDetail/accountDetail.html": {
+		"resources": [
+			"css/mine/accountDetail/accountDetail.css",
+			"js/mine/accountDetail/accountDetail.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/check/noInfo.png"
+		],
+		"refer": []
+	},
+	"views/mine/setUp/modifyPwd.html": {
+		"resources": [
+			"css/mine/setUp/modifyPwd.css",
+			"js/mine/setUp/modifyPwd.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"js/common/md5.js"
+		],
+		"refer": [
+			"views/loginRegister/login.html"
+		]
+	},
+	"views/mine/setUp/setUp.html": {
+		"resources": [
+			"js/mine/setUp/setUp.js",
+			"css/mine/setUp/setUp.css",
+			"lib/mui/mui.min.css",
+			"lib/mui/mui.min.js",
+			"lib/fonts/mui.ttf",
+			"js/common/common.js",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": [
+			"views/mine/setUp/modifyPwd.html",
+			"views/mine/setUp/aboutUs.html",
+			"views/mine/setUp/platformActivities.html",
+			"views/mine/setUp/help.html",
+			"views/loginRegister/register.html",
+			"views/loginRegister/login.html",
+			"views/mine/setUp/feedback.html",
+			"views/mine/setUp/authorization.html",
+			"views/certificate/bankCer.html"
+		]
+	},
+	"views/mine/friendInvitation/friendInvitation.html": {
+		"resources": [
+			"js/mine/friendInvitation/friendInvitation.js",
+			"css/mine/friendInvitation/friendInvitation.css",
+			"img/homePage/bg1.jpg",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/mine/weChat.png",
+			"img/mine/button.png",
+			"img/mine/left.png",
+			"img/mine/right.png",
+			"img/homePage/company1.png",
+			"img/mine/friendCircle.png",
+			"img/mine/QQ.png",
+			"lib/fonts/mui.ttf"
+		],
+		"refer": [
+			"views/mine/friendInvitation/interestFree.html"
+		]
+	},
+	"views/mine/friendInvitation/interestFree.html": {
+		"resources": [
+			"lib/fonts/mui.ttf",
+			"js/mine/friendInvitation/interestFree.js",
+			"css/mine/friendInvitation/interestFree.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/mine/useBg.png",
+			"img/mine/useUnCheckedIcon.png",
+			"img/mine/useCheckedIcon.png",
+			"img/mine/useUnBg.png",
+			"lib/mui/mui.pullToRefresh.material.js",
+			"lib/mui/mui.pullToRefresh.js"
+		],
+		"refer": []
+	},
+	"views/certificate/sesameCer.html": {
+		"resources": [
+			"js/certificate/sesameCer.js",
+			"css/certificate/sesameCer.css",
+			"img/certificate/bgSesame.jpg",
+			"lib/mui/mui.min.css",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/common.js",
+			"css/common.css",
+			"js/common/calcSize.js"
+		],
+		"refer": []
+	},
+	"views/check/repayment.html": {
+		"resources": [
+			"css/check/repayment.css",
+			"js/check/repayment.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"lib/swiper3/swiper.min.js",
+			"lib/swiper3/swiper.min.css"
+		],
+		"refer": []
+	},
+	"views/check/historyCheck.html": {
+		"resources": [
+			"lib/valid/valid.js",
+			"js/check/historyCheck.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"lib/mui/mui.picker.min.css",
+			"css/check/historyCheck.css",
+			"lib/mui/mui.picker.min.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": []
+	},
+	"views/mine/setUp/aboutUs.html": {
+		"resources": [
+			"js/mine/setUp/aboutUs.js",
+			"css/mine/setUp/aboutUs.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": []
+	},
+	"views/mine/setUp/platformActivities.html": {
+		"resources": [
+			"js/mine/setUp/platformActivities.js",
+			"css/mine/setUp/platformActivities.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": [
+			"views/mine/setUp/activitiesDetail.html"
+		]
+	},
+	"views/mine/setUp/help.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"js/mine/setUp/help.js",
+			"css/mine/setUp/help.css",
+			"js/common/common.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"lib/fonts/mui.ttf"
+		],
+		"refer": []
+	},
+	"views/mine/setUp/activitiesDetail.html": {
+		"resources": [
+			"js/mine/setUp/activitiesDetail.js",
+			"css/mine/setUp/activitiesDetail.css",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js"
+		],
+		"refer": []
+	},
+	"views/check/applyExtension.html": {
+		"resources": [
+			"lib/mui/mui.min.css",
+			"css/check/applyExtension.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"js/check/applyExtension.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/homePage/loanApply/checkIcon.png",
+			"lib/mui/mui.picker.min.css",
+			"img/homePage/loanApply/checkedIcon.png",
+			"lib/mui/mui.picker.min.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js"
+		],
+		"refer": [
+			"views/loginRegister/registerAgreement.html"
+		]
+	},
+	"views/loginRegister/forgetPwd.html": {
+		"resources": [
+			"css/loginRegister/forgetPwd.css",
+			"lib/mui/mui.min.css",
+			"lib/mui/mui.min.js",
+			"js/loginRegister/forgetPwd.js",
+			"lib/valid/valid.js",
+			"lib/valid/Validform_v5.3.2.js",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"js/common/md5.js",
+			"js/common/calcSize.js"
+		],
+		"refer": [
+			"views/loginRegister/login.html"
+		]
+	},
+	"views/mine/setUp/feedback.html": {
+		"resources": [
+			"css/mine/setUp/feedback.css",
+			"js/mine/setUp/feedback.js",
+			"img/mine/addImage.png",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"lib/fonts/mui.ttf",
+			"lib/jquery/jquery-3.2.1.min.js",
+			"lib/vue/vue.min.js",
+			"lib/mui/mui.min.js",
+			"js/common/calcSize.js",
+			"img/certificate/basicCIcon.png"
+		],
+		"refer": []
+	},
+	"views/mine/setUp/authorization.html": {
+		"resources": [
+			"img/mine/fail.png",
+			"lib/mui/mui.min.css",
+			"img/mine/scucces.png",
+			"js/mine/setUp/authorization.js",
+			"css/mine/setUp/authorization.css"
+		],
+		"refer": []
+	},
+	"views/loginRegister/registerAgreement.html": {
+		"resources": [
+			"js/loginRegister/registerAgreement.js",
+			"css/loginRegister/registerAgreement.css",
+			"lib/mui/mui.min.js",
+			"lib/mui/mui.min.css",
+			"js/common/common.js",
+			"css/common.css",
+			"lib/fonts/mui.ttf",
+			"lib/vue/vue.min.js"
+		],
+		"refer": []
+	},
+	"views/homePage/messageIndex.html": {
+		"refer": [
+			"views/homePage/homeMessage.html",
+			"views/loginRegister/login.html"
+		],
+		"resources": []
+	},
+	"main.html": {
+		"refer": [
+			"guidePage.html",
+			"index.html"
+		],
+		"resources": []
+	},
+	"guidePage.html": {
+		"refer": [
+			"index.html"
+		],
+		"resources": []
+	},
+	"views/mine/mine.html": {
+		"refer": [
+			"views/mine/myOrder/myOrder.html",
+			"views/mine/setting.html",
+			"views/mine/address/address.html",
+			"views/mine/accountSecurity/accountSecurity.html",
+			"views/mine/barcode.html",
+			"views/mine/myCollection.html",
+			"views/mine/feedback.html",
+			"views/mine/revisingPersonal.html",
+			"views/mine/myOrder/exchangeGoods.html",
+			"lib/qrcode/qrcode.html",
+			"views/mine/shopGuide/customerList.html",
+			"views/mine/shopGuide/myCommission.html",
+			"views/mine/shopGuide/customerReturns.html",
+			"views/mine/myOrder/refundAndDelivery.html",
+			"views/mine/shopGuide/commissionExpressive.html",
+			"views/mine/shopGuide/cashAccountManagement.html",
+			"views/mine/myCoupon.html",
+			"views/mine/myOrder/exchangeGoodsSingle.html",
+			"views/mine/myCopperate/myCopperate.html",
+			"views/mine/help.html",
+			"views/mine/helpShop.html",
+			"views/mine/myticket.html"
+		],
+		"resources": [
+			"img/mine/tixianguanli.png",
+			"img/mine/zhanghuyuanquan.png",
+			"img/mine/kehutuihuo.png",
+			"img/mine/shoucangkongxin.png",
+			"img/mine/yiwancheng.png",
+			"img/mine/daizhifu.png",
+			"img/mine/daishouhuo.png",
+			"img/mine/wodedizhi.png",
+			"img/mine/duihuanquanhexiao.jpg",
+			"img/mine/yijinafankui.png",
+			"img/mine/daifahuo.png",
+			"img/mine/tixian.png",
+			"img/mine/wodexiaoshou.png",
+			"css/mine/mine.css",
+			"img/mine/youhuiquan.png",
+			"css/common.css",
+			"img/mine/kehuliebiao.png",
+			"img/mine/erweima.png",
+			"img/mine/kehudingdan.png",
+			"img/mine/help.png",
+			"img/mine/head.png",
+			"img/mine/tuihuanhuo.png",
+			"img/mine/shezhi.png",
+			"img/mine/jifen.png"
+		]
+	},
+	"views/mine/setting.html": {
+		"refer": [
+			"views/loginRegister/login.html"
+		],
+		"resources": []
+	},
+	"views/mine/address/address.html": {
+		"refer": [
+			"views/mine/address/addAddress.html"
+		],
+		"resources": []
+	},
+	"views/classification/classification.html": {
+		"refer": [
+			"views/homePage/homeList.html",
+			"views/homePage/cityChoose.html"
+		],
+		"resources": [
+			"css/common.css",
+			"css/classification/classification.css",
+			"css/homePage/homeIndex.css"
+		]
+	},
+	"views/mine/accountSecurity/accountSecurity.html": {
+		"refer": [
+			"views/mine/accountSecurity/changePhone.html"
+		],
+		"resources": []
+	},
+	"views/shoppingCart/commodityDetails.html": {
+		"refer": [
+			"views/shoppingCart/shopSettlement.html",
+			"views/shoppingCart/shoppingCart.html",
+			"views/loginRegister/login.html",
+			"views/shoppingCart/groupbuying.html"
+		],
+		"resources": []
+	},
+	"views/shoppingCart/shopSettlement.html": {
+		"refer": [
+			"views/shoppingCart/pay.html",
+			"views/mine/address/address.html",
+			"views/shoppingCart/shopCoupon.html",
+			"views/shoppingCart/payHappy.html",
+			"views/shoppingCart/commodityDetails.html",
+			"views/mine/myOrder/myOrder.html",
+			"views/homePage/homeIndex.html"
+		],
+		"resources": []
+	},
+	"views/shoppingCart/shoppingCart.html": {
+		"refer": [
+			"views/shoppingCart/shopSettlement.html",
+			"views/shoppingCart/commodityDetails.html",
+			"views/homePage/homeList.html"
+		],
+		"resources": [
+			"css/shoppingCart/shoppingCart.css",
+			"css/common.css"
+		]
+	},
+	"views/shoppingCart/pay.html": {
+		"refer": [
+			"views/mine/myOrder/myOrder.html"
+		],
+		"resources": []
+	},
+	"views/mine/myOrder/myOrder.html": {
+		"refer": [
+			"views/shoppingCart/shopSettlement.html",
+			"views/mine/myOrder/orderDetail.html"
+		],
+		"resources": []
+	},
+	"views/homePage/searchSearch.html": {
+		"refer": [
+			"views/homePage/searchIndex.html"
+		],
+		"resources": []
+	},
+	"views/homePage/homeList.html": {
+		"refer": [
+			"views/shoppingCart/commodityDetails.html"
+		],
+		"resources": []
+	},
+	"views/homePage/searchIndex.html": {
+		"refer": [
+			"views/shoppingCart/commodityDetails.html"
+		],
+		"resources": []
+	},
+	"views/mine/myCollection.html": {
+		"refer": [
+			"views/shoppingCart/commodityDetails.html"
+		],
+		"resources": []
+	},
+	"views/mine/shopGuide/myCommission.html": {
+		"refer": [
+			"views/mine/shopGuide/moneyList.html"
+		],
+		"resources": []
+	},
+	"views/mine/shopGuide/moneyList.html": {
+		"refer": [
+			"views/mine/shopGuide/searchList.html"
+		],
+		"resources": []
+	},
+	"views/mine/shopGuide/searchList.html": {
+		"refer": [
+			"views/mine/myOrder/orderDetail.html"
+		],
+		"resources": []
+	},
+	"views/mine/myOrder/orderDetail.html": {
+		"refer": [
+			"views/mine/myOrder/applyAfterSale.html",
+			"views/shoppingCart/commodityDetails.html"
+		],
+		"resources": []
+	},
+	"views/mine/myOrder/exchangeGoods.html": {
+		"refer": [
+			"views/mine/myOrder/orderDetail.html"
+		],
+		"resources": []
+	},
+	"views/mine/myOrder/refundAndDelivery.html": {
+		"refer": [
+			"views/mine/myOrder/orderDetail.html"
+		],
+		"resources": []
+	},
+	"views/mine/myCopperate/myCopperate.html": {
+		"refer": [
+			"views/mine/feedback.html",
+			"views/mine/myCopperate/zshPay.html",
+			"views/mine/myCopperate/searchStore.html"
+		],
+		"resources": []
+	},
+	"views/mine/feedback.html": {
+		"refer": [
+			"views/mine/myCopperate/myCopperate.html"
+		],
+		"resources": []
+	},
+	"views/shoppingCart/payHappy.html": {
+		"refer": [
+			"views/mine/myOrder/myOrder.html"
+		],
+		"resources": []
+	},
+	"views/mine/shopGuide/cashAccountManagement.html": {
+		"refer": [
+			"views/mine/shopGuide/changeAliPayNum.html"
+		],
+		"resources": []
+	},
+	"views/mine/help.html": {
+		"refer": [
+			"views/mine/helpDetails.html"
+		],
+		"resources": []
+	},
+	"views/mine/helpShop.html": {
+		"refer": [
+			"views/mine/helpDetails.html",
+			"views/mine/helpShopDetails.html"
+		],
+		"resources": []
+	},
+	"views/mine/myticket.html": {
+		"refer": [
+			"views/mine/ticketshare.html",
+			"views/mine/golddetails.html"
+		],
+		"resources": []
+	},
+	"views/mine/shopGuide/commissionExpressive.html": {
+		"refer": [
+			"views/mine/shopGuide/cashAccountManagement.html"
+		],
+		"resources": []
+	},
+	"views/homePage/turntable.html": {
+		"resources": [
+			"css/homePage/turntable.css"
+		]
+	}
 }

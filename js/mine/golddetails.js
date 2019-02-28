@@ -5,7 +5,8 @@
 		data:{
 			goldcoin:'' , 	//积分
 			cards:[],		//兑换券组
-			infos:[]       //积分明细
+			infos:[],       //积分明细
+			page:1			//分页
 		},
 		methods:{
 			//查询积分
@@ -22,6 +23,7 @@
 			//查询明细
 			selectCards:function(){
 				NetUtil.ajax("/GoldcoinV/select_my",{
+					page:this.page,
 					uname:localStorage.getItem('uname'),
 					UID:localStorage.getItem('uuid')
 				},function(r) {
@@ -35,10 +37,24 @@
 					mui('#pullrefresh').pullRefresh().endPulldownToRefresh();
 				},1000)
 			},
-			showMessage:function(){
-				var message = '积分规则,积分规则,积分规则,积分规则,积分规则,积分规则,积分规则'
-				mui.alert(message,function(){},'div')
-			}
+			//上拉加载
+			pullupRefresh:function(){
+				this.page++;
+				NetUtil.ajax("/GoldcoinV/select_my",{
+					page:this.page,
+					rows:10,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r) {
+					app.infos =app.infos.concat(r.data);
+					if(r.data.length<=0){
+					 	mui('#pullrefresh').pullRefresh().endPullupToRefresh(true);
+					}else{
+						mui('#pullrefresh').pullRefresh().endPullupToRefresh(false);
+					}
+				})
+				mui('#pullrefresh').pullRefresh().disablePullupToRefresh();
+			},
 		},
 		created:function(){
 				this.selectTickets()
@@ -56,7 +72,14 @@
 						contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
 						auto: false,
 						callback: this.pulldownRefresh
-					}
+					},
+					up : {
+//					      height:50,//可选.默认50.触发上拉加载拖动距离
+//					      auto:true,//可选,默认false.自动上拉加载一次
+					      contentrefresh : "正在加载...",//可选，正在加载状态时，上拉加载控件上显示的标题内容
+					      contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+					      callback : this.pullupRefresh//必选，刷新函数，根据具体业务来编写，比如通过ajax从服务器获取新数据；
+					    }
 				}
 			});
 		},
