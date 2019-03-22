@@ -264,11 +264,11 @@ html,body, .mui-bar-nav~.mui-content{
 }
 .isUse{
 	position: absolute;
-	right:0rem;
+	right:0;
 }
 .isUse input{
 	border:0;
-	width:1rem;
+	width:1.5rem;
 	float: right;
 }
 .red{

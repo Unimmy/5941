@@ -7,7 +7,8 @@
 			cjtitle:''		,//抽奖出的东西
 			M_NUM:'',		//使用积分
 			imgs:[],
-			goldcoin:''		//积分
+			goldcoin:'',//积分
+			Detail:'' //活动详情
 		},
 		methods:{
 			turnTo:function(name,id){
@@ -39,14 +40,15 @@
 				})
 			},
 			//进页面加载内容
-			loadding:function(){
-		            $('#redux').eraser({
-		                size: 80,   //设置橡皮擦大小
-		                completeRatio: .3, //设置擦除面积比例
-		                completeFunction: showResetButton   //大于擦除面积比例触发函数
-		            });
-		            function showResetButton() {
-						NetUtil.ajax('/cj/add',
+			luckdraw:function(){
+				var acopyofdeg = 30
+				var rdm = Math.random()*70
+				var deg = acopyofdeg*rdm
+				if(deg<360){
+					deg = deg*20
+				}
+				// console.log(deg)
+				NetUtil.ajax('/cj/add',
 						{
 							jc_bh:1,
 							uname:localStorage.getItem('uname'),
@@ -54,28 +56,20 @@
 						},
 						function(r){
 							if(r.status==200){
+								$('.iorn').css('transform','rotate('+deg+'deg)')
 									app.cjtitle = r.data.TITLE 
-									if ( r.data.TITLE != "谢谢参与") {
-										$(".main_box .hint-show,.main_box .mask").fadeIn(300)
-									}else{
-										$('.thanks').fadeIn(300)
-									}
-										}else{
-											mui.alert(r.message,function (e) {},'div')
+										setTimeout(function(){
+											if ( r.data.TITLE != "谢谢参与") {
+												$('.getprize').fadeIn(300)
+											}else{
+												$(".getprizethanks").fadeIn(300)
+											}
+									},1000)
+								}else{
+											mui.alert(r.message,function () {},'div')
 										}
 							console.log(JSON.stringify(r))
 						})
-				            }
-				            $(".main_box .mask,.main_box .hint-show .close").click(function () {
-				                $(".main_box .hint-show,.main_box .mask").fadeOut(300);
-				            });
-							$(".main_box .hint-show .btn").click(function(){
-								   $(".main_box .hint-show,.main_box .mask").fadeOut(300);
-							});
-							$(".thanks .mui-btn-danger").click(function(){
-								$('.thanks').fadeOut(300)
-							})
-				       
 			},
 			//查询免费抽奖次数
 			loadjf:function(){
@@ -94,32 +88,23 @@
 					}
 					if(r.data=="0"){
 					app.select_max = 0; 
-					app.loadding();
 					}else{
 						app.select_max = r.data;
-						app.loadding();
 					}
 				})
 			},
-			restart:function(){
-				var prePage = plus.webview.getWebviewById("turntable.html"); //根据页面ID获取到该页面对象
-					 prePage.reload(true); //设置页面重新加载项(默认为false，改为true)
-// 					 this.loadding()
-// 					 this.loadjf();
-
-			},
+			//查询奖品
 			selectJP:function(){
 				NetUtil.ajax('/jc/select',{
 					bh:'1',
-					page:1,
-					rows:12,
 					uname:localStorage.getItem('uname'),
 					UID:localStorage.getItem('uuid')
 				},function(r){
-					console.log(JSON.stringify(r))
-					app.M_NUM = r.data[0].m_num
+					// console.log(JSON.stringify(r))
 					if(r.status==200){
-						app.imgs = r.data
+						app.M_NUM = r.data[0].m_num
+						app.Detail = r.data[0].title_su
+						app.imgs = r.data.splice(0,6)
 					}
 				})
 			},
@@ -145,7 +130,6 @@
 								uname:localStorage.getItem('uname'),
 								UID:localStorage.getItem('uuid')
 							},function(r) {
-
 								// console.log(r);
 								if(r.status  == '200'){
 									app.goldcoin = r.data.goldcoin;
@@ -153,18 +137,53 @@
 									mui.alert(r.message,function(){},'div');
 								}
 							});
-						}
+						},
+			//刷新			
+			pulldownRefresh:function(){
+				var prePage = plus.webview.getWebviewById("turntable.html"); //根据页面ID获取到该页面对象
+				prePage.reload(true); //设置页面重新加载项(默认为false，改为true)
+			},
+			closebtn:function(){
+				$('.getprize').fadeOut(300)
+				setTimeout(()=>{
+					app.pulldownRefresh()
+				},300)
+				
+			}
 		},
 		created:function(){
-			this.loadjf();
+			this.loadjf()
 			this.selectJP()
 			this.personalAjax()
 			this.selectAddress()
+			mui.init({
+					swipeBack: false,
+					pullRefresh: {
+						container: '#pullrefresh',
+						down: {
+							style:'circle',
+							color:'#ff5930',
+							offset:'44px',
+							contentdown: "下拉可以刷新", //可选，在下拉可刷新状态时，下拉刷新控件上显示的标题内容
+							contentover: "释放立即刷新", //可选，在释放可刷新状态时，下拉刷新控件上显示的标题内容
+							contentrefresh: "正在刷新...", //可选，正在刷新状态时，下拉刷新控件上显示的标题内容
+							auto: false,
+							callback: this.pulldownRefresh
+						},
+			//					up: {
+			//						auto: false,
+			//						contentrefresh: '正在加载...',
+			//						contentnomore:'没有更多数据了',//可选，请求完毕若没有更多数据时显示的提醒内容；
+			//						callback: this.pullupRefresh
+			//					}
+							}
+						});
 		},
 		mounted:function(){
-			mui('.mui-scroll-wrapper').scroll({
-				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
-			});
+// 			mui('.mui-scroll-wrapper').scroll({
+// 				deceleration: 0.0005 //flick 减速系数，系数越大，滚动速度越慢，滚动距离越小，默认值0.0006
+// 			});
+			
 		},
 		filters:{
 			httpgl:function(val){
@@ -177,3 +196,4 @@
 		}
 	});		 
 })();
+

@@ -17,10 +17,9 @@
 			<header id="header" class="mui-bar mui-bar-nav nav-home">		
 				<h1 class="mui-title">确认信息</h1>
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"  v-if="isUse!='正在选择'"></a>
-				<!-- <a class="mui-icon mui-icon-checkmarkempty mui-pull-right"  v-if="isUse=='正在选择'" @tap="sureSTKP()"></a> -->
+				<a class="mui-icon mui-icon-closeempty mui-pull-right" @tap="changeStatus('false')" v-if="isUse=='正在选择'"></a>
 			</header>
 			<div class="stkpdivhide" v-if="isUse=='正在选择'">
-				<a class="mui-icon mui-icon-closeempty mui-pull-right" @tap="changeStatus('false')" style="position: fixed;top:0.2rem;right:0.1rem"></a>
 				<div class="Stcards" v-for="item in stcards" @tap="chooseImg(''+item.id+'')" >
 					<p>{{item.id}}</p>
 					<div class="circle"></div>
@@ -82,8 +81,8 @@
 							</li>
 							<li >
 								<p class="left">商品总价</p>
-								<p class="right shopzongjia" v-if="isChooseModey==1">{{i.numall | moneyFiler}}</p>
-								<p class="right shopzongjia" v-if="isChooseModey==3">{{i.numall-i.postfee | moneyFiler}}</p>
+								<p class="right shopzongjia" v-if="isChooseModey==1">{{i.numall | changeMoney | moneyFiler}}</p>
+								<p class="right shopzongjia" v-if="isChooseModey==3">{{i.numall-i.postfee | changeMoney | moneyFiler}}</p>
 							</li>
 						</ul>
 					</div>
@@ -165,8 +164,8 @@
 				<div class="goPay">
 					<div class="leftMoney">
 						<p class="word">应付金额：</p>
-						<p class="money yingfuMoneyAll" v-if="isChooseModey==1">{{moneyAll | moneyFiler}}</p>
-						<p class="money yingfuMoneyAll" v-if="isChooseModey==3">{{moneyAll-postFeePostFee | moneyFiler}}</p>
+						<p class="money yingfuMoneyAll" v-if="isChooseModey==1">{{moneyAll | changeMoney | moneyFiler }}</p>
+						<p class="money yingfuMoneyAll" v-if="isChooseModey==3">{{moneyAll-postFeePostFee | changeMoney | moneyFiler}}</p>
 					</div>
 					<div @tap="goPayBtn();" class="rightGoPay">去支付</div>
 				</div>

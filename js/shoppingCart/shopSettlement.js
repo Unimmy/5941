@@ -31,6 +31,7 @@
 			orderscardid:'',//实物卡编号
 			isUse:'不使用',//是否使用实物卡
 			stcards:[],		//实体卡
+			reduceMoney:'' //实体卡减价
 		},
 		methods: {
 			turnTo:function(name,id,data,isChoosePay){
@@ -387,6 +388,18 @@
 		filters:{
 			moneyFiler:function(value){
 				return "￥"+Number(value).toFixed(2);
+			},
+			//减价
+			changeMoney:function(val){
+				console.log(val)
+				NetUtil.ajax('/OrdersCard/selectbynum',{
+					num:val,
+					uname:localStorage.getItem('uname'),
+					UID:localStorage.getItem('uuid')
+				},function(r){
+					app.reduceMoney = r.data
+				})
+				return app.moneyAll-app.reduceMoney
 			}
 		},
 		mounted: function() {

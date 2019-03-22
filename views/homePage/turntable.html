@@ -16,60 +16,61 @@
 		<!--html-->
 		<div id="app" v-cloak>
 			<header id="header" class="mui-bar mui-bar-nav nav-home">		
-				<h1 class="mui-title">福利中心</h1>
+				<h1 class="mui-title">快乐抽奖</h1>
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-				<a class="mui-icon mui-icon-reload  mui-pull-right" @tap="restart()"></a>
+				<a class=" mui-icon mui-icon-more  mui-pull-right" @tap="turnTo('myaddress','myaddress')"></a>
 			</header>
-			<div class="box">
-				<p class="myPrize" @tap="turnTo('turntabledetail','turntabledetail')">我的奖品</p>
-				<p class="myAddress" @tap="turnTo('myaddress','myaddress')">我的地址</p>
-			    <div class="bg_in">
-			        <div class="title">•&nbsp;刮奖区&nbsp;•</div>
-			    </div>
-			    <div class="content">
-			        <div id="mask_img_bg" ><span class="cont-span">{{cjtitle}}</span>
-			            <!--<img/>-->
-			        </div>
-			        <img id="redux" src="../../img/homePage/layer.png"/>
-			    </div>
-			    <!--次数-->
-			    <div class="hint-num" v-if="select_max>0">
-			        <h4>你还有 <strong class="clicknum">{{select_max}}</strong> 次免费刮奖机会</h4>
-			    </div>
-				 <div class="hint-num" v-if="select_max<=0">
-				    <h4>本次抽奖消耗 <strong class="clicknum">{{M_NUM}}</strong>积分</h4>
-					<h6>您还剩余{{goldcoin}}积分</h6>
-				</div>
-				<h3 class="title">奖品列表</h3>
-					<div class="advertisements">
-						<div class="ad-item" v-for="item in imgs">
-							<img :src="item.imagepath | httpgl" alt="">
-							<p>{{item.title}}</p>
+			<div id="pullrefresh" class="mui-content mui-scroll-wrapper">
+				<div class="container">
+					<div class="turntable">
+						<div id="turntable">
+						</div>
+						<img src="../../img/homePage/iorn.png"  class="iorn">
+						<p id="integral" v-if="select_max>=1" @tap="luckdraw">免费<br>抽一次</p>
+						<p id="integral"  v-if="select_max<=01"  @tap="luckdraw">{{M_NUM}}积分<br>抽一次</p>
+						<p id="myintegral">我的积分<br>{{goldcoin}}分</p>
+						<h4 class="leavetimes" v-if="select_max>=1">你还有 <strong class="clicknum">{{select_max}}</strong> 次免费刮奖机会</h4>
+					</div>
+					<div class="details">
+						<h4  @tap="turnTo('activedetails','activedetails')">活动规则<span style="padding-left:0rem;font-size: 10px;">&nbsp; &nbsp;活动详情</span></h4>
+						<div class="explain">
+							<p>{{Detail}}</p>
+						</div>
+						<h4>奖品展示:</h4>
+						<div class="prize">
+							<div class="prizes"  v-for="item in imgs">
+								<div class="prize-item">
+									<img :src="item.imagepath | httpgl" alt="" width="100%">
+								</div>
+								<p>{{item.title}}</p>
+							</div>	
 						</div>
 					</div>
+					<p class="prizehistory" @tap="turnTo('turntabledetail','turntabledetail')">中奖纪录&gt;&gt;</p>
+				</div>
 			</div>
-		
-			<div class="thanks hint-show">
-				<!-- <div class="mui-btn-success" @tap='restart()'>点我再来一次</div>
-				<div class="mui-btn-danger">关闭</div> -->
-				  <img class="hint-img" src="../../img/homePage/thanks.png">
-				<!-- <img class="colour-img" src="../../img/homePage/colour.png"> -->
-				<!-- <span class="prize-span">{{cjtitle}}</span> -->
-				<a class="close"></a>
-				<a class="btn"  @tap='restart()'></a>
+			<div class="getprizethanks">
+				<img src="../../img/homePage/getPic.png" class="getprizeimgthanks">
+				<span id="cjtitle">
+					{{cjtitle}}
+				</span>
+				<span class="closebtn1" @tap="closebtn">
+					点击关闭
+				</span>
 			</div>
-			<div class="hint-show">
-			    <img class="hint-img" src="../../img/homePage/hint.png">
-			    <img class="colour-img" src="../../img/homePage/colour.png">
-			    <span class="prize-span">{{cjtitle}}</span>
-			    <a class="close"></a>
-			    <a class="btn"  @tap='restart()'></a>
-			</div>	
-			<div class="mask"></div>
+			<div class="getprize">
+				<img src="../../img/homePage/tips.png" class="getprizeimg">
+				<span id="cjtitle">
+					{{cjtitle}}
+				<p>奖品将自动发放</p>
+				</span>
+				<span class="closebtn1" @tap="closebtn">
+					点击关闭
+				</span>
+			</div>
 		</div>
 		<!--script-->
 		<script src="../../js/common/common.js"></script>
-		<script src="../../js/homePage/jquery.eraser.js" type="text/javascript" charset="utf-8"></script>
 		<script src="../../js/homePage/turntable.js" type="text/javascript" charset="utf-8"></script>
 	</body>
 </html>

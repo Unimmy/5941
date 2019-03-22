@@ -4,8 +4,12 @@ html{
 .mui-icon{
 	color:#ff5930;
 }
+
 #header{
-	border-bottom: 1px solid #ccc !important;
+	background: #ff7100;
+}
+#header h1, #header a{
+	color:#FFFFFF;
 }
 .content{
 	position: relative;

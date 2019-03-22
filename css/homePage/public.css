@@ -120,3 +120,8 @@ i,em{font-style: normal;}
 }
 /**/
 .mui-bar.mui-bar-tab{background: #fff;}
+.blank_rows{
+	width:100%;
+	height: .1rem;
+	background: #C8C7CC;
+}

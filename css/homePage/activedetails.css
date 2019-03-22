@@ -1,0 +1,14 @@
+#header{
+	background: #ff7100;
+}
+#header h1, #header a{
+	color:#FFFFFF;
+}
+html{
+	background: #FFFFFF;
+}
+.container{
+	padding-top:1.5rem;
+	width:100%;
+	text-align: center;
+}

@@ -3,6 +3,10 @@ html{
 }
 #header{
 	border-bottom:1px solid #ccc!important;
+	background: #ff7100;
+}
+#header h1, #header a{
+	color:#FFFFFF;
 }
 #app{
 	position: relative;
@@ -19,4 +23,6 @@ html{
 	position:absolute;
 	right:0.5rem;
 	bottom:-.7rem;
+	background: #ff7100;
+	border-color:#ff7100
 }
