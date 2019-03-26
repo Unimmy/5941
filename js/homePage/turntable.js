@@ -147,9 +147,8 @@
 				$('.getprize').fadeOut(300)
 				setTimeout(()=>{
 					app.pulldownRefresh()
-				},300)
-				
-			}
+				},300)	
+			},
 		},
 		created:function(){
 			this.loadjf()

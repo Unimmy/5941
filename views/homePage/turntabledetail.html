@@ -17,28 +17,29 @@
 			<header id="header" class="mui-bar mui-bar-nav nav-home">		
 				<h1 class="mui-title">我的奖品明细</h1>
 				<a class="mui-action-back mui-icon mui-icon-left-nav mui-pull-left"></a>
-				<a class="mui-icon mui-icon-info mui-pull-right" @tap="showhidediv(1)"></a>
+				<a class="mui-icon mui-icon-info mui-pull-right" @tap="showhidediv(1)" v-if="showdiv==false"></a>
+				<a class="mui-icon mui-icon-close mui-pull-right" @tap="showhidediv('false')"  v-if="showdiv!=false"></a>
 			</header>
 			<div class="mui-content">
 				<div id="pullrefresh"  class="">
 					<div class='contents'>
 						<div class="content" v-for="item in infos" v-if="item.jc_name!='谢谢参与'">
-							<p class="contents-item">奖品名称: {{item.jc_name}}</p>
+							<p class="contents-item" v-if="item.jc_name">奖品名称: {{item.jc_name}}</p>
 							<p class="contents-item1">中奖时间: {{item.id | getMyDate}}</p>
-							<p class="contents-item2">状态：{{item.t}}</p>
+							<p class="contents-item2">{{item.t}}</p>
 							<p class="contents-item3">抽奖方式：{{item.type | getType}}</p>
-							<p class="contents-item4">No:{{item.id}}</p>
+							<!-- <p class="contents-item4">No:{{item.id}}</p> -->
+							<p class="contents-item5" v-if="item.code">No:{{item.code}}</p>
 						</div>
 					</div>
 				</div>
 			</div>
 			<div class="hide" v-if="showdiv">
-				<a class="mui-icon mui-icon-close mui-pull-right"  @tap="showhidediv('false')"></a>
 				<div class="section" v-for="item in price_infos">
 					<p>实物奖励名称:{{item.JC_TITLE}}</p>
 					<p>收件人姓名:{{item.MEMBER_NAME}}</p>
 					<p>收件人电话:{{item.MEMBER_PHONE}}</p>
-					<p>中奖编号:{{item.ID}}</p>
+					<p>中奖编号:{{item.code}}</p>
 					<p>快递单号:{{item.ZIP_CODE}}</p>
 					<p>收件人地址:{{item.MEMBER_ADDRESS}}</p>
 				</div>

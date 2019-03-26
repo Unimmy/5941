@@ -11,6 +11,7 @@
 	<script src="../../lib/jquery/jquery.min.js"></script>
 	<script src="../../lib/mui/mui.min.js"></script>
 	<script src="../../lib/vue/vue.min.js"></script>
+	<script src="../../lib/echarts-all.js"></script>
 	<link rel="stylesheet" type="text/css" href="../../css/homePage/turntable.css"/>
 	<body class="main_box" style="background-color: #eee">
 		<!--html-->
@@ -32,7 +33,7 @@
 						<h4 class="leavetimes" v-if="select_max>=1">你还有 <strong class="clicknum">{{select_max}}</strong> 次免费刮奖机会</h4>
 					</div>
 					<div class="details">
-						<h4  @tap="turnTo('activedetails','activedetails')">活动规则<span style="padding-left:0rem;font-size: 10px;">&nbsp; &nbsp;活动详情</span></h4>
+						<h4  @tap="turnTo('activedetails','activedetails')">活动规则<span style="padding-left:0rem;font-size: 10px;">&nbsp; &nbsp;查看详情</span></h4>
 						<div class="explain">
 							<p>{{Detail}}</p>
 						</div>
@@ -68,9 +69,17 @@
 					点击关闭
 				</span>
 			</div>
+			<div id="circle">
+				<p v-for="(item,index) in imgs">
+					{{item.title}}
+				</p>
+				<p v-for="(item,index) in imgs">
+					{{item.title}}
+				</p>
+			</div>
 		</div>
 		<!--script-->
 		<script src="../../js/common/common.js"></script>
-		<script src="../../js/homePage/turntable.js" type="text/javascript" charset="utf-8"></script>
+		<script src="../../js/homePage/turntable.js"></script>
 	</body>
 </html>

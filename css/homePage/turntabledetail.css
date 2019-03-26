@@ -12,15 +12,30 @@ html{
 	color:#FFFFFF;
 }
 .content{
-	position: relative;
-	margin:.2rem;
+	 position: relative; 
+	/* margin:.2rem; */
 	/* border:1px solid #7d7d7d; */
-	background:#ff5930; 
+	background:url(../../img/homePage/prizedetails.png);
+	background-size:cover;
+	height: 2.5rem;
+	padding-top:.4rem;
+}
+.contents{
+	position: relative;
 }
 .content p{
-	margin-top:.1rem;
-	padding-left:.1rem;
-	color:#fff;
+	margin-top:.15rem;
+	padding-left:.5rem;
+	color:rgba(0,0,0,.9);
+	
+}
+.contents-item2{
+	position:absolute;
+	right:0.2rem;
+	bottom:.8rem;
+	transform: rotate(-90deg);
+	font-size: 18px;
+	font-weight: bold;
 }
 .contents-item4{
 	position: absolute;
@@ -38,10 +53,14 @@ html{
 	overflow: auto;
 }
 .section{
-	margin:.1rem;
-	margin-top:.4rem;
-	background: #ff5930;
+	background:url(../../img/homePage/prizedetails.png);
+	background-size:cover;
+	width:100%;
+	height: 2.5rem;
+	margin:0 auto;
+	padding-top:.3rem;
 }
 .section p{
-	color:#fff;
+	padding-left: .5rem;
+	color:#000;
 }

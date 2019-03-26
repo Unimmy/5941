@@ -2,7 +2,7 @@
  * 设置服务器地址
  */
 //var serverUrl = "http://PC-20180516EPXK/";//
-var serverUrl = "http://192.168.0.154:8091/";  //罗玉波  
+var serverUrl = "http://192.168.5.4:8091/";  //罗玉波  
 // var serverUrl = "http://www.bming.net:8091/";  //正式服域名
 //var serverUrl = "http://114.116.88.94:8091/"	//测试服务器
 //var serverUrl = "http://PC-20180516EPXK/"	//api
@@ -10,7 +10,7 @@ var serverUrl = "http://192.168.0.154:8091/";  //罗玉波
 //var serverUrl = "http://1y74625t01.iok.la:19023/"
 //var baseUrl = serverUrl + "f/";
 
-var baseUrl = serverUrl;
+var baseUrl = serverUrl; 
 //var server = serverUrl +"UpdateBsnLicense";//图片服务器路径
 var server = serverUrl;//图片服务器路径
 var baseFtp = "";//文件服务器地址
